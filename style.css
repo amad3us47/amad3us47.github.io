@@ -1,19 +1,7 @@
-body{
-	background-color:white;
-}
-a{
-	margin:auto;
-	text-decoration:none;
-	color:blue;
-	font-size:30px;
-	padding-right:40px;
-	text-shadow: 2px 1px 3px pink;
-}
-a:hover{
-	background-color:pink;
-	font-size:90px;
-	border-radius:50px;
-}
-a:active{
-	color:red;
+
+li{ 
+  font-size:30px;
+  list-style:none;
+  padding:10px;	
+  float:left;
 }
