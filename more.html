@@ -6,6 +6,17 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<script>
+		var password="aman";
+		(function passcodeprotect(){
+			var passcode=promt("Enter Passcode");
+			while(passcode !==password){
+				alert("Incorrect Passcode");
+				return passcodeprotect();
+			}
+		}());
+		alert('Welcome hacker');
+	</script>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
