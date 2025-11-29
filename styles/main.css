@@ -21,8 +21,15 @@ body {
 
 h1 {
   color: white;
-  font-family: "Source Sans Pro" , sams-serif;
+  font-family: "Source Sans Pro" , sans-serif;
   font-size: 5em;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  color: green;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3em;
   letter-spacing: -0.04em;
 }
 
