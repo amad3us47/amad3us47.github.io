@@ -1,13 +1,21 @@
 id: codemeter-webadmin-panel
 
 info:
-  name: CodeMeter WebAdmin Panel
+  name: CodeMeter - WebAdmin Panel Access
   author: Techryptic (@Tech)
-  severity: high
-  description: Panel on CodeMeter WebAdmin application.
-  tags: codemeter,webadmin,panel
+  severity: info
+  description: CodeMeter WebAdmin panel was accessed.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-668
+    cpe: cpe:2.3:a:wibu:codemeter:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: wibu
+    product: codemeter
+  tags: codemeter,webadmin,panel,wibu,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -23,3 +31,4 @@ requests:
         status:
           - 301
           - 302
+# digest: 4a0a00473045022100ca50b4f604e363007636499e2fef27ae6164394dea89fc99e7ae3937e60b206c02200952a9c2f8cf9ffdc170be420b4278a06f779520cb012bd51be2dbf9228a1c06:922c64590222798bb761d5b6d8e72950

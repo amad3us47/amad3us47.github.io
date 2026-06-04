@@ -4,22 +4,18 @@ info:
   name: Jboss Seam Debug Page Enabled
   author: dhiyaneshDK
   severity: medium
-  reference: https://github.com/jaeles-project/jaeles-signatures/blob/master/common/jboss-seam-debug-page.yaml
-  tags: logs,exposure
+  description: Jboss Seam Debug Page was exposed.
+  reference:
+    - https://github.com/jaeles-project/jaeles-signatures/blob/master/common/jboss-seam-debug-page.yaml
+  metadata:
+    max-request: 1
+  tags: jboss,logs,exposure,vuln
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/debug.seam"
 
-    raw:
-      - |
-        GET /debug.seam HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
     matchers-condition: and
     matchers:
       - type: word
@@ -31,3 +27,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4b0a00483046022100c1eaed345d5725fd1af05ad5a0e7746975c651194c81d6942699fe60691940160221008a643d084113373bf04e3b3cffa8b9332647f76a9c81a796365e741605491aa8:922c64590222798bb761d5b6d8e72950

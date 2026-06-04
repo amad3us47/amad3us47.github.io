@@ -5,22 +5,17 @@ info:
   author: sheikhrishad,geeknik
   severity: high
   description: The log file of this Laravel web app might reveal details on the inner workings of the app, possibly even tokens, credentials or personal information.
-  reference: https://laravel.com/docs/master/logging
-  tags: laravel,logs,exposure
+  reference:
+    - https://laravel.com/docs/master/logging
+  metadata:
+    max-request: 1
+  tags: laravel,logs,exposure,vuln
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/storage/logs/laravel.log"
 
-    raw:
-      - |
-        GET /storage/logs/laravel.log HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
     matchers-condition: and
     matchers:
       - type: word
@@ -31,12 +26,15 @@ requests:
           - "ErrorException"
           - "syntax error"
         condition: or
+
       - type: word
         part: header
         words:
           - "text/plain"
           - "text/x-log"
         condition: or
+
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022013d8ea6e1932825d2bb50407b71a6ac17d3bdfb9c5c33563861f527457e2097c022100e072b0d78a05a8ac2e395ddd05a0a2610d37758893e58c0b6e5f1b27030628e3:922c64590222798bb761d5b6d8e72950

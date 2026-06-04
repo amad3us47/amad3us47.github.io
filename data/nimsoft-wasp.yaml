@@ -5,9 +5,11 @@ info:
   author: Nullfuzz
   severity: info
   description: Detect Nimsoft Wasp WebPage
-  tags: nimsoft,exposure,tech
+  metadata:
+    max-request: 1
+  tags: nimsoft,exposure,tech,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -23,3 +25,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022100e78efcc4894a4c1b28288c0900f10b6bd792286b616bfcbee0f01df94b75b7c2022053a5f5c4674673748aeb120a67db2477f6f6b5f9bb58c6b880a37b81a19e9baa:922c64590222798bb761d5b6d8e72950

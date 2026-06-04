@@ -5,9 +5,11 @@ info:
   author: that_juan_,dwisiswant0,wdahlenb
   severity: low
   description: View recent HTTP requests and responses
-  tags: springboot,exposure
+  metadata:
+    max-request: 1
+  tags: misconfig,springboot,exposure,vuln
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/trace"
@@ -23,14 +25,17 @@ requests:
           - '"path"'
         condition: and
 
-      - type: status
-        status:
-          - 200
-
       - type: word
+        part: header
         words:
           - "application/json"
           - "application/vnd.spring-boot.actuator"
           - "application/vnd.spring-boot.actuator.v1+json"
+          - "application/vnd.spring-boot.actuator.v2+json"
+          - "application/vnd.spring-boot.actuator.v3+json"
         condition: or
-        part: header
+
+      - type: status
+        status:
+          - 200
+# digest: 490a00463044022047274e84b12eb16842a30e373cad309cc5c35e6d0d78172bafffc96884a52c2902203c7a17982437278ad2033aa1c0f2dec25a6f1971a92a3e32607b0e3d0f4f2780:922c64590222798bb761d5b6d8e72950

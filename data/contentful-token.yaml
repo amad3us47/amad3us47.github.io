@@ -7,10 +7,12 @@ info:
   reference:
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/contentful-delivery-api-token.yaml
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/contentful-delivery-api-token.go
+  classification:
+    cwe-id: CWE-522,CWE-540
   metadata:
     verified: true
     max-request: 1
-  tags: contentful,exposure,tokens
+  tags: contentful,exposure,tokens,vuln
 
 http:
   - method: GET
@@ -22,5 +24,4 @@ http:
         part: body
         regex:
           - (?i)(?:contentful)(?:[0-9a-z\-_\t .]{0,20})(?:[\s|']|[\s|"]){0,3}(?:=|>|:=|\|\|:|<=|=>|:)(?:'|\"|\s|=|\x60){0,5}([a-z0-9=_\-]{43})(?:['|\"|\n|\r|\s|\x60|;]|$)
-
-# digest: 490a00463044022006e3e03103bf929fd43d2e6c63686f3c316839b8dd200b3436d8d4f422be422e02202452e6f8e53cc6a454588e1157d8b05384c8d6a895de5802a5bc5de9805c7b37:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022041bffaa9ad14119a76c97a686a6723c1670b7f243095951823adf9cf2bb5fb54022033ecdcb27a7f7a77efee91507982f43deb230f24a1e641a8060918cdc413ec3c:922c64590222798bb761d5b6d8e72950

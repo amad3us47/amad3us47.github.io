@@ -7,10 +7,13 @@ info:
   reference:
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/databricks-api-token.yaml
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/databricks-api-token.go
+    - https://docs.databricks.com/en/dev-tools/auth/pat.html
+  classification:
+    cwe-id: CWE-522,CWE-540
   metadata:
     verified: true
     max-request: 1
-  tags: databricks,exposure,tokens
+  tags: databricks,exposure,tokens,vuln
 
 http:
   - method: GET
@@ -22,5 +25,4 @@ http:
         part: body
         regex:
           - (?i)\b(dapi[a-h0-9]{32})(?:['|\"|\n|\r|\s|\x60|;]|$)
-
-# digest: 4a0a00473045022100a0d31d508d570f40ebc0d6412e68d957a35b4e7657bd744c86cd56e7b37574480220288e89c9c95c38aa14bd5065c7111499f1cbf62df6fd26f68b4685a76cd01b37:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a65bf823c23c026e8203b73bbc44cb5ec44e18063bbb5eaec4fe222af1e8e16e022100dfb04df6df92e492159c6a47e100d1fae4684dd6239af1c47efcf9c05eb0802e:922c64590222798bb761d5b6d8e72950

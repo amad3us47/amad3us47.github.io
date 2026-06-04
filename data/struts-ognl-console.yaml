@@ -9,12 +9,17 @@ info:
   remediation: Restrict access to the struts console on the production server
   reference:
     - https://github.com/PortSwigger/j2ee-scan/blob/master/src/main/java/burp/j2ee/issues/impl/ApacheStrutsWebConsole.java
+  classification:
+    cpe: cpe:2.3:a:apache:struts:*:*:*:*:*:*:*:*
   metadata:
-    verified: "true"
+    verified: true
+    max-request: 1
+    vendor: apache
+    product: struts
     shodan-query: html:"Struts Problem Report"
-  tags: apache,struts,ognl,panel
+  tags: apache,struts,ognl,panel,misconfig,vuln
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/struts/webconsole.html?debug=console'
@@ -29,3 +34,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 490a00463044022015099dde4b0b11dd5aa31a6668d53aedcd0a768c9c8c5a0a254761e5b3b5d024022075246148e0af5bb289b4e9b9293ec26dde9ed438f200a415eb1152fffadb7bf2:922c64590222798bb761d5b6d8e72950

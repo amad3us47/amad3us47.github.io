@@ -1,13 +1,19 @@
 id: sgp-login-panel
 
 info:
-  name: SGP Panel
+  name: SGP Login Panel - Detect
   author: dhiyaneshDK
   severity: info
-  reference: https://www.shodan.io/search?query=http.title%3A%22SGP%22
-  tags: panel,sgp
+  description: SGP login panel was detected.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
+  metadata:
+    max-request: 1
+    shodan-query: http.title:"SGP"
+  tags: panel,sgp,discovery
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/accounts/login?next=/admin/'
@@ -28,3 +34,4 @@ requests:
         group: 1
         regex:
           - ">Ver\\. ([0-9.A-Z]+)</p>"
+# digest: 4b0a004830460221009f84b9e1c28e5a3b6608a0f9b3a34425ff8ed43992e001c503561009f99b559d022100e8388583a38cde836a495cfd949d98c379115a3100425a14775215f056e2c751:922c64590222798bb761d5b6d8e72950

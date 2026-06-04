@@ -10,11 +10,14 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
     cwe-id: CWE-601
+    cpe: cpe:2.3:a:icewarp:icewarp:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: title:"icewarp"
-  tags: icewarp,redirect
+    product: icewarp
+    vendor: icewarp
+  tags: icewarp,redirect,vuln
 
 http:
   - method: GET
@@ -40,5 +43,4 @@ http:
         group: 1
         regex:
           - 'Server: (.{4,20})'
-
-# digest: 4b0a0048304602210081cd43c52ad6b4a02cfa2bcf4d6d16c92aed9bc930995cb0a25bbbb012ab977d0221008b51f5f8f51b2468c18ad64b3e0e90b28f3a222eaff07aa944694f00caca10fb:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100dd0e1db57b170e93bbef938b32e58a6c160308ba2e4ff2c02c2846b227ae046c022100efb39e4ff0dd6cb5f366452d58abe43cc5f366390ad91233392bab1811a91162:922c64590222798bb761d5b6d8e72950

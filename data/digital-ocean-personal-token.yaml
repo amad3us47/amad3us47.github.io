@@ -7,10 +7,12 @@ info:
   reference:
     - https://github.com/praetorian-inc/noseyparker/blob/main/crates/noseyparker/data/default/rules/digitalocean.yml
     - https://docs.digitalocean.com/reference/api/
+  classification:
+    cwe-id: CWE-522,CWE-540
   metadata:
     verified: true
     max-request: 1
-  tags: digitalocean,exposure,token
+  tags: digitalocean,exposure,token,vuln
 
 http:
   - method: GET
@@ -22,5 +24,4 @@ http:
         part: body
         regex:
           - (?i)\b(dop_v1_[a-f0-9]{64})\b
-
-# digest: 4a0a00473045022076f7812ab2f9d8cc0a308818d9be8aa5a019c66cf625e186d8b455418bdcbc14022100f0322a5d29d2e959b5c98aec8a0dfb47996f6b6f2ef91d74ead0074673a49b78:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100927224e712b1e1d47e650e686261fde5d5ddbf3d9ece198d773da8b4d36c17e8022100b83f7f32d8336b172b95e5366d50757276d2e7e51177b1de92348782d7cd40d9:922c64590222798bb761d5b6d8e72950

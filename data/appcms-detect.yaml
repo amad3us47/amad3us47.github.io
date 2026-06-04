@@ -4,9 +4,16 @@ info:
   name: AppCms Detect
   author: princechaddha
   severity: info
-  tags: tech,appcms
+  classification:
+    cpe: cpe:2.3:a:appcms:appcms:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: appcms
+    product: appcms
+    shodan-query: http.html:"Powerd by AppCMS"
+  tags: tech,appcms,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -28,3 +35,4 @@ requests:
         group: 1
         regex:
           - '<!-- Powerd by AppCMS (.*) -->'
+# digest: 4a0a0047304502210090c82947c9dab8eb8e3ddba03572dbd9a747d70ffe110b8a59d9db5099085b6102207f15de73fa404eeabb84b3488b939ca413341ac2e379d3b4d5c8b01e77fb4552:922c64590222798bb761d5b6d8e72950

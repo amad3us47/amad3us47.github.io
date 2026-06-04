@@ -7,15 +7,18 @@ info:
   reference:
     - https://nmap.org/nsedoc/scripts/sshv1.html
   metadata:
-    shodan-query: "port:22"
-  tags: javascript,ssh,network
+    max-request: 2
+    shodan-query: port:22
+  tags: enum,js,ssh,network,discovery
 
 javascript:
-  - code: |
+  - pre-condition: |
+      isPortOpen(Host,Port)
+    code: |
       var m = require("nuclei/ssh");
       var c = m.SSHClient();
       var response = c.ConnectSSHInfoMode(Host, Port);
-      log(to_json(response));
+      Export(response);
 
     args:
       Host: "{{Host}}"
@@ -39,4 +42,4 @@ javascript:
         name: version
         json:
           - '.ServerID.ProtoVersion'
-# digest: 490a004630440220232b88370c07aaca4160e934b9450365d5806d58765db6557911b5cc1e12f0cb0220249eb162bbf5aba1e736b419060a584524d63f9a3f6b3426a273a4a614304b0a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220062952b5c0a8b1435d83bc9cbf907781497c7d3a941b15963ad0c7876605dd58022100f7abaa4aad4c2724ff99055153f57b893a719aa11db639ad2d54404e46ee7687:922c64590222798bb761d5b6d8e72950

@@ -10,11 +10,13 @@ info:
     - https://buaq.net/go-44433.html
     - https://cxsecurity.com/issue/WLB-2020110041
     - https://extensions.joomla.org/
+  classification:
+    cwe-id: CWE-79,CWE-83
   metadata:
     verified: true
     max-request: 2
     google-query: inurl:mod_jvtwitter/jvtwitter.php?id=
-  tags: joomla,jvtwitter,xss
+  tags: joomla,jvtwitter,xss,vuln
 
 http:
   - method: GET
@@ -30,5 +32,4 @@ http:
           - 'contains(body_1, "><img src=x onerror=prompt(document.domain)")'
           - 'contains(body_2,"{\"rs\":\"0")'
         condition: and
-
-# digest: 490a00463044022058829af34bcf8105e471a2037e8b16c67f15bc84a7b7aa0aede72d4b7870baad022044c335f482d540833af4ceb69059d8c28361dc6228b859b68026130b7b5d12cf:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d1872fcc2b3089c5b8ff1d9c37604248dfbdbcdd018d993f6f9b257edc01949d0220394acc8bc50f6ca68f4aa7bba64c1d7718aa5b73e18a63093d68b76fb5a0d366:922c64590222798bb761d5b6d8e72950

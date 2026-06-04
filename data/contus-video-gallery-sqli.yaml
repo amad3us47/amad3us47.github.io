@@ -10,10 +10,12 @@ info:
   reference:
     - https://wpscan.com/vulnerability/b625aee5-8fd1-4f3e-9a9c-d41bdec13243
     - https://wordpress.org/plugins/photo-gallery/
+  classification:
+    cwe-id: CWE-89
   metadata:
     verified: true
     max-request: 1
-  tags: sqli,wpscan,wordpress,contus-video-gallery,unauth
+  tags: sqli,wpscan,wordpress,contus-video-gallery,unauth,vuln
 variables:
   num: '999999999'
 
@@ -42,5 +44,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402204590224dfa9f6ef713a1d5445e0f1587de7d8f5e7555ec74612b0ec1b5061f61022022967059853b044f924ce1d0dbd9797ce81e144fec3734696021aefcfbe5e986:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100951c90876646b7c94d7cb59579be5ff70ea95f1a0a3b74cbbb07abed766a211d022100feeb4e817c168b2bc3639340ee8bffe3fddce1f3a86b169b99c1362db827392b:922c64590222798bb761d5b6d8e72950

@@ -5,9 +5,17 @@ info:
   author: philippedelteil
   severity: info
   description: With this template we can detect the version number of Coldfusion instances based on their logos.
-  tags: adobe,coldfusion
+  classification:
+    cpe: cpe:2.3:a:adobe:coldfusion:*:*:*:*:*:*:*:*
+  metadata:
+    verified: true
+    max-request: 6
+    vendor: adobe
+    product: coldfusion
+    shodan-query: http.component:"Adobe ColdFusion"
+  tags: adobe,coldfusion,tech,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/CFIDE/administrator/images/mx_login.gif"
@@ -17,7 +25,7 @@ requests:
       - "{{BaseURL}}/CFIDE/administrator/images/componentutilslogin.jpg"
       - "{{BaseURL}}/cfide/administrator/images/componentutilslogin.jpg"
 
-    redirects: true
+    host-redirects: true
     stop-at-first-match: true
     max-redirects: 2
     matchers:
@@ -60,3 +68,4 @@ requests:
         name: "coldfusion-mx-7"
         dsl:
           - "status_code==200 && (\"cb594e69af5ba15bca453f76aca53615\" == md5(body))"
+# digest: 490a0046304402205bfafc8e68b1a0498bd725b66897165dddac19af47d78cbe3a22efa6b597908902200131a4b744412bdda9b22d5b0806095918b1ef1b011c748739567ec1fd745b71:922c64590222798bb761d5b6d8e72950

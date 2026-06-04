@@ -3,16 +3,17 @@ id: nexus-default-login
 info:
   name: Nexus Default Login
   author: pikpikcu
-  description: Nexus default admin credentials were discovered.
   severity: high
-  tags: nexus,default-login
+  description: Nexus default admin credentials were discovered.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+  tags: nexus,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /service/rapture/session HTTP/1.1
@@ -34,11 +35,11 @@ requests:
       - type: status
         status:
           - 204
+
       - type: word
         words:
           - "Server: Nexus"
           - "NXSESSIONID"
         part: header
         condition: and
-
-# Enhanced by mp on 2022/03/10
+# digest: 490a00463044022074ee059970b6683104f92fd3c08883662f12aaf511a946516e556ac4ed969e1602201672e7d73f04ff070942ba8d9756b0abb5cba5c1831f1c0b97bfe75ada7021c4:922c64590222798bb761d5b6d8e72950

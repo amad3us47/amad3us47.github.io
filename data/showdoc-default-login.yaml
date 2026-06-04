@@ -7,14 +7,15 @@ info:
   description: Showdoc default credentials were discovered.
   reference:
     - https://blog.star7th.com/2016/05/2007.html
-  tags: showdoc,default-login
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N
     cvss-score: 5.8
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+  tags: showdoc,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /server/index.php?s=/api/user/login HTTP/1.1
@@ -32,7 +33,6 @@ requests:
 
     matchers-condition: and
     matchers:
-
       - type: word
         words:
           - '"username":"showdoc"'
@@ -42,5 +42,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/11
+# digest: 4b0a00483046022100fe18d60b411c1c7b6be72204ac241768d197834d51765f3a4193412e2a140e1b022100cab7b9ab9bf74e5aaed69dd93183d9b879f76e77ec207770e642979088478784:922c64590222798bb761d5b6d8e72950

@@ -10,11 +10,13 @@ info:
     - https://github.com/achuna33/MYExploit/blob/8ffbf7ee60cbd77ad90b0831b93846aba224ab29/src/main/java/com/achuna33/Controllers/SeeyonController.java
     - http://wiki.peiqi.tech/wiki/oa/致远OA/致远OA%20A6%20setextno.jsp%20SQL注入漏洞.html
     - https://github.com/Threekiii/Awesome-POC/blob/master/OA%E4%BA%A7%E5%93%81%E6%BC%8F%E6%B4%9E/%E8%87%B4%E8%BF%9COA%20A6%20setextno.jsp%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md
+  classification:
+    cwe-id: CWE-89
   metadata:
     verified: true
     max-request: 1
     fofa-query: body="yyoa" && app="致远互联-OA"
-  tags: seeyon,oa,sqli
+  tags: seeyon,oa,sqli,vuln
 variables:
   num: "999999999"
 
@@ -35,5 +37,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100805d589a7203364d749b859b35ddaf92688413649647afec08d7c80ffd56ef15022100ce909a61446a4f3e9c76f47795d9b6c70443970cf2fc834fc060aef153ce71b1:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e23caf95f177224e2b8ed474fd400387cd787c62d8ced2337dd94a739b803e89022072437647ce20b22ed796c3b39f02121b841d28ad590bb14719c404f4ee6d9307:922c64590222798bb761d5b6d8e72950

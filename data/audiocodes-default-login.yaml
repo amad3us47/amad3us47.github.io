@@ -1,17 +1,19 @@
 id: audiocodes-default-login
 
 info:
-  name: Audiocodes 310HD, 320HD, 420HD, 430HD & 440HD Default Login
+  name: AudioCodes 310HD, 320HD, 420HD, 430HD & 440HD - Default Login
   author: d4vy
   severity: high
-  description: Audiocodes 310HD, 320HD, 420HD, 430HD & 440HD default login credentials were discovered.
+  description: AudioCodes devices 310HD, 320HD, 420HD, 430HD & 440HD contain a default login vulnerability. Default login credentials were discovered. An attacker can obtain access to user accounts and access sensitive information, modify data, and/or execute unauthorized operations.
   reference:
     - https://wiki.freepbx.org/display/FPG/Supported+Devices-Audio+Codes#:~:text=Reset%20to%20Factory%20Defaults,-Press%20the%20Menu&text=Then%2C%20enter%20the%20Admin%20password,is%20%221234%22%20by%20default
   classification:
     cwe-id: CWE-798
-  tags: iot,audiocodes,default-login
+  metadata:
+    max-request: 1
+  tags: iot,audiocodes,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /login.cgi HTTP/1.1
@@ -26,8 +28,8 @@ requests:
         - admin
       password:
         - "1234"
-
     unsafe: true
+
     matchers-condition: and
     matchers:
       - type: word
@@ -43,3 +45,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022100a268ec475306e9e2fc315d2e4a075fefcd61a89f782d5e761433355647498c2e022006ef816272b75a2033606812b7e0805130493d9e4242f0a4b6f859e90fb66b69:922c64590222798bb761d5b6d8e72950

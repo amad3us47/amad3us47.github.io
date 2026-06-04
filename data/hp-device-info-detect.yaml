@@ -1,25 +1,21 @@
 id: hp-device-info-detect
+
 info:
-  name: HP LaserJet
+  name: HP Device Info Detection
   author: pussycat0x
   severity: low
-  reference: https://www.exploit-db.com/ghdb/6905
-  tags: iot,hp
+  description: Internal info is disclosed to external users in HP Device.
+  reference:
+    - https://www.exploit-db.com/ghdb/6905
+  metadata:
+    max-request: 1
+  tags: iot,hp,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/hp/device/DeviceInformation/View"
 
-    raw:
-      - |
-        GET /hp/device/DeviceInformation/View HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers-condition: and
     matchers:
       - type: word
@@ -31,3 +27,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022072da055d3fc291094f17a09e1d60e265d18780ca6b6a46b7d6ee19fd83e6e26d022100d066c1486e73c571eb1c1a7a4399fa22234a9c3cac1293bd879065980f207ffd:922c64590222798bb761d5b6d8e72950

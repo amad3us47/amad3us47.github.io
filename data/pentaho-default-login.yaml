@@ -3,20 +3,22 @@ id: pentaho-default-login
 info:
   name: Pentaho Default Login
   author: pussycat0x
-  description: Pentaho default admin credentials were discovered.
   severity: high
-  metadata:
-    shodan-query: pentaho
-  tags: pentaho,default-login
+  description: Pentaho default admin credentials were discovered.
   reference:
     - https://www.hitachivantara.com/en-us/pdfd/training/pentaho-lesson-1-user-console-overview.pdf
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+    shodan-query: pentaho
+    product: vantara_pentaho
+    vendor: hitachi
+  tags: pentaho,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /pentaho/j_spring_security_check HTTP/1.1
@@ -44,5 +46,4 @@ requests:
       - type: status
         status:
           - 302
-
-# Enhanced by mp on 2022/03/10
+# digest: 490a0046304402206144b813c00018ee966cb76c87045507479c3c167048e19a931a55cc1ab919aa0220396895f228aa6436832bc129cedf69ff3349104397104d875f8a1fb359894ca8:922c64590222798bb761d5b6d8e72950

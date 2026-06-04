@@ -11,7 +11,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: osint,osint-social,disqus
+  tags: osint,osint-social,disqus,discovery
 
 self-contained: true
 
@@ -30,5 +30,4 @@ http:
         part: body
         words:
           - "<title>Disqus Profile"
-
-# digest: 4a0a00473045022100e3921033b94ef8341d67801d8e44a16a5ecc78fe01cb7c81557d2797f1cb05d40220069243167e8e1b25631b401f6c07f37b65d97cfecc39de23e8366197df3a1ede:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502202a5c6978788b3869cad2fa7ee72d9493b63a232feeb932f1496d05b194c0fc960221009d88209523ad864fca72224315980b38b0e5401d6b66df2deb8945e7d6887e08:922c64590222798bb761d5b6d8e72950

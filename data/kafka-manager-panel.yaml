@@ -2,16 +2,18 @@ id: kafka-manager-panel
 
 info:
   name: Kafka Manager Panel
-  author: Paper-Pen
-  severity: low
-  description: A kafka manager unauthorized access was discovered.
+  author: ritikchaddha
+  severity: info
   reference:
     - https://github.com/yahoo/CMAK
   metadata:
+    verified: true
+    max-request: 1
+    shodan-query: title:"Kafka-Manager"
     fofa-query: app="Kafka-Manager"
-  tags: tech,kafka
+  tags: tech,kafka,apache,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -27,3 +29,4 @@ requests:
         part: header
         words:
           - "Kafka-Manager"
+# digest: 4a0a0047304502201022f2f794e8ea844abfc9fe254f8762aa6eb00c462c582ca214ce617ce1b90e022100c11bdd975698814386f1e65994a5f8d2a6f5dda68b385a646b1d0e45c25b2938:922c64590222798bb761d5b6d8e72950

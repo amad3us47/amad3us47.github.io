@@ -12,10 +12,10 @@ info:
     cwe-id: CWE-1392
   metadata:
     verified: true
-    max-request: 2
+    max-request: 1
     shodan-query: "html:\"Lucee\""
     fofa-query: "app=\"Lucee-Engine\""
-  tags: lucee,default-login
+  tags: lucee,default-login,vuln
 
 http:
   - raw:
@@ -42,4 +42,4 @@ http:
           - '!contains(body, "Access is protected")'
           - 'status_code == 200'
         condition: and
-# digest: 4a0a00473045022100ffc2b819ff95218f966decbf485ac9ea68eb25f62172ea1756b376a1097953ce0220622081774ac714fd4e65b0d515e09e242b91a26b2b6abdb78cbd311dc463bacb:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022067511f01603c4c82a2972cb5d28f7f7402d98bfba6f35ae8e3907c0859e7e11c02210087dff420101b3e4498627a756353d0d09a2d4c429e5b40120a30bea660028fa3:922c64590222798bb761d5b6d8e72950

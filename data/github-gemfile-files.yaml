@@ -5,9 +5,11 @@ info:
   author: hahwul
   severity: info
   description: Find github page files(Gemfile / Gemfile.lock)
-  tags: github,exposure
+  metadata:
+    max-request: 2
+  tags: github,exposure,files,vuln
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/Gemfile"
@@ -30,3 +32,4 @@ requests:
           - 'contains(body, "specs")'
           - 'status_code == 200'
         condition: and
+# digest: 4b0a00483046022100d9836f9a5ba8bbce774efb5a25bfad3dc175bd5669f2004cec5bb7e9a50bd704022100fbdffe1312c2bde44623a6ee6e3ef6ef31e659bdb454f3d7214e8ffdf809e7e3:922c64590222798bb761d5b6d8e72950

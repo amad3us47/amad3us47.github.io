@@ -6,12 +6,14 @@ info:
   severity: high
   description: |
     EcologyOA deleteUserRequestInfoByXml interface has XXE
+  classification:
+    cwe-id: CWE-611,CWE-918
   metadata:
     verified: true
     max-request: 1
     shodan-query: ecology_JSessionid
     fofa-query: app="泛微-协同办公OA"
-  tags: ecology-oa,xxe
+  tags: ecology-oa,xxe,vuln
 
 http:
   - raw:
@@ -41,5 +43,4 @@ http:
         part: interactsh_protocol
         words:
           - "dns"
-
-# digest: 490a0046304402200501aac5c10b73375ecd3b89cad20548624577c332df617cd43bbc6ad1bab6f302203b7dd9905dd757aeae54b4acd61895ffbbfd2ecf4b4f05c074049b60583d6fe4:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100c84427b6b8d181a177e349cf829f67df5954468df7b251f981f9273a001fab0a0220261a41b841bab4b26109c55dceb1b5f952804c121bdd671b9bf1891265e1c043:922c64590222798bb761d5b6d8e72950

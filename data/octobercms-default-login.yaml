@@ -12,18 +12,21 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
+    cpe: cpe:2.3:a:octobercms:october:*:*:*:*:*:*:*:*
   metadata:
     verified: true
+    max-request: 4
     shodan-query: http.component:"October CMS"
-  tags: octobercms,default-login,oss
+    product: october
+    vendor: octobercms
+  tags: octobercms,default-login,oss,vuln
 
-requests:
+http:
   - raw:
       - |
         GET /backend/backend/auth/signin HTTP/1.1
         Host: {{Hostname}}
         Origin: {{BaseURL}}
-
       - |
         POST /backend/backend/auth/signin HTTP/1.1
         Host: {{Hostname}}
@@ -32,7 +35,6 @@ requests:
 
         _token={{token}}&postback=1&login={{username}}&password={{password}}
 
-    cookie-reuse: true
     attack: clusterbomb
     payloads:
       username:
@@ -62,5 +64,4 @@ requests:
         group: 1
         regex:
           - 'meta name="csrf\-token" content="([A-Za-z0-9]+)">'
-
-# Enhanced by mp on 2022/07/15
+# digest: 490a004630440220375a14905eae071a9efb6a1807d7ecc01b02edc26d0991e4e1b7b8ede5c2da24022037854dd4dd85077437bd121f87aca2ec8206f1e8effd951fe7d0cdc2928ca716:922c64590222798bb761d5b6d8e72950

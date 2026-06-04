@@ -7,9 +7,11 @@ info:
   description: Supermicro Ipmi default admin login credentials were successful.
   reference:
     - https://www.gearprimer.com/wiki/supermicro-ipmi-default-username-pasword/
-  tags: supermicro,default-login
+  metadata:
+    max-request: 2
+  tags: supermicro,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /cgi/login.cgi HTTP/1.1
@@ -26,8 +28,8 @@ requests:
       pass:
         - ADMIN
         - admin
-
     stop-at-first-match: true
+
     matchers-condition: and
     matchers:
       - type: word
@@ -40,5 +42,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/07/04
+# digest: 4a0a0047304502206176ee8953ff776cebf5e9b6ab879508947d2011bdb43a66189d0813bc096518022100b220c6f72b6bb6274b9d081863d0e21465384568d20c34c2aa78b04b0f35c612:922c64590222798bb761d5b6d8e72950

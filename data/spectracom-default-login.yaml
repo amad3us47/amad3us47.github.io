@@ -5,16 +5,17 @@ info:
   author: madrobot
   severity: high
   description: Spectracom default admin credentials were discovered.
-  tags: spectracom,default-login
   reference:
     - https://orolia.com/manuals/NC/Content/NC_and_SS/Com/Topics/ADMIN/Passwords.htm
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+  tags: spectracom,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /users/login HTTP/1.1
@@ -42,5 +43,4 @@ requests:
       - type: status
         status:
           - 302
-
-# Enhanced by mp on 2022/03/11
+# digest: 4b0a00483046022100f0360657d52d58d58e07a5317155e802e64b3dc9f22b4a53ca2e24526aa00642022100a02c5370515b1417e911899a602ced7926c843bf012891db2a439920964d5d1b:922c64590222798bb761d5b6d8e72950

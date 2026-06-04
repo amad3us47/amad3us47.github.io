@@ -3,17 +3,19 @@ id: cobbler-default-login
 info:
   name: Cobbler Default Login
   author: c-sh0
+  severity: high
   description: Cobbler default login credentials for the testing module (testing/testing) were discovered.
   reference:
     - https://seclists.org/oss-sec/2022/q1/146
     - https://github.com/cobbler/cobbler/issues/2307
     - https://github.com/cobbler/cobbler/issues/2909
-  severity: high
-  tags: cobbler,default-login,api
   classification:
     cwe-id: CWE-798
+  metadata:
+    max-request: 2
+  tags: cobbler,default-login,api,seclists,vuln
 
-requests:
+http:
   - raw:
       - |
         POST {{BaseURL}}/cobbler_api HTTP/1.1
@@ -68,5 +70,4 @@ requests:
         part: body
         regex:
           - "(.*[a-zA-Z0-9].+==)</string></value>"
-
-# Enhanced by mp on 2022/03/03
+# digest: 490a004630440220363fcb4592df67716a567c5377b82f78174ea59f506962fb053c281157868bdd022065dd9968da6a477205602f4942613108149fa12e30eb7d40bc199109b5e9ccaf:922c64590222798bb761d5b6d8e72950

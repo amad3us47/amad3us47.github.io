@@ -5,17 +5,20 @@ info:
   author: cyllective
   severity: info
   description: Detects OctoberCMS
-  tags: tech,octobercms
-  reference: https://github.com/octobercms/october
+  reference:
+    - https://github.com/octobercms/october
+  metadata:
+    max-request: 2
+  tags: tech,octobercms,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
       - "{{BaseURL}}/modules/system/assets/js/framework.combined-min.js"
 
     stop-at-first-match: true
-    redirects: true
+    host-redirects: true
     max-redirects: 1
     matchers:
       - type: word
@@ -27,3 +30,4 @@ requests:
         part: body
         words:
           - 'OctoberCMS'
+# digest: 490a0046304402206b5f45743e618e74174cca81d76968277f23a324f3b166176840f6d2edeac1c702207e4924c1aa549de434004add0ec4f418289806fdcffd45fe9c91f1bb40207582:922c64590222798bb761d5b6d8e72950

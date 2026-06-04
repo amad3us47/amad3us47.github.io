@@ -4,27 +4,22 @@ info:
   name: FanRuanOA2012-detect
   author: YanYun
   severity: info
-  tags: oa,java,fanruan,tech
+  metadata:
+    max-request: 1
+  tags: oa,java,fanruan,tech,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers-condition: and
     matchers:
       - type: status
         status:
           - 200
+
       - type: word
         words:
           - 'down.download?FM_SYS_ID'
+# digest: 4b0a00483046022100d627bcc859f386e77f478fa15e84bd852629a4c66072b2d19d171bd48905423a022100909e063d2ed4d0e2baeb1a432716754fd4eb5892dcc59dd296f3f3a6b11b6576:922c64590222798bb761d5b6d8e72950

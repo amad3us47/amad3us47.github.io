@@ -5,13 +5,17 @@ info:
   author: pussycat0x
   severity: low
   description: Displays an auto-configuration report showing all auto-configuration candidates and the reason why they 'were' or 'were not' applied.
-  tags: springboot,exposure
+  metadata:
+    max-request: 2
+  tags: springboot,exposure,misconfig,vuln
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/autoconfig"
       - "{{BaseURL}}/actuator/autoconfig"
+
+    stop-at-first-match: true
 
     matchers-condition: and
     matchers:
@@ -26,3 +30,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4b0a00483046022100dc871c8d12b26fd89a76b33b09f16f0cd5e7c60c0328687df0a329a9c4ccb1ec0221009485bd7673bf7a291fcceda39ceb792baeb88e12e48600b811b71b2c914286aa:922c64590222798bb761d5b6d8e72950

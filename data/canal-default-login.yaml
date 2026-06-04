@@ -3,17 +3,19 @@ id: canal-default-login
 info:
   name: Alibaba Canal Default Login
   author: pdteam
-  description: An Alibaba Canal default login was discovered.
   severity: high
+  description: An Alibaba Canal default login was discovered.
   reference:
     - https://github.com/alibaba/canal/wiki/ClientAdapter
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-  tags: alibaba,default-login
+  metadata:
+    max-request: 1
+  tags: canal,alibaba,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /api/v1/user/login HTTP/1.1
@@ -40,5 +42,4 @@ requests:
         words:
           - 'data":{"token"'
           - '"code":20000'
-
-# Enhanced by mp on 2022/03/22
+# digest: 4b0a00483046022100fac00e2ece2fa4599c4c8b787230f8b6588c673566a2b01f925fa9e33cdd30ce0221009318ab62fb1557d9f771a534ce6fb3a27558077322fb03aa9f60b07e69dbd1df:922c64590222798bb761d5b6d8e72950

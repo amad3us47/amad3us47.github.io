@@ -1,13 +1,19 @@
 id: gxd5-pacs-connexion-utilisateur
 
 info:
-  name: GXD5 Pacs Connexion utilisateur
+  name: GXD5 Pacs Connexion Login Panel - Detect
   author: dhiyaneshDK
   severity: info
-  reference: https://www.shodan.io/search?query=http.title%3A%22GXD5+Pacs+Connexion+utilisateur%22
-  tags: panel,login
+  description: GXD5 Pacs Connexion panel was detected.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
+  metadata:
+    max-request: 1
+    shodan-query: http.title:"GXD5 Pacs Connexion utilisateur"
+  tags: panel,login,discovery
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'
@@ -21,3 +27,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 490a0046304402200c0e02a5a4cafec48da50de363abb4541fa4aa9159c8c28c6e407f543954791b02205609420b28daa6f06ddf3780f352d1b8769fadee8ffef96de0eb60e73ee7a4f8:922c64590222798bb761d5b6d8e72950

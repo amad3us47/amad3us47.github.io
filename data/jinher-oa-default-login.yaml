@@ -11,9 +11,11 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-  tags: jinher,default-login
+  metadata:
+    max-request: 1
+  tags: jinher,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /c6/Jhsoft.Web.login/AjaxForLogin.aspx HTTP/1.1
@@ -34,8 +36,8 @@ requests:
       - type: word
         part: body
         words:
-          - "\xcf\xb5\xcd\xb3\xb9\xdc\xc0\xed\xd4\xb1\x7c"
-          - "\xc4\xfa\xba\xc3\x7c\x7c\x7c"
+          - "ÏµÍ³¹ÜÀíÔ±|"
+          - "ÄúºÃ|||"
         condition: and
 
       - type: word
@@ -46,5 +48,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/07/15
+# digest: 4b0a00483046022100ba4568c1950172507294153c10c74d83a64bc97a870faa778c546d725498398f022100971b93ae92f283978387cf9dfa64dd5fc4f67d97dbd126b9d3c15c502e900725:922c64590222798bb761d5b6d8e72950

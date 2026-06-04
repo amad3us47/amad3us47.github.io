@@ -3,24 +3,20 @@ id: sap-igs-detect
 info:
   name: SAP Internet Graphics Server (IGS) Detection
   author: _generic_human_
-  description: Detection of SAP Internet Graphics Server (IGS)
   severity: info
-  tags: sap,tech,igs
+  description: Detection of SAP Internet Graphics Server (IGS)
+  metadata:
+    max-request: 1
+  tags: sap,tech,igs,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
+    host-redirects: true
+    max-redirects: 2
+
     matchers-condition: and
     matchers:
       - type: word
@@ -44,3 +40,4 @@ requests:
         part: header
         kval:
           - "Server"
+# digest: 4a0a004730450221008b47366d3acfbaffacd6a76a71730ad14b457eac572641f8b218bbf524bcaf840220590ceb9554428f0f0adcfdc342d449aa6ed4c872c4a3de6240bc03becd652b35:922c64590222798bb761d5b6d8e72950

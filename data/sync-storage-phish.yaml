@@ -8,8 +8,9 @@ info:
     A sync storage phishing website was detected
   reference:
     - https://sync.com
-  tags: phishing,sync,osint
-
+  metadata:
+    max-request: 1
+  tags: phishing,sync,osint,discovery
 http:
   - method: GET
     path:
@@ -31,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"sync.com")'
-# digest: 4a0a00473045022079105385aa503a359d9d70666f0be20f93b4319e14d48d8b66065b2e7b1749760221009a39faff88379459fa29f0d3a8a272c3b6705849984c4e7c7b04b6005120a5be:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e7a59d1280f936a154614e7450639f7096957aabab9d0d9fcb4254f85313ee3b022100e29ea9c29717d1e946f25cd74cf0d26679a9900f86b08ce5c26fd8f8a4d61da0:922c64590222798bb761d5b6d8e72950

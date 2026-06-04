@@ -5,14 +5,16 @@ info:
   author: pathtaga
   severity: info
   description: An Ametys admin login panel was discovered.
-  tags: panel,ametys,cms
   classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cve-id:
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:ametys:ametys:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: ametys
+    product: ametys
+  tags: panel,ametys,cms,discovery
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/_admin/index.html'
@@ -35,5 +37,4 @@ requests:
         group: 1
         regex:
           - '&nbsp;([0-9.]+)</span>'
-
-# Enhanced by mp on 2022/03/16
+# digest: 4a0a004730450221009fbda5c7b0ca364101cef7c27047926f2b163d52f41dc7dc96e8d5943ea53d8e0220742c583358e0493d13280b9376466029b6dd900a42157740588101d9155040fc:922c64590222798bb761d5b6d8e72950

@@ -4,12 +4,17 @@ info:
   name: Symfony security.yml File Disclosure
   author: DhiyaneshDK
   severity: info
+  classification:
+    cpe: cpe:2.3:a:sensiolabs:symfony:*:*:*:*:*:*:*:*
   metadata:
     verified: true
-    google-dork: intitle:"index of" "security.yml"
-  tags: symfony,devops,exposure
+    max-request: 3
+    vendor: sensiolabs
+    product: symfony
+    google-query: intitle:"index of" "security.yml"
+  tags: symfony,devops,exposure,files,vuln
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/security.yml"
@@ -17,6 +22,7 @@ requests:
       - "{{BaseURL}}/app/config/security.yml"
 
     stop-at-first-match: true
+
     matchers-condition: and
     matchers:
       - type: word
@@ -28,3 +34,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a004730450220642af7032b347cfb99711c8f05ba638c82af1e5c7b3cd068b986e80b4fe592c20221009a09bdcc7b168c866ef47da97d841978edf2109c29e6cb688184157b8efa6319:922c64590222798bb761d5b6d8e72950

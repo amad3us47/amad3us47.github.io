@@ -1,82 +1,31 @@
 id: rdp-detect
 
 info:
-  name: Windows RDP Detection
-  author: princechaddha
+  name: RDP - Detection
+  author: pussycat0x
   severity: info
+  description: |
+    Detects if a target host is running Remote Desktop Protocol (RDP) service on port 3389. This template helps identify Windows systems that have RDP enabled, which is commonly used for remote administration but can also be a security risk if not properly secured.
   metadata:
     verified: true
-  tags: network,windows,rdp
-  description: |
-    Remote Desktop Protocol allows users to connect and control remote server easily.
+    max-request: 1
+    shodan-query: port:"3389"
+  tags: js,network,rdp,info,enum,discovery
 
-network:
-  - inputs:
-      - data: "0300002a25e00000000000436f6f6b69653a206d737473686173683d746573740d0a010008000b000000"
-        type: hex
-    read-size: 2048
+javascript:
+  - code: |
+      let m = require('nuclei/rdp');
+      let response = m.IsRDP(Host,Port);
+      Export(response);
 
-    host:
-      - "{{Host}}:3389"
-      - "{{Hostname}}"
+    args:
+      Host: "{{Host}}"
+      Port: "3389"
 
     matchers:
-      - type: word
-        name: rdp
-        encoding: hex
-        words:
-          - "030000130ed"
-
-      - type: word
-        encoding: hex
-        name: win2000
-        words:
-          - "0300000b06d00000123400"
-
-      - type: word
-        encoding: hex
-        name: win2003
-        words:
-          - "030000130ed000001234000300080002000000"
-
-      - type: word
-        encoding: hex
-        name: win2008
-        words:
-          - "030000130ed000001234000200080002000000"
-
-      - type: word
-        encoding: hex
-        name: win7or2008R2
-        words:
-          - "030000130ed000001234000209080002000000"
-
-      - type: word
-        encoding: hex
-        name: win2008R2DC
-        words:
-          - "030000130ed000001234000201080002000000"
-
-      - type: word
-        encoding: hex
-        name: win10
-        words:
-          - "030000130ed00000123400021f080002000000"
-
-      - type: word
-        encoding: hex
-        name: win2012R2OR8
-        words:
-          - "030000130ed00000123400020f080002000000"
-
-      - type: word
-        encoding: hex
-        name: win2012R2
-        words:
-          - "030000130ed00000123400020f080008000000"
-
-      - type: word
-        encoding: hex
-        name: win2016
-        words:
-          - "030000130ed00000123400021f080008000000"
+      - type: dsl
+        dsl:
+          - 'success == true'
+          - 'contains(response, "\"IsRDP\": true")'
+        condition: and
+# digest: 4a0a00473045022021668f07a6009c8cfd2057dce4e7cc9f1538a0d8450bb4f45b23a8f47feebc80022100cefce2194081e68300363e9b39f176114696f766dee69e47586588c658b3bb17:922c64590222798bb761d5b6d8e72950

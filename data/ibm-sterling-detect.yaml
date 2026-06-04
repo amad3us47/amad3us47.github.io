@@ -4,24 +4,17 @@ info:
   name: IBM Sterling File Gateway Detect
   author: princechaddha
   severity: info
-  tags: tech,sterling,ibm
+  metadata:
+    max-request: 1
+  tags: tech,sterling,ibm,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
     matchers-condition: and
     matchers:
-
       - type: word
         part: body
         words:
@@ -30,3 +23,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022100dd0aa538086ce0673060aab1b6d7dea8e2331435643b628d69b06543083e13560220458955f9542bdc87c97a1408fc1ba3ecf4b3c628ef8dba07cbaad9121e4e02e2:922c64590222798bb761d5b6d8e72950

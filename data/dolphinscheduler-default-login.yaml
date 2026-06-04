@@ -3,19 +3,23 @@ id: dolphinscheduler-default-login
 info:
   name: Apache DolphinScheduler Default Login
   author: For3stCo1d
-  description: Apache DolphinScheduler default admin credentials were discovered.
   severity: high
-  reference: https://github.com/apache/dolphinscheduler
-  metadata:
-    shodan-query: http.title:"DolphinScheduler"
+  description: Apache DolphinScheduler default admin credentials were discovered.
+  reference:
+    - https://github.com/apache/dolphinscheduler
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
-  tags: apache,dolphinscheduler,default-login,oss
+    cpe: cpe:2.3:a:apache:dolphinscheduler:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    shodan-query: http.title:"DolphinScheduler"
+    product: dolphinscheduler
+    vendor: apache
+  tags: apache,dolphinscheduler,default-login,oss,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /dolphinscheduler/login HTTP/1.1
@@ -43,5 +47,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/28
+# digest: 4b0a0048304602210099b367cf13564ec1eee2d8d371b140ff1a025dfa7ab0cf0312b0ed32795ef487022100a596c327fb3eceec9563948fa98c9788539caf578911245ffcce82ca7083ff92:922c64590222798bb761d5b6d8e72950

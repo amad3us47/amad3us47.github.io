@@ -5,16 +5,16 @@ info:
   author: princechaddha
   severity: high
   description: NetSUS Server default admin credentials were discovered.
-  metadata:
-    shodan-query: 'http.title:"NetSUS Server Login"'
-  tags: netsus,default-login
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+    shodan-query: http.title:"NetSUS Server Login"
+  tags: netsus,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /webadmin/index.php HTTP/1.1
@@ -22,6 +22,7 @@ requests:
         Content-Type: application/x-www-form-urlencoded
 
         loginwith=suslogin&username={{username}}&password={{password}}&submit=
+
     attack: pitchfork
     payloads:
       username:
@@ -41,5 +42,4 @@ requests:
       - type: status
         status:
           - 302
-
-# Enhanced by mp on 2022/03/10
+# digest: 4a0a0047304502201e917ff80af92fa4a3e68b0d65abeebf44ddd79c148afdfa79b169b4b96088d8022100ec70e6c5859cfccdd80201c42a42d1b4647bd51cb85f7902238be7b557e211d5:922c64590222798bb761d5b6d8e72950

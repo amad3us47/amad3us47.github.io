@@ -4,24 +4,20 @@ info:
   name: Detect Oracle-iPlanet-Web-Server
   author: pussycat0x
   severity: info
-  tags: tech,oracle
-#  additional-fields:
-#    fofa-dork: 'app="Oracle-iPlanet-Web-Server'
+  classification:
+    cpe: cpe:2.3:a:oracle:iplanet_web_server:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: oracle
+    product: iplanet_web_server
+    fofa-query: app="Oracle-iPlanet-Web-Server
+  tags: tech,oracle,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers-condition: and
     matchers:
       - type: word
@@ -32,3 +28,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 490a0046304402207724a6ad311a8db741a57f352882b151db23235dc9d700ad3b9bb5d6b871075402200d52dfc8a25b0c31abe162890eaabb52570e8a5622a359aa7319e4d1035113fa:922c64590222798bb761d5b6d8e72950

@@ -3,15 +3,17 @@ id: arl-default-login
 info:
   name: ARL Default Admin Login
   author: pikpikcu
-  description: An ARL default admin login was discovered.
   severity: high
+  description: An ARL default admin login was discovered.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-  tags: arl,default-login
+  metadata:
+    max-request: 1
+  tags: arl,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /api/user/login HTTP/1.1
@@ -29,7 +31,6 @@ requests:
 
     matchers-condition: and
     matchers:
-
       - type: word
         condition: and
         words:
@@ -40,5 +41,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/22
+# digest: 490a0046304402203c77aae964609f1242fc211d8ad77fb25b24a2ccc8ccf83f9f749f79c7dd8a59022031b42a5e08f7ea9acc6232d2aefa5ec6756a8d26ce7417968d7f986ef2f5f539:922c64590222798bb761d5b6d8e72950

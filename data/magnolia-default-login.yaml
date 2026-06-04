@@ -1,24 +1,30 @@
 id: magnolia-default-login
 
 info:
-  name: Magnolia Default Login
+  name: Magnolia CMS Default Login - Detect
   author: pussycat0x
   severity: high
-  description: Mangnolia CMS default credentials were discovered.
+  description: Magnolia CMS default login credentials were detected.
   reference:
     - https://www.magnolia-cms.com/
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    cvss-score: 7.5
+    cwe-id: CWE-200
+    cpe: cpe:2.3:a:magnolia-cms:magnolia_cms:*:*:*:*:*:*:*:*
   metadata:
-    verified: "true"
+    verified: true
+    max-request: 3
     shodan-query: html:"Magnolia is a registered trademark"
-  tags: magnolia,default-login
+    product: magnolia_cms
+    vendor: magnolia-cms
+  tags: magnolia,default-login,vuln
 
-requests:
+http:
   - raw:
-
       - |
         GET /.magnolia/admincentral HTTP/1.1
         Host: {{Hostname}}
-
       - |
         POST /.magnolia/admincentral HTTP/1.1
         Host: {{Hostname}}
@@ -28,7 +34,6 @@ requests:
         Referer: {{BaseURL}}/.magnolia/admincentral
 
         mgnlUserId={{username}}&mgnlUserPSWD={{password}}&csrf={{csrf}}
-
       - |
         GET /.magnolia/admincentral/PUSH?v-uiId=1 HTTP/1.1
         Host: {{Hostname}}
@@ -73,3 +78,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022013df67d718d844657a1308b61a42a76152ecbc8092c3497fbf8386c429d72969022100f4303a9f26012d3c24535df2a3038b3e546e1fab57f2411e8e4276ec77905c41:922c64590222798bb761d5b6d8e72950

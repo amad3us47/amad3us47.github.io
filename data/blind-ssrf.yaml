@@ -1,31 +1,40 @@
-id: header-blind-ssrf
+id: blind-ssrf
 
 info:
-  name: Header Blind SSRF Injection
-  author: geeknik,nullrabbit
-  severity: high
-  description: Checks for Blind SSR via popular browser headers.
-  tags: ssrf
+  name: Blind SSRF OAST Detection
+  author: pdteam,AmirHossein Raeisi
+  severity: medium
+  metadata:
+    max-request: 3
+  tags: ssrf,dast,oast,vuln
 
-requests:
-  - payloads:
-      header: helpers/payloads/proxy-headers.txt
+http:
+  - pre-condition:
+      - type: dsl
+        dsl:
+          - 'method == "GET"'
 
-    raw:
-      - |
-        GET /?§header§ HTTP/1.1
-        Host: {{Hostname}}
-        User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
-        §header§: {{interactsh-url}}
-        Connection: close
+    payloads:
+      ssrf:
+        - "{{interactsh-url}}"
+        - "{{FQDN}}.{{interactsh-url}}"
+        - "{{RDN}}.{{interactsh-url}}"
+        - "{{FQDN}}@{{interactsh-url}}"
+        - "{{RDN}}@{{interactsh-url}}"
 
-    redirects: true
-    max-redirects: 5
-    matchers-condition: and
+    fuzzing:
+      - part: query
+        mode: single
+        values:
+          - "https?://" # Replace HTTP URLs with alternatives
+          - "\\./.*" # Replace path parameters with ssrf payloads
+        fuzz:
+          - "https://{{ssrf}}"
+
+    stop-at-first-match: true
     matchers:
       - type: word
-        part: interactsh_protocol
+        part: interactsh_protocol  # Confirms the HTTP Interaction
         words:
-          - "dns"
           - "http"
-        condition: or
+# digest: 490a0046304402204f5689b30c3f94560c914b824916630f62b30706ea13dac96132350cf11edcdb022057a1c782332e4a02cff196012cb4b88cf0492cebb61afbc7064646f14f6bfcb1:922c64590222798bb761d5b6d8e72950

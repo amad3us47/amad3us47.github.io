@@ -1,13 +1,19 @@
 id: fatpipe-ipvpn-panel
 
 info:
-  name: FatPipe IPVPN® Panel Detect
+  name: FatPipe IPVPN® Panel - Detect
   author: dwisiswant0
   severity: info
-  reference: https://www.fatpipeinc.com/products/index.php
-  tags: panel,ipvpn,fatpipe
+  reference:
+    - https://www.fatpipeinc.com/products/index.php
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
+  metadata:
+    max-request: 1
+  tags: panel,ipvpn,fatpipe,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/fpui/jsp/login.jsp"
@@ -28,3 +34,4 @@ requests:
         group: 1
         regex:
           - '<h5>([0-9.a-z]+)<\/h5>'
+# digest: 4a0a004730450221009129e372ccf2b44bc2685173eafe8bdf1cb0d5402dd7cb72608b582b72c710a2022034ed5084e7e0bb0569f30c4f699b1ea9c065085ba725e77475989d44874c0af7:922c64590222798bb761d5b6d8e72950

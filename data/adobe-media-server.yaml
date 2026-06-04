@@ -3,19 +3,18 @@ id: adobe-media-server
 info:
   name: Adobe Media Server Login Panel
   author: dhiyaneshDK
-  description: An Adobe Media Server login panel was detected.
   severity: info
+  description: An Adobe Media Server login panel was detected.
   reference:
-    - https://www.shodan.io/search?query=http.title%3A%22Adobe+Media+Server%22
     - https://helpx.adobe.com/support/adobe-media-server.html
-  tags: panel,adobe
   classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cve-id:
     cwe-id: CWE-200
+  metadata:
+    max-request: 1
+    shodan-query: http.title:"Adobe Media Server"
+  tags: panel,adobe,discovery
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'
@@ -29,5 +28,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/20
+# digest: 4a0a00473045022100a8c6329138e87f5c2452196279ba423ea92c10a6fef51798034029ed4e4812db022066ee90702942a9348dd9291e90ae0ac968d12204fe745059fd29274b03d1e96f:922c64590222798bb761d5b6d8e72950

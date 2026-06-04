@@ -4,22 +4,17 @@ info:
   name: Snyk Ignore File Disclosure
   author: dhiyaneshDk
   severity: info
-  reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/snyk-ignore-file-disclosure.json
-  tags: exposure,files
+  reference:
+    - https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/snyk-ignore-file-disclosure.json
+  metadata:
+    max-request: 1
+  tags: exposure,files,vuln
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.snyk"
 
-    raw:
-      - |
-        GET /.snyk HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
     matchers-condition: and
     matchers:
       - type: word
@@ -30,3 +25,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4b0a004830460221008ddc141ba7def948ec3de0eeb681d7847d68959fb429991edf5077c1f770a0de0221009757b49d74b7a8d4781529fdf2d59f49bdfd9b908b76ca52f0e6c8f2af728a26:922c64590222798bb761d5b6d8e72950

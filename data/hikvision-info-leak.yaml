@@ -1,22 +1,23 @@
 id: hikvision-info-leak
 
 info:
-  name: Hikvision Info Leak
+  name: Hikvision Configuration File - Detect
   author: pikpikcu
   severity: medium
-  tags: exposure,config
+  description: Hikvision configuration file was detected.
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    cvss-score: 5.3
+    cwe-id: CWE-200
+  metadata:
+    max-request: 1
+  tags: exposure,config,hikvision,vuln
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}/config/user.xml'
 
-    raw:
-      - |
-        GET /config/user.xml HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
     matchers-condition: and
     matchers:
       - type: word
@@ -29,3 +30,4 @@ requests:
         words:
           - "text/xml"
         part: header
+# digest: 4a0a00473045022100957b5e877533d3b6309dd9927f72d0e9bfac97d0ff2b568c38a2425a0c25a7b202202f7713270e085395249022eaf6315d14f8aed6355b693e60fe1daf8a27e07d93:922c64590222798bb761d5b6d8e72950

@@ -4,11 +4,16 @@ info:
   name: ChatGPT Web - Unauthorized Access
   author: SleepingBag945
   severity: high
+  description: ChatGPT Web is exposed.
+  classification:
+    cpe: cpe:2.3:a:chanzhaoyu:chatgpt_web:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
+    vendor: chanzhaoyu
+    product: chatgpt_web
     fofa-query: app="Chatgpt-web"
-  tags: chatgpt,unauth,misconfig
+  tags: chatgpt,unauth,misconfig,vuln,ai
 
 http:
   - raw:
@@ -37,5 +42,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a00463044022025e67a1afa68039433f2eeb68afb01b6cefcf700d2976a83d01845f87a2cfcf902204c852c5d7b15d180a10864001521e703eddde47ab3722d0090b6bfbf62f4b3f5:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100f8fc36516b3360bb65492c544d73759757d923e0a7470afb090c6a21e2b703e1022100ce8f69f90e70cc66efa1075ae1a3e99950e449b25558a2bd7834d19d571fcca7:922c64590222798bb761d5b6d8e72950

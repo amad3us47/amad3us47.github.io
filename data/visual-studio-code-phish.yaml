@@ -8,8 +8,9 @@ info:
     A visual studio code phishing website was detected
   reference:
     - https://visualstudio.com
-  tags: phishing,visual-studio-code,osint
-
+  metadata:
+    max-request: 1
+  tags: phishing,visual-studio-code,osint,discovery
 http:
   - method: GET
     path:
@@ -33,4 +34,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"visualstudio.com")'
-# digest: 4a0a0047304502200ac692134c746861c818eae66fb9d301834388548bd8abf388116f1c71abac190221009f9cb5ba97616392893b2cc291ed5f48775ff7cb35853c550d526ee2d028aa7e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204d4e734b27e79b9ad5d71a974ad75f830d0a6c11fa9e422abeb300dc2adb1a5e022100a3fb468e552335d59b6089876430eed1a97ba186764a52dfc27f96c1487cf8e6:922c64590222798bb761d5b6d8e72950

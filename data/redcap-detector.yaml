@@ -4,22 +4,15 @@ info:
   name: REDCap detector
   author: philippedelteil,retr0
   severity: info
-  tags: redcap,tech
+  metadata:
+    max-request: 1
+  tags: redcap,tech,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers-condition: and
     matchers:
       - type: word
@@ -38,3 +31,4 @@ requests:
         group: 1
         regex:
           - 'REDCap ([0-9-.]+)'
+# digest: 490a004630440220280a0ff137416ae1c242516a76f578ebe95dc1df8b2f527b29eef02e53afe32c02200b95a126566460066107e9d129629e7c641e3f09270cc47c92c14ad7c1935f40:922c64590222798bb761d5b6d8e72950

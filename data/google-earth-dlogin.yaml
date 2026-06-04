@@ -4,23 +4,26 @@ info:
   name: Google Earth Enterprise Default Login
   author: orpheus,johnjhacking
   severity: high
-  description: Google Earth Enterprise default login credentials were discovered.
-  remediation: "To reset the username and password:
-sudo /opt/google/gehttpd/bin/htpasswd -c
-/opt/google/gehttpd/conf.d/.htpasswd geapacheuse"
-  tags: default-login,google-earth
+  description: |
+    Google Earth Enterprise default login credentials were discovered.
+  remediation: |
+    To reset the username and password:
+
+    sudo /opt/google/gehttpd/bin/htpasswd -c
+    /opt/google/gehttpd/conf.d/.htpasswd geapacheuse"
   reference:
     - https://johnjhacking.com/blog/gee-exploitation/
     - https://www.opengee.org/geedocs/5.2.2/answer/3470759.html
-  metadata:
-    shodan-query: 'title:"GEE Server"'
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+    shodan-query: title:"GEE Server"
+  tags: default-login,google-earth,vuln
 
-requests:
+http:
   - raw:
       - |
         GET /admin/ HTTP/1.1
@@ -31,7 +34,6 @@ requests:
     payloads:
       username:
         - geapacheuser
-
       password:
         - geeadmin
 
@@ -46,5 +48,4 @@ requests:
         words:
           - 'DashboardPanel'
           - 'Earth Enterprise Server'
-
-# Enhanced by mp on 2022/03/10
+# digest: 4a0a00473045022060ef2dc789eab7643fcafc1692381fc371c6b7711d4f193111f77505a91374eb022100f481ab00bf068c1f7e4d097767884bf6074837d13dbf790d6d7034504cb0c2f2:922c64590222798bb761d5b6d8e72950

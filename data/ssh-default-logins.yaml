@@ -6,8 +6,8 @@ info:
   severity: critical
   metadata:
     max-request: 223
-    shodan-query: port:1433
-  tags: js,ssh,default-login,network,bruteforce
+    shodan-query: port:22
+  tags: js,ssh,default-login,network,fuzz,vuln
 
 javascript:
   - pre-condition: |
@@ -37,4 +37,4 @@ javascript:
           - "response == true"
           - "success == true"
         condition: and
-# digest: 4a0a0047304502201075a52fb072b30eaf6d0a90a65cfd28bb977d1e550dea81be5fdf48eb9d4a40022100d71ccf516beef02a23e98f5041349bad1edefa0e3c4d4f83d7a3789ceb5c26e9:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008ecc13572a4f284982e76f56811ea243578007c1cf89abbdd1b4e1b5518bd735022100efe9c4ddf888cc8880366919397edf6efb93aae380c8a4166696557f280af7a6:922c64590222798bb761d5b6d8e72950

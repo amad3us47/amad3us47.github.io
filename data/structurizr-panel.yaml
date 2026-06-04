@@ -8,11 +8,15 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:structurizr:on-premises_installation:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
+    vendor: structurizr
+    product: on-premises_installation
     shodan-query: http.favicon.hash:1199592666
-  tags: panel,structurizr,detect
+    fofa-query: icon_hash=1199592666
+  tags: panel,structurizr,detect,discovery
 
 http:
   - method: GET
@@ -37,5 +41,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502202a784139d22b25225066573650e7a0ff9af225f66c902365a1a86a3803409bcd022100bafb2be2100b7bbfeb87ecee91e0278689dd0b6c238aa0780040fe8a41817590:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b60a9172509da7180580da8cbb7e6325c05670512b5ce6d3b5e7dfefe440113a022100aa071a9f2fba1e7e14b86f5cc3270078ec31028545325abb54d21a8be7108758:922c64590222798bb761d5b6d8e72950

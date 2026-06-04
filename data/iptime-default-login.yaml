@@ -5,16 +5,17 @@ info:
   author: gy741
   severity: high
   description: ipTIME default admin credentials were discovered.
-  tags: iptime,default-login
   reference:
     - https://www.freewebtools.com/IPTIME/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+  tags: iptime,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /sess-bin/login_handler.cgi HTTP/1.1
@@ -43,5 +44,4 @@ requests:
           - "login.cgi"
         part: body
         condition: and
-
-# Enhanced by mp on 2022/03/10
+# digest: 4a0a0047304502201927c4e9a728a93d3cabd296886588c2de77067b6176b05d58a4f09a93e16f8c022100c3a402daf8ec17e52207b197a51157bbaa2f44c18f58557f3634f48414b0a051:922c64590222798bb761d5b6d8e72950

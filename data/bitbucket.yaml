@@ -11,7 +11,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: osint,osint-coding,bitbucket
+  tags: osint,osint-coding,bitbucket,discovery
 
 self-contained: true
 
@@ -30,5 +30,4 @@ http:
         part: body
         words:
           - "Repositories"
-
-# digest: 490a0046304402206eb1aeaf5db429b2aeb5c6af9c28c3708417f3d1c5c5499bc48a251aee4edff002200ced4903440c229775b47e933f6f274acbd61a5de3fcb3d37d920f5d7987a707:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022005d7fe9dacc2680acc39edfda828b5731099b75f923cba694be731c8b2ce60a1022007ef19d20a99f125fd318f8d7030d43410daf84dd6c2aac8fbe54a95cd420f43:922c64590222798bb761d5b6d8e72950

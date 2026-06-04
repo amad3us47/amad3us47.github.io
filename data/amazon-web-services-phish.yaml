@@ -8,8 +8,9 @@ info:
     An amazon-web-services phishing website was detected
   reference:
     - https://signin.aws.amazon.com
-  tags: phishing,amazon-web-services,aws,osint
-
+  metadata:
+    max-request: 1
+  tags: phishing,amazon-web-services,aws,osint,discovery
 http:
   - method: GET
     path:
@@ -31,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"amazon.com")'
-# digest: 490a0046304402201a927da6816edd622291614f4cee1d30884e00d3b3c792d52f62c99fceeffb9602205f62dad28486cb4dbec579c3501a19fe0515fd1f6307fc18e567da0f4378d998:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100abe36d5af2d84be7d2efe48a655694b259922bf9807efaceff37b6d5f3994f83022100a2e098e59da1f67c634b14df692bcdc8806fe96c7db43e9b293dbb3cbbfe5793:922c64590222798bb761d5b6d8e72950

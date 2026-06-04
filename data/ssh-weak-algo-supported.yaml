@@ -10,15 +10,18 @@ info:
     - https://www.tenable.com/plugins/nessus/90317
   metadata:
     verified: true
-    max-request: 1
+    max-request: 2
     shodan-query: product:"OpenSSH"
-  tags: javascript,ssh,misconfig,network
+  tags: js,enum,ssh,misconfig,network,vuln
+
 javascript:
-  - code: |
+  - pre-condition: |
+      isPortOpen(Host,Port);
+    code: |
       let m = require("nuclei/ssh");
       let c = m.SSHClient();
       let response = c.ConnectSSHInfoMode(Host, Port);
-      to_json(response);
+      Export(response);
     args:
       Host: "{{Host}}"
       Port: "22"
@@ -37,5 +40,4 @@ javascript:
           - "arcfour128"
           - "arcfour256"
         condition: or
-
-# digest: 4a0a004730450220791c269bff8f611f822a1b188ec392166f2febf667e190377543580639a592ec022100cfc30025a071503bde04a61e8954bb7eea5a8ee55e38fd8efc67c817619832cf:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210092451cd65b8d7c3a656a7a0baa863f9a55783ed6f6a68e09049bb5d8fe7d38e20220224fd04b115c2cf7830607a3c6210f5e95afb9be51a446a016dad28f128800f9:922c64590222798bb761d5b6d8e72950

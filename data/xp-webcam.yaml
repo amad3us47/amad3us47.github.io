@@ -4,23 +4,16 @@ info:
   name: XP Webcam Viewer Page
   author: aashiq
   severity: medium
-  description: Searches for exposed webcams by querying the /mobile.html endpoint and existance of webcamXP in the body
-  tags: webcam,iot
+  description: Searches for exposed webcams by querying the /mobile.html endpoint and the existence of webcamXP in the body.
+  metadata:
+    max-request: 1
+  tags: webcam,iot,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/mobile.html"
 
-    raw:
-      - |
-        GET /mobile.html HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers-condition: and
     matchers:
       - type: word
@@ -33,3 +26,4 @@ requests:
           - "Please provide a valid username/password to access this server."
         part: body
         negative: true
+# digest: 4b0a00483046022100b63060ffa0f72a027512463922c81602b296a08227bab9496f9bcfe732fb30a4022100976adfe50b8c31e4c3af3890ef22acc4e7ea7e917e0c0c1238ec729313ebbf55:922c64590222798bb761d5b6d8e72950

@@ -1,25 +1,23 @@
 id: oracle-dbcs
+
 info:
   name: Oracle Database as a Service
   author: pussycat0x
   severity: info
-  reference: https://www.shodan.io/search?query=http.title%3A%22Oracle+Database+as+a+Service%22
-  tags: oracle,tech
+  classification:
+    cpe: cpe:2.3:a:oracle:database_server:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: oracle
+    product: database_server
+    shodan-query: http.title:"Oracle Database as a Service"
+  tags: oracle,tech,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}'
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers-condition: and
     matchers:
       - type: word
@@ -30,3 +28,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022058bcf3a46b83bf052f0f7f7aee5abf0b655ade6781fba7be8a5b36ea3ad8e411022100c140d4b4fe5e46ef9d0cb0fb9f221cb600f08ac393243651fabee0ed1ee47321:922c64590222798bb761d5b6d8e72950

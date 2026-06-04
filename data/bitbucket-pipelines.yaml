@@ -4,12 +4,17 @@ info:
   name: BitBucket Pipelines Configuration Exposure
   author: DhiyaneshDK
   severity: info
+  classification:
+    cpe: cpe:2.3:a:atlassian:bitbucket:*:*:*:*:*:*:*:*
   metadata:
     verified: true
+    max-request: 1
+    vendor: atlassian
+    product: bitbucket
     shodan-query: html:"bitbucket-pipelines.yml"
-  tags: exposure,bitbucket,devops,cicd
+  tags: exposure,bitbucket,devops,cicd,files,vuln
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/bitbucket-pipelines.yml"
@@ -25,3 +30,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 490a0046304402205a357844abdca74be9c139c4c410450d4fdee331c3c36aace6ba81ae3c8f5f640220712d6fae80a5cfd2c28bae20d11f2799ad64598a4137560799f3aae60ba42f3d:922c64590222798bb761d5b6d8e72950

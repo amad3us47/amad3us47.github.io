@@ -10,12 +10,16 @@ info:
     - https://twitter.com/hacker_/status/1518003548855930882?s=20&t=BVauK0yUjVl5yL7rwy0Eag
   metadata:
     verified: true
-  tags: exposure
+    max-request: 2
+  tags: exposure,files,vuln
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/appsettings.json"
+      - "{{BaseURL}}/appsettings.Production.json"
+
+    stop-at-first-match: true
 
     matchers-condition: and
     matchers:
@@ -31,3 +35,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 490a004630440220683afd578f2d57d4f8c00c01239a63bda91c7d05e7f7eeb534f13b9f745fb9ec0220146fb47f59ec5f3e9eaf05e393e9e1cc532f78e20801869b29159d45083428c1:922c64590222798bb761d5b6d8e72950

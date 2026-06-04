@@ -1,23 +1,25 @@
 id: cisco-network-config
 
 info:
-  name: Cisco System Network Configuration Exposure
+  name: Cisco System Network Configuration Page - Detect
   author: DhiyaneshDk
-  severity: low
-  reference: https://www.exploit-db.com/ghdb/5430
-  tags: config,exposure
+  severity: info
+  description: Cisco System Network configuration page was detected. Page lists whole network configuration and internal logs of Cisco IP phones.
+  reference:
+    - https://www.exploit-db.com/ghdb/5430
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
+    cwe-id: CWE-200
+  metadata:
+    max-request: 1
+  tags: exposure,cisco,edb,config,vuln
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/CGI/Java/Serviceability?adapter=device.statistics.configuration"
 
-    raw:
-      - |
-        GET /CGI/Java/Serviceability?adapter=device.statistics.configuration HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
     matchers-condition: and
     matchers:
       - type: word
@@ -28,3 +30,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a004730450220481138e9a1bfd2ab18f2560a8247bb0c72558077c17ee8b3053ed4f74e054165022100c8b182a463b8f401760ca862031051cf4094de019b17bdeaf6262c7a811f1763:922c64590222798bb761d5b6d8e72950

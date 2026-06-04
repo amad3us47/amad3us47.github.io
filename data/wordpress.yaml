@@ -11,7 +11,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: osint,osint-blog,wordpress
+  tags: osint,osint-blog,wordpress,discovery
 
 self-contained: true
 
@@ -30,5 +30,4 @@ http:
         part: body
         words:
           - "user-member-since"
-
-# digest: 4a0a00473045022100fc04abf609c545f2d62456a051a0d3b96abbadcfb3fd3d61181d47cd3a7b1b77022058d5952c681fe8c9f7184cc6d8620d4b2cf70d36320911b4f9ec11406728bfe0:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008500b2b7c0cbb5a0401be9ccc6604cbd4683a7a7e8157089657bd185d2da6565022100f77a673d3bba897d1176b3e7c97bd20ee414d774620dfc1caab9a0ada7a268dd:922c64590222798bb761d5b6d8e72950

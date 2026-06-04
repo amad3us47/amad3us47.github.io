@@ -5,17 +5,21 @@ info:
   author: PaperPen
   severity: high
   description: An Apollo default login was discovered.
-  metadata:
-    shodan-query: http.favicon.hash:11794165
   reference:
     - https://github.com/apolloconfig/apollo
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-  tags: apollo,default-login
+    cpe: cpe:2.3:a:ctrip:apollo:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 2
+    shodan-query: http.favicon.hash:11794165
+    product: apollo
+    vendor: ctrip
+  tags: apollo,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /signin HTTP/1.1
@@ -25,7 +29,6 @@ requests:
         Referer: {{BaseURL}}/signin?
 
         username={{user}}&password={{pass}}&login-submit=Login
-
       - |
         GET /user HTTP/1.1
         Host: {{Hostname}}
@@ -37,8 +40,6 @@ requests:
       pass:
         - admin
 
-    cookie-reuse: true
-    req-condition: true
     matchers-condition: and
     matchers:
       - type: word
@@ -51,7 +52,6 @@ requests:
       - type: dsl
         dsl:
           - "status_code_1 == 302 && status_code_2 == 200"
-          - "contains(tolower(all_headers_2), 'application/json')"
+          - "contains(tolower(header_2), 'application/json')"
         condition: and
-
-# Enhanced by mp on 2022/03/22
+# digest: 4a0a00473045022100ca1858d05e7c6d9bbb65b3386d7fa3cfdbff532776299d17064660b9468494cf0220509409898b733bb4c3db8b598cb2ef09fb48e657027bc64f1cf6fde8abead413:922c64590222798bb761d5b6d8e72950

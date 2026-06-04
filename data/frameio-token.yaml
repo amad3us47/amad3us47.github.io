@@ -7,10 +7,12 @@ info:
   reference:
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/frameio-api-token.yaml
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/frameio-api-token.go
+  classification:
+    cwe-id: CWE-522,CWE-540
   metadata:
     verified: true
     max-request: 1
-  tags: frameio,exposure,tokens
+  tags: frameio,exposure,tokens,vuln
 
 http:
   - method: GET
@@ -22,5 +24,4 @@ http:
         part: body
         regex:
           - fio-u-(?i)[a-z0-9\-_=]{64}
-
-# digest: 4a0a0047304502207b502173a28c351808849cf5bfc490409a6cf9b4a260a58d0f7a00f43101a9bc022100c02ddc0f512bd72732c939eab30613f63f8a1304f445605169ede711080a9c85:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100928358fd1930c66d8dead16f3b34e474ea94ac60aeb1161680008164b041c86802204420aeef192e343aeafec1f8099374a570790896b59fe59026bb63ecdb621433:922c64590222798bb761d5b6d8e72950

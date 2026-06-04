@@ -5,14 +5,15 @@ info:
   author: davidmckennirey
   severity: high
   description: Trilithic Viewpoint application default admin credentials were discovered. Note this product has been discontinued.
-  tags: default-login,trilithic,viewpoint
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+  tags: default-login,trilithic,viewpoint,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /ViewPoint/admin/Site/ViewPointLogin HTTP/1.1
@@ -41,5 +42,4 @@ requests:
           - 'redirectUrl'
         part: body
         condition: and
-
-# Enhanced by mp on 2022/03/13
+# digest: 490a00463044022038390c69866e85488a6acbff189a6b975f8962c43a20d7f26cf434c1a9061914022067fc9309ab3b76c536f65babbcf74d7dc0e6749b34152b086907d6c10bd4b429:922c64590222798bb761d5b6d8e72950

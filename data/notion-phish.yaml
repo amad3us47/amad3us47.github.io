@@ -8,8 +8,9 @@ info:
     A notion phishing website was detected
   reference:
     - https://notion.so
-  tags: phishing,notion,osint
-
+  metadata:
+    max-request: 1
+  tags: phishing,notion,osint,discovery
 http:
   - method: GET
     path:
@@ -31,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"notion.so")'
-# digest: 4a0a00473045022100a8b2355c5aa8eab162cc5003414f8241f46b819b7281247b906bc689f06da14b02207992f83bd57d802d4ae3d4401e879daaac724e02900b635b26634895a3550ad4:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d6f0c73c5142b1eebc2f8dc96b7a1f7cf6fa43f2cbd9d3153bab4aa80e67a0d902207acdaf2db5469eda7e3ae105a8cbae5999caf80fdd73bbc5152986ba460f6b39:922c64590222798bb761d5b6d8e72950

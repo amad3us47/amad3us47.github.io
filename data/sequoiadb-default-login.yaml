@@ -5,16 +5,17 @@ info:
   author: dhiyaneshDk
   severity: high
   description: SequoiaDB default admin credentials were discovered.
-  tags: default-login,sequoiadb
   reference:
     - https://www.sequoiadb.com/en/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+  tags: default-login,sequoiadb,vuln
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1
@@ -42,11 +43,10 @@ requests:
 
       - type: dsl
         dsl:
-          - contains(tolower(all_headers), 'sdbsessionid')
+          - contains(tolower(header), 'sdbsessionid')
 
       - type: word
         part: body
         words:
           - '{ "errno": 0 }'
-
-# Enhanced by mp on 2022/03/11
+# digest: 490a00463044022056f09061e6db34d33811906d301f18db834fd4f1bc5da5c0937a99dac5ac0061022037462b421f4f7141e4cda3fdfaeb959d8e025a9f5c2b53adabf18a6de9fb7878:922c64590222798bb761d5b6d8e72950

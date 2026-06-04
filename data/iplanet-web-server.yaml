@@ -4,24 +4,16 @@ info:
   name: Detect iPlanet Webserver Detection
   author: pussycat0x
   severity: info
-  tags: tech
-#  additional-fields:
-#    fofa-dork: 'app="iPlanet-Web-Server,-Enterprise-Edition-4.1"'
+  metadata:
+    max-request: 1
+    fofa-query: app="iPlanet-Web-Server,-Enterprise-Edition-4.1"
+  tags: tech,webserver,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers-condition: and
     matchers:
       - type: word
@@ -32,3 +24,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a0047304502202e6858622305bea71d8a87729a0872ae6cf30b0a327e0495f31f99f2baec3e250221008864da17532e5f5ecb887d51588f7d265ec7735b05b5401debd2f9d1bf3ef47b:922c64590222798bb761d5b6d8e72950

@@ -1,14 +1,22 @@
 id: gophish-login
 
 info:
-  name: Gophish Login
+  name: Gophish Login Panel - Detect
   author: dhiyaneshDK
   severity: info
-  tags: panel,gophish
+  description: Gophish login panel was detected.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
+    cpe: cpe:2.3:a:getgophish:gophish:*:*:*:*:*:*:*:*
   metadata:
+    max-request: 1
     shodan-query: http.title:"Gophish - Login"
+    product: gophish
+    vendor: getgophish
+  tags: panel,gophish,discovery
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/login'
@@ -18,6 +26,8 @@ requests:
       - type: word
         words:
           - '<title>Gophish - Login</title>'
+
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022100cac218b877f546b9bc71d6463d314151d16600c8fa5774e0e2b5aa08404ecce202207d17d70be9cf5ce0ce7657185a480718d88a30b80413fc03d56b2dbb1b1706c4:922c64590222798bb761d5b6d8e72950

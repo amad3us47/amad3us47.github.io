@@ -6,10 +6,11 @@ info:
   severity: info
   metadata:
     verified: true
+    max-request: 1
     shodan-query: http.html:"LANDESK(R)"
-  tags: technology,landesk
+  tags: tech,landesk,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -21,3 +22,4 @@ requests:
           - "LANDESK(R)"
           - "Cloud Services Appliance"
         condition: and
+# digest: 4b0a0048304602210083f6945e03f78ede420fd152219bf05a43a020f5884c436be559e311d6e97b22022100e021e6e36e79de2431e8dc510cf50c78889535ef71b9b0954e007921d8b667a3:922c64590222798bb761d5b6d8e72950

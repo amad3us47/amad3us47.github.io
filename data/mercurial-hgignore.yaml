@@ -2,7 +2,7 @@ id: mercurial-hgignore
 
 info:
   name: Mercurial Ignore - File Disclosure
-  author: DhiyaneshDK
+  author: DhiyaneshDK,s4e-io
   severity: info
   description: Mercurial Ignore file disclosure was detected.
   reference:
@@ -11,11 +11,14 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:mercurial:mercurial:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: html:"hgignore"
-  tags: exposure,hgignore,config,mercurial
+    product: mercurial
+    vendor: mercurial
+  tags: exposure,hgignore,config,mercurial,vuln
 
 http:
   - method: GET
@@ -42,8 +45,10 @@ http:
           - "<script"
           - "<meta"
           - "image/"
+          - "Response xmlns="
+          - "text/xml"
+          - "<?xml"
         part: response
         negative: true
         condition: or
-
-# digest: 4a0a00473045022100cb8a38a787a4bf8dfef1af3421219144dcda75b595a67fb07634716d26850372022068094e8496ce58a49baf3c5a4d94bbba402c9a249063e856ae95503aaa2bd8e0:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100f660db33d20398c87e4b7501ab6fbabbab565d62d3963774b330793d2d6bec1f022100a8a18beeeb94940da08be784da85e07d85f0bb59224a2bc823b80fe14cc26e06:922c64590222798bb761d5b6d8e72950

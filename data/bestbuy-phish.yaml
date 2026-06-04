@@ -8,8 +8,9 @@ info:
     A best buy phishing website was detected
   reference:
     - https://bestbuy.com
-  tags: phishing,bestbuy,osint
-
+  metadata:
+    max-request: 1
+  tags: phishing,bestbuy,osint,discovery
 http:
   - method: GET
     path:
@@ -31,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"bestbuy.com")'
-# digest: 490a0046304402206583bbaaebb3dfd3e91f04b0e85067835352390cd0877ce91b9beddd3e50270702201801ac29a31b0b7da9f319350e972dbc740f437d6e7e0df4440ec9a6258b800b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502201a91dbbfbd30779ddb07e1f64923d18f9011fdc1d44a8378731cc681b0b5aa18022100ed8c27c57b7b023f2981b34cbbb54c26861b06aa8c91794ec245e975bff4f7a2:922c64590222798bb761d5b6d8e72950

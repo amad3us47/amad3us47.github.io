@@ -3,19 +3,21 @@ id: azkaban-web-client
 info:
   name: Azkaban Web Client
   author: dhiyaneshDK
-  description: An Azkaban web client panel was discovered.
   severity: info
+  description: An Azkaban web client panel was discovered.
   reference:
     - https://azkaban.github.io/
-    - https://www.shodan.io/search?query=http.title%3A%22Azkaban+Web+Client%22
-  tags: panel,azkaban
   classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cve-id:
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:azkaban_project:azkaban:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    shodan-query: http.title:"Azkaban Web Client"
+    product: azkaban
+    vendor: azkaban_project
+  tags: panel,azkaban,discovery
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'
@@ -25,8 +27,8 @@ requests:
       - type: word
         words:
           - 'Azkaban Web Client'
+
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/20
+# digest: 490a0046304402205408bc33169d7f8edafa9b938932927afbe739e261140f53f37f4e3865db69e202204861ad5e5790631cfb4cc0c4ab9bfe04e180da31a9a4f46e85782b6a1b6dd22e:922c64590222798bb761d5b6d8e72950

@@ -13,7 +13,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: joomla,xss,unauth
+  tags: joomla,xss,unauth,vuln
 
 http:
   - method: GET
@@ -32,5 +32,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100cca2420f9befed720c78ccc259286afc3e34f235d4053c4ba45fe6afa38ef842022100ceac013e9a43f8271ffc2df440ce42b0f954ae0442fa9faeffdbbafdd4e9df4e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210099df7d29c95c6e8a2b4f1543fd6f69becfb817838b0042330065f7f86c47b41602202cca1381089377c21d156ea6350632a4e476ca9552962c480e872f31c21b601f:922c64590222798bb761d5b6d8e72950

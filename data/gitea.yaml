@@ -1,18 +1,21 @@
 id: gitea
 
 info:
-  name: gitea
+  name: Gitea User Name Information - Detect
   author: dwisiswant0
-  description: This OSINT template looks for information about a user name.
   severity: info
+  description: Gitea user name information check was conducted.
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
+    cvss-score: 0
     cwe-id: CWE-200
-  tags: osint,osint-coding,gitea
+  metadata:
+    max-request: 1
+  tags: osint,osint-coding,gitea,discovery
 
 self-contained: true
-requests:
+
+http:
   - method: GET
     path:
       - "https://gitea.com/{{user}}"
@@ -27,3 +30,4 @@ requests:
         part: body
         words:
           - "(Git with a cup of tea)"
+# digest: 4b0a00483046022100fb16ff2867d6bc9b5e5a1c28de2f06523b457497bba331177ddd43fa775df261022100dbc0381798dad545eddc584affe839df0b430730ca15dff7997a6f33d89a5063:922c64590222798bb761d5b6d8e72950

@@ -8,13 +8,19 @@ info:
     Sentry login panel was detected.
   reference:
     - https://sentry.io/
+  classification:
+    cpe: cpe:2.3:a:sentry:sentry:*:*:*:*:*:*:*:*
   metadata:
+    verified: true
+    max-request: 1
     vendor: sentry
     product: sentry
-    verified: true
-    shodan-query: "http.title:\"Login | Sentry\""
-    max-request: 1
-  tags: panel,sentry,login
+    shodan-query:
+      - http.title:"Login | Sentry"
+      - http.title:"login | sentry"
+    fofa-query: title="login | sentry"
+    google-query: intitle:"login | sentry"
+  tags: panel,sentry,login,discovery
 
 http:
   - method: GET
@@ -29,6 +35,7 @@ http:
         dsl:
           - 'status_code == 200'
           - 'contains(body, "/sentry/") && contains(body, "Login")'
+          - 'regex("(?i)<title>[^<]*sentry[^<]*</title>", body)'
         condition: and
 
     extractors:
@@ -37,4 +44,4 @@ http:
         group: 1
         regex:
           - '(?i)"current":\s*"([0-9a-z.-]+)"'
-# digest: 4a0a00473045022100b04d058d31690931f321b078a2ac12a98dbfae03861caadbc878766143783e2902207291a26d57c10aaa7dfedba3b543e898aa150509733c646e144fcd58a5758175:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008bb3c66d6381523b0a0eaa32985566f168985f37f32515ddfe608c80b949139e022100c056685d8756922ca34869f912cdc70e5d507322fd4fe136d4b84ba6eb174330:922c64590222798bb761d5b6d8e72950

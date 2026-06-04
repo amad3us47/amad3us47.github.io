@@ -10,16 +10,18 @@ info:
     - https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html
   metadata:
     verified: true
+    max-request: 1
     shodan-query: http.title:"Coverity"
-  tags: panel,coverity,synopsys
+  tags: panel,coverity,synopsys,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
 
-    redirects: true
+    host-redirects: true
     max-redirects: 1
+
     matchers-condition: and
     matchers:
       - type: word
@@ -30,3 +32,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4b0a00483046022100b392246ae3c6ed4786ed662f41717f50021abbe6aa6b383184401534b1bcac26022100f1dd618738207fb244377f512a6a691b711516d9add31a2059c987a524c96d81:922c64590222798bb761d5b6d8e72950

@@ -1,26 +1,19 @@
 id: hp-media-vault-detect
+
 info:
   name: HP Media Vault Detect
   author: pussycat0x
   severity: info
   metadata:
-    fofa-dork: 'app="HP-Media-Vault-Media-Server"'
-  tags: tech,hp
+    max-request: 1
+    fofa-query: 'app="HP-Media-Vault-Media-Server"'
+  tags: tech,hp,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers-condition: and
     matchers:
       - type: word
@@ -31,3 +24,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 490a00463044022074e7d0b878d9a8f6a1991e3eb598d74e22742b58e5d92300391ae168ef1d5730022010d2a57287ab122a0716ee7ccd71474e152b56b26ec45907ec253094bde07a40:922c64590222798bb761d5b6d8e72950

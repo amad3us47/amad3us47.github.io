@@ -4,17 +4,18 @@ info:
   name: Zmanda Default Login
   author: Techryptic (@Tech)
   severity: high
-  description: "Zmanda default admin credentials admin:admin were discovered."
+  description: Zmanda default admin credentials admin:admin were discovered.
   reference:
     - https://www.zmanda.com
-  tags: zmanda,default-login
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 1
+  tags: zmanda,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /ZMC_Admin_Login HTTP/1.1
@@ -40,5 +41,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/13
+# digest: 4a0a0047304502210083382c1f2d84df9f19bf45a2d51c8da3a2781356eb8a6ce32bc30e1e5c667ffd02204f2c6623c7ad0a35852cf1170362995941b9aa7da0f82ba77674d40394a371e6:922c64590222798bb761d5b6d8e72950

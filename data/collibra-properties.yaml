@@ -2,15 +2,15 @@ id: collibra-properties
 
 info:
   name: Collibra Properties Exposure
-  author: 0xPugazh
+  author: 0xPugal
   severity: high
+  description: Detected exposed Collibra Properties.
   reference:
     - https://twitter.com/shaybt12/status/1662431219223605254
   metadata:
     verified: true
     max-request: 3
-  tags: exposure,config,properties
-
+  tags: exposure,config,collibra-properties,collibra,vuln
 
 http:
   - method: GET
@@ -20,24 +20,25 @@ http:
       - "{{BaseURL}}/src/collibra.properties"
 
     stop-at-first-match: true
+
     matchers-condition: and
     matchers:
-      - type: regex
+      - type: word
         part: body
-        regex:
+        words:
           - 'collibra.url'
           - 'collibra.port'
           - 'collibra.user'
           - 'collibra.password'
         condition: or
-        
+
       - type: word
         part: header
         words:
           - "text/plain"
           - "bytes"
         condition: or
-        
+
       - type: word
         part: header
         words:
@@ -47,3 +48,4 @@ http:
       - type: status
         status:
           - 200
+# digest: 4a0a0047304502207116a2503186a358e31a956a4878c11ed6915eb94ba79375268ad504dcea691b0221009414fd767ff58a307a8874922887685e030534394565f19d9c0b551570aa93c6:922c64590222798bb761d5b6d8e72950

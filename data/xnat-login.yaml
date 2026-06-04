@@ -7,14 +7,17 @@ info:
   description: XNAT login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:xnat:xnat:*:*:*:*:*:*:*:*
   metadata:
     verified: true
+    max-request: 1
     shodan-query: title:"xnat"
-  tags: xnat,panel
+    product: xnat
+    vendor: xnat
+  tags: xnat,panel,discovery
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/app/template/Login.vm'
@@ -33,5 +36,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by md on 2023/01/26
+# digest: 490a004630440220069766d176d2bbd7f7f16a786f72b029c52da4bcdfe67ba2a0218df90cdda07202204c5b8d5ced921a0b8e4fb810e9dbaeed3d5ab0b781d3dc3aafab73ef5901edec:922c64590222798bb761d5b6d8e72950

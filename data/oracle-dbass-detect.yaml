@@ -1,24 +1,18 @@
 id: oracle-dbass-detect
+
 info:
   name: Oracle DBaaS Monitor Detect
   author: pussycat0x
   severity: info
-  tags: oracle,tech
+  metadata:
+    max-request: 1
+  tags: oracle,tech,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}/dbaas_monitor/login'
 
-    raw:
-      - |
-        GET /dbaas_monitor/login HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers-condition: and
     matchers:
       - type: word
@@ -28,3 +22,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 490a00463044022052a835f710da32e3a0c3108d67e517166ece6e01bdc0197c02d3638fbcab053c02204a80b98f1d8ecbb11dd0d90496eaf3b28ac39573037c2ab27c24e903e8c7b317:922c64590222798bb761d5b6d8e72950

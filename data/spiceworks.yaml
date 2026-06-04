@@ -11,7 +11,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: osint,osint-tech,spiceworks
+  tags: osint,osint-tech,spiceworks,discovery
 
 self-contained: true
 
@@ -30,5 +30,4 @@ http:
         part: body
         words:
           - "Portfolio of IT Projects - Spiceworks"
-
-# digest: 490a004630440220247965c050a231e419b56f27f868837f8ccc8a9b24fb7510467f65ab5e7412860220701b6cfab4efd7a78c170d9d37b5e48a5ec91561bc107a4870af5d42c901c47b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203b87acd455b292399a479deef0008ff7289d3172df13327ca4b35d17069b3b52022100e239b084cd316f4ca72e8480cb60e8be3a07185dc3b97ba08f57286da4428b34:922c64590222798bb761d5b6d8e72950

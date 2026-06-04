@@ -3,19 +3,21 @@ id: sicom-mgrng-login
 info:
   name: Sicom MGRNG - Administrative Login Found
   author: sullo
-  severity: low
+  severity: info
   description: |
     Sicom MGRNG administrative login page found.
   classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
-    cvss-score: 3.7
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cwe-id: CWE-668
-  tags: sicom,mgrng,panel
+  metadata:
+    max-request: 1
+  tags: sicom,mgrng,panel,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/~sicom/mgrng/LoginForm.php"
+
     matchers-condition: and
     matchers:
       - type: status
@@ -26,5 +28,4 @@ requests:
         part: body
         words:
           - '<title>MGRNG Login</title>'
-
-# Enhanced by cs on 2022/07/22
+# digest: 490a004630440220509d5ddbcf3379df5cf25328a476c7ed4aae576499d98994ff6dd6ee8e36cfc802204cf83a83d20cb5418c86f698d57881b9814bae9ced71d1c70d2359a17ab94991:922c64590222798bb761d5b6d8e72950

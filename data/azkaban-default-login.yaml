@@ -5,13 +5,17 @@ info:
   author: pussycat0x
   severity: high
   description: Azkaban is a batch workflow job scheduler created at LinkedIn to run Hadoop jobs.  Default web client credentials were discovered.
-  reference:
-    - https://www.shodan.io/search?query=http.title%3A%22Azkaban+Web+Client%22
-  tags: default-login,azkaban
   classification:
     cwe-id: CWE-798
+    cpe: cpe:2.3:a:azkaban_project:azkaban:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    shodan-query: http.title:"Azkaban Web Client"
+    product: azkaban
+    vendor: azkaban_project
+  tags: default-login,azkaban,vuln
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1
@@ -26,6 +30,7 @@ requests:
       password:
         - admin
     attack: pitchfork
+
     matchers-condition: and
     matchers:
       - type: word
@@ -49,5 +54,4 @@ requests:
       - type: kval
         kval:
           - azkaban.browser.session.id
-
-# Enhanced by mp on 2022/03/03
+# digest: 4a0a00473045022100ff9729c80dfbd89838f95543a2e8ec4ae82980ad52f54126bf3d0b537007d5cf022053f35537e0112a08e555a5769e781e666fc3a47038e1b25082ba854d9ffaf027:922c64590222798bb761d5b6d8e72950

@@ -7,10 +7,12 @@ info:
   reference:
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/gitter-access-token.yaml
     - https://github.com/returntocorp/semgrep-rules/blob/develop/generic/secrets/gitleaks/gitter-access-token.go
+  classification:
+    cwe-id: CWE-540
   metadata:
     verified: true
     max-request: 1
-  tags: gitter,file,keys
+  tags: exposure,gitter,file,keys,vuln
 
 http:
   - method: GET
@@ -22,5 +24,4 @@ http:
         part: body
         regex:
           - (?i)(?:gitter)(?:[0-9a-z\-_\t .]{0,20})(?:[\s|']|[\s|"]){0,3}(?:=|>|:=|\|\|:|<=|=>|:)(?:'|\"|\s|=|\x60){0,5}([a-z0-9_-]{40})(?:['|\"|\n|\r|\s|\x60|;]|$)
-
-# digest: 4a0a0047304502201f5ab7c36f51f925c791da04e38e5e91e46565cca10f35c67be9325db7acdf56022100c46a42dd6a9c599ad1ff966c987183a753ae250db0eecb4c1d511a7be1b8bb5c:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502206bc0519d6b235957af7111727a5bc89d95c21a0b230a4cc949348d71fb2e49d5022100d0a1a102e8c0f2734abd02f1ac5b5d18c907eec69a75acf23ba616d4abcd0465:922c64590222798bb761d5b6d8e72950

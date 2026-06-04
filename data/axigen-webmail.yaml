@@ -7,16 +7,17 @@ info:
   description: An Axigen webmail panel was discovered.
   reference:
     - https://www.axigen.com/
-  metadata:
-    shodan-query: 'http.title:"Axigen WebMail"'
-  tags: axigen,panel
   classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cve-id:
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:axigen:axigen_mail_server:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    shodan-query: http.title:"Axigen WebMail"
+    product: axigen_mail_server
+    vendor: axigen
+  tags: axigen,panel,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -39,5 +40,4 @@ requests:
         part: body
         regex:
           - '<script type="text\/javascript" src="js\/lib_login\.js\?v=(.+)"><\/script>'
-
-# Enhanced by mp on 2022/03/20
+# digest: 4b0a00483046022100dde822a6eacad6121ec14b8f960d6e7c9684578f1b18d06a3eefe9ec3af725a3022100e0840a04592dcd23df358a4e4a4a5942fdb9773de320ca4a54fb0437914ff058:922c64590222798bb761d5b6d8e72950

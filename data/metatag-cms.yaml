@@ -5,16 +5,20 @@ info:
   author: dadevel
   severity: info
   description: Generic CMS Detection using html meta generator tag
-  reference: https://www.w3schools.com/tags/att_meta_name.asp
-  tags: tech,cms
+  reference:
+    - https://www.w3schools.com/tags/att_meta_name.asp
+  metadata:
+    max-request: 1
+  tags: tech,cms,discovery
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
 
-    redirects: true
+    host-redirects: true
     max-redirects: 2
+
     matchers-condition: and
     matchers:
       - type: word
@@ -33,3 +37,4 @@ requests:
         group: 1
         regex:
           - '(?i)<meta\s+?name="?generator"?\s+?content="([^"]+?)"'
+# digest: 4b0a00483046022100dc38cda71df062b8291886f2ce0ca38d71b52d1a9722800687aee6baa4bfddbd022100b91197a3878ef432197f2724a385203dd3c69e75920428e7a293927865dd6375:922c64590222798bb761d5b6d8e72950

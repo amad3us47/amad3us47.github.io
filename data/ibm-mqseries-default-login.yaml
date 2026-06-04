@@ -5,17 +5,18 @@ info:
   author: righettod
   severity: high
   description: IBM MQ and REST API default admin credentials were discovered. An unauthenticated, remote attacker can exploit this gain privileged or administrator access to the system.
-  tags: ibm,default-login
   reference:
     - https://github.com/ibm-messaging/mq-container/blob/master/etc/mqm/mq.htpasswd
     - https://vulners.com/nessus/IBM_MQ_DEFAULT_CREDENTIALS.NASL
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
-    cve-id:
     cwe-id: CWE-522
+  metadata:
+    max-request: 3
+  tags: ibm,default-login,vuln
 
-requests:
+http:
   - raw:
       - |
         POST /ibmmq/console/j_security_check HTTP/1.1
@@ -47,5 +48,4 @@ requests:
       - type: status
         status:
           - 302
-
-# Enhanced by mp on 2022/03/10
+# digest: 4a0a004730450221009ee6726fdf0ed109eeeb4520c75bf255c14e1ea6254b278afec0635c7f498d0602207b1d6aaed810a78ab5a6659a4bfea253f71245431d6911c4984417becbfa0b25:922c64590222798bb761d5b6d8e72950

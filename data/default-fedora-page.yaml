@@ -4,25 +4,23 @@ info:
   name: Fedora Default Test Page
   author: dhiyaneshDk
   severity: info
-  tags: tech,fedora
-  reference: https://www.shodan.io/search?query=http.title%3A%22Test+Page+for+the+HTTP+Server+on+Fedora%22
+  classification:
+    cpe: cpe:2.3:o:fedoraproject:fedora:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: fedoraproject
+    product: fedora
+    shodan-query: http.title:"Test Page for the HTTP Server on Fedora"
+  tags: tech,fedora,discovery
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}'
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers:
       - type: word
         words:
           - '<title>Test Page for the HTTP Server on Fedora</title>'
         part: body
+# digest: 4a0a0047304502207bca56a6da3c90647a4c21154cd9f71bfbba2b3a098c998b95e5c9d320953ca702210097b0f5fbc6c2b180782c24db033883a5cbcb4fedb15af7a9e2df8c4807ab7b35:922c64590222798bb761d5b6d8e72950

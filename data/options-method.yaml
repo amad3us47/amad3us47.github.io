@@ -4,9 +4,11 @@ info:
   name: Allowed Options Method
   author: pdteam
   severity: info
-  tags: misc,generic
+  metadata:
+    max-request: 1
+  tags: miscellaneous,misc,generic,vuln
 
-requests:
+http:
   - method: OPTIONS
     path:
       - "{{BaseURL}}"
@@ -17,3 +19,4 @@ requests:
         group: 1
         regex:
           - "Allow: ([A-Z, ]+)"
+# digest: 4b0a00483046022100e440ce368f5a62fa7e62df661f9aef57c1c61c66987ccc6af3bfd0afbeaac059022100e017390245a18212415e09bf1435d1483bb404ee4102551af34e343658e1368f:922c64590222798bb761d5b6d8e72950
