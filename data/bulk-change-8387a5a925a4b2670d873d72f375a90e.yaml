@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bulk-change-8387a5a925a4b2670d873d72f375a90e
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: manageengine-apex-helpdesk
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"APEX IT Help Desk"
   tags: panel,zoho,manageengine
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/jsp/index.jsp'

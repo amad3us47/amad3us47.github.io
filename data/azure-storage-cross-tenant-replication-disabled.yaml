@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-storage-cross-tenant-replication-disabled
 info:
   name: Azure Storage Cross-Tenant Replication Disabled

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tomcat-found
 info:
   name: Tomcat_found
@@ -7,7 +8,7 @@ info:
   reference:
     - https://
   tags: tags
-requests:
+http:
   - raw:
       - |+
         GET /manager/html HTTP/1.1

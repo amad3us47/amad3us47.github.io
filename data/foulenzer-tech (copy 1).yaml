@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: foulenzer-tech
 info:
   name: WebApp tech detection
   author: hakluke (edited by @foulenzer)
   severity: info
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"
@@ -59,14 +60,14 @@ requests:
           - <link[^>]+s\d+\.wp\.com
         condition: or
         part: body
-   
+
       - type: regex
         name: drupal-commerce
         regex:
           - <[^>]+(?:id="block[_-]commerce[_-]cart[_-]cart|class="commerce[_-]product[_-]field)
         condition: or
         part: body
- 
+
       - type: regex
         name: gitlab
         regex:
@@ -154,5 +155,3 @@ requests:
         words:
           - "X-Jenkins"
         part: header
-
-  

@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mongodb-workflow
 
 info:
   name: MongoDb Security Checks
   author: pussycat0x
+  severity: info
   description: A simple workflow that runs all MongoDB related nuclei templates on a given target.
 workflows:
   - template: network/detection/mongodb-detect.yaml

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mautic-crm-detect
 info:
   name: mautic crm detect
@@ -7,7 +8,7 @@ info:
   tags: tech,mautic,crm
   references:
     - https://github.com/mautic/mautic
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/s/login"

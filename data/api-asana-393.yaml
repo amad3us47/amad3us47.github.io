@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-asana
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,asana
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://app.asana.com/api/1.0/users/me"

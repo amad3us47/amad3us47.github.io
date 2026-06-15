@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-video-lightbox-efc2145674513560b8de15c6b17bc00e
 
 info:

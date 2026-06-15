@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: shariff-sharing-de6442c0c190abecd0732e4f86bf82eb
 
 info:

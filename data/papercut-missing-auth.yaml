@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: papercut-missing-auth
 info:
   id: papercut-missing-auth
   name: Open PaperCut MF/NG without Authentication - Detect
   author: OpenAI
   description: Template to detect open PaperCut MF/NG instances without authentication
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

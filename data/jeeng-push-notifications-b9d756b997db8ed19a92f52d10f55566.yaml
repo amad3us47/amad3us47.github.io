@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jeeng-push-notifications-b9d756b997db8ed19a92f52d10f55566
 
 info:

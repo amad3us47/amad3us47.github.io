@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aspose-doc-exporter-f081545c6a350c83b719b6d6452ded1d
 
 info:

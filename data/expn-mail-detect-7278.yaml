@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: expn-mail-detect
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: mail,expn,network
 
-network:
+tcp:
   - inputs:
       - data: "65686c6f20636865636b746c730a"
         type: hex

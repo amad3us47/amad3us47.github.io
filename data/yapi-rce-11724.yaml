@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yapi-rce
 info:
   name: Yapi Remote Code Execution
@@ -9,7 +10,7 @@ info:
     - https://gist.github.com/pikpikcu/0145fb71203c8a3ad5c67b8aab47165b
     - https://twitter.com/sec715/status/1415484190561161216
     - https://github.com/YMFE/yapi
-requests:
+http:
   - raw:
       - | # REQUEST 1
         POST /api/user/reg HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2022-03672
 info:
   name: Sunflower Simple and Personal - Remote Code Execution
@@ -14,7 +15,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: cnvd,cnvd2020,sunflower,rce
-requests:
+http:
   - raw:
       - |
         POST /cgi-bin/rpc HTTP/1.1

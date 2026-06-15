@@ -1,16 +1,17 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: git-folder
-info: 
+info:
   author: Me
   name: "Git Folder Exposure"
   severity: medium
-requests: 
-  - matchers: 
-      - status: 
+http:
+  - matchers:
+      - status:
           - 200
         type: status
       - part: body
         type: word
-        words: 
+        words:
           - root
           - commint
           - git
@@ -19,7 +20,7 @@ requests:
           - gitignore
     matchers-condition: and
     method: GET
-    path: 
+    path:
       - "{{BaseURL}}/.git/branches/"
       - "{{BaseURL}}/.git/COMMIT_EDITMSG"
       - "{{BaseURL}}/.git/config"

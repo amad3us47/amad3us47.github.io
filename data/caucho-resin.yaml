@@ -1,15 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: caucho-resin
 name: caucho-resin
-priority: 3
-nuclei_tags:
-  - - caucho
-    - resin
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 0
-    headers:
-      Server: Resin
-    keyword: []
-    favicon_hash: []

@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-nw-abap
 
 info:
   name: Workflow related to SAP NetWeaver ABAP
   author: randomstr1ng
+  severity: info
   description: A simple workflow that runs all checks related to SAP NetWeaver ABAP.
   tags: workflow
 

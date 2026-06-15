@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: health-check-lfi
 
 info:
@@ -15,7 +16,7 @@ info:
     cwe-id: CWE-22
   tags: lfi,wp,wordpress,wp-plugin,authenticated,lfr
 
-requests:
+http:
   - raw:
       - |
         POST /wp-login.php HTTP/1.1

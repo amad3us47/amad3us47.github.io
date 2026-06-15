@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: amazon-mws-auth-token-detect
 info:
   id: amazon-mws-auth-token-detect
   name: Amazon MWS Auth Token - Detect
   author: OpenAI
   description: Template to detect Amazon MWS (Marketplace Web Service) Auth Tokens
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:

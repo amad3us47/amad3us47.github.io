@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-js-external-link-info-dab1c7e25c5e1a2666afddd447dcd7b0
 
 info:

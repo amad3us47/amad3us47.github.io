@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: daily-inspiration-generator-159cbd55b2dfe69bf8e2a38c8a2ebfde
 
 info:

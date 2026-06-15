@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: agritourismo-theme-ac2f34c1fdd77ca924ca49575a7c95c0
 
 info:

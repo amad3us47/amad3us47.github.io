@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: server-status-localhost
 info:
   name: Server Status Disclosure
   author: bauthard
   severity: low
-requests:
+http:
   - method: GET
     # Example of sending some headers to the servers
     headers:

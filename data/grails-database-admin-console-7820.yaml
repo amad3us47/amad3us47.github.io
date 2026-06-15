@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: grails-database-admin-console
 info:
   name: Grails database admin console
@@ -6,7 +7,7 @@ info:
   reference:
     - https://www.acunetix.com/vulnerabilities/web/grails-database-console/
   tags: grails,panel
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/dbconsole/'
@@ -19,4 +20,3 @@ requests:
       - type: word
         words:
           - "Sorry, remote connections ('webAllowOthers') are disabled on this server"
-        negative: true

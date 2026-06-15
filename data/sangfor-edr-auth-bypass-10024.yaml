@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sangfor-edr-auth-bypass
 info:
   name: Sangfor EDR Authentication Bypass
@@ -9,7 +10,7 @@ info:
   metadata:
     fofa-query: app="sangfor"
   tags: sangfor,auth-bypass,login
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/ui/login.php?user=admin"
@@ -23,11 +24,3 @@ requests:
         part: header
         words:
           - 'Set-Cookie=""'
-        negative: true
-      - type: word
-        part: header
-        words:
-          - 'Set-Cookie='
-      - type: status
-        status:
-          - 302

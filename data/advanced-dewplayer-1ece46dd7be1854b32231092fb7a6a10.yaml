@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: advanced-dewplayer-1ece46dd7be1854b32231092fb7a6a10
 
 info:

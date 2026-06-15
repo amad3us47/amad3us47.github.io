@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: joomla-manifest-file
 info:
   name: Joomla manifest file disclosure
@@ -5,7 +6,7 @@ info:
   severity: info
   description: joomla.xml is a xml file which stores some informations about installed Joomla, like version, files and paths.
   tags: misc
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/administrator/manifests/files/joomla.xml"

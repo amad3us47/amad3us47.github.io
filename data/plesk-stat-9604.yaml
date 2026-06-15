@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: plesk-stat
 info:
   name: Plesk-stat (Log analyzer)
@@ -5,7 +6,7 @@ info:
   severity: low
   tags: config,exposure,plesk
   reference: http://www.webalizer.org
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/plesk-stat/"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ruijie-networks-lfi
 info:
   name: Ruijie Networks Switch eWeb S29_RGOS 11.4 LFI
@@ -5,10 +6,10 @@ info:
   severity: high
   reference: https://exploit-db.com/exploits/48755
   tags: ruijie,lfi
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

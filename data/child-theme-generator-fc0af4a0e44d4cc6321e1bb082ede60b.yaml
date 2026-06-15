@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: child-theme-generator-fc0af4a0e44d4cc6321e1bb082ede60b
 
 info:

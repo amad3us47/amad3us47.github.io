@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: idor-vuln-params
 
 info:
-  name: detect possible idor parameters 
+  name: detect possible idor parameters
   author: ayadim
   severity: info
   tags: file,bbh,bbh-idor,bbh-check1

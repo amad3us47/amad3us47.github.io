@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: magento-admin-panel
 info:
   name: Exposed Magento Admin Panel
@@ -7,7 +8,7 @@ info:
   reference:
     - https://docs.magento.com/user-guide/stores/store-urls-custom-admin.html
   tags: magento,panel
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/admin'

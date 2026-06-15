@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cloud-storage-misconfig
 info:
   name: Security Misconfigurations in Cloud Storage
+  author: unknown
   severity: medium
   description: Detects potential misconfigurations in cloud storage settings on the target
 author: qaisar
 tags:
   - cloud
   - security
-requests:
+http:
 - method: GET
   path:
     - "/storage"

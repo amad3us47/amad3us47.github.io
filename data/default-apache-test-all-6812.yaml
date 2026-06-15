@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: default-apache-test-all
 
 info:
@@ -9,10 +10,10 @@ info:
   metadata:
     shodan-query: http.title:"Apache+Default","Apache+HTTP+Server+Test","Apache2+It+works"
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

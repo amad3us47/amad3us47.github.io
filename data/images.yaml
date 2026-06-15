@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: extract-images-links
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Extract Images links from web page body
   tags: osint,juicy-info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -24,4 +25,4 @@ requests:
           - '(?:https?|ftp)://\S+\.(png|jpg|jpeg|bmp|tiff)'
 
 
-#url for testhttps://www.luxembourg-city.com/en/things-to-do/sights/museums?gclid=CjwKCAiAmJGgBhAZEiwA1JZoluBJdgHKvXv5oCSZRsI8Gnse7rX_pWk-yqD5d7ca8-9Z8rij1ledfhoCm5EQAvD_BwE 
+#url for testhttps://www.luxembourg-city.com/en/things-to-do/sights/museums?gclid=CjwKCAiAmJGgBhAZEiwA1JZoluBJdgHKvXv5oCSZRsI8Gnse7rX_pWk-yqD5d7ca8-9Z8rij1ledfhoCm5EQAvD_BwE

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cheatset-disclosure
 
 info:
@@ -7,7 +8,7 @@ info:
   description: This Template checks disclosing secret information via /cheatset
   tags: config, secrets, leaks, cheatset, tokens, sql, tokens
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/cheatset'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cloudwatch-events-not-used
 info:
   name: AWS CloudWatch Events Not Used
@@ -16,7 +17,7 @@ variables:
   service: events
   region: us-east-1
 
-requests:
+http:
   - raw:
       - |
         POST https://{{service}}.{{region}}.amazonaws.com/ HTTP/1.1

@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: google-api-keys
 info:
   id: google-api-keys
   name: Google Maps API Key
   author: Fábio Castro
   description: List of regex patterns for Google Maps API Keys.
-  severity: Info
+  severity: info
   classification:
     tags:
       - google
@@ -12,7 +14,7 @@ info:
 
   matcher-condition: or
 
-  
+
   requests:
       method: GET
       path:
@@ -25,5 +27,5 @@ info:
       type: body
       description: "Matches Google Maps API Key in request bodies"
   response:
-    - status: 
+    - status:
       - 200

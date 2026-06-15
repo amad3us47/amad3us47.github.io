@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xerox-phaser-7500dt-webserver
 
 info:
-  name: Xerox Phaser 7500DT Web Server 
+  name: Xerox Phaser 7500DT Web Server
   author: alexrydzak
   severity: info
   tags: hp,web,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/home.html"

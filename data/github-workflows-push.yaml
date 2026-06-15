@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: github-workflows-push
 info:
   name: Detect GitHub Actions Workflow Sensitive Information Exposure
@@ -9,7 +10,7 @@ info:
     - sensitive-information
     - GitHub-actions
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/.github/workflows/push.yml'
@@ -24,4 +25,3 @@ requests:
           - 'PostgreSQL'
           - 'on: push'
           - 'GITHUB_TOKEN'
-          

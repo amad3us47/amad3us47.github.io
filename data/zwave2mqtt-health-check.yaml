@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zwave2mqtt-health-check
 
 info:
@@ -7,7 +8,7 @@ info:
   author: geeknik
   severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/health/mqtt"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: office365-open-redirect
 info:
   name: Office365 Open Redirect From Autodiscover
@@ -5,10 +6,10 @@ info:
   severity: low
   reference: https://medium.com/@heinjame/office365-open-redirect-from-autodiscover-64284d26c168
   tags: redirect,office365,microsoft
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

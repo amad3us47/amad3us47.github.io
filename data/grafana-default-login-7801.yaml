@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: grafana-default-login
 info:
   name: Grafana Default Login
@@ -14,7 +15,7 @@ info:
     cvss-score: 8.3
     cve-id:
     cwe-id: CWE-522
-requests:
+http:
   - raw:
       - |
         POST /login HTTP/1.1

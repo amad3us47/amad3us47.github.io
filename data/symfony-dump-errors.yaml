@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: symfony-dump-errors
 info:
   id: symfony-dump-errors
   name: Symfony Debugging Errors
   author: Fabio Castro
   description: List of common regular expression patterns to detect debugging errors in HTTP request bodies.
-  severity: High
+  severity: high
   classification:
     tags:
       - debug
@@ -29,7 +31,7 @@ info:
     - pattern: "(var_dump|print_r)"
       type: body
       description: "Matches PHP dump functions in request bodies."
-      
+
   response:
-    - status: 
+    - status:
       - 200

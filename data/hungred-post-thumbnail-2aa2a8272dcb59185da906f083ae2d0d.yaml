@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hungred-post-thumbnail-2aa2a8272dcb59185da906f083ae2d0d
 
 info:

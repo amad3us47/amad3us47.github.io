@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: openemr-default-login
 info:
   name: OpenEMR - Default Admin Discovery
@@ -14,7 +15,7 @@ info:
     fofa-query: app="OpenEMR"
     shodan-query: http.html:"OpenEMR"
   tags: openemr,default-login
-requests:
+http:
   - raw:
       - |
         POST /interface/main/main_screen.php?auth=login&site=default HTTP/1.1

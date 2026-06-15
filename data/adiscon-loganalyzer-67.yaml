@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: adiscon-loganalyzer
 
 info:
@@ -14,7 +15,7 @@ info:
     cve-id:
     cwe-id: CWE-200
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

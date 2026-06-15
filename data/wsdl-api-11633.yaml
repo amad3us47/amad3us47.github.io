@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wsdl-api
 info:
   name: wsdl-detect
@@ -5,10 +6,10 @@ info:
   severity: info
   tags: exposure,api
   description: Detects web services that have WSDL (https://www.w3.org/TR/wsdl/)
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

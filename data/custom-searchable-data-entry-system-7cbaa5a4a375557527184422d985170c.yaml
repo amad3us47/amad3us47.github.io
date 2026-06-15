@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: custom-searchable-data-entry-system-7cbaa5a4a375557527184422d985170c
 
 info:

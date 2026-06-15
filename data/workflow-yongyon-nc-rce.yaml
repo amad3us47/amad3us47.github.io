@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yongyou-nc-beanshell-rce
 info:
   name: Yongyou Nc Beanshell Rce
@@ -6,5 +7,5 @@ info:
 
 workflows:
   - template: yongyou-nc-beanshell-detect.yaml
-    subtemplates: 
+    subtemplates:
       - template: yongyou-nc-beanshell-rce.yaml

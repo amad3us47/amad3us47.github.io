@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: all-404-redirect-to-homepage-3b94983ed2f71b4298d8797d3d7d15ab
 
 info:

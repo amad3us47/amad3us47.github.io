@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woocommerce-abandoned-cart-7188a88dd1c187a0b6e30d598b522c73
 
 info:

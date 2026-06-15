@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tracked-tweets-bf9659f33404212d6fe1e85c70f3c1a6
 
 info:

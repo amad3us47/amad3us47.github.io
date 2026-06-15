@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: myfactory-fms-xss
 info:
   id: myfactory-fms-xss
   name: MyFactory FMS Cross-Site Scripting (XSS) - Detect
   author: OpenAI
   description: Template to detect Cross-Site Scripting (XSS) vulnerabilities in MyFactory FMS
-  severity: Medium
+  severity: medium
 
   reference:
     - https://www.example.com/vulnerability-reference

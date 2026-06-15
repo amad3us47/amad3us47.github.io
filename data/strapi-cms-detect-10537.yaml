@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: strapi-cms-detect
 info:
   name: strapi CMS detect
@@ -7,7 +8,7 @@ info:
   tags: tech,strapi,cms
   references:
     - https://github.com/strapi/strapi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/admin/auth/login"

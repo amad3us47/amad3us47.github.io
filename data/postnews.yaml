@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: postnews
 
 info:
@@ -12,7 +13,7 @@ info:
   tags: osint,osint-social,postnews
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://post.news/@/{{user}}"
@@ -23,9 +24,5 @@ requests:
         part: body
         words:
           - "Profile Not Found"
-        negative: true
 
-      - type: status
-        status:
-          - 200
 # Enhanced by cs 03/17/2023

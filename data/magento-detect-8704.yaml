@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: magento-detect
 info:
   name: Magento Detect
@@ -5,7 +6,7 @@ info:
   severity: info
   description: Identify Magento
   tags: magento
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

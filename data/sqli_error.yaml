@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: SQLI-ERROR
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   description: sqli-error
 
-requests:
+http:
 
   - raw:
       - |
@@ -14,30 +15,30 @@ requests:
         Host: {{Hostname}}
         User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
         §header§: §sqli§
-   
+
       - |
         POST /§sqli§ HTTP/1.1
         Host: {{Hostname}}
         User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
         §header§: §sqli§
         Content-Type: application/x-www-form-urlencoded
- 
+
       - |
         PUT /§sqli§ HTTP/1.1
         Host: {{Hostname}}
         User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
         §header§: §sqli§
         Content-Type: application/x-www-form-urlencoded
-      
+
     payloads:
       header: helpers/payloads/request-headers.txt
       sqli: helpers/payloads/sqli.txt
-    
+
     attack: clusterbomb
     redirects: true
-    
+
     matchers-condition: and
-    matchers: 
+    matchers:
       - type: regex
         regex:
           # MySQL

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ms-sql-detect
 
 info:
@@ -8,7 +9,7 @@ info:
     ms sql detection template
   metadata:
     shodan-query: "port:1433"
-  
+
 javascript:
   - code: |
       var m = require("nuclei/mssql");

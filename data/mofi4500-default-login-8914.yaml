@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mofi4500-default-login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   tags: mofi,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /cgi-bin/luci/ HTTP/1.1

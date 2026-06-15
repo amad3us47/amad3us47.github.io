@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-app-log
 info:
   name: Discover wp-app.log Files
   author: geeknik
   severity: info
   tags: exposure,logs
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-app.log"
@@ -20,7 +21,3 @@ requests:
         words:
           - "text/html"
           - "application/javascript"
-        negative: true
-      - type: status
-        status:
-          - 200

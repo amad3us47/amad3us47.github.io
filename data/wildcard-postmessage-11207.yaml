@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wildcard-postmessage
 info:
   name: Wildcard postMessage detection
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://jlajara.gitlab.io/web/2020/06/12/Dom_XSS_PostMessage.html
   tags: xss,postmessage
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

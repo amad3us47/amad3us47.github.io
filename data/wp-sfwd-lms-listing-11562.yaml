@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-sfwd-lms-listing
 info:
   name: WordPress Plugin Sfwd-lms Listing
@@ -6,7 +7,7 @@ info:
   description: Searches for sensitive directories present in the wordpress-plugins plugin.
   reference: https://www.exploit-db.com/ghdb/6426
   tags: wordpress,listing
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/sfwd-lms/"

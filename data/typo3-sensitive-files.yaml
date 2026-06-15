@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: typo3-sensitive-files
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://docs.typo3.org/m/typo3/guide-installation/master/en-us/In-depth/SystemRequirements/Index.html#nginx
   tags: typo3,sensitive,files
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/typo3/sysext/install/composer.json'
@@ -23,4 +24,3 @@ requests:
         part: header
         words:
           - 200
-          

@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: heartbleed-openssl
 info:
   name: Heartbleed OpenSSL Vulnerability
+  author: unknown
   severity: high
   description: Detects potential Heartbleed OpenSSL vulnerabilities in the target
 author: YourName
 tags:
   - web
   - openssl
-requests:
+http:
 - method: GET
   path:
     - "/heartbeat"

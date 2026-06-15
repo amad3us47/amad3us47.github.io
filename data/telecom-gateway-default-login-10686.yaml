@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: telecom-gateway-default-login
 info:
   name: Telecom Gateway Default Login
   author: ritikchaddha
   severity: high
   tags: telecom,default-login,gateway
-requests:
+http:
   - raw:
       - |
         POST /manager/login.php HTTP/1.1

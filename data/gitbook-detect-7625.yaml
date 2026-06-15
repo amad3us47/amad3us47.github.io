@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitbook-detect
 info:
   name: gitbook-detect
@@ -8,7 +9,7 @@ info:
     fofa: app="Introduction-GitBook"
   tags: gitbook,tech
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -18,5 +19,5 @@ requests:
         part: body
         regex:
           - "<title>.*[Gg]it[bB]ook</title>"
-          - "<title>.*· [Gg]it[bB]ook.*</title>"
+          - "<title>.*ï¿½ [Gg]it[bB]ook.*</title>"
         condition: or

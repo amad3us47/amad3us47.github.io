@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: M1Server-rce
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   tags: M1Server
 
-requests:
+http:
   - raw:
       - |
         POST /esn_mobile_pns/service/userTokenService HTTP/1.1

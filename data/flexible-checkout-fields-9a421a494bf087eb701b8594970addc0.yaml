@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: flexible-checkout-fields-9a421a494bf087eb701b8594970addc0
 
 info:

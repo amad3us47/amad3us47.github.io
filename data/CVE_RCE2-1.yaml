@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CVE_RCE2-1
 info:
   name: CVE_RCE2
   author: 0x240x23elu
   severity: high
-requests:
+http:
   - payloads:
       dirt: /mnt/d/tools/alltest/myopen/payload/PayloadsAllTheThings/DirectoryTraversal/Intruder/traversals-8-deep-exotic-encoding.txt
     attack: sniper # Available options: sniper, pitchfork and clusterbomb

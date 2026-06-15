@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vsftpd-detection
 
 info:
@@ -14,7 +15,7 @@ info:
   remediation: This backdoor was removed on July 3rd, 2011.
   tags: network,vsftpd,ftp,backdoor
 
-network:
+tcp:
   - inputs:
       - data: "USER anonymous\r\nPASS anonymous\r\n"
 

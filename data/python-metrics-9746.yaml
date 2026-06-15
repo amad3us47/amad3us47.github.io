@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: python-metrics
 info:
   name: Detect Python Exposed Metrics
@@ -8,10 +9,10 @@ info:
   reference:
     - https://www.shodan.io/search?query=html%3A%22python_gc_objects_collected_total%22
     - https://gist.github.com/ruanbekker/e5b1e7895f62b020ff29b5f40767190c
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

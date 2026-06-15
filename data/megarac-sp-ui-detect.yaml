@@ -1,16 +1,17 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: megarac-sp-ui-detect
 
 info:
-  name: Tyan/AMI Megarac SP Web UI Detection 
+  name: Tyan/AMI Megarac SP Web UI Detection
   description: Tyan/AMI Megarac SP Web UI Detection
   author: c-sh0
   severity: info
   metadata:
-    shodan-query: 
+    shodan-query:
       - http.title:"Megarac SP"
   tags: panel,tyan,ami
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

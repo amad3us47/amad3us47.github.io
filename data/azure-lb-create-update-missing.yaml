@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-lb-create-update-missing
 info:
   name: Azure Load Balancer Create or Update Alert Not Configured
@@ -50,10 +51,5 @@ code:
       - type: word
         words:
           - "Microsoft.Network/loadBalancers/write"
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - 'ids + " does not have correct Create or Update Load Balancer alert configured"'
 # digest: 4a0a004730450220202edf54205ae7f469993ba247fabb0860c5e009b4a057dc7dbc696355c2b8d6022100e1e561b98dbe6f1a23609ba8722b59fbb2023835ce506be4125836b77301f832:922c64590222798bb761d5b6d8e72950

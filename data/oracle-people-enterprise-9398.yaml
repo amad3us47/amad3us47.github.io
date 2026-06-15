@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-people-enterprise
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.shodan.io/search?query=http.title%3A%22Oracle+Peoplesoft+Enterprise%22
   tags: oracle,login,panel
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

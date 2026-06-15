@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Url-Redirection-Catcher
 
 info:
@@ -5,32 +6,8 @@ info:
   author: SirBugs
   severity: low
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
     payloads:
-      redirect:
-        - "bing.com"
-        - "http://bing.com"
-        - "https://bing.com"
-        - "http://bing.com/%2F"
-        - "https://bing.com/%2F"
-        - "https://bing.com////"
-    fuzzing:
-      - part: query
-        type: replace
-        mode: single
-        fuzz:
-        - "{{redirect}}"
-    matchers-condition: and
-    matchers:
-      - type: word
-        part: header
-        words:
-          - "Location: {{redirect}}"
-      - type: status
-        status:
-          - 301
-          - 302
-          - 307

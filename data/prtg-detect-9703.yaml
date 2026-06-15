@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: prtg-detect
 info:
   name: Detect PRTG
@@ -5,7 +6,7 @@ info:
   description: Monitor all the systems, devices, traffic, and applications in your IT infrastructure -- https://www.paessler.com/prtg
   severity: info
   tags: tech,prtg
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.htm"

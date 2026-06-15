@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: photoblocks-grid-gallery-182b84934cc30246ba214c9a1868be55
 
 info:

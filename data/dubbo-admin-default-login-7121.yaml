@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dubbo-admin-default-login
 info:
   name: Dubbo Admin Default Login
@@ -6,7 +7,7 @@ info:
   reference:
     - https://www.cnblogs.com/wishwzp/p/9438658.html
   tags: dubbo,apache,default-login
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1

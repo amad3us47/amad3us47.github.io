@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jira-detect1
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: panel,jira
 
 
-requests:
+http:
   - raw:
       - |
         GET /secure/Dashboard.jsp HTTP/1.1

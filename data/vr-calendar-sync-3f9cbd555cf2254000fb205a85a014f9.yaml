@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vr-calendar-sync-3f9cbd555cf2254000fb205a85a014f9
 
 info:

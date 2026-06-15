@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rails6-xss
 
 #  XSS (6.0.0 - 6.0.3.1); Payload is location=%0djavascript:alert(1);

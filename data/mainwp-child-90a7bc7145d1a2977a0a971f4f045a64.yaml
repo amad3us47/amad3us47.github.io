@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mainwp-child-90a7bc7145d1a2977a0a971f4f045a64
 
 info:

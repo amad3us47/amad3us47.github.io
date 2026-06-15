@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: parallelus-intersect-7b32db59006e0d07dcb31c89bd0e05bc
 
 info:

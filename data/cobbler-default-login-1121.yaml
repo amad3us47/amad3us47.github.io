@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cobbler-default-login
 info:
   name: Cobbler Default Login
@@ -7,7 +8,7 @@ info:
     - https://github.com/cobbler/cobbler/issues/2909
   severity: high
   tags: cobbler,default-login,api
-requests:
+http:
   - raw:
       - |
         POST {{BaseURL}}/cobbler_api HTTP/1.1

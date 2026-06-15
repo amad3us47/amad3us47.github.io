@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: chamilo-lms-sqli
 info:
   author: undefl0w
@@ -5,7 +6,7 @@ info:
   severity: high
   description: Finds sql injection in Chamilo version 1.11.14
   tags: chamilo,sqli
-requests:
+http:
   - raw:
       - |
         POST /main/inc/ajax/extra_field.ajax.php?a=search_options_from_tags HTTP/1.1

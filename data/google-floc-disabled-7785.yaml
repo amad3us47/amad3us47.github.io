@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: google-floc-disabled
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.bleepingcomputer.com/news/security/github-disables-google-floc-user-tracking-on-its-website/
   tags: google,floc,misc
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

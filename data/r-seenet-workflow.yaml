@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: r-seenet-workflow
 
 info:
   name: R-SeeNet Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all R-SeeNet related nuclei templates on a given target.
 workflows:
   - template: http/technologies/rseenet-detect.yaml

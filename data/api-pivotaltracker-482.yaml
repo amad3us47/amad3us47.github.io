@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-pivotaltracker
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,pivotaltracker
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://www.pivotaltracker.com/services/v5/me"
@@ -18,7 +19,3 @@ requests:
     matchers:
       - type: word
         part: body
-        negative: true
-        words:
-          - 'invalid_authentication'
-          - 'unauthenticated'

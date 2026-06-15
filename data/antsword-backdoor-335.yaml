@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: antsword-backdoor
 info:
   name: Antsword backdook
@@ -6,7 +7,7 @@ info:
   description: 蚁剑「绕过 disable_functions」插件生成的 shell
   reference: https://github.com/AntSwordProject/AntSword-Labs/tree/master/bypass_disable_functions/9
   tags: backdoor,antsword
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/.antproxy.php"

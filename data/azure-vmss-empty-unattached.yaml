@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-vmss-empty-unattached
 info:
   name: Azure Virtual Machine Scale Sets Empty and Unattached

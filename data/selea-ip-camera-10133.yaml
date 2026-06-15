@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: selea-ip-camera
 info:
   name: Detect Selea Targa IP OCR-ANPR Camera
@@ -5,7 +6,7 @@ info:
   description: Selea Targa IP OCR-ANPR Camera Unauthenticated RTP/RTSP/M-JPEG Stream Disclosure -- https://www.zeroscience.mk/en/vulnerabilities/ZSL-2021-5619.php
   severity: info
   tags: iot
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woocommerce-product-vendors-df7e88f9ecd37703ab5846b0e4fc21c9
 
 info:

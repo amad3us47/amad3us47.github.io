@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-hash-querybuilder
 info:
   author: DhiyaneshDk
@@ -5,10 +6,10 @@ info:
   severity: medium
   reference: https://twitter.com/AEMSecurity/status/1372392101829349376
   tags: aem
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

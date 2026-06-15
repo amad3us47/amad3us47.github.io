@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: brother-printer-detect
 
 info:
@@ -11,7 +12,7 @@ info:
 
   tags: iot,printer,tech
 
-requests:
+http:
   - method: GET
 
     path:

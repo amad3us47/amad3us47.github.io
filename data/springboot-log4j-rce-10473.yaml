@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-log4j-rce
 info:
   name: Spring Boot Log4j Remote Code Injection
@@ -14,7 +15,7 @@ info:
     cwe-id: CWE-502
   remediation: Upgrade to Log4j 2.3.1 (for Java 6), 2.12.3 (for Java 7), or 2.17.0 (for Java 8 and later).
   tags: springboot,rce,oast,log4j
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1

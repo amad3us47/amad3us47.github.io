@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: floating-social-media-links-8bc7d24298b67188b24a6acba23b0fa5
 
 info:

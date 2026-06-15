@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-npm
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: token-spray,node,npm,package,manager
 
-requests:
+http:
   - method: GET
     path:
       - "https://registry.npmjs.org/-/whoami"
@@ -19,4 +20,3 @@ requests:
         status:
           - 401
           - 403
-        negative: true

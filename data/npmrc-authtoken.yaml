@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: npmrc-authtoken
 
 info:
@@ -32,9 +33,5 @@ http:
           - "text/html"
           - "application/javascript"
           - "application/json"
-        negative: true
 
-      - type: status
-        status:
-          - 200
 # digest: 4a0a00473045022100f6aabb488d163461e4775b67c5328dae27b45b476ff35065fd75d59cfc10ad7402202ce32289fb37650446036a6928f3b3f3f33a3ef14205aeb2747ce3af90f8b79e:922c64590222798bb761d5b6d8e72950

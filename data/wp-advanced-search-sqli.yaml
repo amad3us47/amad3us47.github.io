@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-advanced-search-sqli
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://wpscan.com/vulnerability/136e1010-2f1b-4d09-b251-10db01ab72f1
   tags: sqli,wp,wordpress,wp-plugin,unauth
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/wp-advanced-search/readme.txt'

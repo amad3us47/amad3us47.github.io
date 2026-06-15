@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xdcms-sqli
 info:
   name: XdCMS SQL Injection
@@ -8,7 +9,7 @@ info:
   tags: sqli,xdcms
 variables:
   num: "999999999"
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/index.php?m=member&f=login_save"

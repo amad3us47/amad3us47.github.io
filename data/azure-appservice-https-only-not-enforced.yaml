@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-appservice-https-only-not-enforced
 info:
   name: Azure App Service HTTPS-Only Not Enforced

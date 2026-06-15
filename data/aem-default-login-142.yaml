@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-default-login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   tags: aem,default-login,adobe
 
-requests:
+http:
   - raw:
       - |
         POST /libs/granite/core/content/login.html/j_security_check HTTP/1.1

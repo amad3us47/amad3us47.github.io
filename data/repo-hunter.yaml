@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: repo-hunter
 
 info:
@@ -7,22 +8,21 @@ info:
   description: Search for the each repos patterns on passed URLs.
   tags: exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/{{repo-path}}"
     payloads:
       repo-path: repo-paths.txt
-    
-    attack: sniper
+
     stop-at-first-match: true
     threads: 50
-    matchers-condition: and  
+    matchers-condition: and
     matchers:
       - type: status
         status:
           - 200
-          
+
       - type: word
         words:
           - "Index of "

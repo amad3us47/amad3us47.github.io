@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-pagerduty
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: token-spray,pagerduty
 
-requests:
+http:
   - method: GET
     path:
       - "https://api.pagerduty.com/schedules"
@@ -19,4 +20,3 @@ requests:
       - type: status
         status:
           - 401
-        negative: true

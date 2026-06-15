@@ -1,15 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: alibaba-anyproxy
 name: alibaba-anyproxy
-priority: 3
-nuclei_tags:
-  - - anyproxy
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 0
-    headers: {}
-    keyword:
-      - <title>AnyProxy</title>
-      - dist/main.css
-    favicon_hash: []

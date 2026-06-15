@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-security-open-redirect
 
 info:
@@ -12,7 +13,7 @@ info:
     verified: true
   tags: wp-plugin,redirect,wordpress,wp
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?aiowpsec_do_log_out=1&after_logout=https://attacker.com"

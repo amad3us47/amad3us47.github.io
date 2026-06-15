@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: panabit-default-login
 info:
   name: Panabit Gateway Default Login
@@ -5,10 +6,10 @@ info:
   severity: high
   reference: https://max.book118.com/html/2017/0623/117514590.shtm
   tags: panabit,default-login
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

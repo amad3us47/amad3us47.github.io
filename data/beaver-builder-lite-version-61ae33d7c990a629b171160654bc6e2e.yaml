@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: beaver-builder-lite-version-61ae33d7c990a629b171160654bc6e2e
 
 info:

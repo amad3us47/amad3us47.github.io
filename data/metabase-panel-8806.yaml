@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: metabase-panel
 info:
   name: Metabase Login Panel
@@ -7,7 +8,7 @@ info:
     shodan-query: http.title:"Metabase"
   severity: info
   tags: panel,metabase,login
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/auth/login"

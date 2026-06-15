@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: webmodule-ee-panel
 
 info:
@@ -9,7 +10,7 @@ info:
   reference: https://www.exploit-db.com/ghdb/7001
   tags: panel,webmodule-ee,login
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/webmodule-ee/login.seam"

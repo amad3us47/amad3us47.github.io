@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zhiyuan-oa-session-leak
 info:
   name: Zhiyuan Oa Session Leak
@@ -5,10 +6,10 @@ info:
   severity: medium
   reference: https://www.zhihuifly.com/t/topic/3345
   tags: zhiyuan,leak,disclosure
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

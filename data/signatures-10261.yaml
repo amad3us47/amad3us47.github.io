@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: orchard
 info:
   name: orchard_version_fingerprint
   severity: info
   author: glatisant & erwan
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/Modules/Orchard.Comments/Module.txt"

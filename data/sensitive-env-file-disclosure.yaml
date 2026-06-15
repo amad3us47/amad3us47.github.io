@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: sensitive-env-file-disclosure
 info:
   id: sensitive-env-file-disclosure
   name: Sensitive Env File Disclosure
   author: twitter/drfabiocastro
   description: Template to detect Sensitive Env File Disclosure
-  severity: High
+  severity: high
   classification:
     country: any
     tags:
@@ -40,7 +42,7 @@ info:
     - pattern: "(?m)^DB_(HOST|PASSWORD|DATABASE)"
       type: body
       description: Matching DB_ variables found in response body
-      
+
   response:
-    - status: 
+    - status:
       - 200

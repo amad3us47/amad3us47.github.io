@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: all-in-one-invite-codes-433c9772f64f607988a1025d6f6a5903
 
 info:

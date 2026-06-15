@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dell-idrac-workflow
 info:
   name: Dell iDRAC Security Checks
   author: kophjager007
+  severity: info
   description: A workflow to identify Dell iDRAC instances and run all related nuclei templates.
   tags: workflow
 

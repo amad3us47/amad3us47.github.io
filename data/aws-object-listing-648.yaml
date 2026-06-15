@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aws-object-listing
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://mikey96.medium.com/cloud-based-storage-misconfigurations-critical-bounties-361647f78a29
   tags: aws,misconfig,bucket
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

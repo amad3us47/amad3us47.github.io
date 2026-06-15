@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: landray-oa-treexml-rce
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://github.com/tangxiaofeng7
   tags: landray,oa,rce
 
-requests:
+http:
   - method: POST
     path:
       - '{{BaseURL}}/data/sys-common/treexml.tmpl'

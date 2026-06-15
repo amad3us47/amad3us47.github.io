@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: circleci-config
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://circleci.com/docs/2.0/sample-config/
   tags: config,exposure,circleci
 
-requests:
+http:
   - method: GET
     redirects: true
     max-redirects: 3

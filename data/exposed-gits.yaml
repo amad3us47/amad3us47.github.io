@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-git-config
 
 info:
@@ -5,7 +6,7 @@ info:
   author: CyberCavalcante
   severity: high
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.git/config"
@@ -16,6 +17,3 @@ requests:
         words:
           - "[core]"
         part: body
-
-
-          

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: levelfourstorefront-bbf0a5ea0782cc60e54d03621a134795
 
 info:

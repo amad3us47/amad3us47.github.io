@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: monsters-editor-10-for-wp-super-edit-f54e6a159821188a4032a3d155a57af1
 
 info:

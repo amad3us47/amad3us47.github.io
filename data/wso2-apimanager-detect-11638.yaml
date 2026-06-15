@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wso2-apimanager-detect
 info:
   name: WSO2 API Manager detect
@@ -5,7 +6,7 @@ info:
   severity: info
   description: Try to detect the presence of a WSO2 API Manager instance via the version endpoint
   tags: tech,wso2,api-manager
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/services/Version"

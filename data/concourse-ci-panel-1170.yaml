@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: concourse-ci-panel
 
 info:
@@ -11,7 +12,7 @@ info:
     shodan-query: title:"Concourse"
   tags: panel,concourse,oss
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

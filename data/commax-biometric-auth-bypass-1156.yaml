@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: commax-biometric-auth-bypass
 info:
   name: COMMAX Biometric Access Control System 1.0.0 - Authentication Bypass
@@ -8,10 +9,10 @@ info:
     - https://www.exploit-db.com/exploits/50206
     - https://www.zeroscience.mk/en/vulnerabilities/ZSL-2021-5661.php
   tags: commax,auth-bypass
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

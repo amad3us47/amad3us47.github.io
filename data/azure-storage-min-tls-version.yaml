@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-storage-min-tls-version
 info:
   name: Azure Storage Minimum TLS Version Not Set to TLS1_2
@@ -51,10 +52,5 @@ code:
       - type: word
         words:
           - 'TLS1_2'
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - 'name + " is not using TLS version 1.2"'
 # digest: 4a0a00473045022100e9023322e9ee80afad2c173008e3e0e15779f010125a9f47f77190f825278775022047ea42208779c19cb6b3d583dd579117369def5df4c2aa43949387c70a85f884:922c64590222798bb761d5b6d8e72950

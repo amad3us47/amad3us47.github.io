@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: openbmcs-ssrf
 info:
   name: OpenBMCS 2.4 Unauthenticated SSRF / RFI
@@ -8,7 +9,7 @@ info:
   tags: ssrf,oast,openbmcs
   metadata:
     shodan-query: http.favicon.hash:1550906681
-requests:
+http:
   - raw:
       - |
         POST /php/query.php HTTP/1.1

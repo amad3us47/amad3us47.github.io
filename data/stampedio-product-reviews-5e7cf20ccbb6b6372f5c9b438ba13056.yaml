@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: stampedio-product-reviews-5e7cf20ccbb6b6372f5c9b438ba13056
 
 info:

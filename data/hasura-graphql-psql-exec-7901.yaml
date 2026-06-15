@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hasura-graphql-psql-exec
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.exploit-db.com/exploits/49802
   tags: hasura,rce,graphql
 
-requests:
+http:
   - raw:
       - |
         POST /v2/query HTTP/1.1

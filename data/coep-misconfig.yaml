@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: coep-misconfig
 info:
   name: COEP Misconfiguration
+  author: unknown
   severity: medium
   description: Detects potential Cross-Origin Embedder Policy (COEP) misconfigurations in the target
 author: qaisar afridi
 tags:
   - web
   - coep
-requests:
+http:
 - method: GET
   path:
     - "/"

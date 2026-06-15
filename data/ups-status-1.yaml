@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ups-status1
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: logs
 
 
-requests:
+http:
   - raw:
       - |
         GET /cgi-bin/apcupsd/multimon.cgi HTTP/1.1

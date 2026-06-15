@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: advanced-custom-fields-a985fb2ac9f2db3b846e852424e888f0
 
 info:

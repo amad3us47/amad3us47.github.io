@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-firewall-2-8d5ab8c943e8125c42a26adf1e26ddbf
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: detect-dns-over-https
 
 info:
@@ -9,7 +10,7 @@ info:
   severity: info
   tags: dns,doh,misc
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/dns-query?dns=q80BAAABAAAAAAAAA3d3dwdleGFtcGxlA2NvbQAAAQAB"

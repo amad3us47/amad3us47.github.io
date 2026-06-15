@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wpdm-cache-session
 info:
   name: Wpdm-Cache Session
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://www.exploit-db.com/ghdb/7004
   tags: wordpress
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/uploads/wpdm-cache/'

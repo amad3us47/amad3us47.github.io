@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: stopbadbots-7db6879d87c942d7ef8b4be14e79ba6d
 
 info:

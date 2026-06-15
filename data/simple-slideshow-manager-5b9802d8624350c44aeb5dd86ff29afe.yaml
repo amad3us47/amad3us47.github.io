@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: simple-slideshow-manager-5b9802d8624350c44aeb5dd86ff29afe
 
 info:

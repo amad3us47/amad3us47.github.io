@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-autoconfig
 info:
   name: Detect Springboot autoconfig Actuator
@@ -5,7 +6,7 @@ info:
   severity: low
   description: Displays an auto-configuration report showing all auto-configuration candidates and the reason why they 'were' or 'were not' applied.
   tags: springboot,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/autoconfig"

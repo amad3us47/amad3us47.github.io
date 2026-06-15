@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: duplicate-wp-page-post-ba659964e468eef751b0f46933f2eafc
 
 info:

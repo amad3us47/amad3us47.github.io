@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: truffle-config-exposure
 info:
   id: truffle-config-exposure
   name: Truffle Configuration Exposure - Detect
   author: OpenAI
   description: Template to detect the exposure of Truffle configuration files
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

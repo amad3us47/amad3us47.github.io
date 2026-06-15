@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: smart-slide-show-5bda0ed100ef70bb9ba0ccf2bb5e8869
 
 info:

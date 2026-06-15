@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nacl-open-inbound
 info:
   name: Open Inbound NACL Traffic
@@ -55,10 +56,5 @@ code:
       - type: word
         words:
           - "PortRange"
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - '"Access to the VPC subnets associated with your NACL " + naclid + " is not restricted."'
 # digest: 4a0a00473045022038258a9ed742e00db36fcc2c517562a509834fddfd0ff2f229c0de8ce3d93038022100f1b4b3278f9e9987c7aa831106f107e16c7053eff871cc90f2cd512eda8671d1:922c64590222798bb761d5b6d8e72950

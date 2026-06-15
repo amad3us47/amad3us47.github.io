@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: git-config-nginxoffbyslash
 info:
   name: Nginx - Git Configuration Exposure
@@ -13,7 +14,7 @@ info:
     cvss-score: 5.3
     cwe-id: CWE-200
   tags: config,exposure,nginx
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/static../.git/config'

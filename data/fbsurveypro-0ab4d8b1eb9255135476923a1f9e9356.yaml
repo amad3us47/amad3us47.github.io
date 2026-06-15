@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fbsurveypro-0ab4d8b1eb9255135476923a1f9e9356
 
 info:

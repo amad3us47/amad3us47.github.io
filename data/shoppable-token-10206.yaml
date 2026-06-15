@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: shoppable-token
 info:
   name: Shoppable Service Auth Token
@@ -5,7 +6,7 @@ info:
   severity: unknown
   reference: https://ask.shoppable.com/knowledge/quick-start-api-guide
   tags: exposure,shoppable,token,auth,service
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

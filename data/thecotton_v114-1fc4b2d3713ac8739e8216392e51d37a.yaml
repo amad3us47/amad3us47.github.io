@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thecotton_v114-1fc4b2d3713ac8739e8216392e51d37a
 
 info:

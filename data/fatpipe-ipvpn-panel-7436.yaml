@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fatpipe-ipvpn-panel
 info:
   name: FatPipe IPVPN® Panel Detect
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://www.fatpipeinc.com/products/index.php
   tags: panel,ipvpn,fatpipe
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/fpui/jsp/login.jsp"

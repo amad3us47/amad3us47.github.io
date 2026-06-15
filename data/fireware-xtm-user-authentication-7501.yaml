@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fireware-xtm-user-authentication
 info:
   name: Fireware XTM User Authentication
@@ -6,7 +7,7 @@ info:
   tags: panel
   metadata:
     shodan-query: 'http.title:"Fireware XTM User Authentication"'
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/sslvpn_logon.shtml'

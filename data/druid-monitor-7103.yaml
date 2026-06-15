@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: druid-monitor
 info:
   name: Druid Monitor Unauthorized Access
   author: 0h1in9e @ohlinge
   severity: high
   tags: druid,unauth
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/druid/index.html"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: allure-real-estate-theme-for-real-estate-9ed65d9655d0737d8d401f512eaecd3f
 
 info:

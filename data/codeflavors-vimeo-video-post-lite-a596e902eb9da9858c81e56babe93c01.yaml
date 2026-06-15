@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: codeflavors-vimeo-video-post-lite-a596e902eb9da9858c81e56babe93c01
 
 info:

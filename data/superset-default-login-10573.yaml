@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-superset-default-login
 info:
   name: Apache Superset Default Login
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/apache-superset-default-credentials.json
   tags: apache, default-login
-requests:
+http:
   - raw:
       - |
         GET /login/ HTTP/1.1

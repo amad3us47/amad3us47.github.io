@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: joomla-file-listing
 info:
   name: Joomla database files listing
@@ -6,7 +7,7 @@ info:
   reference: https://www.exploit-db.com/ghdb/6377
   description: Searches for the pattern /libraries/joomla/database/ on passed URLs.
   tags: exposure,joomla,listing
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/libraries/joomla/database/"

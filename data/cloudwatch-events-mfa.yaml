@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cloudwatch-events-mfa
 info:
   name: Missing CloudWatch Alarm for Sign In without MFA
@@ -16,7 +17,7 @@ variables:
   service: monitoring
   region: us-east-1
 
-requests:
+http:
   - raw:
       - |
         POST https://{{service}}.{{region}}.amazonaws.com/ HTTP/1.1
@@ -37,9 +38,3 @@ requests:
         part: body
         words:
           - "SignInWithoutMFA"
-        negative: true
-
-    extractors:
-      - type: dsl
-        dsl:
-          - '"Missing CloudWatch Alarm for sign-ins without MFA"'

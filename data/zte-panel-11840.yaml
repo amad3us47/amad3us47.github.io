@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zte-panel
 info:
   name: ZTE Panel
@@ -11,7 +12,7 @@ info:
     verified: true
     shodan-query: http.html:"ZTE Corporation"
   tags: panel,zte
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

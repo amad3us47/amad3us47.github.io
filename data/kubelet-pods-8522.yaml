@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kubelet-pods
 info:
   name: Kubelet Scan
@@ -5,7 +6,7 @@ info:
   severity: info
   description: Scans for kubelet pods
   tags: tech,k8s,kubernetes,devops,kubelet,pods
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/pods"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sequoiadb-default-login
 info:
   name: SequoiaDB Default Login
@@ -5,7 +6,7 @@ info:
   severity: high
   description: Searches for default admin credentials for the SequoiaDB application.
   tags: default-login,sequoiadb
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

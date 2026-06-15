@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: user-activity-log-2c5e4e0e939a6ee6d2f87bd6657e0ea1
 
 info:

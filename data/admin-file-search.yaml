@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: admin-file-search
 
 info:
@@ -6,16 +7,15 @@ info:
   severity: medium
   tags:  disclosure,sensitive,data
 
-  
-requests:
+
+http:
   - method: GET
     path:
       - "{{BaseURL}}/crx/de/filesearch.jsp;%0A.css?name=admin"
       - "{{BaseURL}}/crx/de/filesearch.jsp?name=admin"
-       
+
     matchers:
       - type: word
         words:
           - "jcr:path"
         part: body
-

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: host-header-auth-bypass
 info:
   name: Auth bypass via localhost host header
   author: esetal
   severity: info
 
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1

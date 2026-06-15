@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: modify-comment-fields-b58c5998ccd72a75e391a187a7efce8b
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: frp-default-login
 info:
   name: Frp Default Login
@@ -5,7 +6,7 @@ info:
   severity: high
   tags: frp,default-login
   reference: https://github.com/fatedier/frp/issues/1840
-requests:
+http:
   - raw:
       - |
         GET /api/proxy/tcp HTTP/1.1

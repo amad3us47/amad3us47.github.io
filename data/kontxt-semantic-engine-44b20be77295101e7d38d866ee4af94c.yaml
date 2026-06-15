@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kontxt-semantic-engine-44b20be77295101e7d38d866ee4af94c
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CRMEB-sqli
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: CRMEB,sqli
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/products?sid=1%27"

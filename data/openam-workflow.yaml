@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: openam-workflow
 
 info:
   name: OpenAM Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all OpenAM related nuclei templates on a given target.
 workflows:
   - template: http/exposed-panels/openam-panel.yaml

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ibm-security-access-manager
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.ibm.com/docs/en/sva/9.0.7?topic=overview-introduction-security-access-manager
   tags: panel,ibm
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

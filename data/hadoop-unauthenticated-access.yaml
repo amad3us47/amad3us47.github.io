@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hadoop-unauthenticated-access
 info:
   name: Apache Hadoop Unauthenticated Access
+  author: unknown
   severity: high
   description: Detects potential unauthenticated access to Apache Hadoop in the target
 author: YourName
 tags:
   - web
   - apache-hadoop
-requests:
+http:
 - method: GET
   path:
     - "/hadoop"

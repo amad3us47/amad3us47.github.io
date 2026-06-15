@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hp-color-laserjet-cp4025-webserver
 
 info:
-  name: HP Color LaserJet CP4025 Web Server 
+  name: HP Color LaserJet CP4025 Web Server
   author: alexrydzak
   severity: info
   tags: hp,web,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/hp/device/this.LCDispatcher?nav=hp.DeviceStatus"

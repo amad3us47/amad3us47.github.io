@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mikrotik-routeros
 info:
   name: MikroTik RouterOS Login
@@ -5,10 +6,10 @@ info:
   severity: info
   reference: https://systemweakness.com/routeros-user-with-just-ftp-policy-can-write-to-filesystem-cve-2021-27221-e3e45d780dfe
   tags: panel,login
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

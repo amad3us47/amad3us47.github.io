@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: apache-dir-listing
 info:
   id: apache-dir-listing
   name: Apache Directory Listing
   author: OpenAI
   description: Template para detectar diretórios de listagem no servidor web Apache.
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:
@@ -15,7 +17,7 @@ info:
 
   requests:
       method: GET
-      path: 
+      path:
       - "/"
       condition: and
 
@@ -28,5 +30,5 @@ info:
       description: O servidor web Apache foi encontrado na resposta do cabeçalho.
 
   response:
-   - status: 
+   - status:
       - 200

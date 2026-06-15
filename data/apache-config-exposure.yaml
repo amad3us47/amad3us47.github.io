@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: apache-config-exposure
 info:
   id: apache-config-exposure
   name: Apache Configuration File Exposure
   author: OpenAI
   description: Template to detect the exposure of the Apache configuration file.
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -30,5 +32,5 @@ info:
       description: Apache configuration file found in the response headers
 
   response:
-   - status: 
+   - status:
       - 200

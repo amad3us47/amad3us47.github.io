@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: php-user-ini-disclosure
 info:
   name: Php User.ini Disclosure
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/php-user-ini-disclosure.json
   tags: exposure,config
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/user.ini"

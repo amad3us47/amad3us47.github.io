@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bluetermite-emdivi-sfx-hash
 info:
   name: Bluetermite Emdivi SFX Malware Hash - Detect

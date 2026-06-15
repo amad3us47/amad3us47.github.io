@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ASVS-4-0-3-V14-4-5
 
 info:
@@ -32,13 +33,4 @@ http:
     matchers:
       - type: word
         name: "'Strict-Transport-Security' (HSTS) header does not exist."
-        part: header
-        negative: true
-        words:
-          - 'Strict-Transport-Security:'
-      - type: regex
-        name: "'Strict-Transport-Security' (HSTS) header does not include subdomains."
-        negative: true
-        regex:
-          - (?i)Strict-Transport-Security:\s*.*\bincludeSubdomains\b
         part: header

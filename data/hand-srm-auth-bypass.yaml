@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hand-srm-auth-bypass
 
 info:
@@ -19,7 +20,7 @@ http:
       - "{{BaseURL}}/tomcat.jsp?dataName=role_id&dataValue=1"
       - "{{BaseURL}}/tomcat.jsp?dataName=user_id&dataValue=1"
 
-    stop-at-first-match: true    
+    stop-at-first-match: true
     matchers-condition: and
     matchers:
       - type: status

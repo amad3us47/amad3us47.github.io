@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-weatherstack
 
 info:
@@ -11,7 +12,7 @@ info:
   tags: token-spray,weatherstack
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://api.weatherstack.com/current?access_key={{token}}&query=New%20York"

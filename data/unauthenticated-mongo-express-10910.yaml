@@ -1,11 +1,12 @@
-id: unauthenticated-mongo-express.yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: unauthenticated-mongo-express-yaml
 info:
   name: Mongo Express Unauthenticated
   author: dhiyaneshDK
   severity: high
   reference: https://www.exploit-db.com/ghdb/5684
   tags: mongo,unauth
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

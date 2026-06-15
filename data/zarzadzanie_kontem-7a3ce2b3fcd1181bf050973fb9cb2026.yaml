@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zarzadzanie_kontem-7a3ce2b3fcd1181bf050973fb9cb2026
 
 info:

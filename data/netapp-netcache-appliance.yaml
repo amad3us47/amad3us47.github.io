@@ -1,14 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: netapp-netcache-appliance
 name: netapp-netcache-appliance
-priority: 2
-nuclei_tags:
-  - []
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 0
-    headers:
-      Server: netcache appliance
-    keyword: []
-    favicon_hash: []

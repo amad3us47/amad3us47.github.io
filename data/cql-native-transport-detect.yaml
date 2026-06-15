@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cql-native-transport-detect
 
 info:
@@ -11,7 +12,7 @@ info:
     shodan-query: "cassandra"
   tags: network,cassandra
 
-network:
+tcp:
   - inputs:
       - data: "/n"
       - data: "/n"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lucee-login
 info:
   name: Lucee Web/Server Administrator Login
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://www.shodan.io/search?query=http.title%3A%22Lucee%22
   tags: panel,lucee
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/lucee/admin/web.cfm'

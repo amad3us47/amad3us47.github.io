@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: quadmenu-f860b7f21e9586ac4fed33ec6c938d0e
 
 info:

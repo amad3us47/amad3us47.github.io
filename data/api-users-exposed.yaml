@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-emails-exposed
 info:
   name: api-emails-exposed
@@ -6,8 +7,8 @@ info:
   description: |
     This is a Nuclei template for checking for exposed email addresses or personally identifiable information (PII) in API responses.
   reference:
-  
-  tags: 
+
+  tags:
     - api
     - email
     - pii
@@ -28,7 +29,7 @@ http:
           - id
           - firstName
           - login
-        
+
       - type: status
         status:
           - 200

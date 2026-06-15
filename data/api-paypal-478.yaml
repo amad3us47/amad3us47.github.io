@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-paypal
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,paypal
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://api-m.sandbox.paypal.com/v1/identity/oauth2/userinfo?schema=paypalv1.1"
@@ -23,6 +24,3 @@ requests:
           - 200
 
       - type: regex
-        negative: true
-        regex:
-          - "error(_description)?"

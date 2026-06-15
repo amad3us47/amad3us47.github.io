@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: simple-employee-rce
 info:
   name: Simple Employee Records System 1.0 RCE
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://www.exploit-db.com/exploits/49596
   tags: rce
-requests:
+http:
   - raw:
       - |
         POST /dashboard/uploadID.php HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: php-debug-bar
 info:
   name: PHP Debug bar
@@ -5,10 +6,10 @@ info:
   severity: high
   tags: debug,logs,exposure
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: umbraco
 info:
   name: umbraco_version_fingerprint
   severity: info
   author: glatisant & erwan
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/Umbraco/Js/umbraco.controllers.js"

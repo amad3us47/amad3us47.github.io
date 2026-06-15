@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: buddypress-xprofile-custom-fields-type-4635da6788b0ae81be6b2209587e6da1
 
 info:

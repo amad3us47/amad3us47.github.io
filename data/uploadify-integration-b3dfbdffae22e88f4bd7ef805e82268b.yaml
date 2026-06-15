@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: uploadify-integration-b3dfbdffae22e88f4bd7ef805e82268b
 
 info:

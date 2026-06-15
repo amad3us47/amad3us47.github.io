@@ -1,4 +1,5 @@
-id: awstats-config 2
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: awstats-config-2
 
 info:
   name: AWStats config
@@ -6,10 +7,10 @@ info:
   severity: info
   tags: config,exposure
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

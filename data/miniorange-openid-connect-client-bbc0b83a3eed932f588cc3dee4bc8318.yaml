@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: miniorange-openid-connect-client-bbc0b83a3eed932f588cc3dee4bc8318
 
 info:

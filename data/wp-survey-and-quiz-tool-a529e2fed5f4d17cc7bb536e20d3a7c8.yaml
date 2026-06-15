@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-survey-and-quiz-tool-a529e2fed5f4d17cc7bb536e20d3a7c8
 
 info:

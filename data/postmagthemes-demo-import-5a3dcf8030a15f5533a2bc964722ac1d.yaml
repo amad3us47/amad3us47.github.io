@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: postmagthemes-demo-import-5a3dcf8030a15f5533a2bc964722ac1d
 
 info:

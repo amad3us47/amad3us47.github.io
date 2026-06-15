@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: possibility-of-webshell
 
 info:
@@ -5,7 +6,7 @@ info:
   author: marcositu
   severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/angel.php"
@@ -788,5 +789,3 @@ requests:
       - type: dsl
         dsl:
           - "len(body)>=140 && status_code==200"
-
-

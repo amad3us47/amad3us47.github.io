@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phpinfo-files
 info:
   name: phpinfo Disclosure
@@ -8,7 +9,7 @@ info:
     Remove PHP Info pages from publicly accessible sites, or restrict access to authorized users only.
   severity: low
   tags: config,exposure,phpinfo
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/php.php"

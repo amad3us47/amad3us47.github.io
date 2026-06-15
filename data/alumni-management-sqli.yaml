@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: alumni-management-sqli
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://www.exploit-db.com/exploits/48883
   tags: alumni,sqli,auth-bypass,cms
 
-requests:
+http:
   - raw:
       - |
         POST /admin/ajax.php?action=login HTTP/1.1
@@ -37,8 +38,3 @@ requests:
         part: body
         words:
           - '#login-form'
-        negative: true
-
-      - type: status
-        status:
-          - 200

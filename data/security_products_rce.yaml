@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: security_products_rce
 info:
   name: 多厂商安全设备远程命令执行漏洞
@@ -48,8 +49,8 @@ http:
         DNT: 1
         Connection: close
         Upgrade-Insecure-Requests: 1
-    matchers: 
+    matchers:
       - type: word
         part: header
-        words: 
+        words:
           - '200'

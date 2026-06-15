@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jolokia-info-disclosure
 info:
   name: Jolokia - Information disclosure
@@ -8,7 +9,7 @@ info:
     - https://github.com/laluka/jolokia-exploitation-toolkit
   tags: jolokia,springboot,mbean,tomcat
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/actuator/jolokia/read/JMImplementation:type=MBeanServerDelegate/ImplementationName"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: newsletter-by-supsystic-466dcf8e4e9a002d112948258edb5d41
 
 info:

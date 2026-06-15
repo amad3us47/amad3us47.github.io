@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: docker-misconfigured-api
 info:
   id: docker-misconfigured-api
   name: Docker API Misconfiguration
   author: OpenAI
   description: Template to detect unauthorized access to Docker API due to misconfiguration.
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

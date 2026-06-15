@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jm-twitter-cards-351328a0879403827ae809d6cc7d91a3
 
 info:

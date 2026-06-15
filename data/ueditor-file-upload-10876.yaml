@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ueditor-file-upload
 info:
   name: UEditor Arbitrary File Upload
@@ -7,7 +8,7 @@ info:
     - https://zhuanlan.zhihu.com/p/85265552
     - https://www.freebuf.com/vuls/181814.html
   tags: ueditor,fileupload
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/ueditor/net/controller.ashx?action=catchimage&encode=utf-8"

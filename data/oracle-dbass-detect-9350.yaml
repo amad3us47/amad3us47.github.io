@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-dbass-detect
 info:
   name: Oracle DBaaS Monitor Detect
   author: pussycat0x
   severity: info
   tags: oracle,tech
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/dbaas_monitor/login'

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: druid-console-exposure
 info:
   name: Alibaba Druid Console Exposure
   author: pdteam
   severity: medium
   tags: panel,alibaba,druid
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

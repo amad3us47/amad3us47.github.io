@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sqli-vuln-params-deep
 
 info:
-  name: detect possible sqli parameters 
+  name: detect possible sqli parameters
   author: mohammed ayadi
   severity: info
   tags: sqli,file,gf

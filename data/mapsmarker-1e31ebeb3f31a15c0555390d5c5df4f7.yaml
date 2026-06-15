@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mapsmarker-1e31ebeb3f31a15c0555390d5c5df4f7
 
 info:

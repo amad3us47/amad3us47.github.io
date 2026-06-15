@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-gitlab-ci-config
 info:
   name: Exposed Gitlab CI Config
   author: SirBugs
   severity: high
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.gitlab-ci.yml"

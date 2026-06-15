@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: revampcrm-woocommerce-fa1f77824e54b13ebe0f4e44a187530d
 
 info:

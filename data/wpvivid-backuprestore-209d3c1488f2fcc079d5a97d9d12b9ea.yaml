@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wpvivid-backuprestore-209d3c1488f2fcc079d5a97d9d12b9ea
 
 info:

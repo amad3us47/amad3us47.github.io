@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: formassembly-web-forms-7c65fad216736051bd66cc94f3c9f29c
 
 info:

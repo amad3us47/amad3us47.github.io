@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-rce-simplefilelist
 info:
   name: WordPress SimpleFilelist Unauthenticated Arbitrary File Upload RCE
@@ -7,7 +8,7 @@ info:
   description: |
     The Simple File List WordPress plugin was found to be vulnerable to an unauthenticated arbitrary file upload leading to remote code execution. The Python exploit first uploads a file containing PHP code but with a png image file extension. A second request is sent to move (rename) the png file to a PHP file.
   tags: wordpress,wp-plugin,rce
-requests:
+http:
   - raw:
       - |
         POST /wp-content/plugins/simple-file-list/ee-upload-engine.php HTTP/1.1

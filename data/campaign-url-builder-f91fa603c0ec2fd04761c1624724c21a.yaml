@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: campaign-url-builder-f91fa603c0ec2fd04761c1624724c21a
 
 info:

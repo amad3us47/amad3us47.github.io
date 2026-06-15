@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-reviewapi
 
 info:
@@ -11,7 +12,7 @@ info:
   tags: token-spray,reviewapi
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://app.reviewapi.io/api/v1/reviews?apikey={{token}}&url=https%3A%2F%2Fwww.capterra.com%2Fp%2F140650%2FRecruitee%2Freviews&amount=25"

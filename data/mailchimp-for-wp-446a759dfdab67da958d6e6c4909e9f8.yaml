@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mailchimp-for-wp-446a759dfdab67da958d6e6c4909e9f8
 
 info:

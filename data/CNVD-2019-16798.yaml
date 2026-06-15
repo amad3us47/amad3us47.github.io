@@ -1,15 +1,7 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2019-16798
 
 info:
     name: Coremail Information Disclosure
     author: cc_ci(https://github.com/cc8ci)
     severity: high
-
-rules:
-    r0:
-        request:
-            method: GET
-            path: /mailsms/s?func=ADMIN:appState&dumpConfig=/
-        expression: response.status == 200 && response.body.bcontains(bytes("<object name=\"cm_md_db\">"))
-expression: r0()
-

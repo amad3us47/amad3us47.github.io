@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: custom-smartclient-dev-console
 
 info:
@@ -7,7 +8,7 @@ info:
         tags: panel
 
 
-requests:
+http:
         - method: GET
           path:
                   - "{{BaseURL}}/isoversion/12.1.4.12.21/isomorphic/system/helpers/Log.html"
@@ -15,5 +16,3 @@ requests:
                   - type: word
                     words:
                             - "<TITLE>SmartClient Developer Console</TITLE>"
-
-

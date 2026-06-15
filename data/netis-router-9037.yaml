@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netis-router
 info:
   name: Netis Router Login
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://www.tacnetsol.com/blog/cve-2019-8985-rce
   tags: panel,login,netis,router
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/login.htm'

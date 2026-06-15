@@ -1,14 +1,15 @@
-id: Siteminderagent exposed
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Siteminderagent-exposed
 info:
   name: Find siteminderagent exposed
   author: Clark
   severity: medium
   #Look in for test keys, backup of the login.sfcc, and source code smformscgi.cpp
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/siteminderagent/"
-    
+
     matchers-condition: and
     matchers:
       - type: word

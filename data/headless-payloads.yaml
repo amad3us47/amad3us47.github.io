@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: headless-payloads
 
 info:
@@ -17,10 +18,3 @@ headless:
         - dd
     steps:
       - args:
-          url: "{{BaseURL}}?aa={{aa}}&bb={{bb}}"
-        action: navigate
-      - action: waitload
-    matchers:
-      - type: word
-        words:
-          - "test"

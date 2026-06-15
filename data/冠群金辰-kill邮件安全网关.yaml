@@ -1,15 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: kill
 name: 冠群金辰-kill邮件安全网关
-priority: 3
-nuclei_tags:
-  - []
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 0
-    headers: {}
-    keyword:
-      - background="skins/default/images/login_ksgm.jpg
-      - kill邮件安全网关
-    favicon_hash: []

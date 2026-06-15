@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-pastebin
 
 info:
@@ -11,7 +12,7 @@ info:
   tags: token-spray,pastebin
 
 self-contained: true
-requests:
+http:
   - raw:
       - |
         POST https://pastebin.com/api/api_post.php HTTP/1.1

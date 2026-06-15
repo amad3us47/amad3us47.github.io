@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lfr-poc
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   description: You got it
 
-requests:
+http:
   - method: GET
     payloads:
       passwd: /etc/passwd

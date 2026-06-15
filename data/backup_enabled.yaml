@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: android-manifest-backup
 
 info:
-  name: Backup flag is set to True 
+  name: Backup flag is set to True
   author: sklnhunt
   severity: low
   description: Backup flag with the value true defines whether application data can be backed up and restored by a user who has enabled usb debugging.

@@ -1,14 +1,15 @@
-id: error-logs 22
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: error-logs-22
 info:
   name: common error log files
   author: geeknik,daffainfo
   severity: low
   tags: logs,exposure
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

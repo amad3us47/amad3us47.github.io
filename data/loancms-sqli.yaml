@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: loancms-sqli
 
 info:
@@ -12,7 +13,7 @@ info:
     verified: true
   tags: loancms,sqli,auth-bypass,cms
 
-requests:
+http:
   - raw:
       - |
         POST /ajax.php?action=login HTTP/1.1
@@ -40,4 +41,3 @@ requests:
         part: body
         words:
           - 'login-form'
-        negative: true

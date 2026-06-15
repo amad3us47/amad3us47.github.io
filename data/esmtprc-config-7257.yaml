@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: esmtprc-config
 info:
   name: eSMTP config disclosure
@@ -5,10 +6,10 @@ info:
   reference: https://linux.die.net/man/5/esmtprc
   severity: high
   tags: esmtp,config
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

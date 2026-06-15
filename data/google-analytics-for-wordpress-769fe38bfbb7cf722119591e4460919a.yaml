@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: google-analytics-for-wordpress-769fe38bfbb7cf722119591e4460919a
 
 info:

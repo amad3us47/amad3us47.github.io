@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: foulenzer-cve
 info:
   name: Advanced workflow detecting usual CVEs
   author: foulenzer
+  severity: info
 variables:
 
   shellshock: cves/CVE-2017-10075.yaml
@@ -12,14 +14,3 @@ variables:
   rails2: cves/CVE-2019-5418.yaml
   nextjs: cves/CVE-2020-5284.yaml
   rails3: cves/CVE-2020-8163.yaml
-  
-logic:
-  |
-  shellshock()
-  nodejs()
-  struts2()
-  rails()
-  phpfpm_nginx()
-  rails2()
-  nextjs()
-  rails3()

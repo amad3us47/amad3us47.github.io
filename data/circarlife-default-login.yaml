@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: circarlife-default-login
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: critical
   tags: circarlife,scada,iot,auth
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/html/setup.html"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: spider-calendar-eb9fc253c7dc0fb319d9c9d884acd955
 
 info:

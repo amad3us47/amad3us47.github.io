@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ssh-known-hosts
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: low
   tags: config,exposure,ssh
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.ssh/known_hosts"

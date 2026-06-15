@@ -1,14 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: special-device-testing-risk-assessment-system
 name: special-device-testing-risk-assessment-system
-priority: 3
-nuclei_tags:
-  - []
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 0
-    headers: {}
-    keyword:
-      - var unitid = getpagerequestvalue("unitid")
-    favicon_hash: []

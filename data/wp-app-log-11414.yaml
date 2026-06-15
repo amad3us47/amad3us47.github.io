@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-app-log
 info:
   name: Discover wp-app.log Files
   author: geeknik
   severity: info
   tags: exposure,logs
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |
@@ -27,7 +28,3 @@ requests:
         part: header
         words:
           - "text/html"
-        negative: true
-      - type: status
-        status:
-          - 200

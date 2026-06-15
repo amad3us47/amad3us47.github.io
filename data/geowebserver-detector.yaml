@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: geowebserver-detector
 info:
   id: geowebserver-detector
   name: GeoWebServer Detector Panel - Detect
   author: OpenAI
   description: Template to detect exposed GeoWebServer detector panels
-  severity: High
+  severity: high
   classification:
     country: any
     tags:

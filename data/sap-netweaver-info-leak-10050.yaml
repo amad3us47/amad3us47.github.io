@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-netweaver-info-leak
 info:
   name: SAP NetWeaver ICM Info page leak
@@ -8,10 +9,10 @@ info:
   reference: |
     - https://www.acunetix.com/vulnerabilities/web/sap-icf-sap-public-info-sensitive-information-disclosure/
     - https://github.com/Jean-Francois-C/SAP-Security-Audit
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

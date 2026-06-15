@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bsk-pdf-manager-7d3a12cd85a719ee4898ba1c83ad8b95
 
 info:

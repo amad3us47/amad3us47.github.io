@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-storage-private-endpoint-unconfigured
 info:
   name: Azure Storage Private Endpoint Not Configured

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dwsync-exposure
 info:
   name: Dreamweaver Dwsync.xml Exposure
@@ -7,7 +8,7 @@ info:
   classification:
     cwe-id: CWE-200
   tags: dwsync,exposure,dreamweaver
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_notes/dwsync.xml"

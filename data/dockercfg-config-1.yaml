@@ -1,4 +1,5 @@
-id: dockercfg-config 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: dockercfg-config-1
 
 info:
   name: Detect .dockercfg
@@ -7,10 +8,10 @@ info:
   description: Docker registry authentication data
   tags: docker,exposure,config
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

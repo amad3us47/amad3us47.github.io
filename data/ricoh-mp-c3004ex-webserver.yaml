@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ricoh-mp-c3004ex-webserver
 
 info:
-  name: Ricoh MP C3004ex Web Server 
+  name: Ricoh MP C3004ex Web Server
   author: alexrydzak
   severity: info
   tags: ricoh,web,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/web/guest/en/websys/webArch/mainFrame.cgi"

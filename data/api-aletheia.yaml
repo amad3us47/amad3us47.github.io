@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-aletheia
 
 info:
@@ -10,7 +11,7 @@ info:
   tags: token-spray,aletheia
 
 self-contained: true
-requests:
+http:
   - raw:
       - |
         GET http://api.aletheiaapi.com/LatestTransactions?issuer=TSLA&owner=1494730 HTTP/1.1

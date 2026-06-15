@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tidio-live-chat-5841edbae5f362f60a79d9cb73e8dd52
 
 info:

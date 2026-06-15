@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netflix-conductor-ui
 info:
   name: Netflix Conductor UI Detection
@@ -7,7 +8,7 @@ info:
   metadata:
     shodan-query: http.title:"Conductor UI", http.title:"Workflow UI"
   tags: webserver,netflix,conductor,panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

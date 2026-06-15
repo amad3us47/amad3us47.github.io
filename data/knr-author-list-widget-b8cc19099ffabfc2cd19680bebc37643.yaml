@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: knr-author-list-widget-b8cc19099ffabfc2cd19680bebc37643
 
 info:

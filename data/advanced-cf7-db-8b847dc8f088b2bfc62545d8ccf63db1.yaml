@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: advanced-cf7-db-8b847dc8f088b2bfc62545d8ccf63db1
 
 info:

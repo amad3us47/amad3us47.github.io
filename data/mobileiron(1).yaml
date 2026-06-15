@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: MobileIron
 info:
   name: MobileIron MDM Server
@@ -10,7 +11,7 @@ info:
     - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15507
     - https://hackerone.com/reports/983548
   tags: cve,cve2020,rce,lfi,auth-bypass
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/mifs/.;/services/LogService"

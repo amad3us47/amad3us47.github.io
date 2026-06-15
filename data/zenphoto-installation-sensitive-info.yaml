@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zenphoto-sensitive-info
 
 info:
@@ -8,7 +9,7 @@ info:
     information disclosure
   tags: unauth
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/zenphoto/zp-core/setup/index.php'

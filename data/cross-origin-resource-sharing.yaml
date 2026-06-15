@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cross-origin-resource-sharing
 
 info:
@@ -13,7 +14,7 @@ http:
       - "{{BaseURL}}"
     headers:
       Origin: https://www.tesla.com
-    
+
     matchers-condition: or
     matchers:
       - type: regex
@@ -23,13 +24,13 @@ http:
           - "(?i)access-control-allow-credentials: true"
         condition: and
         part: header
-     
+
       - type: regex
         name: Origin value
         regex:
          - "(?i)access-control-allow-origin: https://www.tesla.com"
         part: header
-      
+
       - type: word
         name: Wildcard *
         words:
@@ -45,4 +46,3 @@ http:
           - "(?i)access-control-allow-credentials: true"
         condition: and
         part: header
-    

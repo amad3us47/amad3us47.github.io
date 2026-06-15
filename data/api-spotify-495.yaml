@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-spotify
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,spotify
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://api.spotify.com/v1/me/player/devices"

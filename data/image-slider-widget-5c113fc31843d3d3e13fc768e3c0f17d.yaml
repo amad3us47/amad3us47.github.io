@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: image-slider-widget-5c113fc31843d3d3e13fc768e3c0f17d
 
 info:

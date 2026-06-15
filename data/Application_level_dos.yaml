@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Application-dos
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   description: application_dos
 
-requests:
+http:
 
   - raw:
       - |
@@ -15,18 +16,17 @@ requests:
         User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
         §header§: ab72a99f16a2ff1249c98ccbd2916fa8
 
-    
+
     payloads:
-      header: helpers/payloads/request-headers.txt   
-   
+      header: helpers/payloads/request-headers.txt
+
     attack: clusterbomb
-    redirects: true 
-  
+    redirects: true
+
     matchers:
       - type: status
-        status: 
+        status:
           - 500
           - 503
           - 502
           - 504
-          

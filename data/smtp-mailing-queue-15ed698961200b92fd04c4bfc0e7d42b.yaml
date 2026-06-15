@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: smtp-mailing-queue-15ed698961200b92fd04c4bfc0e7d42b
 
 info:

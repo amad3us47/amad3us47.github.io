@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-zookeeper
 info:
   name: ZooKeeper Unauth Server
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://zookeeper.apache.org/security.html
   tags: network,zookeeper,unauth
-network:
+tcp:
   - inputs:
       - data: "envi\r\nquit\r\n"
     host:

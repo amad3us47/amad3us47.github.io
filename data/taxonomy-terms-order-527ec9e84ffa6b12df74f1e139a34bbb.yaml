@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: taxonomy-terms-order-527ec9e84ffa6b12df74f1e139a34bbb
 
 info:

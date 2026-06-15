@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bp-group-documents-bb441889d3f7f3f8e0d741a1cecd59db
 
 info:

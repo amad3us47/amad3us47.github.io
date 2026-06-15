@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: labtech-panel
 info:
   name: LabTech Web Portal
   author: deFr0ggy, @github.com/deFr0ggy
   severity: info
   tags: panel,labtech
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

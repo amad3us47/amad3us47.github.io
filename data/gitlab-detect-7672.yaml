@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitlab-detect
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"GitLab"
   tags: panel,gitlab
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/users/sign_in"

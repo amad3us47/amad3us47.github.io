@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mediawiki-version-detect
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: tech,mediawiki
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -26,7 +27,6 @@ requests:
     extractors:
       - type: regex
         part: body
-        group: 1  
+        group: 1
         regex:
           - '<meta name="generator" content="MediaWiki (.*?)"/>'
-

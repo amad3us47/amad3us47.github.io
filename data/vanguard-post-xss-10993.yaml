@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vanguard-post-xss
 info:
   name: Vanguard Marketplace CMS ≤ 2.1
@@ -6,10 +7,10 @@ info:
   description: Persistent Cross-site Scripting in message & product title-tags also there's Non-Persistent Cross-site scripting in product search box
   reference: https://packetstormsecurity.com/files/157099/Vanguard-2.1-Cross-Site-Scripting.html
   tags: vanguard,xss
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

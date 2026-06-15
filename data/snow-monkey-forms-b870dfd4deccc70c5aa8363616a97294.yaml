@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: snow-monkey-forms-b870dfd4deccc70c5aa8363616a97294
 
 info:

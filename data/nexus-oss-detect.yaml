@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nexus-oss-detect
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Try to detect the presence of a NRM OSS instance
   tags: tech,nexus
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

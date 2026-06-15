@@ -1,11 +1,12 @@
-id: apache-druid-detect 
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: apache-druid-detect
 
 info:
   name: Apache Druid Detection
   author: notnotnotveg
-  severity: informative
+  severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/status/properties"

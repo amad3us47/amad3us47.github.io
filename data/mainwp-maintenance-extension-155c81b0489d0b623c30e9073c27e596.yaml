@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mainwp-maintenance-extension-155c81b0489d0b623c30e9073c27e596
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-mailchimp-log-exposure
 info:
   name: WordPress Mailchimp 4 Debug Log Exposure
@@ -5,10 +6,10 @@ info:
   severity: medium
   description: Searches for Mailchimp log exposure by attempting to query the debug log endpoint on wp-content
   tags: logs,wordpress,exposure
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

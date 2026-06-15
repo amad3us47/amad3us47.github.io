@@ -1,15 +1,16 @@
-id: x-remote-ip 
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: x-remote-ip
 
 info:
-  name: x-remote-ip 
+  name: x-remote-ip
   author: Kabilan S
   severity: low
 
-requests:
+http:
   - method: GET
     # Example of sending some headers to the servers
     headers:
-      
+
       X-Remote-IP: "evil.com"
     path:
       - "{{BaseURL}}/"

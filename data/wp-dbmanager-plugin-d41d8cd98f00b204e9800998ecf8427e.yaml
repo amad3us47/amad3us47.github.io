@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-dbmanager-plugin-d41d8cd98f00b204e9800998ecf8427e
 
 info:
@@ -12,7 +13,7 @@ info:
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:H
     cvss-score: 8.7
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/wp-dbmanager/"
     google-query: inurl:"/wp-content/plugins/wp-dbmanager/"

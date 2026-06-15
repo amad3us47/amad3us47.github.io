@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phpldap-admin
 
 info:
@@ -16,7 +17,7 @@ info:
     shodan-query: title:"phpLDAPAdmin"
   tags: panel,php,phpldap
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

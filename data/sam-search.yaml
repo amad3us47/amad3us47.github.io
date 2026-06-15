@@ -1,13 +1,14 @@
-id: saml Exposed
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: saml-Exposed
 info:
   name: Find saml
   author: Clark
   severity: medium
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/saml/module.php/core/frontpage_welcome.php"
-    
+
     matchers-condition: and
     matchers:
       - type: word

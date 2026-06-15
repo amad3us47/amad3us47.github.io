@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: html-reflect-fuzzer-erickfernandox
 
 info:
@@ -25,29 +26,29 @@ http:
       - "{{BaseURL}}/?pa=FUZZ391&pb=FUZZ392&pc=FUZZ393&pd=FUZZ394&pe=FUZZ395&pf=FUZZ396&pg=FUZZ397&ph=FUZZ398&pi=FUZZ399&pj=FUZZ400&pk=FUZZ401&pl=FUZZ402&pm=FUZZ403&pn=FUZZ404&po=FUZZ405&pp=FUZZ406&pq=FUZZ407&pr=FUZZ408&ps=FUZZ409&pt=FUZZ410&pu=FUZZ411&pv=FUZZ412&pw=FUZZ413&px=FUZZ414&py=FUZZ415&pz=FUZZ416&qa=FUZZ417&qb=FUZZ418&qc=FUZZ419&qd=FUZZ420&qe=FUZZ421&qf=FUZZ422&qg=FUZZ423&qh=FUZZ424&qi=FUZZ425&qj=FUZZ426&qk=FUZZ427&ql=FUZZ428&qm=FUZZ429&qn=FUZZ430&qo=FUZZ431&qp=FUZZ432&qq=FUZZ433&qr=FUZZ434&qs=FUZZ435&qt=FUZZ436&qu=FUZZ437&qv=FUZZ438&qw=FUZZ439&qx=FUZZ440&qy=FUZZ441&qz=FUZZ442&ra=FUZZ443&rb=FUZZ444&rc=FUZZ445&rd=FUZZ446&re=FUZZ447&rf=FUZZ448&rg=FUZZ449&rh=FUZZ450&ri=FUZZ451&rj=FUZZ452&rk=FUZZ453&rl=FUZZ454&rm=FUZZ455&rn=FUZZ456&ro=FUZZ457&rp=FUZZ458&rq=FUZZ459&rr=FUZZ460&rs=FUZZ461&rt=FUZZ462&ru=FUZZ463&rv=FUZZ464&rw=FUZZ465&rx=FUZZ466&ry=FUZZ467&rz=FUZZ468&sa=FUZZ469&sb=FUZZ470&sc=FUZZ471&sd=FUZZ472&se=FUZZ473&sf=FUZZ474&sg=FUZZ475&sh=FUZZ476&si=FUZZ477&sj=FUZZ478&sk=FUZZ479&sl=FUZZ480&sm=FUZZ481&sn=FUZZ482&so=FUZZ483&sp=FUZZ484&sq=FUZZ485&sr=FUZZ486&ss=FUZZ487&st=FUZZ488&su=FUZZ489&sv=FUZZ490&sw=FUZZ491&sx=FUZZ492&sy=FUZZ493&sz=FUZZ494"
       - "{{BaseURL}}/?ta=FUZZ495&tb=FUZZ496&tc=FUZZ497&td=FUZZ498&te=FUZZ499&tf=FUZZ500&tg=FUZZ501&th=FUZZ502&ti=FUZZ503&tj=FUZZ504&tk=FUZZ505&tl=FUZZ506&tm=FUZZ507&tn=FUZZ508&to=FUZZ509&tp=FUZZ510&tq=FUZZ511&tr=FUZZ512&ts=FUZZ513&tt=FUZZ514&tu=FUZZ515&tv=FUZZ516&tw=FUZZ517&tx=FUZZ518&ty=FUZZ519&tz=FUZZ520&ua=FUZZ521&ub=FUZZ522&uc=FUZZ523&ud=FUZZ524&ue=FUZZ525&uf=FUZZ526&ug=FUZZ527&uh=FUZZ528&ui=FUZZ529&uj=FUZZ530&uk=FUZZ531&ul=FUZZ532&um=FUZZ533&un=FUZZ534&uo=FUZZ535&up=FUZZ536&uq=FUZZ537&ur=FUZZ538&us=FUZZ539&ut=FUZZ540&uu=FUZZ541&uv=FUZZ542&uw=FUZZ543&ux=FUZZ544&uy=FUZZ545&uz=FUZZ546&va=FUZZ547&vb=FUZZ548&vc=FUZZ549&vd=FUZZ550&ve=FUZZ551&vf=FUZZ552&vg=FUZZ553&vh=FUZZ554&vi=FUZZ555&vj=FUZZ556&vk=FUZZ557&vl=FUZZ558&vm=FUZZ559&vn=FUZZ560&vo=FUZZ561&vp=FUZZ562&vq=FUZZ563&vr=FUZZ564&vs=FUZZ565&vt=FUZZ566&vu=FUZZ567&vv=FUZZ568&vw=FUZZ569&vx=FUZZ570&vy=FUZZ571&vz=FUZZ572&wa=FUZZ573&wb=FUZZ574&wc=FUZZ575&wd=FUZZ576&we=FUZZ577&wf=FUZZ578&wg=FUZZ579&wh=FUZZ580&wi=FUZZ581&wj=FUZZ582&wk=FUZZ583&wl=FUZZ584&wm=FUZZ585&wn=FUZZ586&wo=FUZZ587&wp=FUZZ588&wq=FUZZ589&wr=FUZZ590&ws=FUZZ591&wt=FUZZ592&wu=FUZZ593&wv=FUZZ594&ww=FUZZ595&wx=FUZZ596&wy=FUZZ597&wz=FUZZ598"
       - "{{BaseURL}}/?xa=FUZZ599&xb=FUZZ600&xc=FUZZ601&xd=FUZZ602&xe=FUZZ603&xf=FUZZ604&xg=FUZZ605&xh=FUZZ606&xi=FUZZ607&xj=FUZZ608&xk=FUZZ609&xl=FUZZ610&xm=FUZZ611&xn=FUZZ612&xo=FUZZ613&xp=FUZZ614&xq=FUZZ615&xr=FUZZ616&xs=FUZZ617&xt=FUZZ618&xu=FUZZ619&xv=FUZZ620&xw=FUZZ621&xx=FUZZ622&xy=FUZZ623&xz=FUZZ624&ya=FUZZ625&yb=FUZZ626&yc=FUZZ627&yd=FUZZ628&ye=FUZZ629&yf=FUZZ630&yg=FUZZ631&yh=FUZZ632&yi=FUZZ633&yj=FUZZ634&yk=FUZZ635&yl=FUZZ636&ym=FUZZ637&yn=FUZZ638&yo=FUZZ639&yp=FUZZ640&yq=FUZZ641&yr=FUZZ642&ys=FUZZ643&yt=FUZZ644&yu=FUZZ645&yv=FUZZ646&yw=FUZZ647&yx=FUZZ648&yy=FUZZ649&yz=FUZZ650&za=FUZZ651&zb=FUZZ652&zc=FUZZ653&zd=FUZZ654&ze=FUZZ655&zf=FUZZ656&zg=FUZZ657&zh=FUZZ658&zi=FUZZ659&zj=FUZZ660&zk=FUZZ661&zl=FUZZ662&zm=FUZZ663&zn=FUZZ664&zo=FUZZ665&zp=FUZZ666&zq=FUZZ667&zr=FUZZ668&zs=FUZZ669&zt=FUZZ670&zu=FUZZ671&zv=FUZZ672&zw=FUZZ673&zx=FUZZ674&zy=FUZZ675&zz=FUZZ676"
-               
+
     matchers-condition: and
     matchers:
       - type: word
         part: body
-        words:                    
-          - '="FUZZ'            
-          - '"https://FUZZ'             
-          - '"http://FUZZ'                
-          - '="//FUZZ'                     
-          - '="/\FUZZ'                  
+        words:
+          - '="FUZZ'
+          - '"https://FUZZ'
+          - '"http://FUZZ'
+          - '="//FUZZ'
+          - '="/\FUZZ'
           - "'FUZZ"
-          - "'//FUZZ"          
-          - "(FUZZ"          
-          - "_FUZZ"         
-          - "-FUZZ"                  
-          - ".FUZZ"                
+          - "'//FUZZ"
+          - "(FUZZ"
+          - "_FUZZ"
+          - "-FUZZ"
+          - ".FUZZ"
           - '{FUZZ'
-          - '|FUZZ'                
-          - '[FUZZ'                    
-          - '@FUZZ'                    
-          - ':FUZZ'                      
-          
+          - '|FUZZ'
+          - '[FUZZ'
+          - '@FUZZ'
+          - ':FUZZ'
+
       - type: status
         status:
           - 200
@@ -57,8 +58,8 @@ http:
           - 303
           - 307
           - 308
-          - 306          
+          - 306
           - 500
-          - 403          
-          
+          - 403
+
         condition: or

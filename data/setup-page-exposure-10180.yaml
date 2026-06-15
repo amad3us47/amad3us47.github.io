@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: setup-page-exposure
 info:
   name: Zenphoto Setup Page Exposure
@@ -5,7 +6,7 @@ info:
   severity: medium
   description: Misconfiguration on Zenphoto version < 1.5.X which lead to sensitive information disclosure
   tags: panel
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/zp-core/setup/index.php'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: advanced-post-manager-c5ff432210d446c4c1112bc0d9c04403
 
 info:

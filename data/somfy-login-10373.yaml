@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: somfy-login
 info:
   name: Somfy Login Page
   author: DhiyaneshDK
   severity: info
   tags: panel,login
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/m_login.htm'

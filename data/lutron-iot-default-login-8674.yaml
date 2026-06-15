@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lutron-iot-default-login
 info:
   name: Lutron IOT Device Default Login
@@ -5,10 +6,10 @@ info:
   author: geeknik
   severity: high
   tags: iot,default-login,lutron
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

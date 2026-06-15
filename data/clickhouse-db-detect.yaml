@@ -1,11 +1,12 @@
-id: Clickhouse DB - Detect
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Clickhouse-DB-Detect
 
 info:
   name: Clickhouse DB - Detect
   author: notnotnotveg
-  severity: informative
+  severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/test"
@@ -17,4 +18,4 @@ requests:
       - type: word
         words:
           - "clickhouse"
-        part: body	
+        part: body

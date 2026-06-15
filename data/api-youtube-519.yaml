@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-youtube
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,youtube
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://www.googleapis.com/youtube/v3/activities?part=contentDetails&maxResults=25&channelId=UC-lHJZR3Gqxm24_Vd_AJ5Yw&key={{token}}"

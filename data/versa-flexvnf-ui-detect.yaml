@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: versa-flexvnf-ui-detect
 
 info:
-  name: Flex VNF Web-UI Detection 
-  description: Flex VNF Web-UI Panel Detection 
+  name: Flex VNF Web-UI Detection
+  description: Flex VNF Web-UI Panel Detection
   author: c-sh0
   severity: info
   reference:
@@ -11,7 +12,7 @@ info:
     shodan-query: http.title:"Flex VNF Web-UI"
   tags: panel,versa,sd-wan,flexvnf
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

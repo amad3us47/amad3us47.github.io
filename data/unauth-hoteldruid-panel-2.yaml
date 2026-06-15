@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauth-hoteldruid-panel2
 info:
   name: Unauthenticated Hoteldruid Panel
@@ -7,7 +8,7 @@ info:
   tags: hoteldruid,panel,unauth
 
 
-requests:
+http:
   - raw:
       - |
         GET /inizio.php HTTP/1.1

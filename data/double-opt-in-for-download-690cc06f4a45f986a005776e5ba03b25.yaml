@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: double-opt-in-for-download-690cc06f4a45f986a005776e5ba03b25
 
 info:

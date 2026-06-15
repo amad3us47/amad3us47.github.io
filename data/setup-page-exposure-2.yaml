@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: setup-page-exposure2
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: panel
 
 
-requests:
+http:
   - raw:
       - |
         GET /zp/zp-core/setup/index.php HTTP/1.1

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: openerp-database
 info:
   name: OpenERP database instances
   author: impramodsargar
   severity: info
   tags: openerp
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/web/database/selector/"

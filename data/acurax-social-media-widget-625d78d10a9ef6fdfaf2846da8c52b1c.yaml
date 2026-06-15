@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: acurax-social-media-widget-625d78d10a9ef6fdfaf2846da8c52b1c
 
 info:

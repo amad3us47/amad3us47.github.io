@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: squid-analysis-report-generator
 info:
   name: Squid Analysis Report Generator
@@ -7,7 +8,7 @@ info:
   reference:
     - https://sourceforge.net/projects/sarg/
   tags: sarg,exposure,logs
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

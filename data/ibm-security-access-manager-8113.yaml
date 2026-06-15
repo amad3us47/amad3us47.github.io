@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ibm-security-access-manager
 info:
   name: Detects IBM Security Access Manager
@@ -6,7 +7,7 @@ info:
   description: IBM Security Access Manager is a complete authorization and network security policy management solution. It provides end-to-end protection of resources over geographically dispersed intranets and extranets.
   reference: https://www.ibm.com/docs/en/sva/9.0.7?topic=overview-introduction-security-access-manager
   tags: panel,ibm
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

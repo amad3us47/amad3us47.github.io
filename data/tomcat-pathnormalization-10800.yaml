@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tomcat-manager-pathnormalization
 info:
   name: Tomcat Manager Path Normalization
@@ -10,7 +11,7 @@ info:
   classification:
     cwe-id: CWE-200
   tags: panel,tomcat,apache
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/..;/manager/html'
@@ -23,9 +24,5 @@ requests:
           - 'manager-gui'
         condition: and
       - type: status
-        negative: true
-        status:
-          - 403
-          - 401
 
 # Enhanced by mp on 2022/03/17

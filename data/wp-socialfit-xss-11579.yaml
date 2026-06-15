@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-socialfit-xss
 info:
   name: WordPress Plugin SocialFit - 'msg' Cross-Site Scripting
@@ -8,10 +9,10 @@ info:
   reference: |
     - https://www.exploit-db.com/exploits/37481
   tags: wordpress,xss,wp-plugin
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

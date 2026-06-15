@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mw-wp-form-4f3887e31c9dd8ce0ca984079d0d55a4
 
 info:

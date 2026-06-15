@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microsoft-exchange-server-detect
 info:
   name: Microsoft Exchange Server Detect
@@ -6,10 +7,10 @@ info:
   reference: https://github.com/GossiTheDog/scanning/blob/main/http-vuln-exchange.nse
   description: |
     Check for Exchange Server CVEs CVE-2021-26855, CVE-2021-26857, CVE-2021-26858 and CVE-2021-27065,using Outlook Web App path data.
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

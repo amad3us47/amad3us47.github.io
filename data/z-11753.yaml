@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: z-11753
 3cx-management-console.yaml.~1~
 3cx-management-console.yaml.~1~.~1~
 3g-wireless-gateway.yaml.~1~

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-jquery-file-upload
 info:
   name: Exposed jQuery File Upload
@@ -5,7 +6,7 @@ info:
   reference: https://www.exploit-db.com/exploits/45584
   severity: medium
   tags: exposure,jquery
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/jquery-file-upload/server/php/"

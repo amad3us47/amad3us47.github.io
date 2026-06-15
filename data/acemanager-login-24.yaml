@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: acemanager-login
 
 info:
@@ -8,7 +9,7 @@ info:
     fofa-dork: 'app="ACEmanager"'
   tags: panel,login,tech,acemanager
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

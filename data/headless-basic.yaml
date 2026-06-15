@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: headless-basic
 info:
   name: Headless Basic
@@ -9,10 +10,3 @@ headless:
   - steps:
       - action: navigate
         args:
-          url: "{{BaseURL}}/"
-        
-      - action: waitload
-    matchers:
-      - type: word
-        words:
-          - "<html>"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woocommerce-customers-manager-6f0e31241df0e2762d58e550c48e2e79
 
 info:

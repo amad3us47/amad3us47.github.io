@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: search-autocomplete-e7875df4f2cee8b672e6000b42a8fabd
 
 info:

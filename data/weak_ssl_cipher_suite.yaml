@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: weak-ssl-tls-cipher-suite
 
 info:
@@ -18,7 +19,7 @@ file:
         name: SSL
         regex:
           - 'SSLContext.getInstance\(\"SSL\"\)'
-          
+
       - type: regex
         name: SSLv2
         regex:
@@ -28,14 +29,13 @@ file:
         name: SSLv3
         regex:
           - 'SSLContext.getInstance\(\"SSLv3\"\)'
-      
+
       - type: regex
         name: TLS1.0
         regex:
           - 'SSLContext.getInstance\(\"TLSv1.0\"\)'
-      
+
       - type: regex
         name: TLS1.1
         regex:
           - 'SSLContext.getInstance\(\"TLSv1.1\"\)'
-      

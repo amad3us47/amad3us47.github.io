@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kev-workflow
 
 info:
   name: KEV Workflow
   author: king-alexander
+  severity: info
   description: This workflow runs the relevant Nuclei templates to detect Known Exploited Vulnerabilities.
 workflows:
   - tags: kev

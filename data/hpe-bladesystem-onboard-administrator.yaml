@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hpe-bladesystem-onboard-administrator
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Fingerprint HPE BladeSystem Onboard Administrator
   tags: tech,hpe
 
-requests:
+http:
   - raw:
       - |
         POST /hpoa HTTP/1.1

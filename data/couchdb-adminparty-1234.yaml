@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: couchdb-adminparty
 info:
   name: couchdb admin party
   author: organiccrap
   severity: high
   # commonly runs on port 5984/http
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/_users/_all_docs'

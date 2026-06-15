@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ip-blacklist-cloud-d21c514d669c148bfc0cb72c9e7c0c1b
 
 info:

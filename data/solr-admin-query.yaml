@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: solr-admin-query
 
 info:
@@ -6,18 +7,5 @@ info:
   severity: high
   description: |
     app="APACHE-Solr"
-  reference: 
+  reference:
     - https://www.exploit-db.com/ghdb/5856
-
-rules:
-    r0:
-        request:
-            method: GET
-            path: /admin/
-        expression: response.status == 200 && response.body.bcontains(b'<title>Solr admin page</title>')
-    r1:
-        request:
-            method: GET
-            path: /solr/admin/
-        expression: response.status == 200 && response.body.bcontains(b'<title>Solr admin page</title>')
-expression: r0() && r1()

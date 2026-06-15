@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ack-cluster-api-public
 
 info:
@@ -35,5 +36,5 @@ code:
       - type: word
         words:
           - 'api_server_endpoint\":\"\",'
-        negative: true
+
 # digest: 4b0a00483046022100b7fc429fd01243451efc9c2af29a4f7dd9fa7d3d472f6b2390b237f52c8d29bd022100e7e94a2b747bfaf80f269494c33d26ad15655c94116df0673fc9002d46206901:922c64590222798bb761d5b6d8e72950

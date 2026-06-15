@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-backup-files
 info:
   name: Exposed Backup Files
+  author: unknown
   severity: low
   description: Detects potential exposure of backup files on the target server
 author: qaisar
 tags:
   - web
   - backup-files
-requests:
+http:
 - method: GET
   path:
     - "/backups"

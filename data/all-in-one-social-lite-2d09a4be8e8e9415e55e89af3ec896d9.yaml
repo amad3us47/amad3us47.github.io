@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: all-in-one-social-lite-2d09a4be8e8e9415e55e89af3ec896d9
 
 info:

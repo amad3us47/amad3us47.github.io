@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yarn-lock
 
 info:
@@ -7,7 +8,7 @@ info:
   description: The yarn.lock file stores the versions of each Yarn dependency installed.
   tags: exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/yarn.lock"

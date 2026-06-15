@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: versa-default-login
 
 info:
@@ -48,5 +49,5 @@ http:
         dsl:
           - "contains(tolower(header_2), '/login?error=true')"
           - "contains(tolower(header_2), '/login?tokenmissingerror=true')"
-        negative: true
+
 # digest: 4a0a0047304502210083cb49b99922f75f03d03772e225551bf1e102dfcafefa8f75a91478956e7249022000ba66eece4bd1650a1593d532c6efb7da299914c2d0ae268174068b23be7986:922c64590222798bb761d5b6d8e72950

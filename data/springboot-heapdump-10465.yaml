@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-heapdump
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Environment variables and HTTP requests can be found in the HPROF
   tags: springboot,exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/heapdump"

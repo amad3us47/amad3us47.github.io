@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: easy-social-icons-0b5559ce76306a7ccefcad8e15d7e5a6
 
 info:

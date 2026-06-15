@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ssrf-vuln-params
 
 info:
-  name: detect possible SSRF parameters 
+  name: detect possible SSRF parameters
   author: mohammed ayadi (ayadim)
   severity: info
   tags: file,bbh,bbh-ssrf,bbh-or,bbh-check1

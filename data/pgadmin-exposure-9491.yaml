@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pgadmin-exposure
 info:
   name: PostgreSQL - pgAdmin Dasboard Exposure
@@ -5,7 +6,7 @@ info:
   severity: info
   tags: unauth,pgadmin,postgres,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/browser/"

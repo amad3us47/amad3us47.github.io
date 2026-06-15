@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: HTML-Sourcecode
 
 info:
   name: HTML source code
   description: Password in HTML comment
   author: Tomitom13
-  severity: Critical
+  severity: critical
   tags: password,comment,html,rootme
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

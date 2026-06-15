@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: request-condition-new
 
 info:
@@ -5,7 +6,7 @@ info:
   author: pd-team
   severity: info
 
-requests:
+http:
   - method: GET
     id: first
     path:

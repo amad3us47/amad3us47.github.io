@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vsftpd-detection
 info:
   name: VSFTPD v2.3.4 Backdoor Command Execution
@@ -5,7 +6,7 @@ info:
   severity: critical
   tags: network,vsftpd,ftp
   reference: https://www.rapid7.com/db/modules/exploit/unix/ftp/vsftpd_234_backdoor/
-network:
+tcp:
   - inputs:
       - data: "USER anonymous\r\nPASS pussycat0x\r\n"
     host:

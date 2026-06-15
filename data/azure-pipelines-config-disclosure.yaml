@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: azure-pipelines-config-disclosure
 info:
   id: azure-pipelines-config-disclosure
   name: Azure Pipelines Configuration File Disclosure Test
   author: OpenAI
   description: Template to detect the presence of Azure Pipelines configuration files.
-  severity: High
+  severity: high
   classification:
     country: any
     tags:

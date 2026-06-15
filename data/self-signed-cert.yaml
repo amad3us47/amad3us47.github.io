@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: self-signed-cert
 info:
   id: self-signed-cert
   name: Self-signed Certificate Detected - Alert
   author: OpenAI
   description: Template to detect self-signed SSL/TLS certificates
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mindbody-access-management-16bc2e33ae9cc3928f52c9188d9689cf
 
 info:

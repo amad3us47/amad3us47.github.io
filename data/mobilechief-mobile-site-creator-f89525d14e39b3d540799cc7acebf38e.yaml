@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mobilechief-mobile-site-creator-f89525d14e39b3d540799cc7acebf38e
 
 info:

@@ -1,4 +1,5 @@
-id: php-user-ini-disclosure 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: php-user-ini-disclosure-1
 
 info:
   name: Php User.ini Disclosure
@@ -7,10 +8,10 @@ info:
   reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/php-user-ini-disclosure.json
   tags: exposure,config
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

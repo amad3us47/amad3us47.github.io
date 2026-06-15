@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: google-earth-dlogin
 info:
   name: Google Earth Enterprise Default Login
@@ -7,7 +8,7 @@ info:
   reference: https://www.opengee.org/geedocs/5.2.2/answer/3470759.html
   metadata:
     shodan-dork: 'title:"GEE Server"'
-requests:
+http:
   - raw:
       - |
         GET /admin/ HTTP/1.1

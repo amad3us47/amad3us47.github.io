@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: superb-social-share-and-follow-buttons-e2f4c5bc35f981344aece5836f1522c3
 
 info:

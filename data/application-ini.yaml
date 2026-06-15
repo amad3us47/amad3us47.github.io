@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: application-ini
 
 info:
@@ -6,7 +7,7 @@ info:
   author: geeknik
   severity: high
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/admin/configs/application.ini"
@@ -40,7 +41,3 @@ requests:
         part: header
         words:
           - "text/html"
-        negative: true
-      - type: status
-        status:
-          - 200

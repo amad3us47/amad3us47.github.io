@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jupiterx-core-7e0366d96360d8d3fa3cfd9890d82c85
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: booking-calendar-contact-form-a1cf1b8974c4b0f0e16e021791a69175
 
 info:

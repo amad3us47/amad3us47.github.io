@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-user-enumeration
 info:
   name: Wordpress user enumeration
   author: Manas_Harsh & daffainfo
   severity: info
   tags: wordpress
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-json/wp/v2/users/"

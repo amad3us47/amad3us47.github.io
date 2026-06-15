@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: django_cms
 info:
   name: django_cms_version_fingerprint
   severity: info
   author: glatisant & erwan
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/static/cms/sass/components/_iconography.scss"

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: powerlinkg3-default-credential
 info:
   name: powerlinkg3 Default Credentials Check
   author: grant
   severity: high
 
-requests:
+http:
   - method: GET
     path:
       - "http://{{BaseURL}}/zone_status.htm?b"

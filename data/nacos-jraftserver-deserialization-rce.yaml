@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nacos-jraftserver-deserialization-rce
 
 info:
   name: Nacos - jraftserver deserialization Remote Code Execution
   author: unknown
   severity: critical
-  description: Nacos uses Hessian for deserialization when processing certain Jraft based requests, but no restrictions are set, resulting in remote code execution (RCE) vulnerabilities in the application. 
+  description: Nacos uses Hessian for deserialization when processing certain Jraft based requests, but no restrictions are set, resulting in remote code execution (RCE) vulnerabilities in the application.
   reference: https://stack.chaitin.com/techblog/detail?id=106
   tags: nacos
   metadata:

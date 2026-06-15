@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tp-link-tl-r470gp-ac-default-login
 
 info:
@@ -30,5 +31,3 @@ http:
           - "\"stok\""
           - "\"error_code\":0"
         condition: and
-
-

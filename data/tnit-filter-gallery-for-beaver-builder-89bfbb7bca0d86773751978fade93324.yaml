@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tnit-filter-gallery-for-beaver-builder-89bfbb7bca0d86773751978fade93324
 
 info:

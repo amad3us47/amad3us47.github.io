@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: upnp-device-detect
 info:
   name: Detect Basic uPNP Device
@@ -5,7 +6,7 @@ info:
   reference: https://www.upnp.org/specs/basic/UPnP-basic-Basic-v1-Device.pdf
   severity: info
   tags: upnp,iot
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

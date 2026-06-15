@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: citrix-honeypot-detection
 
 info:
@@ -33,4 +34,3 @@ http:
         part: body
         words:
           - "In order to use our services, you must agree to Citrix's Terms of Service."
-        negative: true

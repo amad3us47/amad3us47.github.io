@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rconfig-rce
 info:
   name: rConfig 3.9.5 - Remote Code Execution
@@ -9,7 +10,7 @@ info:
   # References:
   # - [1] https://www.rconfig.com/downloads/rconfig-3.9.5.zip
   # - [2] https://www.exploit-db.com/exploits/48878
-requests:
+http:
   - raw:
       - |
         POST /lib/crud/userprocess.php HTTP/1.1

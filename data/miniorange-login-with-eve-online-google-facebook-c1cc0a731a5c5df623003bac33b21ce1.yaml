@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: miniorange-login-with-eve-online-google-facebook-c1cc0a731a5c5df623003bac33b21ce1
 
 info:

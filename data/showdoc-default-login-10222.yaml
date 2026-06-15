@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: showdoc-default-login
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://blog.star7th.com/2016/05/2007.html
   tags: showdoc,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /server/index.php?s=/api/user/login HTTP/1.1

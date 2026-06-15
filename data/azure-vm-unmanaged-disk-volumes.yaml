@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-vm-unmanaged-disk-volumes
 info:
   name: Azure VM Unmanaged Disk Volumes Detected

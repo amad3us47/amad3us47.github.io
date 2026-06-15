@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: donorbox-donation-form-7e3cdcd7322fdba36cae6661c4404f33
 
 info:

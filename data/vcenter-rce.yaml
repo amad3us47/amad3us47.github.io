@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: vcenter-rce
 info:
   id: vcenter-rce
   name: VMware vCenter Server Remote Code Execution - Detect (CVE-2021-22022)
   author: OpenAI
   description: Template to detect VMware vCenter Server instances vulnerable to Remote Code Execution (CVE-2021-22022)
-  severity: Critical
+  severity: critical
   classification:
     country: any
     tags:

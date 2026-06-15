@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: uncanny-automator-1df18b3ce0870f9a096bc4c892d90dcd
 
 info:

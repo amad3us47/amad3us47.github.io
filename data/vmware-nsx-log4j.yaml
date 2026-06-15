@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-nsx-log4j
 
 info:
@@ -14,7 +15,7 @@ info:
   tags: cve,cve2021,rce,jndi,log4j,graylog
 
 
-requests:
+http:
   - raw:
       - |
         POST /login HTTP/1.1

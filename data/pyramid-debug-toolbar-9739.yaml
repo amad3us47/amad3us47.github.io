@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pyramid-debug-toolbar
 info:
   name: Pyramid Debug Toolbar
@@ -6,10 +7,10 @@ info:
   reference: https://github.com/Pylons/pyramid_debugtoolbar
   severity: medium
   tags: pyramid,logs,exposure
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

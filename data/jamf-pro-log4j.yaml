@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jamf-pro-log4j
 
 info:
@@ -13,7 +14,7 @@ info:
     shodan-query: title:"Jamf Pro"
   tags: cve,cve2021,rce,jndi,log4j,jamfpro
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mcloud-panel
 
 info:
@@ -14,7 +15,7 @@ info:
     shodan-query: http.title:"mcloud-installer-web"
   tags: panel,mcloud,exposure
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/clusterList'

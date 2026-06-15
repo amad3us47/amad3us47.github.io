@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: drupal-install
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: low
   tags: exposure,drupal
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/install.php?profile=default"

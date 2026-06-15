@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: h3c-imc-rce
 info:
   name: H3c IMC - Remote Code Execution
@@ -13,7 +14,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: rce,h3c-imc
-requests:
+http:
   - raw:
       - |
         POST /imc/javax.faces.resource/dynamiccontent.properties.xhtml HTTP/1.1

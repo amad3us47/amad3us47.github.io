@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: graphql-array-batching
 
 info:
@@ -15,7 +16,7 @@ info:
     Deactivate or limit Batching in your GraphQL engine.
   tags: graphql
 
-requests:
+http:
   - raw:
       - |
         POST /graphql HTTP/1.1

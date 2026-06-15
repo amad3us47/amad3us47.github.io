@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: detect-all-takeovers
 
 info:
@@ -11,7 +12,7 @@ info:
   # You need to claim the CNAME the subdomain to confirm the takeover.
   # Do not report this without claiming the CNAME.
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

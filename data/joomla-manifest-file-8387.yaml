@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: joomla-manifest-file
 info:
   name: Joomla Manifest File Disclosure
@@ -9,7 +10,7 @@ info:
     cvss-score: 5.3
     cwe-id: CWE-200
   tags: misc,joomla
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/administrator/manifests/files/joomla.xml"

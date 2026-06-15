@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: stats-counter-9aa163e47da0ed5b2d3659ce351aff8e
 
 info:

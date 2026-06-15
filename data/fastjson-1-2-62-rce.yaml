@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fastjson-1-2-62-rce
 
 info:
@@ -36,7 +37,5 @@ http:
           - "dns"
 
       - type: status
-        negative: true
-        status:
-          - 200
+
 # digest: 4b0a00483046022100bc4ea495070bac963554d5167a731432657dde2812666a1f2c84fca4b9ff00ae022100cd6b3fe5d56b66f68c9e1bac1002df64d5ad8cec7d09db8196a4231c6e87121b:922c64590222798bb761d5b6d8e72950

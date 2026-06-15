@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: voipmonitor-detect
 info:
   name: VoipMonitor detect
   author: Yanyun
   severity: info
   tags: tech,voipmonitor
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: otobo-panel
 
 info:
@@ -10,7 +11,7 @@ info:
     shodan-query: http.title:"otobo"
   tags: panel,otobo
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/otobo/index.pl"

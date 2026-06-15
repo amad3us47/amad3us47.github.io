@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: freepbx-workflow
 
 info:
   name: Freepbx Security Checks
   author: darses
+  severity: info
   description: A simple workflow that runs all FreePBX related nuclei templates on a given target.
 
 workflows:

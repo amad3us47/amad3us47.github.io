@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ssi-files
 
 info:
-  name: detect SSI files can lead to SSII 
+  name: detect SSI files can lead to SSII
   author: ayadim
   severity: info
   tags: file,bbh,bbh-ssii,bbh-check1

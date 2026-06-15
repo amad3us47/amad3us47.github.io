@@ -1,14 +1,15 @@
-id: Find killswitch dashboard
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Find-killswitch-dashboard
 info:
   name: Find killswitch dashboard exposed
   author: Clark
   severity: medium
   #Server-side Request Forgery (SSRF) Try adminer.php?server=[payload]&username=123&password=123&db=123
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/killswitch.aspx"
-    
+
     matchers-condition: and
     matchers:
       - type: word

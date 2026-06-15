@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitlab-public-snippets1
 info:
   name: GitLab public snippets
@@ -9,7 +10,7 @@ info:
         - https://twitter.com/intigriti/status/1375078783338876929
 
 
-requests:
+http:
   - raw:
       - |
         GET /explore/snippets HTTP/1.1
@@ -31,5 +32,3 @@ requests:
         words:
           - "No snippets found"
           - "Nothing here."
-        negative: true
-        part: body

@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: flatcore_cms
 info:
   name: flatcore_cms_version_fingerprint
   severity: info
   author: glatisant & erwan
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/lib/js/tinymce/tinymce.min.js"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kubelet-metrics
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Scans for kubelet metrics
   tags: tech,k8s,kubernetes,devops,kubelet
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/metrics"

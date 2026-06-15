@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp_rokbox-54e3ed3666a6eb619c3d909e2f37e3f8
 
 info:

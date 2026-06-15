@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dewplayer-flash-mp3-player-3201fff4d092e388bc284819122da309
 
 info:

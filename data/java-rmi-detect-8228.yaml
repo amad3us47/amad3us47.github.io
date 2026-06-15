@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: java-rmi-detect
 info:
   name: Detect Java RMI Protocol
   author: F1tz
   severity: info
   tags: network,rmi,java
-network:
+tcp:
   - inputs:
       - data: "{{hex_decode('4a524d4900024b')}}"
     host:

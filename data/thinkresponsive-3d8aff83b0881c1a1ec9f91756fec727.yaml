@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkresponsive-3d8aff83b0881c1a1ec9f91756fec727
 
 info:

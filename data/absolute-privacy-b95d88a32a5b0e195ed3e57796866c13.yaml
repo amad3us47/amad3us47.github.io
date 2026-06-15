@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: absolute-privacy-b95d88a32a5b0e195ed3e57796866c13
 
 info:

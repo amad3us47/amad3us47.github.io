@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: container-registry-exposure
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://docs.docker.com/registry/spec/api/
   tags: container,registry,docker,remote,noninvasive
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/v2/"
@@ -26,4 +27,3 @@ requests:
         status:
           - 200
           - 204
-        

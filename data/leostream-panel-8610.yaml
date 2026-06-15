@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: leostream-panel
 info:
   name: Leostream Panel Detect
@@ -8,7 +9,7 @@ info:
   metadata:
     shodan-query: http.title:"Leostream"
   tags: panel,leostream
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

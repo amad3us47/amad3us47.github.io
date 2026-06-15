@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phalcon-framework-source
 info:
   name: Phalcon Framework - Source Code Leakage
@@ -5,7 +6,7 @@ info:
   severity: high
   description: Phalcon Framework source code was discovered.
   tags: exposure,debug,phalcon
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/anything_here"

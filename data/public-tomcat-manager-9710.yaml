@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: public-tomcat-manager
 info:
   name: Apache Tomcat Manager Disclosure
@@ -7,7 +8,7 @@ info:
   classification:
     cwe-id: CWE-200
   tags: panel,tomcat,apache
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/manager/html'

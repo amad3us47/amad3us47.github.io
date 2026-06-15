@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2019-01348
 info:
   name: Xiuno BBS CNVD-2019-01348
@@ -12,7 +13,7 @@ info:
     cwe-id: CWE-284
   remediation: Upgrade to the latest version of Xiuno BBS or switch to a supported product.
   tags: xiuno,cnvd,cnvd2019
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/install/"

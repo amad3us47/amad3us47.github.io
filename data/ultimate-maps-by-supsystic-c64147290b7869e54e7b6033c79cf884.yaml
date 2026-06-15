@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ultimate-maps-by-supsystic-c64147290b7869e54e7b6033c79cf884
 
 info:

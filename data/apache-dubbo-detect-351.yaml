@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-dubbo-detect
 info:
   name: Apache dubbo detect
@@ -7,7 +8,7 @@ info:
     fofa-query: app="APACHE-dubbo"
   tags: apache,dubbo,tech
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

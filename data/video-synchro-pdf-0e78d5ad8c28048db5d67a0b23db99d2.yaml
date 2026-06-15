@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: video-synchro-pdf-0e78d5ad8c28048db5d67a0b23db99d2
 
 info:

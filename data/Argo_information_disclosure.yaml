@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Argo-Information-Disclosure
 
 info:
   name: Argo information disclosure
   author: Excis3
-  severity: High
+  severity: high
   description: Disclosure of argo database information.
   tags: argo
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/WEB-INF/classes/argo.properties"
@@ -18,7 +19,7 @@ requests:
         part: body
         words:
           - "argo.database"
-          
+
       - type: status
         status:
           - 200

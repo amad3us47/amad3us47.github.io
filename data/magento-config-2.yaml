@@ -1,14 +1,15 @@
-id: magento-config 2
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: magento-config-2
 info:
   name: Magento Config Disclosure
   author: geeknik
   severity: medium
   tags: config,exposure,magento
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

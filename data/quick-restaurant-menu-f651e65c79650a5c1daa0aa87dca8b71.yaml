@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: quick-restaurant-menu-f651e65c79650a5c1daa0aa87dca8b71
 
 info:

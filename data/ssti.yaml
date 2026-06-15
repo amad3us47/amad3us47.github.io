@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: ssti
 template:
    name: ssti-discovery
    severity: high
@@ -5,11 +7,11 @@ template:
    description: Server Side Template Injection Discovery
 
 request:
-   payloads: 
+   payloads:
       - "{{7*7}}foobar"
 
    paths: false
 response:
    statusCode: 200
-   patterns: 
+   patterns:
       - "49foobar"

@@ -1,12 +1,13 @@
-id: database-username-and-password 
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: database-username-and-password
 
 info:
-  name: database-username-and-password 
+  name: database-username-and-password
   author: me
   severity: high
   tags: github
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.gitlab-ci.yml"

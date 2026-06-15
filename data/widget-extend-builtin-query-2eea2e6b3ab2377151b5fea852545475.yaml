@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: widget-extend-builtin-query-2eea2e6b3ab2377151b5fea852545475
 
 info:

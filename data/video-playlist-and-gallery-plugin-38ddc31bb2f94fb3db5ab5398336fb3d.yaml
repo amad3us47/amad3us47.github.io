@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: video-playlist-and-gallery-plugin-38ddc31bb2f94fb3db5ab5398336fb3d
 
 info:

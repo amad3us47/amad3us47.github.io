@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: h3c-imc-rce
 
 info:
@@ -11,7 +12,7 @@ info:
     fofa-query: body="/imc/javax.faces.resource/images/login_help.png.jsf?ln=primefaces-imc-new-webui"
   tags: rce,h3c-imc
 
-requests:
+http:
   - raw:
       - |
         POST /imc/javax.faces.resource/dynamiccontent.properties.xhtml HTTP/1.1

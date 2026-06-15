@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: autoptimize-2ecfdf7e957d875bca93a4c9bd866fc9
 
 info:

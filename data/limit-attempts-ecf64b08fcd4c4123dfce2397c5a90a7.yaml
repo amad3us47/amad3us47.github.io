@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: limit-attempts-ecf64b08fcd4c4123dfce2397c5a90a7
 
 info:

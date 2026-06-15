@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: instagram-feed-cbc70ceeb403c1a00a90c2131d02a387
 
 info:

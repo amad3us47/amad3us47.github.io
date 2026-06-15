@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: graphite-browser
 
 info:
@@ -10,7 +11,7 @@ info:
     shodan-query: http.title:"Graphite Browser"
   tags: graphite,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

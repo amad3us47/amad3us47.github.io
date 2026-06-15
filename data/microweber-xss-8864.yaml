@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microweber-xss
 info:
   name: Microweber Cross-Site Scripting
@@ -15,7 +16,7 @@ info:
     cve-id:
     cwe-id: CWE-79
   tags: microweber,xss,oss
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/editor_tools/module?type=files/admin"><script>alert(document.domain)</script>&params=filetype=images#path='

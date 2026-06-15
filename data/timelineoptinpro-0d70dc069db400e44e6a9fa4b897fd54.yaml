@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: timelineoptinpro-0d70dc069db400e44e6a9fa4b897fd54
 
 info:

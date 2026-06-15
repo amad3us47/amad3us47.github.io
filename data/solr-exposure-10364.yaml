@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: solr-exposure
 info:
   name: Apache Solr Exposure
@@ -6,7 +7,7 @@ info:
   tags: panel,solr,apache
   metadata:
     shodan-query: http.title:"Solr Admin"
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/solr/'

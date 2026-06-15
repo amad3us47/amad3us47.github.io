@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-buildkite
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: token-spray,buildkite
 
-requests:
+http:
   - method: GET
     path:
       - "https://api.buildkite.com/v2/user"
@@ -18,4 +19,3 @@ requests:
       - type: status
         status:
           - 401
-        negative: true

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: iomega-emc-shared-nas
 info:
   name: Iomega Lenovo EMC with shared NAS
   author: e_schultze_
   severity: info
   tags: panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cp/Shares?user=&protocol=webaccess&v=2.3"

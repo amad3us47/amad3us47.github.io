@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sonarqube-login
 info:
   name: SonarQube panel detect
   author: dhiyaneshDk
   severity: info
   tags: panel,sonarqube
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/sessions/new"

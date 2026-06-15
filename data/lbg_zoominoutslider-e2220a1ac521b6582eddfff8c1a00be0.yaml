@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lbg_zoominoutslider-e2220a1ac521b6582eddfff8c1a00be0
 
 info:

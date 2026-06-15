@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: chinaunicom-default-login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: chinaunicom,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /cu.html HTTP/1.1

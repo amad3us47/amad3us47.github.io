@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Jitong-EWEBS-phpinfo-leak
 
 info:
@@ -7,11 +8,11 @@ info:
     severity: high
     description: 极通EWEBS访问testweb.php造成phpinfo泄露
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/testweb.php"
-    
+
     redirects: false
 
     matchers-condition: and

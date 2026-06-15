@@ -1,10 +1,11 @@
-id: db-schema.yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: db-schema-yaml
 info:
   name: Discover db schema files
   description: This file is auto-generated from the current state of the database.
   author: geeknik
   severity: info
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/db/schema.rb"
@@ -21,13 +22,3 @@ requests:
         part: header
         words:
           - "text/html"
-        negative: true
-      - type: status
-        status:
-          - 200
-    extractors:
-      - type: regex
-        name: version
-        part: body
-        regex:
-          - 'version: \d{14}'

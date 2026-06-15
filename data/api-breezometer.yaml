@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-breezometer
 
 info:
@@ -10,7 +11,7 @@ info:
   tags: token-spray,breezometer
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://api.breezometer.com/air-quality/v2/current-conditions?lat=48.857456&lon=2.354611&key={{token}}"

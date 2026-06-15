@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: image-optimizer-wd-849c2803a0f8c9de629f8a19987aaee2
 
 info:

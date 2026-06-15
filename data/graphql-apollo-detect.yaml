@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: graphql-apollo-detect
 info:
   name: Graphql Apollo Detect
@@ -34,13 +35,5 @@ http:
         words:
           - 'Content-Type: text/html'
         part: header
-        negative: true
 
-      - type: word
-        words:
-          - '<html'
-          - '<body'
-        part: body
-        condition: or
-        negative: true
 # digest: 4a0a00473045022100b7f6082bae42aa175132ebc8b08e106849e20c4c66c581d3f624cc9d357f321f022038aebd86230dd34714907a6adaec0a024549ab0d07e2bb7931927774be025493:922c64590222798bb761d5b6d8e72950

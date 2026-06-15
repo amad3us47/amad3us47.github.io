@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: miniorange-2-factor-authentication-43e6582b1b7f9b7f36d6a43823fc8a4e
 
 info:

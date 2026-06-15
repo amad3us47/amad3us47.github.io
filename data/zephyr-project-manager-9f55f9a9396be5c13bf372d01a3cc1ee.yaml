@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zephyr-project-manager-9f55f9a9396be5c13bf372d01a3cc1ee
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: appspec-yml-disclosure
 
 info:
@@ -35,9 +36,5 @@ http:
         part: header
         words:
           - "text/html"
-        negative: true
 
-      - type: status
-        status:
-          - 200
 # digest: 4a0a00473045022070202f1c1cc0354db60a0e53722e22ed46b324d722917ab8203752a2228d80ba022100bec2a76bcbbf9277d6dfedf6013668e0794655892ce95b8f1878eae40f46de1e:922c64590222798bb761d5b6d8e72950

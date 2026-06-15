@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rockmongo-xss
 info:
   name: RockMongo V1.1.8 XSS
@@ -6,7 +7,7 @@ info:
   description: A vulnerability in RockMongo allows attackers to inject arbitrary javascript into the response returned by the application.
   reference: https://packetstormsecurity.com/files/136658/RockMongo-1.1.8-Cross-Site-Request-Forgery-Cross-Site-Scripting.html
   tags: rockmongo,xss
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/index.php?action=login.index"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: acf-quickedit-fields-f57146a233ec79023fdb84aa0331cf1e
 
 info:

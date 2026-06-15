@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yith-woocommerce-request-a-quote-c221cde95d7127eb45cfab1bc4d3a612
 
 info:

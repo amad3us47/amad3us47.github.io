@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Wireless-leakage
 info:
   name: Wireless-leakage
@@ -6,7 +7,7 @@ info:
   reference:
     - https://bbs.ichunqiu.com/forum.php?mod=viewthread&tid=26003&highlight=cms
   tags: 74cms,sqli
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cgi-bin/DownloadCfg/RouterCfm.cfg"

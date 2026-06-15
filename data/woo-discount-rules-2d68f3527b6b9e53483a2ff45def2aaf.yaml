@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woo-discount-rules-2d68f3527b6b9e53483a2ff45def2aaf
 
 info:

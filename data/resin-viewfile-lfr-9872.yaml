@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: resin-viewfile-lfr
 info:
   name: Caucho Resin LFR
@@ -8,7 +9,7 @@ info:
     - http://0day5.com/archives/1173/
     - https://www.cnvd.org.cn/flaw/show/CNVD-2006-3205
   tags: resin,caucho,lfr
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/resin-doc/viewfile/?file=index.jsp"

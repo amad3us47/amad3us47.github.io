@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: work-the-flow-file-upload-66aae81fb9cc536577e60b301fd5b108
 
 info:

@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-netweaver-detect
 info:
   name: SAP NetWeaver Detect
   author: rakeshmane10
   severity: info
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/irj/portal'

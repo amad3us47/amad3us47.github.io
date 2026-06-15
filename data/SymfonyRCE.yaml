@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rce-symfony
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.ambionics.io/blog/symfony-secret-fragment
   tags: rce
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_fragment?_path=_controller=phpcredits&flag=-1"

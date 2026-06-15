@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Anni-fileDownload
 
 info:
@@ -7,12 +8,12 @@ info:
   reference: http://www.cnvd.org.cn/flaw/show/CNVD-2018-09319
   tags: Anni,fileDownload
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/download.rsp"
     matchers-condition: and
-    
+
     matchers:
       - type: word
         words:

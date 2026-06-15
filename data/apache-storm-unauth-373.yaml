@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-storm-unauth
 info:
   name: Apache Storm Unauth
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
   tags: apache,unauth,misconfig
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/api/v1/cluster/summary'

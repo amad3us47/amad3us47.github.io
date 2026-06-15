@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: free-sales-funnel-squeeze-pages-landing-page-builder-templates-make-267c13265a681f5c4a2cf3601cdb366d
 
 info:

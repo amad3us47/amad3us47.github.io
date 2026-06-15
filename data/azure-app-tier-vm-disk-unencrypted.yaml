@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-app-tier-vm-disk-unencrypted
 info:
   name: Azure App-Tier VM Disk Encryption Not Enabled

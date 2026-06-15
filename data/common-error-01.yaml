@@ -1,9 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: common-error-01
-type: fuzz
-level: 2
 info:
   name: Common case to trigger the error 02
-  risk: Info
+  author: unknown
+  severity: info
 
 variables:
   - head: |
@@ -30,11 +30,7 @@ variables:
 payloads:
   - '{{.prefix}}{{.params}}'
 
-requests:
+http:
 
   - generators:
       - Header("{{.payload}}", "{{.head}}")
-    detections:
-      - >-
-        StatusCode() < 300 && StatusCode() >= 500 && StatusCode() != OriginStatusCode() && !StringSearch("response", "Not found") && !StringSearch("response", "Request Rejected") && !StringSearch("response", "Not found") && Math.abs(ContentLength() - OriginContentLength()) > {{.length}} && CommonError()
-        

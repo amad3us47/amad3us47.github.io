@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitlab-public-signup
 
 info:
@@ -37,7 +38,5 @@ http:
           - 200
 
       - type: word
-        negative: true
-        words:
-          - '<meta content="GitLab.com" property="og:description">'
+
 # digest: 4a0a00473045022062b8db9baa3d5d313d3ae13c53a7227a7ee19d26050ef100a939cb0ab4cd4157022100d0f23da59efb040286c83a011bbffc59e6af30aeb1b93f8973c1521e4d95ee65:922c64590222798bb761d5b6d8e72950

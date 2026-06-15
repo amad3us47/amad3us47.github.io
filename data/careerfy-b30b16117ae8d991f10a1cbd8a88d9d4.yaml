@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: careerfy-b30b16117ae8d991f10a1cbd8a88d9d4
 
 info:

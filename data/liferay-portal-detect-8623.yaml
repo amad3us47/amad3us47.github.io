@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: liferay-portal-detect
 info:
   name: Liferay Portal Detection
@@ -5,7 +6,7 @@ info:
   severity: low
   # CVE-2020-7961: Liferay Portal Unauthenticated RCE
   # https://github.com/mzer0one/CVE-2020-7961-POC
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/api/jsonws'

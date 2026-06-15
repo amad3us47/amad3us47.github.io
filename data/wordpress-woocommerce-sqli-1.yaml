@@ -1,4 +1,5 @@
-id: wordpress-woocommerce-sqli 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: wordpress-woocommerce-sqli-1
 
 info:
   name: Unauthenticated SQL injection Woocommerce
@@ -9,10 +10,10 @@ info:
       - https://woocommerce.com/posts/critical-vulnerability-detected-july-2021
       - https://viblo.asia/p/phan-tich-loi-unauthen-sql-injection-woocommerce-naQZRQyQKvx
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

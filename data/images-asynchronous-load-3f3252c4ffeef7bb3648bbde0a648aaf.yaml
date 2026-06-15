@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: images-asynchronous-load-3f3252c4ffeef7bb3648bbde0a648aaf
 
 info:

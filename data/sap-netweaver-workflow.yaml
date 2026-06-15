@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-netweaver-workflow
 
 info:
   name: SAP NetWaver Security Checks
   author: dwisiswant0
+  severity: info
   description: A simple workflow that runs all SAP NetWaver related nuclei templates on a given target.
 workflows:
   - template: http/technologies/sap/sap-netweaver-detect.yaml

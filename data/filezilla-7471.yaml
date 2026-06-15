@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: filezilla-exposed
 info:
   name: Filezilla
   author: amsda
   severity: medium
   tags: exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/filezilla.xml"

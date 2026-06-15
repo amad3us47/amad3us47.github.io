@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: complianz-gdpr-57c6888ced10b936db3b5ad6f04d5907
 
 info:

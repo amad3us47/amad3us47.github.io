@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: mysql-dump-files
 info:
   id: mysql-dump-files
   name: MySQL Dump Files - Detect
   author: OpenAI
   description: Template to detect MySQL dump files
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

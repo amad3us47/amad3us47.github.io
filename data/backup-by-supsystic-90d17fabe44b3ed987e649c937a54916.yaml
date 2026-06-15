@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: backup-by-supsystic-90d17fabe44b3ed987e649c937a54916
 
 info:

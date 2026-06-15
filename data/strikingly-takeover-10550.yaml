@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: strikingly-takeover
 info:
   name: strikingly takeover detection
@@ -6,7 +7,7 @@ info:
   reference:
     - https://medium.com/@sherif0x00/takeover-subdomains-pointing-to-strikingly-5e67df80cdfd
   tags: takeover
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: header-injection
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Fuzzing headers for OOB SSRF
   tags: fuzz,ssrf
 
-requests:
+http:
   - payloads:
       header: helpers/payloads/proxy-headers.txt
 

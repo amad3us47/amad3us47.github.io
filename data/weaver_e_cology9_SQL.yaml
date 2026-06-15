@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: weaver_e_cology9_SQL
 info:
   name: weaver_e_cology9_SQL
@@ -7,7 +8,7 @@ info:
   reference:
     - https://
   tags: tags
-requests:
+http:
   - raw:
       - |
         POST /mobile/%20/plugin/browser.jsp HTTP/1.1

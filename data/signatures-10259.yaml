@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bolt
 info:
   name: bolt_version_fingerprint
   severity: info
   author: glatisant & erwan
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/bolt-public/view/js/bolt.js"

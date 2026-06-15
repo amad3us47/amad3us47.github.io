@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: freshdesk-takeover
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: takeover
   reference: https://twitter.com/ja1sharma/status/1377239265348743175
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -23,4 +24,3 @@ requests:
       - type: word
         words:
           - "freshservice.com"
-        negative: true

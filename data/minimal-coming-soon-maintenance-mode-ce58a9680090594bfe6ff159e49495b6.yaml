@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: minimal-coming-soon-maintenance-mode-ce58a9680090594bfe6ff159e49495b6
 
 info:

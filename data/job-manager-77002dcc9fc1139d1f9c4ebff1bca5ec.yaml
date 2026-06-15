@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: job-manager-77002dcc9fc1139d1f9c4ebff1bca5ec
 
 info:

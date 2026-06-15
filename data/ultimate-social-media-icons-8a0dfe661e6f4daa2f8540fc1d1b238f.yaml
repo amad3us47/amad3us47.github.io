@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ultimate-social-media-icons-8a0dfe661e6f4daa2f8540fc1d1b238f
 
 info:

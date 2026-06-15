@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lovetravel-23e1aaa9c3f9ff0df0ea74cdaffa6f35
 
 info:

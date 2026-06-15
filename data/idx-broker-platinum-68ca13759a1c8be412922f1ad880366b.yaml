@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: idx-broker-platinum-68ca13759a1c8be412922f1ad880366b
 
 info:

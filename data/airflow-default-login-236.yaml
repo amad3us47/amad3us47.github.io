@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: airflow-default-login
 info:
   name: Apache Airflow Default Login
@@ -7,7 +8,7 @@ info:
   reference: https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html
   metadata:
     shodan-query: title:"Sign In - Airflow"
-requests:
+http:
   - raw:
       - |
         GET /login/ HTTP/1.1

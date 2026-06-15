@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: security-txt
 info:
   name: Security.txt File
@@ -5,7 +6,7 @@ info:
   severity: info
   description: The website defines a security policy.
   tags: misc,generic
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.well-known/security.txt"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: iotawatt-app-exposure
 info:
   name: IoTaWatt Configuration App Exposure
@@ -13,7 +14,7 @@ info:
   metadata:
     fofa-query: app="IoTaWatt-Configuration-app"
   tags: iot,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

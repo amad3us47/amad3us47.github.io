@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: osticket-install
 
 info:
@@ -48,9 +49,5 @@ http:
         part: body
         words:
           - 'already installed'
-        negative: true
 
-      - type: status
-        status:
-          - 200
 # digest: 4a0a00473045022035d0e7dbba1784db12cb4fb7ced8fbd7bb5e203f3b99603d001c0b680ae3864d022100c9db677907c233439ef4a032b7e7a62cf887cf2675c1bcc4aa2c8f46fefb7868:922c64590222798bb761d5b6d8e72950

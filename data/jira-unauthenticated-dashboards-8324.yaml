@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jira-unauthenticated-dashboards
 # If public sharing is ON it allows users to share dashboards and filters with all users including
 # those that are not logged in. Those dashboard and filters could reveal potentially sensitive information.
 info:
   name: Jira Unauthenticated Dashboards
   author: TechbrunchFR
-  severity: Info
-requests:
+  severity: info
+http:
   - method: GET
     path:
       - "{{BaseURL}}/rest/api/2/dashboard?maxResults=100"

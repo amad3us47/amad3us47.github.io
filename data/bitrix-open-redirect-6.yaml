@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bitrix-open-redirect6
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: redirect,bitrix
 
 
-requests:
+http:
   - raw:
       - |
         GET /bitrix/redirect.php?event1=&event2=&event3=download&goto=https://example.com HTTP/1.1

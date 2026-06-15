@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: magic-post-thumbnail-ccc7771aaedb79d810ecb689585d56c8
 
 info:

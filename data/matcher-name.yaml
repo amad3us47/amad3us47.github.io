@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: matcher-name-workflow
 
 info:
@@ -7,7 +8,7 @@ info:
 
 workflows:
   - template: workflow/match-2.yaml
-    matchers: 
+    matchers:
       - name: test-matcher
         subtemplates:
           - template: workflow/match-1.yaml

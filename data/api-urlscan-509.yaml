@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-urlscan
 
 info:
@@ -10,7 +11,7 @@ info:
   tags: token-spray,urlscan
 
 self-contained: true
-requests:
+http:
   - raw:
       - |
         GET https://urlscan.io/user/quotas/ HTTP/1.1

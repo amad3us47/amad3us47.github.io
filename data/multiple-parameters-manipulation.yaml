@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: multiple-parameters-link-manipulation-erickfernandox
 
 info:
@@ -24,15 +25,15 @@ http:
     matchers:
       - type: word
         part: body
-        words:                    
+        words:
           - '"A://B.C'
-          - '"https://B.C'          
-          
+          - '"https://B.C'
+
       - type: status
         status:
-          - 200     
+          - 200
           - 404
           - 302
           - 301
-          
+
         condition: or

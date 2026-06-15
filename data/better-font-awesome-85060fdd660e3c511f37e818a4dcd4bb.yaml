@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: better-font-awesome-85060fdd660e3c511f37e818a4dcd4bb
 
 info:

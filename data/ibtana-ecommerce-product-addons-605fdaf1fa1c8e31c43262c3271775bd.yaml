@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ibtana-ecommerce-product-addons-605fdaf1fa1c8e31c43262c3271775bd
 
 info:

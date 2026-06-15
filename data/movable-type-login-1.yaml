@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: movable-type-login-1
 
 info:
@@ -9,7 +10,7 @@ info:
     shodan-query: 'title:"サインイン | Movable Type Pro"'
 
 
-requests:
+http:
   - raw:
       - |
         GET /mt/admin HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: socialmedia-handle
 
 info:
@@ -8,7 +9,7 @@ info:
     Social media username enumeration is a technique used to discover the usernames of social media accounts. It can be used to identify the accounts of celebrities,political figures, or other high-profile individuals.
   tags: osint,enumeration,social-media
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

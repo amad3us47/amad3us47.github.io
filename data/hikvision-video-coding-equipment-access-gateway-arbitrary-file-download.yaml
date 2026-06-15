@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hikvision-video-coding-equipment-access-gateway-arbitrary-file-download
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://blockchain.seebug.org/vuldb/ssvid-91769
   tags: hikvision,download
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/serverLog/downFile.php?fileName=../web/html/serverLog/downFile.php"

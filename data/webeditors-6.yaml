@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: webeditors6
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: panel
 
 
-requests:
+http:
   - raw:
       - |
         GET /fck/editor/dialog/fck_spellerpages/spellerpages/server-scripts/spellchecker.php HTTP/1.1

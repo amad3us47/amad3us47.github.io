@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: iframes-get
 
 info:
@@ -9,21 +10,3 @@ info:
 headless:
   - steps:
       - args:
-          url: '{{BaseURL}}'
-        action: navigate
-      - action: waitload
-      - action: sleep
-        args:
-          duration: 5
-      - action: script
-        name: extract
-        args:
-          code: |
-            () => {
-             return [...new Set(Array.from(document.querySelectorAll('iframe')).map(i=>{try{return(new URL(i.src,window.location.href)).hostname}catch(e){console.error('Error accessing iframe:',e.message)}}))].join(',')
-            }
-    extractors:
-      - type: kval
-        part: extract
-        kval:
-          - extract

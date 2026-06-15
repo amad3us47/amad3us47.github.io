@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lfi-linux
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Generic Linux is subject to local file Inclusion on searches for /etc/passwd on passed URLs.
   tags: linux,lfi,generic
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

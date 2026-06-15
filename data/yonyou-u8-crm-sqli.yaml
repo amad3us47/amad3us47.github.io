@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yonyou-u8-crm-sqli
 
 info:
@@ -32,11 +33,5 @@ http:
 
       - type: regex
         part: body
-        negative: true
-        regex:
-          - "src_fld\":null"
 
-      - type: status
-        status:
-          - 200
 # digest: 4b0a00483046022100c61b0f4b7a90e592143eb9f6c3167b097e06f6cba1296257768ae7ac7dbe8c89022100afa77ed5c0f17de8002d0cd6da39492bc834c8b2d3596448c56740fabe69ac54:922c64590222798bb761d5b6d8e72950

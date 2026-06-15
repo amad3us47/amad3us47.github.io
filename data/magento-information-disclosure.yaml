@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: magento-information-disclosure
 
 info:
@@ -12,7 +13,7 @@ info:
     verified: true
   tags: magento,exposure,credential,config
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/app/etc/local.xml"

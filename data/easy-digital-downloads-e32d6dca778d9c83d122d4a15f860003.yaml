@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: easy-digital-downloads-e32d6dca778d9c83d122d4a15f860003
 
 info:

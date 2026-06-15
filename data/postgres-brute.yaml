@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: postgres-brute
 info:
   name: Brute Force Postgres
@@ -16,7 +17,7 @@ javascript:
       var m = require("nuclei/postgres");
       var c = m.PGClient();
       c.Connect(Host, Port, User, Pass);
-  
+
     args:
       Host: "{{Host}}"
       Port: "5432"
@@ -34,7 +35,7 @@ javascript:
         - "postgres"
     attack: clusterbomb
     stop-at-first-match: true
-    
+
     matchers:
       - type: dsl
         dsl:

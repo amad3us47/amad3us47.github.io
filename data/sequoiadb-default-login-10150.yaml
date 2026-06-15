@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sequoiadb-default-login
 info:
   name: SequoiaDB Default Login
@@ -12,7 +13,7 @@ info:
     cvss-score: 8.3
     cve-id:
     cwe-id: CWE-522
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

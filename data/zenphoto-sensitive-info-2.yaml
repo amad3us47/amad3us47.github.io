@@ -1,4 +1,5 @@
-id: zenphoto-sensitive-info 2
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: zenphoto-sensitive-info-2
 
 info:
   name: Zenphoto Installation Sensitive Information
@@ -8,10 +9,10 @@ info:
     information disclosure
   tags: unauth
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wd-facebook-feed-6856e6f571b9e2dba73efb4f64b1586a
 
 info:

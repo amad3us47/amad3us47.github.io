@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: social-discussions-ee6d96fff93999ea7bd8e56cb8ebd66e
 
 info:

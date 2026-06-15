@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-json_info
 info:
   name: wp-json_info
@@ -7,9 +8,9 @@ info:
   reference:
     - https://
     - http://
-    
+
   tags: tags
-requests:
+http:
   - raw:
       - |+
         GET /wp-json/wp/v2/users/ HTTP/2

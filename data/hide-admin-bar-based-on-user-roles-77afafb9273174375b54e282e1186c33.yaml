@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hide-admin-bar-based-on-user-roles-77afafb9273174375b54e282e1186c33
 
 info:

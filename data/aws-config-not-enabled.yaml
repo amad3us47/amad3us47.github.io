@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aws-config-not-enabled
 info:
   name: AWS Config Enabled
@@ -17,7 +18,7 @@ variables:
   service: config
   region: us-east-1
 
-requests:
+http:
   - raw:
       - |
         POST https://{{service}}.{{region}}.amazonaws.com HTTP/1.1

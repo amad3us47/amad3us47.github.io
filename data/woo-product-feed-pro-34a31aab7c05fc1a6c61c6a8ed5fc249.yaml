@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woo-product-feed-pro-34a31aab7c05fc1a6c61c6a8ed5fc249
 
 info:

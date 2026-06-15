@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: manageengine-desktop
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"ManageEngine Desktop Central 10"
   tags: panel,zoho,manageengine
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/configurations'

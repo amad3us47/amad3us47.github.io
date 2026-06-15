@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ecology-arbitrary-file-upload
 
 info:
@@ -10,7 +11,7 @@ info:
     fofa-query: app="泛微-协同办公OA"
   tags: ecology,upload,fileupload,intrusive
 
-requests:
+http:
   - raw:
       - |
         POST /page/exportImport/uploadOperation.jsp HTTP/1.1

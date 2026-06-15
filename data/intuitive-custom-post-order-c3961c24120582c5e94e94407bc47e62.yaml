@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: intuitive-custom-post-order-c3961c24120582c5e94e94407bc47e62
 
 info:

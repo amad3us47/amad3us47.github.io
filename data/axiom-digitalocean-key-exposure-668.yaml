@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: axiom-digitalocean-key-exposure
 
 info:
@@ -13,7 +14,7 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cwe-id: CWE-425
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.axiom/accounts/do.json"

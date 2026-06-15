@@ -1,4 +1,5 @@
-id: github-gemfile-files 2
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: github-gemfile-files-2
 
 info:
   name: Github Gemfiles
@@ -7,10 +8,10 @@ info:
   description: Find github page files(Gemfile / Gemfile.lock)
   tags: github,exposure
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

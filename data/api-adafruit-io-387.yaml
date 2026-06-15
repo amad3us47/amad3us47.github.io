@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-adafruit-io
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,adafruit
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://io.adafruit.com/api/v2/user"

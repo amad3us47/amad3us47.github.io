@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microaudio-a64e3e2a3ecd35d72dea160897cc6e5a
 
 info:

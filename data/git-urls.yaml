@@ -1,14 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: git-urls
 
-requests:
+http:
   - method: GET
     path:
       - /.git/config
-      
+
     matchers:
       - type: regex
         regex: \[remote\s+"origin"\]
-        
+
 test:
   possitive:
     - responses:
@@ -16,7 +17,7 @@ test:
         - |
           HTTP/1.1 200 OK
           Content-Type: text/plan
-          
+
           [core]
             repositoryformatversion = 0
             filemode = true

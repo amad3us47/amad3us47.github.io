@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: erident-custom-login-and-dashboard-0e2a68c6bc5c7e524706a5b5493bef90
 
 info:

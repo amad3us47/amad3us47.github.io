@@ -1,13 +1,14 @@
-id: Arbitrary Text Injection
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Arbitrary-Text-Injection
 
 info:
   name: Arbitrary Text Injection
   author: Nikhil Kumar
-  severity: Low
+  severity: low
   tags:  injection
 
-  
-requests:
+
+http:
   - method: GET
     path:
       - "{{BaseURL}}/!!!ATENTION!!!_This_site_is_on_Maintenance_please_go_to_WWW.EVIL.COM"

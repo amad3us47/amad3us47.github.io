@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: panos-default-login
 info:
   name: Palo Alto Networks PAN-OS Default Login
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   tags: panos,default-login
-requests:
+http:
   - raw:
       - |
         POST /php/login.php HTTP/1.1

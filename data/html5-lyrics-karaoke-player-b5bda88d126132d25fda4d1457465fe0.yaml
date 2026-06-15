@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: html5-lyrics-karaoke-player-b5bda88d126132d25fda4d1457465fe0
 
 info:

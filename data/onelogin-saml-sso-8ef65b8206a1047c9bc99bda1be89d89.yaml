@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: onelogin-saml-sso-8ef65b8206a1047c9bc99bda1be89d89
 
 info:

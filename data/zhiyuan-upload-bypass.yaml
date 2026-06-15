@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zhiyuan-upload-bypass
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: seeyon
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/seeyon/thirdpartyController.do.css/..;/ajax.do"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phpmyadmin-brute
 
 info:
@@ -47,7 +48,7 @@ http:
     payloads:
       user: github/dictionary/phpmyadmin_login.txt
       password: github/dictionary/phpmyadmin_pass.txt
-        
+
     extractors:
       - type: regex
         name: token

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wptouch-open-redirect
 
 info:
@@ -16,7 +17,7 @@ info:
     - https://cxsecurity.com/issue/WLB-2020030114
   tags: wp-plugin,redirect,wordpress
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?wptouch_switch=desktop&redirect=https://example.com/"

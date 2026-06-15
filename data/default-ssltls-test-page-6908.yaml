@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: default-ssltls-test-page
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"Test Page for the SSL/TLS-aware Apache Installation on Web Site"
   tags: tech,ssltls
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

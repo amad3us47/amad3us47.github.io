@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-17369
 info:
   name: Ruijie Smartweb Management System Password Information Disclosure
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://www.cnvd.org.cn/flaw/show/CNVD-2021-17369
   tags: ruijie,disclosure,cnvd,cnvd2021
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/web/xml/webuser-auth.xml"

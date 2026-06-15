@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netis-info-leak
 info:
   name: Netis E1+ V1.2.32533 - Unauthenticated WiFi Password Leak
@@ -7,7 +8,7 @@ info:
   reference:
     - https://www.exploit-db.com/exploits/48384
   tags: netis,exposure
-requests:
+http:
   - raw:
       - |
         GET //netcore_get.cgi HTTP/1.1

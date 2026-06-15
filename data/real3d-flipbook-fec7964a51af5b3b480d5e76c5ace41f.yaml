@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: real3d-flipbook-fec7964a51af5b3b480d5e76c5ace41f
 
 info:

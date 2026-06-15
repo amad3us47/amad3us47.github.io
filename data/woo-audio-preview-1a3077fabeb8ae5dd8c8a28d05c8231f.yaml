@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woo-audio-preview-1a3077fabeb8ae5dd8c8a28d05c8231f
 
 info:

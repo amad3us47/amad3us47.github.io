@@ -1,9 +1,10 @@
-id: elmah.axd found in partnerportal
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: elmah-axd-found-in-partnerportal
 info:
   name: Find partnerportal elmah.axd
   author: nithissh
-  severity: meduim
-requests:
+  severity: medium
+http:
   - method: GET
     path:
       - "{{BaseURL}}/MX/partnerportal/elmah.axd"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-iam-role-resource-lock-unassigned
 info:
   name: Azure IAM Role for Resource Locking Not Assigned
@@ -49,23 +50,5 @@ code:
           - "Microsoft.Authorization/locks/write"
           - "Microsoft.Authorization/locks/delete"
         condition: and
-        negative: true
 
-  - engine:
-      - sh
-      - bash
-    source: |
-      az role assignment list --role "$roleName" --query '[*].principalName' --output json
-
-    matchers-condition: and
-    matchers:
-      - type: word
-        words:
-          - "[]"
-        negative: true
-
-    extractors:
-      - type: dsl
-        dsl:
-          - '"Role " + roleName + " is not assigned to any identity. Role unutilized for resource lock management."'
 # digest: 4a0a004730450220528292880851a01be7d5d5e53c8417aa350464ae227befe76f6f1d92cc47ed05022100a67e65a5bb69ad277015f02dbd260fc3676e3c24dcdb485ee37ffd5020474770:922c64590222798bb761d5b6d8e72950

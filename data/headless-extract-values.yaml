@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 
 id: headless-extract-values
 info:
@@ -10,22 +11,3 @@ headless:
   - steps:
       - action: navigate
         args:
-          url: "{{BaseURL}}"        
-      - action: waitload
-      # From headless/extract-urls.yaml
-      - action: script
-        name: extract
-        args:
-          code: |
-            () => '\n' + [...new Set(Array.from(document.querySelectorAll('[src], [href], [url], [action]')).map(i => i.src || i.href || i.url || i.action))].join('\r\n') + '\n'
-
-    matchers:
-      - type: word
-        words:
-          - "test.html"
-    
-    extractors:
-      - type: kval
-        part: extract
-        kval:
-          - extract

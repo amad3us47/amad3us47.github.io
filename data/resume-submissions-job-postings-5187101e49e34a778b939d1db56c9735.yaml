@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: resume-submissions-job-postings-5187101e49e34a778b939d1db56c9735
 
 info:

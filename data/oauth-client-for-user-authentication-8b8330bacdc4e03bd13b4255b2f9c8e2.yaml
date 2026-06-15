@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oauth-client-for-user-authentication-8b8330bacdc4e03bd13b4255b2f9c8e2
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: expsoed-adb
 info:
   name: Exposed Android Debug Bridge
@@ -5,7 +6,7 @@ info:
   severity: critical
   tags: network,adb,rce,android
   reference: https://www.hackeracademy.org/how-to-hack-android-device-with-adb-android-debugging-bridge
-network:
+tcp:
   - inputs:
       - data: "434e584e0100000100001000ea000000445b0000bcb1a7b1" # Generated using https://github.com/projectdiscovery/network-fingerprint
         type: hex

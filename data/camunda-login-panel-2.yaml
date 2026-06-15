@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: camunda-login-panel2
 info:
   name: Camunda Login panel
@@ -7,8 +8,8 @@ info:
   reference: https://docs.camunda.org/manual/7.15/webapps/admin/user-management/
   tags: camunda,panel
 
-requests:
-  - raw:      
+http:
+  - raw:
     - |+
       GET /camunda/app/welcome/default/#!/login HTTP/1.1
       Host: {{Hostname}}

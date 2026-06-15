@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-flink-unauth-rce
 
 info:
@@ -16,7 +17,7 @@ info:
     cwe-id: CWE-77
   tags: apache,flink,rce,intrusive,unauth
 
-requests:
+http:
   - raw:
       - |
         POST /jars/upload HTTP/1.1

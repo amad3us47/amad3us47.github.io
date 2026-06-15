@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-wordcloud
 
 info:
@@ -10,7 +11,7 @@ info:
   tags: token-spray,wordcloud
 
 self-contained: true
-requests:
+http:
   - raw:
       - |
         POST https://textvis-word-cloud-v1.p.rapidapi.com/v1/textToCloud HTTP/1.1
@@ -40,6 +41,3 @@ requests:
     matchers:
       - type: word
         part: body
-        negative: true
-        words:
-          - '{"message":"You are not subscribed to this API."}'

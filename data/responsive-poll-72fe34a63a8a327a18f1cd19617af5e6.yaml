@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: responsive-poll-72fe34a63a8a327a18f1cd19617af5e6
 
 info:

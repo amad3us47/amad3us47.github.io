@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Ultimate_VC_Addons-0bf801912dc38239a5e7021eaa28f37a
 
 info:

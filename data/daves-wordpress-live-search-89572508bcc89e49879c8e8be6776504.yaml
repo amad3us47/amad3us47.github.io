@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: daves-wordpress-live-search-89572508bcc89e49879c8e8be6776504
 
 info:

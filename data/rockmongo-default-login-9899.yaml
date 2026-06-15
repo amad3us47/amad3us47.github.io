@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rockmongo-default-login
 info:
   name: Rockmongo Default Login
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   tags: rockmongo,default-login
-requests:
+http:
   - raw:
       - |
         POST /index.php?action=login.index HTTP/1.1

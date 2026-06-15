@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: salesforce-aura
 info:
   name: Detect the exposure of Salesforce Lightning aura API
@@ -6,7 +7,7 @@ info:
   reference:
     - https://www.enumerated.de/index/salesforce
   tags: aura,unauth,salesforce,exposure
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/aura"

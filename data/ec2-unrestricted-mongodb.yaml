@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ec2-unrestricted-mongodb
 info:
   name: Unrestricted MongoDB Access in EC2

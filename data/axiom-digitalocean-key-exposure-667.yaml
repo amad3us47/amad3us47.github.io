@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: axiom-digitalocean-key-exposure
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://github.com/pry0cc/axiom
   tags: axiom,digitalocean,key,exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.axiom/accounts/do.json"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xss-fuzz-javascript-context
 
 info:
@@ -40,14 +41,3 @@ http:
           - "(?i)<script[^>]*>.*'-alert\\(document.domain\\)-'.*</script>"
       - type: regex
         part: body
-        negative: true
-        regex:
-          - "(?i)<script[^>]*>.*\\\\\"; alert\\('xss'\\); //.*</script>"
-          - "(?i)<script[^>]*>[^<]*\\\\\"; alert\\('xss'\\); //[^<]*</script>"
-          - "(?i)<script[^>]*>[^<]*\\\\'-alert\\(document.domain\\)-'[^<]*</script>"
-          - "(?i)<script[^>]*>\\s*\\{[^<]*\"[^\"<]*'-alert\\(document.domain\\)-'[^\"<]*\"[^<]*\\}\\s*</script>"
-      - type: word
-        part: header
-        words:
-          - "text/html"
-

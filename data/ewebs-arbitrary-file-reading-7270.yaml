@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ewebs-arbitrary-file-reading
 info:
   name: EWEBS - Local File Inclusion
@@ -11,7 +12,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: ewebs,lfi
-requests:
+http:
   - method: POST
     path:
       - '{{BaseURL}}/casmain.xgi'

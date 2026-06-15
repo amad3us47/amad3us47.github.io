@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: graphql-get-method
 
 info:
@@ -14,7 +15,7 @@ info:
     - https://graphql.security/
   tags: graphql
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/graphql?query={__typename}"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yongyou-nc-beanshell-detect
 info:
   name: Yongyou Nc Beanshell Detect
@@ -7,7 +8,7 @@ info:
   reference:
     - https://www.cnvd.org.cn/flaw/show/CNVD-2021-30167
   tags: yongyou,rce
-requests:
+http:
   - raw:
       - |+
         GET /service/~ic/bsh.servlet.BshServlet HTTP/1.1

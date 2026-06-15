@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-rce-simplefilelist
 info:
   name: WordPress SimpleFilelist Unauthenticated Arbitrary File Upload RCE
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://wpscan.com/vulnerability/10192
   tags: wordpress,wp-plugin,rce
-requests:
+http:
   - raw:
       - |
         POST /wp-content/plugins/simple-file-list/ee-upload-engine.php HTTP/1.1

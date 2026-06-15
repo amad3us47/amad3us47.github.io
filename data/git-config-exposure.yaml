@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: git-config-exposure
 info:
   id: git-config-exposure
   name: Git Configuration Exposure
   author: twitter/drfabiocastro
   description: Template to detect Git configuration files exposed on web servers.
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -14,11 +16,11 @@ info:
   matcher-condition: or
 
   requests:
-    
+
       method: GET
       path:
         - "/.git/config"
-        
+
       description: Attempt to access Git configuration files
       condition: or
 
@@ -35,7 +37,7 @@ info:
     - pattern: "core.bare"
       type: body
       description: Git repository configuration found in the response body
-      
+
   response:
-    - status: 
+    - status:
       - 200

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zentao-detect
 info:
   name: Zentao detect
   author: pikpikcu
   severity: info
   tags: panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/zentao/index.php?mode=getconfig"

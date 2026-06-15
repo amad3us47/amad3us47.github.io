@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: phpinfo-disclosure-env
 info:
   id: phpinfo-disclosure-env
   name: PHP Info Disclosure via Environment Variable - Detect
   author: OpenAI
   description: Template to detect PHP Info disclosure through the environment variable
-  severity: High
+  severity: high
   classification:
     country: any
     tags:
@@ -12,7 +14,7 @@ info:
 
   requests:
       method: GET
-      path: 
+      path:
         - "/phpinfo.php"
         - "/info.php"
       description: Attempt to access PHP Info page

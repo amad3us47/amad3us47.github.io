@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fma-additional-registration-attributes-8167d8f51252a2e35fb7c45f05312c8d
 
 info:

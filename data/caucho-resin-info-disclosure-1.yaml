@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: caucho-resin-info-disclosure1
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: exposure,resin
 
 
-requests:
+http:
   - raw:
       - |
         GET /resin-doc/viewfile/?file=/WEB-INF/resin-web.xml HTTP/1.1

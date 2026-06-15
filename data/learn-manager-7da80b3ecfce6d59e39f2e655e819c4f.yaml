@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: learn-manager-7da80b3ecfce6d59e39f2e655e819c4f
 
 info:

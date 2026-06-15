@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fanwei_eoffice_json_common_sqli
 info:
   name: 泛微E-Office json_common.php文件存在sql注入漏洞
@@ -7,7 +8,7 @@ info:
   reference:
     - https://
   tags: sqli
-requests:
+http:
   - raw:
       - |+
         POST /building/json_common.php HTTP/1.1

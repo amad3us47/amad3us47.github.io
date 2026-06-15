@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: magee-shortcodes-2102c551f0406d915fbacd3e4c6234ec
 
 info:

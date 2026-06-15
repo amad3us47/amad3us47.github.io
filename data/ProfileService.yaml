@@ -1,14 +1,15 @@
-id: Find ProfileService
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Find-ProfileService
 info:
   name: Find WSLD Profile Service exposed
   author: Clark
   severity: medium
-  
-requests:
+
+http:
   - method: GET
     path:
       - "{{BaseURL}}/services/profileService"
-    
+
     matchers-condition: and
     matchers:
       - type: word

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xml-external-entities-TransformerFactory-SAXTransformerFactory
 
 info:
@@ -11,7 +12,7 @@ info:
 file:
   - extensions:
     - java
-    
+
     matchers-condition: and
     matchers:
       - type: regex
@@ -26,5 +27,3 @@ file:
         regex:
           - '.+\.setAttribute\(XMLConstants\.ACCESS_EXTERNAL_DTD,\s*\"\"\);'
           - '.+\.setAttribute\(XMLConstants\.ACCESS_EXTERNAL_STYLESHEET,\s*\"\"\);'
-        negative: true
-        condition: and

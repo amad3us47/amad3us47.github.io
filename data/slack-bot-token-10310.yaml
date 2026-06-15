@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: slack-bot-token
 info:
   name: Slack access token
   author: nadino
   severity: info
   tags: exposure,token,slack
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

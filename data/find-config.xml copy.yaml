@@ -1,10 +1,11 @@
-id: Configuration displayed
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Configuration-displayed
 info:
-  name: Finds config for 
+  name: Finds config for
   author: Clark
   severity: medium
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/CaseManager/welcome/displayCmisConfig.jsp"

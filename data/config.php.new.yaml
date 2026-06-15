@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: check-config-files
 info:
   name: Check for config.php.new leaks
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://example.com/reference
   tags: config, hostname, dbName, leaks
-requests:
+http:
   - method: GET
     path:
       - /common/config.php.new

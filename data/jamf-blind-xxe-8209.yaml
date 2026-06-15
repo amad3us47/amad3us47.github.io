@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jamf-blind-xxe
 info:
   name: JAMF Blind XXE / SSRF
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://www.synack.com/blog/a-deep-dive-into-xxe-injection/
   tags: xxe,ssrf,jamf
-requests:
+http:
   - raw:
       - |
         POST /client HTTP/1.1

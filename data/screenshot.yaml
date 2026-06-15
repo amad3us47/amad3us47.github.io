@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: screenshot
 
 info:
@@ -21,13 +22,5 @@ headless:
 
       - action: navigate
         args:
-          url: "{{BaseURL}}"
 
-      - action: waitload
-
-      - action: screenshot
-        args:
-          fullpage: "true"
-          mkdir: "true"
-          to: "{{dir}}/{{filename}}"
 # digest: 4b0a00483046022100c4bcf934666a7bbd25a7b18cc338fe04d57c97488a39e5a18d1f802cf3efc9bf022100d3bd8dcaad1eecc32980fb9298ccec2da4a347cd530a819a758625b7bde3aaf6:922c64590222798bb761d5b6d8e72950

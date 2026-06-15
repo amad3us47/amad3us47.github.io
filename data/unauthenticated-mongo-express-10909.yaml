@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauthenticated-mongo-express
 info:
   name: Mongo Express Unauthenticated
@@ -6,7 +7,7 @@ info:
   reference:
     - https://www.exploit-db.com/ghdb/5684
   tags: mongo,unauth
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: stackstorm-default-login
 info:
   name: StackStorm Default Login
@@ -13,7 +14,7 @@ info:
   metadata:
     fofa-query: app="stackstorm"
   tags: stackstorm,default-login
-requests:
+http:
   - raw:
       - |
         POST /auth/tokens HTTP/1.1

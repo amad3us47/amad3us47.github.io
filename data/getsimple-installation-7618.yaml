@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: getsimple-installation
 info:
   name: GetSimple CMS Installation
@@ -6,7 +7,7 @@ info:
   reference:
     - http://get-simple.info/
   tags: getsimple,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/admin/install.php"

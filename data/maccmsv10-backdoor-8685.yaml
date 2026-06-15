@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: maccmsv10-backdoor
 info:
   name: Maccmsv10 - Backdoor Remote Code Execution
@@ -11,7 +12,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: maccmsv10,rce,backdoor
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/index.php/bbs/index/download?url=/etc/passwd&name=1.txt&local=1"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: calendarix-panel2
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: panel,calendarix
 
 
-requests:
+http:
   - raw:
       - |
         GET /calendar/admin/cal_login.php HTTP/1.1

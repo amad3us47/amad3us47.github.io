@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: X-Rewrite-URl_Vulnerability
 info:
   name: X-Rewrite_URL Header to Bypass Cliend Side restriction
   author: p3n73st3r
-  severity: High
+  severity: high
   description: Bypassing Client Side restriction through X-Rewrite-URl and X-Original-URL Headers.
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nextend-facebook-connect-382f0d521c8395fd1265e1b77fd47050
 
 info:

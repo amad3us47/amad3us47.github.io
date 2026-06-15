@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 
 id: misconfig-workflow
 
 info:
   name: Misconfiguration Security Checks
   author: thevillagehacker
+  severity: info
   description: A simple workflow that runs all misconfig related nuclei templates against the target.
 
 workflows:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: webmin-panel2
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: panel
 
 
-requests:
+http:
   - raw:
       - |
         GET /webmin/ HTTP/1.1

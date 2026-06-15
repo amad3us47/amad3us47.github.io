@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: indianic-testimonial-f78c6816c05a37309db615f55d9b6da6
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: injection-guard-ebe661b0cfdad1cc7ea95c3de1cc96ed
 
 info:

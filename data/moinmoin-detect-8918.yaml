@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: moinmoin-detect
 info:
   name: MoinMoin wiki detect
@@ -7,10 +8,10 @@ info:
   tags: tech,moin,moinmoin,wiki
   reference:
     - https://github.com/moinwiki/moin-1.9
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

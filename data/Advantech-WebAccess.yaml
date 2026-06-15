@@ -1,14 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Advantech-WebAccess
 
 info:
   name: Advantech WebAccess sqli
-  author: Str1am    
+  author: Str1am
   severity: high
   description: Advantech WebAccess SQL注入导致身份验证绕过
   reference: http://www.str1am.top
   tags: Advantech,sqli
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/BWMobileService/BWScadaRest.svc/"

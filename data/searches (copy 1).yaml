@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: search-field
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Searches Response body for input-tag and id= or name=
   tags: search,input
 
-requests:
+http:
   - method: GET
     redirects: true
     # max-redirects is max number of redirects to follow. Can be blank.

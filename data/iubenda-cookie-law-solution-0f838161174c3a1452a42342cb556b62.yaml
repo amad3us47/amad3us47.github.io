@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: iubenda-cookie-law-solution-0f838161174c3a1452a42342cb556b62
 
 info:

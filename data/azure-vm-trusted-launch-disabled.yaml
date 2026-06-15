@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-vm-trusted-launch-disabled
 info:
   name: Azure VM Trusted Launch Not Enabled

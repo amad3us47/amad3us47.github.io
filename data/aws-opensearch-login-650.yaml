@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aws-opensearch-login
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://aws.amazon.com/pt/blogs/opensource/introducing-opensearch/
   tags: panel,opensearch,aws
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/_dashboards/app/login'

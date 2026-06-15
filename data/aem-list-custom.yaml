@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-list-custom
 
 info:
@@ -12,7 +13,7 @@ info:
       - http.component:"Adobe Experience Manager"
   tags: misconfig,aem,adobe
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/apps.tidy.infinity.json"

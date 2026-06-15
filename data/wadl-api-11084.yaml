@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wadl-api
 info:
   name: wadl file disclosure
@@ -7,7 +8,7 @@ info:
   reference: |
     - https://github.com/dwisiswant0/wadl-dumper
     - https://www.nopsec.com/leveraging-exposed-wadl-xml-in-burp-suite/
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/application.wadl"

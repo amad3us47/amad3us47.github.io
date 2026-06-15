@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: s3bubble-amazon-s3-html-5-video-with-adverts-d80fd84841409d3ad6648500cbe92207
 
 info:

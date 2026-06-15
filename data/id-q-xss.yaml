@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: id-xss
 
 info:
@@ -10,7 +11,7 @@ info:
   # Basic ID XSS prober
   # Manual testing needed for exploitation
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/<script>alert('XSS')</script>"

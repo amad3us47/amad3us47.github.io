@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: quotes-and-tips-a8697251cd190a704491d5f2c25efbc8
 
 info:

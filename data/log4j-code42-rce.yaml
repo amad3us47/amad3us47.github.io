@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: log4j-code42-rce
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Remote code execution via log4j vulnerability
   tags: rce
 
-requests:
+http:
   - raw:
   - method: GET
     path:

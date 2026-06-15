@@ -1,20 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: random-fuzz-02
-type: fuzz
-level: 1
 info:
   name: Random Fuzz on Param Basic 02
-  risk: Info
+  author: unknown
+  severity: info
 
 params:
   - length: '1000'
 
 origin:
   method: GET
-  redirect: false
-  headers:
-    - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
-  url: >-
-    {{.URL}}
 
 variables:
   - name: File("{{.Resources}}/lite-params.txt")
@@ -47,9 +42,6 @@ payloads:
   - >-
     °
 
-requests:
+http:
   - generators:
       - Query("{{.payload}}", "{{.name}}")
-    detections:
-      - >-
-        StatusCode() < 300 && StatusCode() >= 500 && StatusCode() != OriginStatusCode() && !StringSearch("response", "Not found") && !StringSearch("response", "Request Rejected") && !StringSearch("response", "Not found") && Math.abs(ContentLength() - OriginContentLength()) > {{.length}} && CommonError()

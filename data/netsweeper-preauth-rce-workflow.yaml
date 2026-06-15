@@ -1,15 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netsweeper-preauth-rce-workflow
 
 info:
   name: Netsweeper PreAuth RCE Workflow
   author: dwisiswant0
+  severity: info
 
 variables:
   netsweeper_webadmin: technologies/netsweeper-webadmin-detect.yaml
   netsweeper_webadmin_cve_1: cves/CVE-2020-13167.yaml
-
-logic:
-  |
-  if netsweeper_webadmin() {
-    netsweeper_webadmin_cve_1()
-  }

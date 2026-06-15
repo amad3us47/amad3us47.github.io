@@ -1,15 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: sun-java-system-calendar-express
 name: sun-java-system-calendar-express
-priority: 2
-nuclei_tags:
-  - []
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 0
-    headers: {}
-    keyword:
-      - <img src="imx/login-logo.gif" width="186" height="79" alt="sun microsystems,
-        inc.">
-    favicon_hash: []

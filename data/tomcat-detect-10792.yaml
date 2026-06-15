@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tomcat-version-detect
 info:
   name: Detect Tomcat Version
   author: philippedelteil
   description: If an Tomcat instance is deployed on the target URL, when we send a request for a non existent resource we receive a Tomcat error page with version.
   severity: info
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/something_not_existing_"

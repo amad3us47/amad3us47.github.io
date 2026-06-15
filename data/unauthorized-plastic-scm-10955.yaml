@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauthorized-plastic-scm
 info:
   name: Unauthorized Access to Plastic Admin Console
@@ -5,7 +6,7 @@ info:
   severity: critical
   tags: plastic
   reference: https://infosecwriteups.com/story-of-google-hall-of-fame-and-private-program-bounty-worth-53559a95c468
-requests:
+http:
   - raw:
       - |
         GET /account/register HTTP/1.1

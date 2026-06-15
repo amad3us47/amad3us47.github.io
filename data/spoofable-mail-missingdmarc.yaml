@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: spoofable-mail-missingdmarc
 
 info:
@@ -29,11 +30,3 @@ dns:
           - "v=dmarc1"
           - "v=DMARC1"
         part: fqdn_answer
-        negative: true
-
-      - type: word
-        words:
-          - "v=dmarc1"
-          - "v=DMARC1"
-        part: answer
-        negative: true

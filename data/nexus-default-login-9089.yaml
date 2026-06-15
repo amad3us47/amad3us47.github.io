@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nexus-default-login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: nexus,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /service/rapture/session HTTP/1.1

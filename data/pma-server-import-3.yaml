@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pma-server-import3
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: phpmyadmin,misconfig
 
 
-requests:
+http:
   - raw:
     - |+
       GET /phpMyAdmin 2/server_import.php HTTP/1.1
@@ -16,7 +17,7 @@ requests:
       User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
       Accept-Encoding: gzip, deflate
       Accept: */*
-      
+
     unsafe: true
     matchers-condition: and
     matchers:

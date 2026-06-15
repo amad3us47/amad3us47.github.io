@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-49104
 
 info:
@@ -15,7 +16,7 @@ info:
     cvss-score: 9.9
     cwe-id: CWE-434
 
-requests:
+http:
   - raw:
       - |
         POST /general/index/UploadFile.php?m=uploadPicture&uploadType=eoffice_logo&userId= HTTP/1.1

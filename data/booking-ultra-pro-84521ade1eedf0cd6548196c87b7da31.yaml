@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: booking-ultra-pro-84521ade1eedf0cd6548196c87b7da31
 
 info:

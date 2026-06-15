@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: privesc-python
 
 info:
@@ -45,12 +46,5 @@ code:
         part: code_1_response
         words:
           - "root"
-        negative: true
 
-      - type: dsl
-        dsl:
-          - 'contains(code_2_response, "root")'
-          - 'contains(code_3_response, "root")'
-          - 'contains(code_4_response, "root")'
-        condition: or
 # digest: 4b0a004830460221009d573c184e24737640e3535778e28ed55e29bed051507f2358779b8e8c5d912c022100f2fd6f437e9833ff598a60bd5ce205d6da5a4776c4189c74dddd982b7fc15249:922c64590222798bb761d5b6d8e72950

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: spryng-payments-woocommerce-0b64e6d9e26d4f7209aa4efa0edc3b1d
 
 info:

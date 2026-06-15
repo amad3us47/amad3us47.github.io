@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-popup-listing
 info:
   name: WordPress Popup Plugin Directory Listing
@@ -5,7 +6,7 @@ info:
   severity: info
   description: Searches for sensitive directories present in the wordpress-popup plugin.
   tags: wordpress,listing
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/wordpress-popup/views/admin/"

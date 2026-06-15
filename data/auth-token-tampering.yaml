@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: auth-token-tampering
 info:
   name: Authentication Token Tampering Test
@@ -9,7 +10,7 @@ info:
 tags:
   - web
 
-requests:
+http:
   - method: GET
     path:
       - "/user-profile"

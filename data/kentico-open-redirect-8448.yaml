@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kentico-open-redirect
 
 info:
@@ -8,7 +9,7 @@ info:
   severity: low
   tags: odoo,redirect
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/CMSPages/GetDocLink.ashx?link=https://example.com/"

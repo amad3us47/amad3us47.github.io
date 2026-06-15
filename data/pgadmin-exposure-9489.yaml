@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pgadmin-exposure
 info:
   name: PostgreSQL - pgAdmin Dasboard Exposure
   author: princechaddha
   severity: info
   tags: unauth,pgadmin,postgres,panel
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

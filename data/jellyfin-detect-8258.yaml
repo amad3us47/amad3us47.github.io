@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jellyfin-detect
 info:
   name: Jellyfin detected
   author: dwisiswant0
   severity: info
   tags: tech,jellyfin
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/home.html"

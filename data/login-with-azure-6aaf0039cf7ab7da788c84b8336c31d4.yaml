@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: login-with-azure-6aaf0039cf7ab7da788c84b8336c31d4
 
 info:

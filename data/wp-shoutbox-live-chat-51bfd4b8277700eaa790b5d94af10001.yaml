@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-shoutbox-live-chat-51bfd4b8277700eaa790b5d94af10001
 
 info:

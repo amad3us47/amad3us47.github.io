@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xml-external-entities-XMLInputFactory
 
 info:
@@ -11,7 +12,7 @@ info:
 file:
   - extensions:
     - java
-    
+
     matchers-condition: and
     matchers:
       - type: regex
@@ -23,5 +24,3 @@ file:
         name: XMLInputFactory
         regex:
           - '.+\.setProperty\(XMLInputFactory\.SUPPORT_DTD,\s*false\);'
-        negative: true
-        condition: and

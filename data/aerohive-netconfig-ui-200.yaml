@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aerohive-netconfig-ui
 
 info:
@@ -13,7 +14,7 @@ info:
     shodan-dork: http.title:"Aerohive NetConfig UI"
   tags: panel,tech,hiveos,aerohive
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php5"

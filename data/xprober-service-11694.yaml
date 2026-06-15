@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xprober-service
 info:
   name: X Prober server information leakage
@@ -6,7 +7,7 @@ info:
   reference:
     - https://twitter.com/bugbounty_tips/status/1339984643517423616
   tags: config,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/xprober.php"

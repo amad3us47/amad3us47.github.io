@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: manageengine-opmanager
 info:
   name: ZOHO ManageEngine OpManager
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://www.shodan.io/search?query=http.title%3A%22OpManager+Plus%22
   tags: panel,zoho,manageengine
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-virtualization-manager-panel
 info:
   name: Open Virtualization Userportal & Webadmin Panel Detection
@@ -15,7 +16,7 @@ info:
     shodan-query: title:"Ovirt-Engine"
     google-query: intitle:"Ovirt-Engine"
   tags: panel,ovirt,oss
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/ovirt-engine/userportal/'

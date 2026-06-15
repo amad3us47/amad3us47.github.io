@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-plugins-detect
 info:
   name: WordPress Plugins Detection
   author: 0xcrypto
   severity: info
   tags: fuzz,wordpress
-requests:
+http:
   - raw:
       - |
         GET /wp-content/plugins/{{pluginSlug}}/readme.txt HTTP/1.1

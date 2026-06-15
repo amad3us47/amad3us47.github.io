@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-nomad
 info:
   name: Exposed Nomad Jobs
@@ -5,10 +6,10 @@ info:
   severity: high
   tags: nomad,devops,hashicorp,panel
   reference: https://www.nomadproject.io/docs/internals/security
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

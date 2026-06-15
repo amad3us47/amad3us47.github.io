@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: extreme-netconfig-ui
 info:
   name: Extreme NetConfig UI
@@ -6,7 +7,7 @@ info:
   metadata:
     shodan-dork: 'http.title:"Extreme NetConfig UI"'
   tags: panel,tech,hiveos,extreme
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php5"

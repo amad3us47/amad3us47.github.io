@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lucee-detect
 info:
   name: Detect Lucee
@@ -5,7 +6,7 @@ info:
   description: Lucee Server is a dynamic, Java based (JSR-223), tag and scripting language used for rapid web application development -- https://github.com/lucee/Lucee/
   severity: info
   tags: tech,lucee
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

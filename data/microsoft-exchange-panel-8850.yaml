@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microsoft-exchange-panel
 info:
   name: Microsoft Exchange Control Panel
@@ -7,7 +8,7 @@ info:
   reference:
     - https://docs.microsoft.com/en-us/answers/questions/58814/block-microsoft-exchange-server-2016-exchange-admi.html
   tags: microsoft,panel,exchange
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/owa/auth/logon.aspx?replaceCurrent=1&url={{BaseURL}}/ecp"

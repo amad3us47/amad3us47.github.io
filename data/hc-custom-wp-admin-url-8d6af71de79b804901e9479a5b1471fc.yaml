@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hc-custom-wp-admin-url-8d6af71de79b804901e9479a5b1471fc
 
 info:

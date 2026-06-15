@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mainwp-article-uploader-extension-ccc32d45cac4eab5936000b0140d52ab
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: better-wp-security-935e3ca64df8dbabc40b284aaccb67eb
 
 info:

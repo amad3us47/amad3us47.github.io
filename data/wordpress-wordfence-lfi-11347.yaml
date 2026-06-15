@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-wordfence-lfi
 info:
   name: Wordpress Plugin wordfence.7.4.5 - Local File Disclosure
@@ -7,10 +8,10 @@ info:
     - https://www.exploit-db.com/exploits/48061
     - https://www.nmmapper.com/st/exploitdetails/48061/42367/wordpress-plugin-wordfence745-local-file-disclosure/
   tags: wordpress,wp-plugin,lfi,wordfence
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

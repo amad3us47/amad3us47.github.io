@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ibm-app-connect-login
 
 info:
@@ -12,13 +13,12 @@ info:
   tags: ibm, appconnect
 
 http:
-        
+
   - method: GET
     path:
       - "{{BaseURL}}/ciloginmanager?authType=basic"
-    
+
     matchers:
       - type: status
         status:
           - 200
-

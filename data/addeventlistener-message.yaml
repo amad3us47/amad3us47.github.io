@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: addeventlistener-message
 info:
   name: AddEventlistener('message') in body
@@ -5,7 +6,7 @@ info:
   severity: info
   tags: xss
   reference: https://github.com/yavolo/nuclei-templates/
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/'

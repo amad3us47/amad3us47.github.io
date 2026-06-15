@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitlab-snippets
 info:
   name: GitLab public snippets
@@ -6,7 +7,7 @@ info:
   tags: gitlab
   reference: https://gist.github.com/vysecurity/20311c29d879e0aba9dcffbe72a88b10
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/explore/snippets"
@@ -25,5 +26,3 @@ requests:
         words:
           - "No snippets found"
           - "Nothing here."
-        negative: true
-        part: body

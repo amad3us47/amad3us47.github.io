@@ -1,13 +1,14 @@
-id: vmware-vcenter-lfi-linux 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: vmware-vcenter-lfi-linux-1
 info:
   name: Vmware Vcenter LFI for Linux appliances
   author: PR3R00T
   severity: high
   tags: vmware,lfi
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

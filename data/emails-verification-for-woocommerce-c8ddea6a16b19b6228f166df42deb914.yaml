@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: emails-verification-for-woocommerce-c8ddea6a16b19b6228f166df42deb914
 
 info:

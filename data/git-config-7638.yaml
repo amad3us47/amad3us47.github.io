@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: git-config
 info:
   name: Git Config Disclosure
@@ -5,7 +6,7 @@ info:
   severity: medium
   description: Searches for the pattern /.git/config and log file on passed URLs.
   tags: config,git,exposure
-requests:
+http:
   - raw:
       - |
         GET /.git/config HTTP/1.1

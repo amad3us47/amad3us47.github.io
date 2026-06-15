@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: adobe-experience-manager-login
 
 info:
@@ -13,7 +14,7 @@ info:
     shodan-query: http.title:"AEM Sign In"
   tags: panel,aem,adobe
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/libs/granite/core/content/login.html'

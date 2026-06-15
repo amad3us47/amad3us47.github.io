@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yongyou-nc-beanshell-rce
 info:
   name: Yongyou Nc Beanshell RCE
@@ -9,7 +10,7 @@ info:
   tags: yongyou,rce
 variables:
   a1: "{{rand_text_alphanumeric(10, '')}}"
-requests:
+http:
   - raw:
       - |-
         POST /service/~ic/bsh.servlet.BshServlet HTTP/1.1

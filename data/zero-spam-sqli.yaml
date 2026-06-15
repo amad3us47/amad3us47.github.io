@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zero-spam-sqli
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://wpscan.com/vulnerability/44cc8d59-9b45-46b7-afaf-894e4ba62dd5
   tags: sqli,wp,wordpress,wp-plugin,unauth
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/zero-spam/readme.txt'

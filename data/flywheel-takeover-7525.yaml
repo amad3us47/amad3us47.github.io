@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: flywheel-takeover
 info:
   name: Flywheel Subdomain Takeover
@@ -5,7 +6,7 @@ info:
   severity: high
   tags: takeover
   reference: https://smaranchand.com.np/2021/06/flywheel-subdomain-takeover
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

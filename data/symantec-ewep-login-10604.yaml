@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: symantec-ewep-login
 info:
   name: Symantec Encryption Web Email Protection
@@ -5,10 +6,10 @@ info:
   severity: info
   reference: https://www.shodan.io/search?query=http.title%3A%22Symantec+Encryption+Server%3A+Web+Email+Protection+-+Login%22
   tags: panel,symantec,login
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

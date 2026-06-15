@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hashicorp-consul-rce
 info:
   name: Hashicorp Consul Services Api RCE
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://www.exploit-db.com/exploits/46074
   tags: hashicorp,rce,oob
-requests:
+http:
   - raw:
       - | # Create USER
         PUT /v1/agent/service/register HTTP/1.1

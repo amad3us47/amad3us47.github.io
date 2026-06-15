@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-redis-nonssl-port-disabled
 info:
   name: Azure Redis Cache In-Transit Encryption Not Enabled

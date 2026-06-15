@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-custom-tables-xss
 info:
   name: WordPress Custom Tables Plugin 3.4.4 - Reflected Cross Site Scripting (XSS)
@@ -6,10 +7,10 @@ info:
   description: WordPress custom tables Plugin 'key' Parameter Cross Site Scripting Vulnerability
   reference: https://www.securityfocus.com/bid/54326/info
   tags: wordpress,xss,wp-plugin
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

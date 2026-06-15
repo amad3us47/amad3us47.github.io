@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: maian-cart-detect
 info:
   name: Maian Cart Detection
   author: pdteam
   severity: info
   tags: tech,maian
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/favicon.ico"

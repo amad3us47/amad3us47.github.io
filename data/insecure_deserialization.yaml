@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: insecure-deserialization
 
 info:
@@ -11,12 +12,12 @@ info:
 file:
   - extensions:
     - java
-  
+
     extractors:
       - type: regex
         name: readObject
         regex:
-          - '.+\.readObject\(.*' 
+          - '.+\.readObject\(.*'
         # This method is called when the object is being deserialized, and is used to read the object's state from the input stream.
 
       - type: regex
@@ -41,17 +42,17 @@ file:
         name: ObjectMapper readValue
         regex:
           - '.+\.readValue\(.*'
-      
+
       - type: regex
         name: XStream fromXML
         regex:
           - '.+\.fromXML\(.*'
-      
+
       - type: regex
         name: ObjectInputStream readUnshared
         regex:
           - '.+\.readUnshared\(.*'
-      
+
       - type: regex
         name: YAML load
         regex:

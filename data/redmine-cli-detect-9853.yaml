@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: redmine-cli-detect
 info:
   name: Detect Redmine CLI Configuration File
   author: geeknik
   description: A small command-line utility to interact with Redmine - https://pypi.org/project/Redmine-CLI/
   severity: info
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.redmine-cli"

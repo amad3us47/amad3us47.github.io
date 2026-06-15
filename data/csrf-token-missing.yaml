@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: csrf-token-missing
 info:
   name: Cross-Site Request Forgery (CSRF) Token Missing
+  author: unknown
   severity: high
   description: Detects potential vulnerabilities where CSRF tokens are missing in login requests
 author: qaisar
 tags:
   - web
   - csrf
-requests:
+http:
 - method: POST
   path: "/login"
   matchers:

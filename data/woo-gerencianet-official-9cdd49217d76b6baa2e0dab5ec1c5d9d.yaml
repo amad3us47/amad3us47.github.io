@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woo-gerencianet-official-9cdd49217d76b6baa2e0dab5ec1c5d9d
 
 info:

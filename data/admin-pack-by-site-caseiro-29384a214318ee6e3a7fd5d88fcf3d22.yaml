@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: admin-pack-by-site-caseiro-29384a214318ee6e3a7fd5d88fcf3d22
 
 info:

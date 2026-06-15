@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: magento-detect
 info:
   name: Magento Detect
@@ -7,7 +8,7 @@ info:
   reference:
     - https://devdocs.magento.com/guides/v2.4/graphql/
   tags: magento
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

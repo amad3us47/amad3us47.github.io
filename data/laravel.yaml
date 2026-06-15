@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: laravel-ignition-xss
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://github.com/facade/ignition/issues/273
     - https://www.acunetix.com/vulnerabilities/web/laravel-ignition-reflected-cross-site-scripting/
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_ignition/scripts/--><svg%20onload=alert(1337)>"

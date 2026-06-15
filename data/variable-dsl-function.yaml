@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: basic-example
 
 info:
@@ -9,7 +10,7 @@ variables:
  a1: "{{to_lower(rand_base(5))}}"
 
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?x={{a1}}"

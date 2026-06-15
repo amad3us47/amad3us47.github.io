@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: n-media-wp-simple-quiz-2556b5294e6b883403ef09c22bea8c0f
 
 info:

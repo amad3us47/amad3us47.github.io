@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cnnvd-200705-315
 info:
   name: Caucho Resin Information Disclosure
@@ -7,7 +8,7 @@ info:
     - http://www.cnnvd.org.cn/web/xxk/ldxqById.tag?CNNVD=CNNVD-200705-315
   tags: resin,caucho,lfr
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/%20../web-inf/"

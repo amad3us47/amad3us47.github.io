@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-aks-entra-id-unintegrated
 info:
   name: Azure AKS Microsoft Entra ID Integration Not Configured

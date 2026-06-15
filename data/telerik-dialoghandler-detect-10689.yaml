@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: telerik-dialoghandler-detect
 info:
   name: Detect Telerik Web UI Dialog Handler
   author: organiccrap
   severity: low
   # https://captmeelo.com/pentest/2018/08/03/pwning-with-telerik.html
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/Telerik.Web.UI.DialogHandler.aspx'

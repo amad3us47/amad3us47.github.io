@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: webeditors3
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: panel
 
 
-requests:
+http:
   - raw:
       - |
         GET /editor/ckeditor/samples/ HTTP/1.1

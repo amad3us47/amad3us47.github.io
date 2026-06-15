@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: smartsense-default-login
 info:
   name: HortonWorks SmartSense Default Login
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   tags: hortonworks,smartsense,default-login
-requests:
+http:
   - raw:
       - |
         GET /apt/v1/context HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: premium-seo-pack-light-version-70f9035f25476959d09b902faa701941
 
 info:

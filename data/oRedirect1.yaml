@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-redirect-top25
 
 info:
@@ -41,4 +42,3 @@ http:
           - 302
           - 307
           - 308
-

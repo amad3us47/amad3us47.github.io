@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ait-csv-import-export-4bf82f0bc6d8b72ec6bfa493701fd6b8
 
 info:

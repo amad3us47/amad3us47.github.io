@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-nsg-mssql-unrestricted
 info:
   name: Unrestricted MS SQL Server Access in Azure NSGs

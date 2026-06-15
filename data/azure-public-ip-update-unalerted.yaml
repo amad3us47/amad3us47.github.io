@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-public-ip-update-unalerted
 info:
   name: Azure Public IP Create/Update Alert Not Configured
@@ -50,10 +51,5 @@ code:
       - type: word
         words:
           - "Microsoft.Network/publicIPAddresses/write"
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - 'id + " does not have the correct alert configuration for Create/Update Public IP Address events"'
 # digest: 4a0a00473045022100fe5a63546e63ed5b5f65ed6a253017b0a16a5c5f8a57d0b5087d291aa46360a8022047d918e49bec204816e763da7e3eb182d10df6ee97ca3ae7190f333d419cdf5b:922c64590222798bb761d5b6d8e72950

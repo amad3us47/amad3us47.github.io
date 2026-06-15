@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-woocommerce-file-download
 info:
   name: Product Input Fields for WooCommerce < 1.2.7 - Unauthenticated File Download
@@ -8,10 +9,10 @@ info:
   reference:
     - https://wpscan.com/vulnerability/15f345e6-fc53-4bac-bc5a-de898181ea74
     - https://blog.nintechnet.com/high-severity-vulnerability-fixed-in-product-input-fields-for-woocommerce/
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

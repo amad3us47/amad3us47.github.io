@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: alibaba-canal-info-leak
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://my.oschina.net/u/4581879/blog/4753320
   tags: config,exposure,alibaba
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/v1/canal/config/1/1"

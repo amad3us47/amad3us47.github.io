@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: nuclei
 # Headers to include with all HTTP request
 #header:
 #- 'X-BugBounty-h1: USERNAME'
 
 # Directory based template execution
-# you can add your custom templatess also 
+# you can add your custom templatess also
 # also add more category to scan
 templates:
   - cves/
@@ -11,11 +13,11 @@ templates:
   - misconfiguration/
   - miscellaneous/
   - exposures/apis/
-  - exposures/backups/ 
+  - exposures/backups/
   - exposures/configs/
   - exposures/logs/
   - exposures/tokens/
-  - fuzzing/adminer-panel-fuzz.yaml 
+  - fuzzing/adminer-panel-fuzz.yaml
   - fuzzing/header-command-injection.yaml
   - exposed-panels/
 
@@ -44,4 +46,3 @@ output:
 rate-limit: 50
 bulk-size: 50
 concurrency: 50
-

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mysql_infotmation_Leak
 info:
   name: 泛微 E-Office mysql配置文件泄露

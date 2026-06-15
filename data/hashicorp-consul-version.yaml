@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hashicorp-consul-version
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Obtain Consul Version Information
   tags: tech,consul,api
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/v1/agent/self"
@@ -16,4 +17,3 @@ requests:
       - type: json
         json:
           - " .Config.Version"
-

@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hp-laserjet-m605-webserver
 
 info:
-  name: HP LaserJet M605 Web Server 
+  name: HP LaserJet M605 Web Server
   author: alexrydzak
   severity: info
   tags: hp,web,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/hp/device/DeviceStatus/Index"

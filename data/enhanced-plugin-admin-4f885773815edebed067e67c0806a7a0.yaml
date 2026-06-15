@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: enhanced-plugin-admin-4f885773815edebed067e67c0806a7a0
 
 info:

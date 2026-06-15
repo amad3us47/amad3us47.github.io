@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: visual-form-builder-9105cfa6c7297b2cdf84201c088b5ba6
 
 info:

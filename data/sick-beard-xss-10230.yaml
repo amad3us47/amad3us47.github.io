@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sick-beard-xss
 info:
   name: Sick Beard XSS
@@ -9,7 +10,7 @@ info:
     - https://github.com/midgetspy/Sick-Beard # software link
   metadata:
     shodan-query: sickbeard
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/config/postProcessing/testNaming?pattern=%3Csvg/onload=alert(document.domain)%3E"

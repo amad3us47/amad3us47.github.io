@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cloudtrail-logfile-integrity-validation
 info:
   name: CloudTrail Log File Integrity Validation
@@ -17,7 +18,7 @@ variables:
   service: cloudtrail
   region: ap-south-1
 
-requests:
+http:
   - raw:
       - |
         POST https://{{service}}.{{region}}.amazonaws.com/ HTTP/1.1

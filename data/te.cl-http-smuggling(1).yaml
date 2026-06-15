@@ -1,10 +1,11 @@
-id: TE.CL-http-smuggling
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: TE-CL-http-smuggling
 info:
   name: HTTP request smuggling, basic TE.CL vulnerability
   author: pdteam
   severity: info
   lab: https://portswigger.net/web-security/request-smuggling/lab-basic-te-cl
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

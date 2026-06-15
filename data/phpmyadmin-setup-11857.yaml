@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phpmyadmin-setup
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: medium
   tags: phpmyadmin,misconfig
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/phpmyadmin/scripts/setup.php"

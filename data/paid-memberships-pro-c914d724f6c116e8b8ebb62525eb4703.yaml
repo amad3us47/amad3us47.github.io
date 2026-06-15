@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: paid-memberships-pro-c914d724f6c116e8b8ebb62525eb4703
 
 info:

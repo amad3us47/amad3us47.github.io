@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: system-info-leak
 
 info:
@@ -16,5 +17,3 @@ file:
         name: printStackTrace
         regex:
           - '(?i).+\.printstacktrace\(.*\)'
-
-

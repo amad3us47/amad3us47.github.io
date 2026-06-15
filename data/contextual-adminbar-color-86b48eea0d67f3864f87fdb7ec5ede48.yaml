@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: contextual-adminbar-color-86b48eea0d67f3864f87fdb7ec5ede48
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: digitalrebar-provision-ui
 
 info:
@@ -10,7 +11,7 @@ info:
   severity: info
   tags: rackn,digitalrebar,webserver,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/ui"
@@ -27,4 +28,3 @@ requests:
         part: body
         words:
           - '<title>Digital Rebar</title>'
-

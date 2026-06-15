@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ruijie-workflow
 
 info:
   name: Ruijie Checks
   author: pikpikcu
+  severity: info
   description: A simple workflow that runs all Ruijie related nuclei templates on a given target.
 workflows:
   - tags: ruijie

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: enable-wp-debug-from-admin-dashboard-3dd429958070257d397e464122420c2e
 
 info:

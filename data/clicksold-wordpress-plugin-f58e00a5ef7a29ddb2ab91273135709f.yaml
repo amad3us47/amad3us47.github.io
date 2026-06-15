@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: clicksold-wordpress-plugin-f58e00a5ef7a29ddb2ab91273135709f
 
 info:

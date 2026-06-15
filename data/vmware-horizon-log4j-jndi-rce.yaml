@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-horizon-log4j-jndi-rce
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://www.vmware.com/security/advisories/VMSA-2021-0028.html
   tags: rce,jndi,log4j,horizon,vmware
 
-requests:
+http:
   - raw:
       - |
         GET /portal/info.jsp HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fiorilaunchpad-logon
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.exploit-db.com/ghdb/6793
   tags: panel
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?saml2=disabled'

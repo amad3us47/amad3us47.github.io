@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: custom-connection-server-detect
 
 info:
-        name: Custom ADXWebconnect Server 
+        name: Custom ADXWebconnect Server
         author: 0xunknown
         severity: low
         tags: panel
 
-requests:
+http:
         - method: GET
           path:
                   - "{{BaseURL}}/adxwebconnect/index.jsp"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bb-ultimate-addon-3815c578c25f7f27ed21ebdab98f18d5
 
 info:

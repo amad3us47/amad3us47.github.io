@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jmx-console
 info:
   name: JMX Console
   author: Yash Anand @yashanand155
-  severity: Low
-requests:
+  severity: low
+http:
   - method: GET
     path:
       - '{{BaseURL}}/jmx-console/'

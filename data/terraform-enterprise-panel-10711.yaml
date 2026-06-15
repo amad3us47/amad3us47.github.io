@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: terraform-enterprise-panel
 info:
   name: Terraform Enterprise Panel
@@ -10,7 +11,7 @@ info:
     shodan-query: title:"Terraform Enterprise"
     google-query: intitle:"Terraform Enterprise"
   tags: panel,terraform
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/session'

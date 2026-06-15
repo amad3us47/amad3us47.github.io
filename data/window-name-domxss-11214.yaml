@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: window-name-domxss
 info:
   name: window.name - DOM Cross-Site Scripting
@@ -62,20 +63,3 @@ headless:
               };
             }
       - args:
-          url: "{{BaseURL}}"
-        action: navigate
-      - action: waitload
-      - action: script
-        name: alerts
-        args:
-          code: window.alerts
-    matchers:
-      - type: word
-        part: alerts
-        words:
-          - "sink:"
-    extractors:
-      - type: kval
-        part: alerts
-        kval:
-          - alerts

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: huawei-hg659-lfi
 info:
   name: HUAWEI HG659 LFI
@@ -6,10 +7,10 @@ info:
   reference: |
     - https://twitter.com/sec715/status/1406782172443287559
   tags: lfi,huawei
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

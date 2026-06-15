@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: simple-download-monitor-9b26b1c5d89251bcf80dc2c7c6c0f3af
 
 info:

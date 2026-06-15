@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jboss-detect
 info:
   name: JBoss detected
   author: daffainfo
   severity: info
   tags: tech,jboss
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

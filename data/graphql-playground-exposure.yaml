@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: graphql-playground-exposure
 info:
   id: graphql-playground-exposure
   name: GraphQL Playground Exposure
   author: OpenAI
   description: Template to detect if the GraphQL Playground is exposed and accessible.
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:
@@ -12,7 +14,7 @@ info:
       - security
 
   matcher-condition: or
-  
+
   requests:
     method: GET
     path:
@@ -27,5 +29,5 @@ info:
       description: The GraphQL Playground UI is displayed in the response body
 
   response:
-    - status: 
+    - status:
       - 200

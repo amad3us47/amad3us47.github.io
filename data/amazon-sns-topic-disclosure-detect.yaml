@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: amazon-sns-topic-disclosure-detect
 info:
   id: amazon-sns-topic-disclosure-detect
   name: Amazon SNS Topic Disclosure - Detect
   author: OpenAI
   description: Template to detect Amazon SNS (Simple Notification Service) topic disclosure
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:

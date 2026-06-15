@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitlab-user-open-api
 info:
   author: Suman_Kar
@@ -5,7 +6,7 @@ info:
   severity: medium
   tags: gitlab,disclosure
   reference: https://gitlab.com/gitlab-org/gitlab-foss/-/issues/40158
-requests:
+http:
   - raw:
       - |
         GET /api/v4/users/{{uid}} HTTP/1.1

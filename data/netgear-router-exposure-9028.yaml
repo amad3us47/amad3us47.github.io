@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netgear-router-exposure
 info:
   name: NETGEAR Router S/N Disclosure
@@ -8,7 +9,7 @@ info:
   author: geeknik
   severity: critical
   tags: netgear,exposure,iot,router
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/rootDesc.xml"

@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-user-info-error-messages
 info:
   name: Exposed User Information in Login Error Messages
+  author: unknown
   severity: medium
   description: Detects potential vulnerabilities where login error messages reveal sensitive user information
 author: qaisar
 tags:
   - web
   - authentication
-requests:
+http:
 - method: POST
   path: "/login"
   matchers:

@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tomcat-scripts
 info:
   name: Detect Tomcat Exposed Scripts
   author: Co0nan
   severity: low
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/examples/servlets/index.html"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: os-patches-outdated
 
 info:
@@ -39,10 +40,5 @@ code:
           - '"TotalCount": 0'
           - '"VulRecords":'
         condition: and
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - '" OS Patches are Outdated "'
 # digest: 490a004630440220075d428a4f7bf677cfb89468182e7f1e917c233bd6df02a9df3e0bc705434aa502204af7cc4cfcff4b1cbdb9b876b678b263a1486cbb328c2045cd209970f6221e3a:922c64590222798bb761d5b6d8e72950

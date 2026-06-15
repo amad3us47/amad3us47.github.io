@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CVE-2020-26876
 info:
   name: WordPress WP Courses Plugin Information Disclosure
@@ -11,7 +12,7 @@ info:
     - https://www.redtimmy.com/critical-information-disclosure-on-wp-courses-plugin-exposes-private-course-videos-and-materials/
   classification:
     cve-id: CVE-2020-26876
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-json/wp/v2/lesson/1"

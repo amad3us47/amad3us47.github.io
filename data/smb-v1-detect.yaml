@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: smb-v1-detect
 
 info:
@@ -10,7 +11,7 @@ info:
   description: |
     SMB (Server Message Block) is a network-layered protocol mainly used on Windows for sharing files, printers, and communication between network-attached computers. SMB related vulnerabilities can be levaraged to compromise large-scale systems.
 
-network:
+tcp:
   - inputs:
       - data: 00000031ff534d4272000000001845680000000000000000000000000000be2200000100000e00024e54204c4d20302e3132000200
         type: hex

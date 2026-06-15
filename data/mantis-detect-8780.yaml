@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mantis-detect
 info:
   name: Mantis portal detection
   author: makyotox
   severity: info
   tags: panel,mantis
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/login_page.php"

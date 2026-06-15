@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ricerca-smart-search-c4e3d4f1b090997da274297fcb6764ea
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: afterpay-gateway-for-woocommerce-08fa7a6f2adf7af4a102b9e1cbe8e789
 
 info:

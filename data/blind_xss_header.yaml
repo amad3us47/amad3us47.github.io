@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: header-blind-xss-injection
 
 info:
   name: Header BlindXSS Injection
   author: MRiambatman
   severity: high
-  description: Fuzzing headers for blindxss 
+  description: Fuzzing headers for blindxss
 
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1
@@ -27,7 +28,7 @@ requests:
         TRACE / HTTP/1.1
         Host: {{Hostname}}
         §header§: §payload§
-     
+
     payloads:
       header: helpers/payloads/request-headers.txt
       payload: helpers/payloads/command-injection.txt
@@ -38,6 +39,3 @@ requests:
         words:
           - "*.xss.ht"
         part: body
-    
-
-

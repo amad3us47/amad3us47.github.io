@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sns-topic-public-accessible
 
 info:
@@ -54,12 +55,5 @@ code:
 
       - type: regex
         part: body
-        negative: true
-        regex:
-          - '"Condition"'
 
-    extractors:
-      - type: dsl
-        dsl:
-          - '"The SNS topic " + topicArn + " is publicly accessible via Policy"'
 # digest: 490a0046304402207477e3b96fefe9ff0041e38fa1a327abd5cc0e56707254ebc55eb58f972fecbc02203fb1b080abc19fc5e2726b4eb7a6df47a964df150c88c2764151cc4b9f310a93:922c64590222798bb761d5b6d8e72950

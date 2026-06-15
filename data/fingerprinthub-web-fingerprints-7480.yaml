@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fingerprinthub-web-fingerprints
 info:
   name: FingerprintHub Technology Fingerprint
@@ -5,7 +6,7 @@ info:
   reference: https://github.com/0x727/FingerprintHub
   severity: info
   tags: tech
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

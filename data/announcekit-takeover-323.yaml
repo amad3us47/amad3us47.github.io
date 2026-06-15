@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: announcekit-takeover
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://blog.melbadry9.xyz/dangling-dns/xyz-services/dangling-dns-announcekit
     - https://github.com/EdOverflow/can-i-take-over-xyz/issues/228
 
-requests:
+http:
   - method: GET
     raw:
       - |

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: academy-lms-xss
 
 info:
@@ -14,7 +15,7 @@ info:
     shodan-query: http.html:"Academy LMS"
   tags: packetstorm,lms,academy,xss
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/search?query=%22%3E%3Cscript%3Ealert(document.domain)%3C/script%3E"

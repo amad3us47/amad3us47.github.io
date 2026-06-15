@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gdeslon-affiliate-shop-4fc4da9c5ae93b2a8297962ed5ec0f29
 
 info:

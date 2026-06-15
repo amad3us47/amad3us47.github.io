@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: shopware-detect
 info:
   name: Shopware CMS detect
@@ -8,7 +9,7 @@ info:
   references:
     - https://github.com/shopware/shopware
     - https://github.com/shopware/platform
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/admin"

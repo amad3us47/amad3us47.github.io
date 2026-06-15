@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: versa-default-login
 info:
   name: Versa Networks SD-WAN Application Default Login
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   tags: default-login,versa,sdwan
-requests:
+http:
   - raw:
       - |
         GET /versa/login.html HTTP/1.1
@@ -43,6 +44,5 @@ requests:
         dsl:
           - "contains(tolower(all_headers_2), '/login?error=true')"
           - "contains(tolower(all_headers_2), '/login?tokenmissingerror=true')"
-        negative: true
 
 # Enhanced by mp on 2022/04/06

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tomcat-manager-pathnormalization
 info:
   name: Tomcat Manager Path Normalization
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-Out-2.pdf
   tags: panel
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/..;/manager/html'
@@ -21,4 +22,3 @@ requests:
         status:
           - 403
           - 401
-        negative: true

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netsweeper-open-redirect
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://packetstormsecurity.com/files/download/133034/netsweeper-issues.tgz
   tags: netsweeper,redirect
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/webadmin/authportal/bounce.php?url=https://example.com/"

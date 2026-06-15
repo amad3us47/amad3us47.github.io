@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-dbt
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,dbt
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://cloud.getdbt.com/api/v2/accounts/"
@@ -23,4 +24,3 @@ requests:
           - "Invalid token"
           - "Authentication credentials were not provided."
         condition: or
-        negative: true

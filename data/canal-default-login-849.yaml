@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: canal-default-login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: alibaba,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /api/v1/user/login HTTP/1.1

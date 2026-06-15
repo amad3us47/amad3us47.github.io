@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: qdpm-info-leak
 info:
   author: gy741
@@ -7,10 +8,10 @@ info:
   tags: qdpm,exposure
   reference: |
     - https://www.exploit-db.com/exploits/50176
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

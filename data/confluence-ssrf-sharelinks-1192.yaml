@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: confluence-ssrf-sharelinks
 
 info:
@@ -18,7 +19,7 @@ info:
     shodan-query: http.component:"Atlassian Confluence"
   tags: confluence,atlassian,ssrf,oast
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/rest/sharelinks/1.0/link?url=https://{{interactsh-url}}/'

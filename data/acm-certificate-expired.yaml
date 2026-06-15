@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: acm-certificate-expired
 
 info:
@@ -18,7 +19,7 @@ variables:
   service: acm
   region: us-east-1
 
-requests:
+http:
   - raw:
       - |
         POST https://{{service}}.{{region}}.amazonaws.com HTTP/1.1
@@ -38,16 +39,3 @@ requests:
       - type: word
         words:
           - '{"CertificateSummaryList":[]}'
-        negative: true
-
-    extractors:
-      - type: regex
-        name: certificatearn
-        part: body
-        internal: true
-        regex:
-          - '"CertificateArn":\s*"([^"]+)"'
-
-      - type: dsl
-        dsl:
-          - '"ACM certificates " + certificatearn + " is expired"'

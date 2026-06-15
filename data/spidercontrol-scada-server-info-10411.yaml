@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: spidercontrol-scada-server-info
 info:
   name: SpiderControl SCADA Web Server Info Exposure
@@ -6,7 +7,7 @@ info:
   reference: https://spidercontrol.net/spidercontrol-inside/
   severity: high
   tags: spidercontrol,scada,exposure
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/cgi-bin/GetSrvInfo.exe'

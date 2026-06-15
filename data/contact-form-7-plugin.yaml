@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: contact-form-7-plugin
 info:
   id: contact-form-7-plugin
   name: Contact Form 7 Plugin Detection
   author: OpenAI
   description: Template to detect the presence of Contact Form 7 plugin.
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: uptimerobot-takeover
 info:
   name: uptimerobot takeover detection
@@ -7,7 +8,7 @@ info:
     - https://exploit.linuxsec.org/uptimerobot-com-custom-domain-subdomain-takeover/
     - https://github.com/EdOverflow/can-i-take-over-xyz/issues/45
   tags: takeover
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

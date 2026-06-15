@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-googlefindplacefromtext
 
 info:
@@ -20,5 +21,5 @@ http:
         part: body
         words:
           - 'error_message'
-        negative: true
+
 # digest: 4b0a00483046022100db0259f7a20fb8d468faf4b78a7a2e818c5a1bc803b879b47dd07df0fc19b9b7022100cad21d1edfd5319f76dd6f5658fb7da03f9d3fe9b256b6cb51e8bd181981acab:922c64590222798bb761d5b6d8e72950

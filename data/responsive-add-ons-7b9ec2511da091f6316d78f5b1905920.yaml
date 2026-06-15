@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: responsive-add-ons-7b9ec2511da091f6316d78f5b1905920
 
 info:

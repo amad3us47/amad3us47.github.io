@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: atlassian-jira-info-disclosure
 info:
   id: atlassian-jira-info-disclosure
   name: Atlassian Jira Server/Data Center Information Disclosure
   author: OpenAI
   description: Template to detect Atlassian Jira Server/Data Center versions vulnerable to information disclosure
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

@@ -1,15 +1,16 @@
-id: ScanMySQLiErrorBased 
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: ScanMySQLiErrorBased
 
 info:
   name:  MySQLInjection Detected
   author: Hernan Rodriguez
-  severity: High
+  severity: high
 
-requests:
+http:
   - method: GET
 
     path:
-    
+
       - "{{BaseURL}}*"
       - "{{BaseURL}}-"
       - "{{BaseURL}}'"
@@ -18,7 +19,7 @@ requests:
       - "{{BaseURL}}``"
       - "{{BaseURL}};"
       - "{{BaseURL}}//"
-      - "{{BaseURL}}' AND id IS NULL; --"      
+      - "{{BaseURL}}' AND id IS NULL; --"
       - "{{BaseURL}}/*…*/"
       - "{{BaseURL}}-x()"
       - "{{BaseURL}}[1]"
@@ -32,4 +33,3 @@ requests:
         part: body
         regex:
           - "An error occurred | array_merge() | valid MySQL result |MySqlClient.|mysqli_.*| SQL syntax.*MySQL|Warning.*mysql_.*"
-

@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-directory-listing
 info:
   name: Multiples Wordpress Directory Listing
-  risk: Medium
+  author: unknown
+  severity: info
 params:
   - root: '{{.BaseURL}}'
 variables:
@@ -14,13 +16,5 @@ variables:
       wp-content/plugins/
       wp-content/plugins/hustle/views/admin/dashboard/
       wp-admin/
-requests:
+http:
   - method: GET
-    redirect: false
-    url: >-
-      {{.root}}/{{.vul}}
-    headers:
-      - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
-    detections:
-      - >-
-        StatusCode() == 200 && StringSearch("response", "Index of /")

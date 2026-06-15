@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: album-and-image-gallery-plus-lightbox-e1404d57a9b2b897dfede53ab092987f
 
 info:

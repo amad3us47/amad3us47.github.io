@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kevinlab-bems-backdoor
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.zeroscience.mk/en/vulnerabilities/ZSL-2021-5654.php
   tags: kevinlab,backdoor
 
-requests:
+http:
   - raw:
       - |
         POST /http/index.php HTTP/1.1

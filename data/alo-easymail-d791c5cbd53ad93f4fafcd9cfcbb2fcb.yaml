@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: alo-easymail-d791c5cbd53ad93f4fafcd9cfcbb2fcb
 
 info:

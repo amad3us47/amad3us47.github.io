@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gravity-forms-pdf-extended-585ecc8eef01effec1f942cedad6f936
 
 info:

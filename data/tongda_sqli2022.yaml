@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tongda_sqli2022
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: tongda,sqli
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/general/management_center/portal/oa_engine/engine_manage_bulletin_number/query.php"

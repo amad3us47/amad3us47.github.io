@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: EOffice_UserSelect_unauth
 info:
   name: 泛微OA E-Office UserSelect 未授权访问漏洞
@@ -7,7 +8,7 @@ info:
   reference:
     - https://peiqi.wgpsec.org/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Office%20UserSelect%20%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E.html
   tags: informationleak
-requests:
+http:
   - raw:
       - |+
         GET /UserSelect/ HTTP/1.1

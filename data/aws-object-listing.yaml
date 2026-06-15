@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aws-object-listing
 
 info:
@@ -36,12 +37,5 @@ http:
           - "x-goog-metageneration"
           - "x-goog-generation"
         case-insensitive: true
-        negative: true
 
-    extractors:
-      - type: regex
-        part: body
-        group: 1
-        regex:
-          - '<Name>([a-z0-9-._]+)'
 # digest: 490a0046304402203054924f3f7581915c1a235416a1872de7a463e128e5be0784ca841c46618c10022044500befaaa794a6315e58a7c87fec7f66c300bc71e3e68b03e905fac688ad9f:922c64590222798bb761d5b6d8e72950

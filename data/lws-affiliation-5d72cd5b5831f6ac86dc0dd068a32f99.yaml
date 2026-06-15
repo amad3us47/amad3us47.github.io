@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lws-affiliation-5d72cd5b5831f6ac86dc0dd068a32f99
 
 info:

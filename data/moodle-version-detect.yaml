@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: moodle-version-detect
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Moodle has a file which describes API changes in core libraries and APIs, and can be used to discover Moodle version.
   tags: misc,moodle
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/lib/upgrade.txt"
@@ -31,8 +32,8 @@ requests:
           - 200
 
     extractors:
-      - type: regex 
-        part: body 
+      - type: regex
+        part: body
         group: 1
         regex:
            - "information provided here is intended especially for developers.\\n\\n=== (.*?) ==="

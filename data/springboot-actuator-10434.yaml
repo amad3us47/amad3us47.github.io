@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-actuator
 info:
   name: Detect Springboot Actuators
   author: that_juan_,dwisiswant0,wdahlenb
   severity: info
   tags: tech,springboot,actuator
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

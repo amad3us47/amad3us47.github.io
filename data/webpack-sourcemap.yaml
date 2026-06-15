@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: webpack-sourcemap
 
 info:
@@ -19,32 +20,7 @@ info:
 headless:
   - steps:
       - args:
-          url: "{{BaseURL}}"
-        action: navigate
 
-      - action: sleep
-        args:
-          duration: 10
-
-      - action: script
-        name: extract
-        args:
-          code: |
-            () => {
-                 AAA = [];
-                 window.performance.getEntriesByType("resource").forEach((element) => { if (element.initiatorType === 'script' || element.initiatorType === 'fetch'|| element.initiatorType === 'xmlhttprequest') {AAA.push(element.name)}});
-                 BBB = [...new Set(Array.from(document.querySelectorAll('script')).map(i => i.src))]
-                 CCC = [...new Set(Array.from(document.querySelectorAll('link[as=script]')).map(i => i.href))]
-                 return [...new Set([...AAA, ...BBB, ...CCC])];
-            }
-
-    extractors:
-      - type: regex
-        name: allscripts
-        internal: true
-        part: extract
-        regex:
-          - (?i)http(.[~a-zA-Z0-9.\/\-_:]+)
 flow: |
   headless();
   http("check_base_srcmap_inline");

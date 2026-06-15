@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: gitlab-login-panel
 info:
   id: gitlab-login-panel
   name: GitLab Login Panel Detection
   author: OpenAI
   description: Template to detect the presence of the GitLab login panel.
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:
@@ -17,7 +19,7 @@ info:
 
   requests:
       method: GET
-      path: 
+      path:
         - "/"
         - "/users/sign_in"
       description: Access the root URL of the web application

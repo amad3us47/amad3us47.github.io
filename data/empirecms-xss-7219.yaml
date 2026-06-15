@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: empirecms-xss
 info:
   name: EmpireCMS v75 XSS
@@ -5,10 +6,10 @@ info:
   severity: medium
   reference: https://www.geek-share.com/detail/2777280260.html
   tags: empirecms,xss
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

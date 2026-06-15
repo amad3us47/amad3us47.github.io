@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: picturesurf-gallery-24c1101716ec9889c5c8138f5d451586
 
 info:

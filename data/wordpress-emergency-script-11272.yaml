@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-emergency-script
 info:
   name: WordPress Emergency Script
@@ -6,7 +7,7 @@ info:
   tags: wordpress
   # Ref:-
   # https://wordpress.org/support/article/resetting-your-password/#using-the-emergency-password-reset-script
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/emergency.php"

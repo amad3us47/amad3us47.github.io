@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: herokuapp-detect
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: heroku,tech
   description: Detected endpoints might be vulnerable to subdomain takeover or disclose sensitive info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

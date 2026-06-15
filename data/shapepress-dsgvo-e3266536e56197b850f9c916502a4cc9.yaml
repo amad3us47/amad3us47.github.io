@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: shapepress-dsgvo-e3266536e56197b850f9c916502a4cc9
 
 info:

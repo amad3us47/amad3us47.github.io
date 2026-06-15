@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: grimag-open-redirect
 
 info:
@@ -8,7 +9,7 @@ info:
   severity: low
   tags: wp,wordpress,themes,redirect
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/themes/Grimag/go.php?https://example.com"

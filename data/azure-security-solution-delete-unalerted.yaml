@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-security-solution-delete-unalerted
 info:
   name: Azure Security Solution Delete Alert Not Configured
@@ -50,10 +51,5 @@ code:
       - type: word
         words:
           - "Microsoft.Security/securitySolutions/delete"
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - 'id + " does not have the correct alert configuration for Delete Security Solution events"'
 # digest: 4a0a0047304502204b3088e815064e3fbb8c75f5d732f7adc3c668563c1727ff5b993f55c1dfc4df022100c3d693b6645a443f2d3914d42f4ef23f3be07c4ebd286e07b216dd579a01e498:922c64590222798bb761d5b6d8e72950

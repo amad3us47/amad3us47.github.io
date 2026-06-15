@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: enhanced-tooltipglossary-fe3b4efc4929d5898fb3a9acd26cbefc
 
 info:

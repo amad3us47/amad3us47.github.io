@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: SQLInjection_ERROR
 
 info:
   name: SQLINJECTION Detection
   author: 0x240x23elu & OFJAAAH
-  severity: High
+  severity: high
 
-requests:
+http:
   - method: GET
 
     path:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: monsters-editor-10-for-wp-super-edit-plugin-d41d8cd98f00b204e9800998ecf8427e
 
 info:
@@ -12,7 +13,7 @@ info:
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/monsters-editor-10-for-wp-super-edit/"
     google-query: inurl:"/wp-content/plugins/monsters-editor-10-for-wp-super-edit/"

@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cors-preflight-bypass
 info:
   name: CORS Pre-Flight Bypass
+  author: unknown
   severity: high
   description: Detects potential CORS pre-flight bypass vulnerabilities in the target
 author: YourName
 tags:
   - web
   - cors
-requests:
+http:
 - method: OPTIONS
   path:
     - "/api"

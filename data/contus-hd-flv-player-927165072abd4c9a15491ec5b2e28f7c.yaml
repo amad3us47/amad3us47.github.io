@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: contus-hd-flv-player-927165072abd4c9a15491ec5b2e28f7c
 
 info:

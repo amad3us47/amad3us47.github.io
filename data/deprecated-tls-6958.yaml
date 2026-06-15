@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: deprecated-tls
 info:
   name: Deprecated TLS Detection (TLS 1.1 or SSLv3)

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: computer-repair-shop-34ea74e81a4828837f1c1298c9543ed7
 
 info:

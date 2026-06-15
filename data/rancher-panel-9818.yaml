@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rancher-panel
 info:
   name: Rancher Login Panel
@@ -6,10 +7,10 @@ info:
   description: Rancher is a open-source multi-cluster orchestration platform, lets operations teams deploy, manage and secure enterprise Kubernetes.
   reference: https://github.com/rancher/rancher
   tags: panel,rancher,kubernetes,devops,cloud
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

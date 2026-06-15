@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: easy-social-feed
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://wpscan.com/vulnerability/6dd00198-ef9b-4913-9494-e08a95e7f9a0
   tags: wordpress,wp-plugin,xss,authenticated
 
-requests:
+http:
   - raw:
       - |
         POST /wp-login.php HTTP/1.1

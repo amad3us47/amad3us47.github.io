@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: clearpass-policy-manager
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"ClearPass Policy Manager"
   tags: panel,aruba
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/tips/tipsLogin.action'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ranger-default-login
 
 info:
@@ -9,7 +10,7 @@ info:
     shodan-query: http.title:"Ranger - Sign In"
   tags: apache,ranger,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /login HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fuzz-xxe
 
 info:
@@ -11,7 +12,7 @@ info:
 variables:
   rletter: "{{rand_base(6,'abc')}}"
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

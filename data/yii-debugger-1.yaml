@@ -1,4 +1,5 @@
-id: yii-debugger 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: yii-debugger-1
 
 info:
   name: View Yii Debugger Information
@@ -6,10 +7,10 @@ info:
   reference: https://yii2-framework.readthedocs.io/en/stable/guide/tool-debugger/
   severity: info
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

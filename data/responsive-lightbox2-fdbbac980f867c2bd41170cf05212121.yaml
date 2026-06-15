@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: responsive-lightbox2-fdbbac980f867c2bd41170cf05212121
 
 info:

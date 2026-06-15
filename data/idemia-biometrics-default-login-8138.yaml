@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: idemia-biometrics-default-login
 info:
   name: IDEMIA BIOMetrics Default Login
@@ -11,7 +12,7 @@ info:
     cvss-score: 5.8
     cve-id:
     cwe-id: CWE-522
-requests:
+http:
   - raw:
       - |
         POST /cgi-bin/login.cgi HTTP/1.1
@@ -30,11 +31,5 @@ requests:
           - "resource"
       - type: word
         part: body
-        negative: true
-        words:
-          - "Invalid Password"
-      - type: status
-        status:
-          - 200
 
 # Enhanced by mp on 2022/03/10

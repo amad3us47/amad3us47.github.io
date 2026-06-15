@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: starbox-voting-0b87d9c2b86e7b7254b433a24cf9404a
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-sendgrid
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: token-spray,sendgrid
 
-network:
+tcp:
   - inputs:
       - data: "ehlo\r\n"
         read: 1024

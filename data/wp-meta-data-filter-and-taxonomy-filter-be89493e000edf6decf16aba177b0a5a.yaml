@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-meta-data-filter-and-taxonomy-filter-be89493e000edf6decf16aba177b0a5a
 
 info:

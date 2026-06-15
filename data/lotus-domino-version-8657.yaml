@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lotus-domino-version
 
 info:
@@ -5,7 +6,7 @@ info:
   author: CasperGN
   severity: info
   tags: tech,lotus
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/homepage.nsf"

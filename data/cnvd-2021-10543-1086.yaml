@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-10543
 info:
   name: EEA Information Disclosure
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://www.cnvd.org.cn/flaw/show/CNVD-2021-10543
   tags: config,exposure,cnvd
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/authenticationserverservlet"

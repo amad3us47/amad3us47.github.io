@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-nw-abap-webgui
 info:
   name: SAP NetWeaver WebGUI
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: sap,webserver
 
-requests:
+http:
   - method: GET
     redirects: true
     max-redirects: 5
@@ -24,7 +25,3 @@ requests:
         part: body
         regex:
           - "Your browser is not configured for using SPNego"
-
-
-
-          

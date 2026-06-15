@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-gitlab
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,gitlab
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://gitlab.com/api/v4/personal_access_tokens"

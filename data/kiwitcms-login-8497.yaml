@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kiwitcms-login
 info:
   name: Kiwi TCMS Login
@@ -8,7 +9,7 @@ info:
   metadata:
     shodan-query: title:"Kiwi TCMS - Login",http.favicon.hash:-1909533337
   tags: kiwitcms,panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/accounts/login/"

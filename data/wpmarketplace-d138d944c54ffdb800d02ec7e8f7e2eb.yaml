@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wpmarketplace-d138d944c54ffdb800d02ec7e8f7e2eb
 
 info:

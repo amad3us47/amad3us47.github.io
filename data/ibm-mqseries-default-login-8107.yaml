@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ibm-mqseries-default-login
 info:
   name: IBM MQSeries web console default login
@@ -8,7 +9,7 @@ info:
   reference:
     - https://github.com/ibm-messaging/mq-container/blob/master/etc/mqm/mq.htpasswd
     - https://vulners.com/nessus/IBM_MQ_DEFAULT_CREDENTIALS.NASL
-requests:
+http:
   - raw:
       - |
         POST /ibmmq/console/j_security_check HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: feedwordpress-8a09acc1a0677a305b3c5f4ce4910d4d
 
 info:

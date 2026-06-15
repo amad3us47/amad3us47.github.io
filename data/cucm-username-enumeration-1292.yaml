@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cucm-username-enumeration
 info:
   name: Cisco Unified Call Manager Username Enumeration
@@ -6,7 +7,7 @@ info:
   reference: https://www.n00py.io/2022/01/unauthenticated-dumping-of-usernames-via-cisco-unified-call-manager-cucm/
   remediation: To mitigate this, enable Contact Search Authentication.
   tags: cisco,cucm,unauth,enum
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cucm-uds/users"

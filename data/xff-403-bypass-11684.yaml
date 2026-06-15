@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xff-403-bypass
 info:
   name: X-Forwarded-For 403-forbidden bypass
@@ -5,7 +6,7 @@ info:
   severity: info
   description: Template to detect 403 forbidden endpoint bypass behind Nginx/Apache proxy & load balancers, based on X-Forwarded-For header.
   tags: xff,bypass,fuzz
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1

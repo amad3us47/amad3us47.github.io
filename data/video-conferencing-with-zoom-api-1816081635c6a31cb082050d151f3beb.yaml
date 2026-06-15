@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: video-conferencing-with-zoom-api-1816081635c6a31cb082050d151f3beb
 
 info:

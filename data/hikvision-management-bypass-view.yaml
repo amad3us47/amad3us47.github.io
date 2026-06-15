@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hikvision-camera-management-bypass-view
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.seebug.org/vuldb/ssvid-96469
   tags: hikvision,camera
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/onvif-http/snapshot?auth=YWRtaW46MTEK"

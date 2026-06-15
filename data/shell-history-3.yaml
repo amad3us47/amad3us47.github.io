@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: shell-history3
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: config
 
 
-requests:
+http:
   - raw:
       - |
         GET /.zsh_history HTTP/1.1
@@ -45,4 +46,3 @@ requests:
           - "html>"
           - "text/html"
         part: all
-        negative: true

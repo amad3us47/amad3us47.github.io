@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: linkerd-badrule-detect
 # Detect the Linkerd service by overriding the delegation table with an invalid
 # rule, the presence of the service is indicated by either:
@@ -8,7 +9,7 @@ info:
   name: Linkerd detection via bad rule
   author: dudez
   severity: info
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

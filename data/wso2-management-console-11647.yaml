@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wso2-management-console
 info:
   name: WSO2 Management Console
@@ -8,7 +9,7 @@ info:
   metadata:
     shodan-query: http.favicon.hash:1398055326
   tags: panel,wso2
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/carbon/admin/login.jsp'

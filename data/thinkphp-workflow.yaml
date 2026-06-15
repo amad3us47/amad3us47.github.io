@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkphp-workflow
 
 info:
   name: ThinkPHP Security Checks
   author: dr_set
+  severity: info
   description: A simple workflow that runs all ThinkPHP related nuclei templates on a given target.
 workflows:
   - template: http/technologies/tech-detect.yaml

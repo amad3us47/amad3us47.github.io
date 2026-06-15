@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: trilithic-viewpoint-default
 info:
   name: Trilithic Viewpoint Default Login
@@ -10,7 +11,7 @@ info:
     cvss-score: 8.3
     cve-id:
     cwe-id: CWE-522
-requests:
+http:
   - raw:
       - |
         POST /ViewPoint/admin/Site/ViewPointLogin HTTP/1.1

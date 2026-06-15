@@ -1,10 +1,11 @@
-id: Search for IOC for Fancy Product Designer
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Search-for-IOC-for-Fancy-Product-Designer
 info:
   name: Find Indicators of Compromise for Fancy Product Designer
   author: Clark
-  severity: High
+  severity: high
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/fancy-product-designer/inc/2021/05/30/4fa00001c720b30102987d980e62d5e4.php"

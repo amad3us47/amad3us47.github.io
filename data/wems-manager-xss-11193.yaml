@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wems-manager-xss
 info:
   name: WEMS Enterprise Manager XSS
@@ -6,10 +7,10 @@ info:
   tags: xss
   reference: |
     - https://packetstormsecurity.com/files/155777/WEMS-Enterprise-Manager-2.58-Cross-Site-Scripting.html
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

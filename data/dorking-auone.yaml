@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: osint-dorking-auone
 
 info:
@@ -11,7 +12,7 @@ self-contained: true
 
 variables:
   DORK_INJECT: "/?q={{DORK}}&client=kddi-auone&ie=UTF-8"
-requests:
+http:
   - method: GET
     path:
       - "https://search.auone.jp/{{DORK_INJECT}}&page=1"

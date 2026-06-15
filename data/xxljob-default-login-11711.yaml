@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xxljob-default-login
 info:
   name: XXL-JOB Default Login
@@ -14,7 +15,7 @@ info:
     verified: true
     shodan-query: http.favicon.hash:1691956220
   tags: default-login,xxljob
-requests:
+http:
   - raw:
       - |
         POST /xxl-job-admin/login HTTP/1.1

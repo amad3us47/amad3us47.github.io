@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ninja-gdpr-compliance-94dfbf441e563c007eaf4e1a4d6e9e5a
 
 info:

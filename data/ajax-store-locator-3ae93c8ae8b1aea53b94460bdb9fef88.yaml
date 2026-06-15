@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ajax-store-locator-3ae93c8ae8b1aea53b94460bdb9fef88
 
 info:

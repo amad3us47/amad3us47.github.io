@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: http-paths
 
 info:
@@ -26,19 +27,19 @@ info:
     - "/xyz/%25u2s/%25invalid"
 
 # Test all templates with FullURLs
-requests:
+http:
   - raw:
     # relative path without leading slash with param
-    # If relative path does not have `/` prefix it is autocorrected 
+    # If relative path does not have `/` prefix it is autocorrected
       - |+
-        GET 1337?with=param HTTP/1.1 
+        GET 1337?with=param HTTP/1.1
         Host: scanme.sh
     # url encoded characters in path
       - |+
         GET /some%0A/%0D HTTP/1.1
         Host: scanme.sh
     # percent encoded characters in path
-    # In URL encoding only key characters are encoded 
+    # In URL encoding only key characters are encoded
     # while in percent encoding all characters are url encoded (similar to burp decoder)
       - |+
         GET /%73%6f%6d%65%0A/%0D HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: linkerd-service-detect
 info:
   name: Linkerd Service detection
@@ -5,7 +6,7 @@ info:
   severity: info
   tags: tech,linkerd,service
   reference: https://twitter.com/nirvana_msu/status/1084144955034165248
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

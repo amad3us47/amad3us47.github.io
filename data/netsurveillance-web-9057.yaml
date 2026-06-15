@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netsurveillance-web
 info:
   name: NETSurveillance WEB
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"NETSurveillance WEB"
     google-dork: intitle:"NETSurveillance WEB"
   tags: tech,iot
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/Login.htm'

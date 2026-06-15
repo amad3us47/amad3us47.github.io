@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bulk-editor-bc90fae2fe9a1c85696ada1c1a69c4ad
 
 info:

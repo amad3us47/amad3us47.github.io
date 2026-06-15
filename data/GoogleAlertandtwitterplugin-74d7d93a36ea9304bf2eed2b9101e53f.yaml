@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: GoogleAlertandtwitterplugin-74d7d93a36ea9304bf2eed2b9101e53f
 
 info:

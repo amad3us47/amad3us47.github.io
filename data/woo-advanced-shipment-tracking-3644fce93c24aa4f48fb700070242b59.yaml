@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woo-advanced-shipment-tracking-3644fce93c24aa4f48fb700070242b59
 
 info:

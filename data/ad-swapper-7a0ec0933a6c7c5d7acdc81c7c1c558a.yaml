@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ad-swapper-7a0ec0933a6c7c5d7acdc81c7c1c558a
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ti-woocommerce-wishlist-2fe046cc3ef502058d32115ea2704f23
 
 info:

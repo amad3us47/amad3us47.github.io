@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: osint-consulta-creditcard-bin-binlist
 
 info:
@@ -8,13 +9,13 @@ info:
   tags: bin,consulta,osint
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://lookup.binlist.net/{{BIN}}"
     headers:
       User-Agent: "Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0"
-    
+
     #matchers-condition: and
     matchers:
       - type: word
@@ -30,7 +31,3 @@ requests:
             part: body
             json:
               - '.'  # JQ like syntax for extraction
-    
-        
-        
-

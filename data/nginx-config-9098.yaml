@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nginx-config
 info:
   name: Nginx Config file disclosure
   author: sheikhrishad
   severity: info
   tags: config,exposure,nginx
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/nginx.conf"

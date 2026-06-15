@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: wamp-xdebug
 info:
   id: wamp-xdebug
   name: WAMP Xdebug - Detect
   author: OpenAI
   description: Template to detect the presence of Xdebug in a WAMP (Windows, Apache, MySQL, PHP) server configuration
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:

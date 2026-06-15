@@ -1,17 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Joomla_version
 
 info:
   name: Detect joomla version
   author: Kien Nguyen
+  severity: info
   tags: joomla,info,tech
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/language/en-GB/en-GB.xml'
       - '{{BaseURL}}/modules/custom.xml'
       - '{{BaseURL}}/administrator/manifests/files/joomla.xml'
-    
+
     matchers-condition: and
     matchers:
       - type: status
@@ -20,7 +22,7 @@ requests:
 
       - type: word
         part: header
-        words: 
+        words:
           - "Content-Type: application/xml"
 
     extractors:
@@ -28,4 +30,4 @@ requests:
         part: body
         group: 1
         regex:
-          - '<version>(.*?)</version>' 
+          - '<version>(.*?)</version>'

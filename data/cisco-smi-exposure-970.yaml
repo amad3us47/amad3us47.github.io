@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cisco-smi-exposure
 
 info:
@@ -17,7 +18,7 @@ info:
     - https://github.com/Sab0tag3d/SIET
   tags: network,cisco,smi,exposure
 
-network:
+tcp:
   - inputs:
       - data: "000000010000000100000004000000080000000100000000"
         type: hex

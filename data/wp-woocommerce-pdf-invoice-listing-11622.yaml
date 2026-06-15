@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-woocommerce-pdf-invoice-listing
 info:
   name: Woocommerce PDF Invoice Exposure
@@ -9,10 +10,10 @@ info:
     - https://github.com/Mohammedsaneem/wordpress-upload-information-disclosure/blob/main/worpress-upload.yaml
     - https://woocommerce.com/products/pdf-invoices/
   tags: wordpress,listing,exposure
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

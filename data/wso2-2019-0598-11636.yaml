@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: WSO2-2019-0598
 info:
   name: WSO2 <5.8.0 - Server Side Request Forgery
@@ -14,7 +15,7 @@ info:
     cvss-score: 6.8
     cwe-id: CWE-918
   tags: ssrf,wso2,shindig
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/shindig/gadgets/proxy?container=default&url=http://oast.pro"

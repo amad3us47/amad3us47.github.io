@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: raw-unsafe-path
 
 info:
@@ -19,15 +20,15 @@ info:
 
 
 # Test all unsafe URL Handling Edgecases
-requests:
+http:
   - raw:
     # relative path without leading slash
       - |+
-        GET 1337 HTTP/1.1 
+        GET 1337 HTTP/1.1
         Host: scanme.sh
     # same but with param
       - |+
-        GET 1337?with=param HTTP/1.1 
+        GET 1337?with=param HTTP/1.1
         Host: scanme.sh
     # url encoded characters in path
       - |+

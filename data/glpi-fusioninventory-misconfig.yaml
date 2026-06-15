@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: glpi-fusioninventory-misconfig
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Misconfiguration of FusionInventory plugin leads to information disclosure
   tags: glpi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/files/_plugins/fusioninventory/xml/computer/1/10.xml"

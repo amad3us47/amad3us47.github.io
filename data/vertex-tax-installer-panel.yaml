@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vertex-tax-installer-panel
 
 info:
@@ -14,7 +15,7 @@ info:
     shodan-query: http.html:"Vertex Tax Installer"
   tags: panel,vertex
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

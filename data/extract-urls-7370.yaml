@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: extract-urls
 
 info:
@@ -9,16 +10,3 @@ info:
 headless:
   - steps:
       - args:
-          url: "{{BaseURL}}"
-        action: navigate
-      - action: waitload
-      - action: script
-        name: extract
-        args:
-          code: |
-            '\n' + [...new Set(Array.from(document.querySelectorAll('[src], [href], [url], [action]')).map(i => i.src || i.href || i.url || i.action))].join('\r\n') + '\n'
-    extractors:
-      - type: kval
-        part: extract
-        kval:
-          - extract

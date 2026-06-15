@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-support-plus-responsive-ticket-system-527bbcbfabdf1c568e4b8620e3f14dd0
 
 info:

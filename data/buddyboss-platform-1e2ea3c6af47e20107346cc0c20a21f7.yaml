@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: buddyboss-platform-1e2ea3c6af47e20107346cc0c20a21f7
 
 info:

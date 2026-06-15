@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: E-Office_group_xmlSQL
 info:
   name: E-Office group_xml.php SQL注入漏洞

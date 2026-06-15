@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-09650
 info:
   name: Ruijie EWEB Gateway Platform - Remote Command Injection
@@ -11,7 +12,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: ruijie,cnvd,cnvd2021,rce
-requests:
+http:
   - raw:
       - |
         POST /guest_auth/guestIsUp.php

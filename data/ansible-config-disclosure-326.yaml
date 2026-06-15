@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ansible-config-disclosure
 info:
   name: Ansible Configuration Exposure
   author: pdteam
   severity: medium
   tags: config,exposure
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/ansible.cfg'

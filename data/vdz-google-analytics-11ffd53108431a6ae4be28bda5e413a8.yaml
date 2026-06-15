@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vdz-google-analytics-11ffd53108431a6ae4be28bda5e413a8
 
 info:

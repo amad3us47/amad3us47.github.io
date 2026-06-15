@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yikes-inc-easy-mailchimp-extender-24ef82a433f1feef4df6b9ff5c255195
 
 info:

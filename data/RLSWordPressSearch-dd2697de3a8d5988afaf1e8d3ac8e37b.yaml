@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: RLSWordPressSearch-dd2697de3a8d5988afaf1e8d3ac8e37b
 
 info:

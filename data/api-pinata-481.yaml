@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-pinata
 
 info:
@@ -11,7 +12,7 @@ info:
   tags: token-spray,pinata
 
 self-contained: true
-requests:
+http:
   - raw:
       - |
         GET https://api.pinata.cloud/data/pinList?status=pinned HTTP/1.1

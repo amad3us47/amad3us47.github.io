@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pop3-workflow
 
 info:
   name: POP3 Security Checks
   author: pussycat0x
+  severity: info
   description: A simple workflow that runs all POP3 related nuclei templates on a given target.
 workflows:
   - template: network/detection/pop3-detect.yaml

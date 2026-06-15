@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: images_proxy_ssrf
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: No Reference
   tags: request, GET
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/imageProxy?url=https://pfelilpe.com/ping"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-fullhunt
 
 info:
@@ -12,7 +13,7 @@ info:
   tags: dns,scan,recon,fullhunt,database,token-spray
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - https://fullhunt.io/api/v1/domain/example.com/details

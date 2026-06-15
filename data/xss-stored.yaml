@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: xss-stored
 template:
    name: xss-stored
    severity: high
@@ -5,12 +7,12 @@ template:
    description: Stored Based Cross-Site Scripting
 
 request:
-   payloads: 
+   payloads:
       - '"><script>alert(1)</script>'
       - '<svg%20onx=()%20onload=(confirm)(123)>'
 
    paths: false
-   exclude: 
+   exclude:
       - .png
       - .svg
       - .tiff
@@ -22,7 +24,7 @@ request:
       - .css
 response:
    statusCode: 200
-   patterns: 
+   patterns:
       - '"><script>alert(1)</script>'
       - '<svg onx=() onload=(confirm)(123)>'
    header:

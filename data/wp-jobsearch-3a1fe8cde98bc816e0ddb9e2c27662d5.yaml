@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-jobsearch-3a1fe8cde98bc816e0ddb9e2c27662d5
 
 info:

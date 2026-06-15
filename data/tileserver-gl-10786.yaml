@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tileserver-gl
 info:
   name: TileServer GL
@@ -9,7 +10,7 @@ info:
     shodan-query: http.title:"TileServer GL - Server for vector and raster maps with GL styles"
     google-dork: intitle:"TileServer GL - Server for vector and raster maps with GL styles"
   tags: tech,tileserver
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

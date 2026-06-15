@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-debug-log
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: low
   tags: wordpress,log
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/debug.log"

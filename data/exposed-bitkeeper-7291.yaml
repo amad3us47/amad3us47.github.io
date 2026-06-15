@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-bitkeeper
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.bitkeeper.org/man/config-etc.html
   tags: config,exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/BitKeeper/etc/config"

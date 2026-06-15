@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apereo-cas-workflow
 
 info:
   name: Apereo CAS Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all Apereo CAS related nuclei templates on a given target.
 workflows:
   - template: http/exposed-panels/cas-login.yaml

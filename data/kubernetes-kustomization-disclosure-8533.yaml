@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kubernetes-kustomization-disclosure
 info:
   name: Kubernetes Kustomization Disclosure
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/kubernetes-kustomization-disclosure.json
   tags: exposure,config,kubernetes
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/kustomization.yml"

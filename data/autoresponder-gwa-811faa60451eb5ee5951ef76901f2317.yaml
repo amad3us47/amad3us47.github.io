@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: autoresponder-gwa-811faa60451eb5ee5951ef76901f2317
 
 info:

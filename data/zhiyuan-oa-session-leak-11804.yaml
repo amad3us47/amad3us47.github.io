@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zhiyuan-oa-session-leak
 info:
   name: Zhiyuan OA Session Leak
@@ -7,7 +8,7 @@ info:
   reference:
     - https://www.zhihuifly.com/t/topic/3345
   tags: zhiyuan,leak,disclosure,seeyon
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/yyoa/ext/https/getSessionList.jsp?cmd=getAll"

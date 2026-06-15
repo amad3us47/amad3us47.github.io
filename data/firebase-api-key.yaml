@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: firebase-api-key
 info:
   id: firebase-api-secret-key
   name: Firebase API Secret Key Exposure
   author: OpenAI
   description: Template to detect if an application is exposing a Firebase API secret key.
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:
@@ -12,7 +14,7 @@ info:
       - security
 
   matcher-condition: or
-  
+
   requests:
       method: GET
       path:
@@ -26,7 +28,7 @@ info:
       description: Firebase API secret found in the response body
 
   response:
-    - status: 
+    - status:
       - 200
       - 403
       - 404

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-business-control
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"Oracle Commerce"
   tags: oracle,login,panel
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/atg/bcc'

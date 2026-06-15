@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wazuh-detect
 info:
   name: wazuh detect
@@ -7,7 +8,7 @@ info:
   tags: tech,wazuh
   references:
     - https://github.com/wazuh/wazuh
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/app/login"

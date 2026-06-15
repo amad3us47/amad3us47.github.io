@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ecology-oa-clusterupgrade-upload
 
 info:
@@ -7,7 +8,7 @@ info:
   description: EcologyOA clusterupgrade interface has file upload vulnerability
   tags: ecology-oa,upload
 
-requests:
+http:
   - raw:
       - |
         GET /clusterupgrade/uploadFileClient.jsp HTTP/1.1
@@ -17,4 +18,3 @@ requests:
       - type: word
         words:
           - 'error,安全校验失败'
-

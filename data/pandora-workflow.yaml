@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pandora-workflow
 
 info:
   name: Pandora FMS Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all Pandora FMS related nuclei templates on a given target.
 workflows:
   - template: http/exposed-panels/pandora-fms-console.yaml

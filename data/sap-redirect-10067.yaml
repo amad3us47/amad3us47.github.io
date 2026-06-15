@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-redirect
 info:
   name: SAP wide open redirect
@@ -5,7 +6,7 @@ info:
   severity: medium
   description: A vulnerability in SAP's 'logoff' endpoint allows attackers to redirect victims to their URL of choice.
   tags: redirect,sap
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/sap/public/bc/icf/logoff?redirecturl=https://interact.sh"

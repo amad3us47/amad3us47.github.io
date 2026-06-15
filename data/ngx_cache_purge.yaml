@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ngx_cache_purge
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: No Reference
   tags: xss
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/test-for-nuclei"
@@ -24,5 +25,3 @@ requests:
       - type: status
         status:
           - 200
-    
-

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-multiple-theme-ssrf
 info:
   name: WordPress Multiple Themes - Unauthenticated Function Injection
@@ -7,7 +8,7 @@ info:
     - https://www.exploit-db.com/exploits/49327
     - https://wpscan.com/vulnerability/10417
   tags: wordpress,rce,ssrf
-requests:
+http:
   - raw:
       - |
         POST /wp-admin/admin-ajax.php?action=action_name HTTP/1.1

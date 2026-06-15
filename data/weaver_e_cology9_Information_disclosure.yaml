@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: weaver_e_cology9_Information_disclosure
 info:
   name: weaver_e_cology9_Information_disclosure
@@ -7,7 +8,7 @@ info:
   reference:
     - https://
   tags: tags
-requests:
+http:
   - raw:
       - |+
         GET /mobile/plugin/changeuserinfo.jsp?type=getLoginid&mobile=0 HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ngrok-takeover
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: takeover
   reference: https://github.com/EdOverflow/can-i-take-over-xyz
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

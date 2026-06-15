@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netsweeper-workflow
 
 info:
   name: Netsweeper Security Checks
   author: dwisiswant0,daffainfo
+  severity: info
   description: A simple workflow that runs all netsweeper related nuclei templates on a given target.
 workflows:
   - template: http/technologies/netsweeper-webadmin-detect.yaml

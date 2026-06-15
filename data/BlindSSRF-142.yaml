@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: 0x142
 
 info:
@@ -5,7 +6,7 @@ info:
   author: 0xAwali
   severity: info
 
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1
@@ -15,7 +16,7 @@ requests:
         Proxy: {{Host}}.{{Port}}.BSSRF-142.{{MY-DOMAIN}}
         Accept-Encoding: gzip, deflate
         Accept: */*
-        
+
     matchers:
       - type: word
         part: body

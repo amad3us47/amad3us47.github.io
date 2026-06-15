@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: radius-manager-login
 info:
   name: Radius Manager Control Panel
@@ -6,7 +7,7 @@ info:
   reference:
     - https://www.exploit-db.com/ghdb/6790
   tags: panel,radius
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

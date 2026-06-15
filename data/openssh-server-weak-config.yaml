@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: openssh-server-weak-config
 info:
   id: openssh-server-weak-config
   name: OpenSSH Server Configuration Weakness - Detect
   author: OpenAI
   description: OpenSSH server installations with weak configurations
-  severity: High
+  severity: high
   classification:
     country: any
     tags:
@@ -13,10 +15,10 @@ info:
 
   reference:
     - https://www.ssh.com/iam/ssh-key-management/
-    
+
   requests:
       method: GET
-      path: 
+      path:
         - "/.ssh/authorized_keys"
       description: Attempt to retrieve authorized SSH keys
 

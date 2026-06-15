@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open_redirect
 info:
   name: Open Redirect
   author: 0xr2r
   severity: medium
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/https://evil.com/"
@@ -83,8 +84,8 @@ requests:
       - "{{BaseURL}}/clickurl=https://evil.com/"
       - "{{BaseURL}}/goto=https://evil.com/"
 
-      
-      
+
+
     redirects: false
     matchers-condition: and
     matchers:
@@ -100,4 +101,3 @@ requests:
           - 304
           - 307
           - 308
-

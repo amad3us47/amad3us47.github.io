@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-vm-ssh-auth-type
 info:
   name: Azure VM SSH Authentication Type Not Using Keys

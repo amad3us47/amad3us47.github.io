@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xml-external-entities-SaxBuilder
 
 info:
@@ -11,19 +12,17 @@ info:
 file:
   - extensions:
     - java
-    
+
     matchers-condition: and
     matchers:
       - type: regex
         name: SaxBuilder
         regex:
           - 'new\s+SAXBuilder\(\)'
-      
+
       - type: regex
         name: SaxBuilder
         regex:
           - '.+\.setFeature\(\"http:\/\/apache.org\/xml\/features\/disallow-doctype-decl\",\s*true\);'
           - '.+\.setFeature\(\"http:\/\/xml.org\/sax\/features\/external-general-entities\",\s*false\);'
           - '.+\.setFeature\(\"http:\/\/xml.org\/sax\/features\/external-parameter-entities\",\s*false\);'
-        negative: true
-        condition: and

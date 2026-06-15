@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: szhe-default-login
 info:
   name: Szhe Default Login
@@ -6,7 +7,7 @@ info:
   tags: szhe,default-login
   reference:
     - https://github.com/Cl0udG0d/SZhe_Scan # vendor homepage
-requests:
+http:
   - raw:
       - |
         POST /login/ HTTP/1.1

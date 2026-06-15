@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: squirrly-seo-114c514bbe32e2bebd3ddcd5d1fb4e5b
 
 info:

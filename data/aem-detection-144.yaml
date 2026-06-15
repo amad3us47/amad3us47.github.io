@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-detection
 
 info:
@@ -14,7 +15,7 @@ info:
     shodan-query: http.component:"Adobe Experience Manager"
   tags: aem,favicon,tech
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/libs/granite/core/content/login/favicon.ico"

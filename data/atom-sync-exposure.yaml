@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: atom-sync-exposure
 info:
   id: atom-sync-exposure
   name: Atom Synchronization Exposure - Detect
   author: OpenAI
   description: Template to detect Atom synchronization exposure
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

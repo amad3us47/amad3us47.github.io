@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: simply-poll-9874490cd63bd1e3ce7c6f2bb36e3ec1
 
 info:

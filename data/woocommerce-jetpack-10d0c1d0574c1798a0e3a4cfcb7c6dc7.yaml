@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woocommerce-jetpack-10d0c1d0574c1798a0e3a4cfcb7c6dc7
 
 info:

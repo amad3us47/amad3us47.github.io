@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-jcr-querybuilder
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: aem
 
-requests:
+http:
   - raw:
       - |
         GET /bin/querybuilder.json.;%0aa.css?p.hits=full&property=rep:authorizableId&type=rep:User HTTP/1.1

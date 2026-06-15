@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: ssrf
 template:
    name: param-ssrf
    severity: info
@@ -5,12 +7,11 @@ template:
    description: Server-Side Request Forgery Parameter Based
 
 request:
-   payloads: 
+   payloads:
       - http://zsvsszmbku3xldyywzg1jc0nkeq6ev.burpcollaborator.net
 
    paths: false
 response:
    statusCode: 200
-   patterns: 
+   patterns:
       - lszm4qbbva85dqtcuv393czjkgz
-

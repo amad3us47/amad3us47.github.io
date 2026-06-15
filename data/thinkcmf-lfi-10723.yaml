@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkcmf-lfi
 info:
   name: ThinkCMF - Local File Inclusion
@@ -14,7 +15,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: thinkcmf,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?a=display&templateFile=README.md"

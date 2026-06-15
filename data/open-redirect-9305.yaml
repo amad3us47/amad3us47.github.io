@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-redirect
 info:
   name: open-redirect
   author: MR.iambatman
   severity: medium
   description: redirect
-requests:
+http:
   - raw:
       - |
         GET /§header§ HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: athlon-manage-calameo-publications-25a0943caf4f4c73286f67544189fd17
 
 info:

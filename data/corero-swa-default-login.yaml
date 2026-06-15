@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: corero-swa-default-login
 
 info:
@@ -14,7 +15,7 @@ info:
     cwe-id: CWE-1392
   tags: default-login,panel,webui,corero
 
-requests:
+http:
   - raw:
       - |
         GET /en-US/account/login HTTP/1.1
@@ -58,4 +59,3 @@ requests:
         part: header
         regex:
           - '(?i)Set-Cookie:\s+cval=([0-9]+);'
-

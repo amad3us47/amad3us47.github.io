@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-nsg-icmp-unrestricted
 info:
   name: Unrestricted ICMP Access in Azure NSGs

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-xmlrpc-brute-force
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://www.acunetix.com/vulnerabilities/web/wordpress-xml-rpc-authentication-brute-force/
   tags: wordpress,php,xmlrpc,fuzz
 
-requests:
+http:
   - raw:
       - |
         POST /xmlrpc.php HTTP/1.1

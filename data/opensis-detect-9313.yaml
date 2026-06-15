@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: opensis-detect
 info:
   name: OpenSIS Detect
   author: pikpikcu
   severity: info
   tags: tech,opensis
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

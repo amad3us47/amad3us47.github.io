@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cisco-vmanage-log4j
 
 info:
@@ -14,7 +15,7 @@ info:
     shodan-query: title:"vManage"
   tags: cve,cve2021,rce,jndi,log4j,cisco
 
-requests:
+http:
   - raw:
       - |
         POST /j_security_check HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: register-ip-multisite-3410adef7bde4200fbdd3d7ef4b4621e
 
 info:

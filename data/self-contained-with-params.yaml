@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: self-contained-with-params
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
 
 self-contained: true
-requests:
+http:
   - raw:
       - |
         GET http://127.0.0.1:5431/?something=here&key=value HTTP/1.1

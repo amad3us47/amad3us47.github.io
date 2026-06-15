@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: guacamole-default-login
 info:
   name: Guacamole Default Login
@@ -5,7 +6,7 @@ info:
   severity: high
   tags: guacamole,default-login
   reference: https://wiki.debian.org/Guacamole#:~:text=You%20can%20now%20access%20the,password%20are%20both%20%22guacadmin%22.
-requests:
+http:
   - raw:
       - |
         POST /api/tokens HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-keyvault-ssl-autorenewal-missing
 info:
   name: Missing SSL Certificate Auto-Renewal in Azure Key Vaults

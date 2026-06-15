@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-directory-listing
 info:
   name: SAP Directory Listing
-  risk: Medium
+  author: unknown
+  severity: info
 
 params:
   - root: "{{.BaseURL}}"
@@ -12,13 +14,5 @@ variables:
       /sap/
   - path: |
       irj/go/km/navigation/
-requests:
+http:
   - method: GET
-    redirect: false
-    url: >-
-      {{.root}}{{.prefix}}{{.path}}
-    headers:
-      - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-    detections:
-      - >-
-        StatusCode() == 200 && StringSearch("response", "~system") && StringSearch("response", "Changed") && StringSearch("response", ".webdav.")

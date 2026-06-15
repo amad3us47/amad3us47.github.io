@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dell-idrac9-default-login
 info:
   name: Dell iDRAC9 Default login
   author: kophjager007
   severity: high
   tags: dell,idrac,default-login
-requests:
+http:
   - method: POST
     cookie-reuse: true
     path:

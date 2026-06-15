@@ -1,9 +1,10 @@
-id: Git logs found
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Git-logs-found
 info:
   name: Find Git log exposure
   author: Clark
   severity: medium
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.git/logs/HEAD"

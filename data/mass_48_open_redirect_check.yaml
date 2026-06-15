@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mass_48_open_redirect_check
 info:
   name: Mass 48 Param For Open Redirect
   author: SirBugs
   severity: medium
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/https://bing.com/"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apocalypse-meow-a9ee2302255a0d7495e5ad8b9d7d88da
 
 info:

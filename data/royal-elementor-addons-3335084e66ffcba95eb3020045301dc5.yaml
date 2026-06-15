@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: royal-elementor-addons-3335084e66ffcba95eb3020045301dc5
 
 info:

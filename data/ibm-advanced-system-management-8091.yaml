@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ibm-advanced-system-management
 info:
   name: IBM Advanced System Management
@@ -6,7 +7,7 @@ info:
   tags: panel,ibm
   metadata:
     shodan-query: 'http.title:"Advanced System Management"'
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/cgi-bin/cgi'

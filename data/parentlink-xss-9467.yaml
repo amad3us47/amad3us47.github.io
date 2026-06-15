@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: parentlink-xss
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://help.blackboard.com/Community_Engagement/Administrator/Release_Notes
   tags: blackboard,parentlink,xss
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/main/blank?message_success=%3Cimg%20src%3Dc%20onerror%3Dalert(8675309)%3E'

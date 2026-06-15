@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: amcrest-login
 
 info:
@@ -14,7 +15,7 @@ info:
     google-dork: intext:"amcrest" "LDAP User"
   tags: panel,camera,amcrest
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

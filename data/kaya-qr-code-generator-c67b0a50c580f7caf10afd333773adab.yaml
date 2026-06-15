@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kaya-qr-code-generator-c67b0a50c580f7caf10afd333773adab
 
 info:

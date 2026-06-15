@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: custom-AEM-ACPV
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: low
   tags: exposure,files,logs
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/etc.clientlibs/dam/clientlibs/assetinsights/pagetracker.js"
@@ -14,7 +15,7 @@ requests:
       - "{{BaseURL}}/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/tracking.js"
       - "{{BaseURL}}/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/sitecatalyst.js"
       - "{{BaseURL}}/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/plugins.js"
-      - "{{BaseURL}}/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/appmeasurement.js"  
+      - "{{BaseURL}}/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/appmeasurement.js"
 
     matchers-condition: and
     matchers:

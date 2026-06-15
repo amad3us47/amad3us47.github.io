@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ezpz-one-click-backup-3460684db8ad8cc1accdc9326dc1fe27
 
 info:

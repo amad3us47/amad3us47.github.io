@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-info-themes-plugins-wp-org-66caa0b56de1f5b395ccb9edd74d127d
 
 info:

@@ -1,4 +1,5 @@
-id: xmlrpc.php
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: xmlrpc-php
 info:
   name: XMLRPC
   author: th3_r3sistanc3
@@ -7,7 +8,7 @@ info:
   reference:
     - https://
   tags: tags
-requests:
+http:
   - raw:
       - |
         POST /xmlrpc.php HTTP/2

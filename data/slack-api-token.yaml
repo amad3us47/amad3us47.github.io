@@ -1,7 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: slack-api-token
 info:
   id: slack-api-token
   name: Slack API Token
   author: Thomas
+  severity: info
   description: List of common regular expression patterns to detect Slack API tokens in HTTP request bodies.
   classification:
     tags:
@@ -11,7 +14,7 @@ info:
 
   references:
     - "Slack API documentation"
-    
+
   matcher-condition: or
 
   matchers:
@@ -19,5 +22,5 @@ info:
       type: body
       description: "Matches Slack API Token in request bodies."
   response:
-      - status: 
+      - status:
         - 200

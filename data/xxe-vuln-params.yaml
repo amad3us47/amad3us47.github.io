@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xxe-vuln-params
 
 info:
-  name: detect possible xml parameters 
+  name: detect possible xml parameters
   author: ayadim
   severity: info
   tags: file,bbh,bbh-xxe,bbh-check1

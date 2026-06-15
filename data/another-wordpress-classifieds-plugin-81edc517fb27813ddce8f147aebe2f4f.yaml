@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: another-wordpress-classifieds-plugin-81edc517fb27813ddce8f147aebe2f4f
 
 info:

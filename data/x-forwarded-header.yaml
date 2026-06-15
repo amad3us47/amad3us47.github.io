@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: x-forwarded-host
 
 info:
@@ -5,11 +6,11 @@ info:
   author: Kabilan S
   severity: low
 
-requests:
+http:
   - method: GET
     # Example of sending some headers to the servers
     headers:
-      
+
       X-Forwarded-Host: "evil.com"
     path:
       - "{{BaseURL}}/"

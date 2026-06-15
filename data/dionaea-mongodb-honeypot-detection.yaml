@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dionaea-mongodb-honeypot-detection
 
 info:
@@ -28,9 +29,3 @@ tcp:
         part: raw
         words:
           - "version"
-        negative: true
-
-    extractors:
-      - type: regex
-        regex:
-          - "([A-Za-z:0-9.]+)"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jetbrains-takeover
 info:
   name: jetbrains takeover detection
@@ -5,7 +6,7 @@ info:
   severity: high
   tags: takeover,jetbrains
   reference: https://github.com/EdOverflow/can-i-take-over-xyz
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

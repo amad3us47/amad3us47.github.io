@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-postgres-double-encryption-disabled
 info:
   name: Azure PostgreSQL Single Server Double Encryption Not Enabled

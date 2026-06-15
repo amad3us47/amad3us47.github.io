@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: git-config-nginxoffbyslash
 info:
   name: Git config nginx off by slash
   author: organiccrap
   severity: medium
   # https://twitter.com/Random_Robbie/status/1262676628167110656
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/static../.git/config'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: my-calendar-56f4b18e66bfb7be1be82ed4a20dcbde
 
 info:

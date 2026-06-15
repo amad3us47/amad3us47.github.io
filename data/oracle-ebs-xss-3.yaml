@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-ebs-xss3
 
 info:
@@ -11,7 +12,7 @@ info:
       - http://www.davidlitchfield.com/AssessingOraclee-BusinessSuite11i.pdf
 
 
-requests:
+http:
   - raw:
       - |
         GET /OA_HTML/ieuiMeetingErrorDisplay.jsp%3FErrCode%3D%27%22%3E%3Csvg%2Fonload%3Dalert('{{randstr}}')%3E HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: HTTP-Character-Attack
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   description: HMC
 
-requests:
+http:
 
   - raw:
       - |
@@ -20,10 +21,10 @@ requests:
         GET /?exits=1234 HTTP/1.1
         Host: {{Hostname}}
 
-      
+
     payloads:
       header: helpers/payloads/cha.txt
-   
+
     attack: clusterbomb
     redirects: true
     matchers-condition: and

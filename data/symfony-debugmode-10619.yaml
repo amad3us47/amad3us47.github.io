@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: symfony-debugmode
 info:
   name: Symfony Debug Mode
@@ -6,10 +7,10 @@ info:
   description: The remote Symfony installations appears to have left the 'debug' interface enabled, allowing the disclosure and possible execution of arbitrary code.
   reference: https://github.com/synacktiv/eos
   tags: symfony,debug
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

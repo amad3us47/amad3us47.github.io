@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2022-03672
 
 info:
@@ -11,7 +12,7 @@ info:
     - https://www.cnvd.org.cn/flaw/show/CNVD-2022-03672
   tags: cnvd,cnvd2020,sunflower,rce
 
-requests:
+http:
   - raw:
       - |
         POST /cgi-bin/rpc HTTP/1.1

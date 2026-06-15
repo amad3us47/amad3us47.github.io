@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: php-timeclock-xss
 info:
   name: PHP Timeclock 1.04 XSS
@@ -6,7 +7,7 @@ info:
   reference: https://www.exploit-db.com/exploits/49853
   severity: medium
   tags: timeclock,xss
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/login.php/'%3E%3Csvg/onload=confirm%60xss%60%3E"

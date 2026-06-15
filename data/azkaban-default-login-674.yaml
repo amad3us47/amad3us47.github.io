@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azkaban-default-login
 
 info:
@@ -11,7 +12,7 @@ info:
     shodan-query: http.title:"Azkaban Web Client"
   tags: default-login,azkaban
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

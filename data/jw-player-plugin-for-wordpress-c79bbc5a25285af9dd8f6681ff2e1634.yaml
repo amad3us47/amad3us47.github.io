@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jw-player-plugin-for-wordpress-c79bbc5a25285af9dd8f6681ff2e1634
 
 info:

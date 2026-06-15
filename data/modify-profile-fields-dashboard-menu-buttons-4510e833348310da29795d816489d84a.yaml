@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: modify-profile-fields-dashboard-menu-buttons-4510e833348310da29795d816489d84a
 
 info:

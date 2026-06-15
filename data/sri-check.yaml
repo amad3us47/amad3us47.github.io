@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sri-check
 info:
   name: Subresource Integrity Check
@@ -6,7 +7,7 @@ info:
   description: Check if the fetched resources have SRI implemented.
   tags: sri, pci
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

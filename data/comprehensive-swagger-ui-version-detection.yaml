@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: comprehensive-swagger-ui-version-detection
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   description: Attempts to detect Swagger UI version from a comprehensive list of common paths.
 
-requests:
+http:
   - method: GET
     path:
       # Combined and sorted list of unique Swagger UI endpoints

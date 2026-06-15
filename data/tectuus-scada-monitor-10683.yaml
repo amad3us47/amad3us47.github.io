@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tectuus-scada-monitor
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.tectuus.mx/
   tags: panel,tectuus,scada
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

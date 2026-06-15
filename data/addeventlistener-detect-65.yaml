@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: addeventlistener-detect
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://portswigger.net/web-security/dom-based/controlling-the-web-message-source
   tags: xss,misc
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

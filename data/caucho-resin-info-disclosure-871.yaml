@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: caucho-resin-info-disclosure
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.exploit-db.com/exploits/27888
   tags: exposure,resin,caucho
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/resin-doc/viewfile/?file=/WEB-INF/resin-web.xml" # Version: 3.0.17/3.0.18

@@ -1,9 +1,10 @@
-id: CellPower Agent backend info exposure
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: CellPower-Agent-backend-info-exposure
 info:
   name: CellPower Agent sensitive info exposure
   author: Clark
   severity: high
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/user/ajax"

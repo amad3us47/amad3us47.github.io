@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ecpay-logistics-for-woocommerce-c8a30e253aa8509faad15d78bd964ee3
 
 info:

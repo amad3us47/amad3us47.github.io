@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: doneren-met-mollie-e90b21d2e5f17dfb66cab871e05a5998
 
 info:

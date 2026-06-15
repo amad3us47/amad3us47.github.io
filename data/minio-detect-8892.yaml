@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: minio-detect
 info:
   name: Minio panel detect
   author: pikpikcu
   severity: info
   tags: panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/minio/login"

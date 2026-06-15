@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: openemr-detect
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-dork: 'app="OpenEMR"'
   tags: panel,openemr
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/interface/login/login.php?site=default"

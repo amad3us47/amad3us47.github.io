@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zingiri-tickets-fc248c05b4ed94d2f27e09b012eb7926
 
 info:

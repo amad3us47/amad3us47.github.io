@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cofense-vision-panel
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://cofense.com/
   tags: panel
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/login'
@@ -17,4 +18,3 @@ requests:
       - type: word
         words:
           - "<strong>We're sorry but vision-ui doesn't work properly without JavaScript enabled"
-          

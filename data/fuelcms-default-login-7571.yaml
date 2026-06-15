@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fuelcms-default-login
 info:
   name: Fuel CMS - Default Admin Discovery
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   tags: fuelcms,default-login,oss
-requests:
+http:
   - raw:
       - |
         GET /fuel/login HTTP/1.1

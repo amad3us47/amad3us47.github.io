@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: product-input-fields-for-woocommerce-9a3ca09635424f94d3861e1ff9bab7e9
 
 info:

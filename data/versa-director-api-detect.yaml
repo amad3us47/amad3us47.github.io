@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: versa-director-api-detect
 
 info:
@@ -8,12 +9,12 @@ info:
   reference:
     - https://versa-networks.com/products/components/
   metadata:
-    shodan-query: 
-      - ssl:"versa" 
+    shodan-query:
+      - ssl:"versa"
       - port:9182
   tags: api,versa,sdwan
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

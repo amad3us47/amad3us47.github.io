@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: concrete-xss
 info:
   author: shifacyclewla,hackergautam
@@ -9,10 +10,10 @@ info:
     - https://hackerone.com/reports/643442
     - https://github.com/concrete5/concrete5/pull/7999
     - https://twitter.com/JacksonHHax/status/1389222207805661187
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

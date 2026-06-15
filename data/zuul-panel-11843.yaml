@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zuul-panel
 info:
   name: Zuul Panel Detect
@@ -7,7 +8,7 @@ info:
   metadata:
     shodan-query: http.favicon.hash:-1127895693
   tags: panel,zuul,cicd,oss
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/api/tenants'

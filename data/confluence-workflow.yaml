@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: confluence-workflow
 
 info:
   name: Atlassian Confluence workflow
   author: philippedelteil
+  severity: info
   description: Workflow that runs all Confluence related nuclei templates
 workflows:
   - template: http/technologies/confluence-detect.yaml

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: multiple-parameters-openredirect-erickfernandox
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: medium
   description: |
     An open redirect vulnerability was detected. An attacker can redirect a user
-    to a malicious site and possibly obtain sensitive information, modify data, 
+    to a malicious site and possibly obtain sensitive information, modify data,
     and/or execute unauthorized operations.
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
@@ -22,8 +23,8 @@ http:
     path:
       - "{{BaseURL}}/?protocol=https&domain=com&subdomain=example&host=X"
       - "{{BaseURL}}/?domain=example.com"
-      - "{{BaseURL}}/?host=example.com"      
-      
+      - "{{BaseURL}}/?host=example.com"
+
 
     stop-at-first-match: true
     matchers-condition: and

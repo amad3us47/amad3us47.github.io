@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wix-takeover
 info:
   name: Wix Takeover Detection
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: takeover,wix
   reference: https://github.com/EdOverflow/can-i-take-over-xyz/issues/231
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

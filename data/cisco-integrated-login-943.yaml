@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cisco-integrated-login
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.exploit-db.com/ghdb/3859
   tags: panel,cisco
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/login.html'

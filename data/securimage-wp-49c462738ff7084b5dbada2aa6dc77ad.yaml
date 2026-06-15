@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: securimage-wp-49c462738ff7084b5dbada2aa6dc77ad
 
 info:

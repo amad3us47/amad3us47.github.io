@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: recordlogin
 
 info:
   name: recordlogin
-  author: websecresearch 
+  author: websecresearch
   severity: info
   description: Record login for any web application
 
-requests:
+http:
   - raw:
     - |
       GET {{Path}} HTTP/1.1
@@ -16,11 +17,11 @@ requests:
       POST {{Path}}/doLogin.php HTTP/1.1
       Host: {{Hostname}}
       Content-Type: application/x-www-form-urlencoded
-      
+
       {{FileContents "path/to/credentials/file.txt"}}
 
     redirects: true
-    cookie-reuse: true      
+    cookie-reuse: true
     req-condition: true
     matchers:
       - type: dsl

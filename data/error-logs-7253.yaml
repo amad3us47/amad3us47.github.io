@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: error-logs
 info:
   name: common error log files
   author: geeknik,daffainfo
   severity: low
   tags: logs,exposure,error
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/routes/error_log"

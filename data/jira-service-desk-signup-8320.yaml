@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jira-service-desk-signup
 info:
   name: Jira Service Desk Signup
   author: TechbrunchFR
   severity: medium
   tags: jira,atlassian,service
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/servicedesk/customer/user/signup"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-auto-affiliate-links-7f1e1920f33cd2e58b9064b9d3c3749a
 
 info:

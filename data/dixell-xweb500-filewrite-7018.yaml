@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dixell-xweb500-filewrite
 info:
   name: Dixell XWEB-500 - Arbitrary File Write
@@ -7,7 +8,7 @@ info:
   metadata:
     google-dork: inurl:"xweb500.cgi"
   tags: lfw,iot,dixell,xweb500
-requests:
+http:
   - raw:
       - |
         POST /cgi-bin/logo_extra_upload.cgi HTTP/1.1

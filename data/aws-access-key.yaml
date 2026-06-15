@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: aws-access-key
 info:
   id: aws-access-key
   name: AWS Access Key ID Value - Detect
   author: OpenAI
   description: Template to detect AWS access key ID values in request headers or parameters
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:
@@ -24,7 +26,7 @@ info:
     - pattern: '(A3T[A-Z0-9]|AKIA|AGPA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}'
       type: body
       description: AWS access key ID found in request body
- 
+
   response:
     - status:
         - 200

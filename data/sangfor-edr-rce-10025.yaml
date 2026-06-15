@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sangfor-edr-rce
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://www.cnblogs.com/0day-li/p/13650452.html
   tags: rce,sangfor
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/api/edr/sangforinter/v2/cssp/slog_client?token=eyJtZDUiOnRydWV9"

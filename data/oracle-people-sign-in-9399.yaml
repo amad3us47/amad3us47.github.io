@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-people-sign-in
 info:
   name: Oracle Peoplesoft Sign-in
@@ -6,7 +7,7 @@ info:
   tags: oracle,panel
   metadata:
     shodan-query: http.title:"Oracle PeopleSoft Sign-in"
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

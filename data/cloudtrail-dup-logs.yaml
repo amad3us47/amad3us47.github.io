@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cloudtrail-dup-logs
 info:
   name: CloudTrail Duplicate Log Avoidance

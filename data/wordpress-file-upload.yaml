@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: wordpress-file-upload
 info:
   id: wordpress-file-upload
   name: WordPress File Upload - Detect
   author: OpenAI
   description: Template to detect WordPress installations vulnerable to file upload attacks
-  severity: High
+  severity: high
   classification:
     country: any
     tags:
@@ -16,7 +18,7 @@ info:
   matcher-condition: and
   requests:
       method: GET
-      path: 
+      path:
         - "/wp-content/plugins/insert-php/readme.txt"
       description: Attempt to upload a file to the WordPress installation
       condition: and

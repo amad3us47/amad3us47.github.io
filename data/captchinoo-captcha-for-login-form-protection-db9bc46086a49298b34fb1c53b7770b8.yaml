@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: captchinoo-captcha-for-login-form-protection-db9bc46086a49298b34fb1c53b7770b8
 
 info:

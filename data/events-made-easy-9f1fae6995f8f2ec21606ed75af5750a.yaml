@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: events-made-easy-9f1fae6995f8f2ec21606ed75af5750a
 
 info:

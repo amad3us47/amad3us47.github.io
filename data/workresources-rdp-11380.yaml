@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: workresources-rdp
 info:
   name: Work Resources RemoteApp and Desktop Connection
@@ -6,7 +7,7 @@ info:
   metadata:
     shodan-query: 'http.title:"RD Web Access"'
   tags: panel,workresources
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/RDWeb/Pages/en-US/login.aspx'

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jaspersoft-detect
 info:
   name: Jaspersoft detected
   author: koti2
   severity: info
   tags: tech,jaspersoft
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/jasperserver/login.html?error=1"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-grimag-open-redirect
 info:
   name: WordPress Grimag Themes < 1.1.1 Open Redirection
@@ -6,10 +7,10 @@ info:
   reference: https://wpscan.com/vulnerability/db319d4c-7de6-4d36-90e9-86de82e9c03a
   severity: low
   tags: wordpress,wp-theme,redirect
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

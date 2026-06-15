@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yith-woocommerce-ajax-navigation-7f018c0345e752201b91724f891367bd
 
 info:

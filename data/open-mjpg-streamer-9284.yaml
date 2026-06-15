@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-mjpg-streamer
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: iot,webcam
   description: Open mjpg-streamer service sharing webcam/camera feed
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?action=stream"

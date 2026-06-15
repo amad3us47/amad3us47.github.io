@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: enhanced-webpack-sourcemap-disclosure
 info:
   name: Enhanced Webpack Sourcemap Disclosure

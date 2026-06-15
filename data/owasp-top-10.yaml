@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: owasp-top10
 info:
   name: OWASP Top 10
@@ -7,7 +8,7 @@ info:
     Nuclei template for scanning OWASP Top 10 vulnerabilities.
   reference: https://owasp.org/top10/
 
-requests:
+http:
   - name: SQL Injection Detection
     path:
       - 'index.php?id=1'

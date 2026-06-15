@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: eroom-zoom-meetings-webinar-f8c9a150f8e5c0021b4329ff44addc63
 
 info:

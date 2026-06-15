@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ups-status
 info:
   name: Multimon UPS status page
@@ -5,7 +6,7 @@ info:
   severity: low
   reference: https://www.exploit-db.com/ghdb/752
   tags: logs,status
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cgi-bin/apcupsd/multimon.cgi"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pieregister-open-redirect
 info:
   name: WordPress Pie Register < 3.7.2.4 - Open Redirect
@@ -10,7 +11,7 @@ info:
   classification:
     cwe-id: CWE-601
   tags: wordpress,redirect,wp-plugin,pieregister
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?piereg_logout_url=true&redirect_to=https://interact.sh"

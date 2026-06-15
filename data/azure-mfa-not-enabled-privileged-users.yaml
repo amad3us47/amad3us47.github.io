@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-mfa-not-enabled-privileged-users
 info:
   name: Azure MFA Not Enabled for All Privileged Users

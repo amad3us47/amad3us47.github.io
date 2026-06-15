@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: brute
 
 info:
@@ -23,13 +24,3 @@ brutes:
     - asdf.php
     - pinfo.php
     - phpversion.php
-
-rules:
-  r0:
-    brutes:
-      - phpinfo
-    request:
-      method: GET
-      path: /{{phpinfo}}
-    expression: response.status == 200 && response.body.bcontains(b'PHP Extension') && response.body.bcontains(b'PHP Version') && r'>PHP Version <\/td><td class="v">([0-9.]+)'.bmatches(response.body)
-expression: r0()

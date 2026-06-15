@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: prestashop-detect
 info:
   name: PrestaShop Tech Detection
@@ -6,7 +7,7 @@ info:
   tags: tech,cms,prestashop
   metadata:
     shodan-query: http.component:"PrestaShop"
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

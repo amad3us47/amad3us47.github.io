@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oob-header-based-interaction
 info:
   name: Header Based Generic OOB Interaction
@@ -6,7 +7,7 @@ info:
   description: The remote server fetched a spoofed URL from the request headers.
   reference: https://github.com/PortSwigger/collaborator-everywhere
   tags: oast,ssrf,generic
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

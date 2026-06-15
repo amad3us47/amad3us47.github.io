@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: AssetNote-RCE
 
 info:
-  name: Assetnote RCE 
+  name: Assetnote RCE
   author: Excis3
-  severity: Critical
+  severity: critical
   description: CVE-2022-47986
   tags: RCE
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/aspera/faspex/package_relay/relay_package"
@@ -18,7 +19,7 @@ requests:
         part: body
         words:
           - "<title>Aspera Faspex</title>"
-          
+
       - type: status
         status:
           - 404

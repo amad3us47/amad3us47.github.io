@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ip2location-country-blocker-9165f56271b9e02fb5f436dc23638eb5
 
 info:

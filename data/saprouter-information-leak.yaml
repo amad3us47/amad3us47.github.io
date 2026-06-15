@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: saprouter-information-leak
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   tags: network,sap
 
-network:
+tcp:
   - inputs:
       - data: 00000022524f555445525f41444d002802000000000000000000000000000000000000000000
         type: hex

@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: rabbitmq-missing-auth
 info:
   id: rabbitmq-dashboard
   name: Open RabbitMQ Authentication - Detect
   author: OpenAI
   description: RabbitMQ instances Dashboard authentication
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:

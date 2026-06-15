@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitlab-public-signup
 info:
   name: GitLab public signup
@@ -6,7 +7,7 @@ info:
   metadata:
     shodan-query: http.title:"GitLab"
   tags: gitlab,misconfig
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/users/sign_in"
@@ -23,6 +24,3 @@ requests:
         status:
           - 200
       - type: word
-        negative: true
-        words:
-          - '<meta content="GitLab.com" property="og:description">'

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sonarqube-token
 info:
   name: SonarQube Token Disclosure
   author: Ice3man
   severity: info
   tags: exposure,token
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

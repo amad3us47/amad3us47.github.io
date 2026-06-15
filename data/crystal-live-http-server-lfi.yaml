@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: crystal-live-http-server-lfi
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://cxsecurity.com/issue/WLB-2019110127
   tags: crystal,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/../../../../../../../../../../../../windows/win.ini"

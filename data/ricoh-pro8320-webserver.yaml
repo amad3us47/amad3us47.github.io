@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ricoh-pro8320-webserver
 
 info:
-  name: Ricoh Fiery/EFI Pro8320 Web Server 
+  name: Ricoh Fiery/EFI Pro8320 Web Server
   author: alexrydzak
   severity: info
   tags: hp,web,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wt4/home?lang=en"

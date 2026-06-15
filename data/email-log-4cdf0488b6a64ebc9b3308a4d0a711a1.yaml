@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: email-log-4cdf0488b6a64ebc9b3308a4d0a711a1
 
 info:

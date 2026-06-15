@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-responsive-thumbnail-slider-2dd59e77ce6a12c4aa0bf300217801cc
 
 info:

@@ -1,10 +1,11 @@
-id: OpenText LiveSites TeamSite database info exposed
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: OpenText-LiveSites-TeamSite-database-info-exposed
 info:
   name: OpenText LiveSite TeamSite database info exposed.
   author: Clark
   severity: medium
   description: Can find database connection info.
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}//iw-cc//WEB-INF/conf/livesite/resources/resource-config.xml'

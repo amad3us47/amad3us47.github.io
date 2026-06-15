@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: webmail-basic-RCE
 info:
   name: Webmail Basic RCE
   author: SirBugs
-  severity: Critical
+  severity: critical
 
-requests:
+http:
   - raw:
       - |
         POST /webmail/basic/ HTTP/2

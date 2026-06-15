@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: host-header-poisoning
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: medium
   description: Basic host header poisoning vulnerability check. Checks for reflections of X-Forwarded-Host and X-Host in the response body.
 
-requests:
+http:
   - raw:
       - |
         GET /?slash-host HTTP/1.1

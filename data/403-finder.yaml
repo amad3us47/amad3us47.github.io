@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Labda_403_Finder
 
 info:
@@ -8,12 +9,12 @@ info:
   tags: find, web, 403, Forbidden
   reference: https://thelabda.com
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
-    
-    
+
+
     matchers-condition: or
     matchers:
       - type: status

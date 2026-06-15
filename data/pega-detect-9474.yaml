@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pega-detect
 info:
   name: Pega Infinity Detection
   author: sshell
   severity: info
   tags: tech,pega
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/prweb/PRRestService/unauthenticatedAPI/v1/docs"

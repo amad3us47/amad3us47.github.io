@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: visual-tools-dvr-rce
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.exploit-db.com/exploits/50098
   tags: visualtools,rce,oast,injection
 
-requests:
+http:
   - raw:
       - |
         GET /cgi-bin/slogin/login.py HTTP/1.1

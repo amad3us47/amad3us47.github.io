@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: all-in-one-seo-pack-2da1906949861d0efadbafa8514d5f7e
 
 info:

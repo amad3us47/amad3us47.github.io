@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ms10-17-eternalblue
 
 info:
@@ -16,7 +17,7 @@ variables:
   trans_name_piped_request_part_3: "52981000000000ffffffff0000000000000000000000004a0000004a0002002300000007005c504950455c00"
   trans_2_session_setup_request: "0000004eff534d4232000000001807c00000000000000000000000000008fffe000841000f0c0000000100000000000000a6d9a40000000c00420000004e0001000e000d0000000000000000000000000000"
 
-network:
+tcp:
   - inputs:
       # send/receive negotiate protocol request
       - data: "{{negotiate_protocol_request}}"
@@ -65,7 +66,7 @@ network:
           ms1017: true
           # just print a debug message (inline matchers not yet connected to template matchers)
           justPrint: print_debug("MS17-010 likely vulnerable")
-      
+
       # send/receive trans 2 session setup request - Double Pulsar Implant check
       - data: "{{trans_2_session_setup_request}}"
         type: hex

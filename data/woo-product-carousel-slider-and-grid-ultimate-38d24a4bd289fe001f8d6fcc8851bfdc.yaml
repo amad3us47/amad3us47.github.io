@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woo-product-carousel-slider-and-grid-ultimate-38d24a4bd289fe001f8d6fcc8851bfdc
 
 info:

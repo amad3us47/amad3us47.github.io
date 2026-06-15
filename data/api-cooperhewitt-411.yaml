@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-cooperhewitt
 
 info:
@@ -10,7 +11,7 @@ info:
   tags: token-spray,cooperhewitt
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://api.collection.cooperhewitt.org/rest/?method=api.spec.formats&access_token={{token}}"

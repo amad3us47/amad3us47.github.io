@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: alphaweb-default-login
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: default-login
   reference: https://wiki.zenitel.com/wiki/AlphaWeb
 
-requests:
+http:
   - raw:
       - |
         GET /php/node_info.php HTTP/1.1

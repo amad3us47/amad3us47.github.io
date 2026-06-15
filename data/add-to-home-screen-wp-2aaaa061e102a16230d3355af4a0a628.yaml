@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: add-to-home-screen-wp-2aaaa061e102a16230d3355af4a0a628
 
 info:

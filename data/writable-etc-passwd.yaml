@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: writable-etc-passwd
 
 info:
@@ -28,5 +29,5 @@ code:
         part: code_1_response
         words:
           - "Not writable"
-        negative: true
+
 # digest: 490a0046304402200a2dcfb2eaea839565816d82dd85b66ba2456dbbe04b3f5571d026c605a94f9c02202f0547ac07c1d33f571cbde87705304d77846d67c120b2b983502fa275396a5f:922c64590222798bb761d5b6d8e72950

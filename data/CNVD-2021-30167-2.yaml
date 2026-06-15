@@ -1,4 +1,5 @@
-id: CNVD-2021-30167 2
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: CNVD-2021-30167-2
 info:
   name: UFIDA NC BeanShell Remote Code Execution
   author: pikpikcu
@@ -7,10 +8,10 @@ info:
     - https://mp.weixin.qq.com/s/FvqC1I_G14AEQNztU0zn8A
     - https://www.cnvd.org.cn/webinfo/show/6491
   tags: beanshell,rce,cnvd
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

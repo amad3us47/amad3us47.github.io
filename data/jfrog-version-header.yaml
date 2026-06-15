@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jfrog-version-header
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.jfrog.com/confluence/display/JFROG/JFrog+Platform+REST+API
   tags: jfrog,artifactory,tech,api
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/api/system/ping'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-auth-bypass-wptimecapsule
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://github.com/SECFORCE/WPTimeCapsulePOC
   tags: wordpress,wp-plugin
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

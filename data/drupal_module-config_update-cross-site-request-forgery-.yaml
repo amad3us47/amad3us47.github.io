@@ -1,5 +1,6 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 
-id: drupal_module-config_update-cross-site-request-forgery-
+id: drupal_module-config_update-cross-site-request-forgery
 info:
   name: drupal_module-config_update-cross-site-request-forgery-
   author: Bishopfox

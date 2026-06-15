@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xml-external-entities-DOMParser
 
 info:
@@ -11,7 +12,7 @@ info:
 file:
   - extensions:
     - java
-    
+
     matchers-condition: and
     matchers:
       - type: regex
@@ -25,5 +26,3 @@ file:
           - '.+\.setAttribute\(DOMParser\.EXPAND_ENTITYREF,\s*false\);'
           - '.+\.setAttribute\(DOMParser\.DTD_OBJECT,\s*dtdObj\);'
           - '.+\.setAttribute\(DOMParser\.ENTITY_EXPANSION_DEPTH,\s*12\);'
-        negative: true
-        condition: and

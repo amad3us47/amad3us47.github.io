@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: default-application-workflow
 
 info:
   name: Default Web Application Detection
   author: andydoering
+  severity: info
   description: Detects default installations of web applications
 
 workflows:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cookie-law-bar-0bbd263850c1ddd77a67fa344955f2e3
 
 info:

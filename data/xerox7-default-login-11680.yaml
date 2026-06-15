@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xerox7-default-login
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: xerox,default-login
   reference: https://www.support.xerox.com/en-us/article/en/x_wc7556_en-O23530
 
-requests:
+http:
   - raw:
       - |
         POST /userpost/xerox.set HTTP/1.1
@@ -43,4 +44,3 @@ requests:
           - "invalid"
           - "errmsg"
         condition: or
-        negative: true

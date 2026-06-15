@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-woosidebars
 
 info:
@@ -11,7 +12,7 @@ info:
     wpscan: https://wpscan.com/plugin/woosidebars
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/woosidebars/readme.txt"

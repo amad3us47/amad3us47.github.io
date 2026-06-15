@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2019-32204
 info:
   name: Fanwei e-cology <=9.0 - Remote Code Execution
@@ -11,7 +12,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: fanwei,cnvd,cnvd2019,rce
-requests:
+http:
   - raw:
       - |
         POST /bsh.servlet.BshServlet HTTP/1.1

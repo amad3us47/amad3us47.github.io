@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gopher-detection
 
 info:
@@ -8,7 +9,7 @@ info:
   description: |
     Gopher is an application-layer protocol that provides the ability to extract and view Web documents stored on remote Web servers.
 
-network:
+tcp:
   - inputs:
       - data: "\r\n"
     host:

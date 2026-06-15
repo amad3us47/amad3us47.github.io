@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: accessibility-help-button-cb4ea33ab0eeeddeb692bcffea55f4b2
 
 info:

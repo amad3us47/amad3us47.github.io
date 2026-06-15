@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkit-wp-contact-form-7cedf651f77feeb037e21dace65fa8ae
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-gitignore
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://twitter.com/pratiky9967/status/1230001391701086208
     - https://www.tenable.com/plugins/was/98595
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.gitignore"
@@ -35,5 +36,3 @@ requests:
           - "<meta"
           - "image/"
         part: all
-        negative: true
-        condition: or

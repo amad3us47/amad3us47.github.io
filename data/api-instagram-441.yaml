@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-instagramgraph
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,instagram,graph
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://graph.facebook.com/v12.0/me/accounts?access_token={{token}}"

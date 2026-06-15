@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-coinapi
 
 info:
@@ -11,7 +12,7 @@ info:
   tags: token-spray,coinapi
 
 self-contained: true
-requests:
+http:
   - raw:
       - |
         GET https://rest.coinapi.io/v1/exchanges HTTP/1.1

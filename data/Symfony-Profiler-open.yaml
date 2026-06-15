@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Symfony-Profiler-open
 info:
   name: Profiling Endpoints for Sensitive Information
@@ -10,7 +11,7 @@ info:
     - sensitive-info
     - profiling-endpoint
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/app_dev.php/_profiler/open?file=app/config/parameters.yml'
@@ -30,5 +31,3 @@ requests:
           - mailer_user
           - mailer_password
           - secret
-
-

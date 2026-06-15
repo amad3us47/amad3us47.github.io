@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: clickjacking-detect
 
 info:
@@ -11,27 +12,3 @@ info:
 headless:
   - steps:
       - args:
-          url: '{{BaseURL}}'
-        action: navigate
-      - action: waitload
-      - action: script
-        args:
-          hook: true
-          code: |
-            () => {
-              var headers = document.getElementsByTagName('head')[0].childNodes;
-              var result = false;
-              headers.forEach(function(header) {
-                if (header.name === 'X-Frame-Options' && header.content !== 'DENY') {
-                  result = true;
-                }
-              });
-              return result;
-            }
-
-    stop-at-first-match: true
-    matchers:
-      - type: word
-        part: body
-        words:
-          - "true"

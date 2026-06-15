@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cloud-enum-aws-s3-bucket
 
 info:
@@ -13,7 +14,7 @@ self-contained: true
 variables:
   baseDNS: "s3.amazonaws.com"
 
-requests:
+http:
   - raw:
       - |
         GET http://{{keyword}}.{{baseDNS}} HTTP/1.1

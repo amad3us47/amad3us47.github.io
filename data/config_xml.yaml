@@ -1,9 +1,10 @@
-id: config.xml database info
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: config-xml-database-info
 info:
   name: Search for config.xml
   author: nithissh
   severity: high
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/debug/config.xml"

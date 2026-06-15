@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-phpmyadmin-extension-401aa097ca89b06ae6f18005fb7dfdf4
 
 info:

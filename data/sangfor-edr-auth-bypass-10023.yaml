@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sangfor-edr-auth-bypass
 info:
   name: Sangfor EDR Authentication Bypass
   author: princechaddha
   severity: high
   tags: sangfor,auth-bypass
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |
@@ -26,9 +27,4 @@ requests:
       - type: word
         words:
           - 'Set-Cookie=""'
-        part: header
-        negative: true
-      - type: word
-        words:
-          - 'Set-Cookie='
         part: header

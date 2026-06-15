@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xui-weak-login
 
 info:
@@ -16,7 +17,7 @@ info:
     shodan-query: title:"X-UI Login"
   tags: x-ui,default-login
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/login"

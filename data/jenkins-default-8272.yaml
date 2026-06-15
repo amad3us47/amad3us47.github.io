@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jenkins-weak-password
 info:
   name: Jenkins Weak Password
   author: Zandros0
   severity: high
   tags: jenkins,default-login
-requests:
+http:
   - raw:
       - |
         GET /login HTTP/1.1

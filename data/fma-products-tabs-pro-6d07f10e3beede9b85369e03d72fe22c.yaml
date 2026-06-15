@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fma-products-tabs-pro-6d07f10e3beede9b85369e03d72fe22c
 
 info:

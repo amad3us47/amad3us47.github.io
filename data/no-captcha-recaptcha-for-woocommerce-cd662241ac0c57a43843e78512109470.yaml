@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: no-captcha-recaptcha-for-woocommerce-cd662241ac0c57a43843e78512109470
 
 info:

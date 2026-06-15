@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jkstatus-manager
 
 info:
@@ -5,7 +6,7 @@ info:
   author: bauthard
   severity: low
 
-requests:
+http:
   - method: GET
     headers:
       X-Forwarded-For: "127.0.0.1"

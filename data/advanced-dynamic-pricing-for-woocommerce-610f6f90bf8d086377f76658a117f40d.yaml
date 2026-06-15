@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: advanced-dynamic-pricing-for-woocommerce-610f6f90bf8d086377f76658a117f40d
 
 info:

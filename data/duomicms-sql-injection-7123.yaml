@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: duomicms-sql-injection
 info:
   name: DuomiCMS SQL Injection
@@ -5,10 +6,10 @@ info:
   severity: high
   reference: https://redn3ck.github.io/2016/11/01/duomiCMS/
   tags: duomicms,sqli
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

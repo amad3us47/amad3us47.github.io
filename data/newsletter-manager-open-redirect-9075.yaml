@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: newsletter-manager-open-redirect
 info:
   name: Newsletter Manager < 1.5 - Unauthenticated Open Redirect
@@ -10,7 +11,7 @@ info:
   metadata:
     verified: true
   tags: wp-plugin,redirect,wordpress,wp,unauth
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?wp_nlm=confirmation&appurl=aHR0cDovL2F0dGFja2VyLmNvbQ=="

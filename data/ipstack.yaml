@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-ipstack
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: token-spray,ipstack
 
-requests:
+http:
   - method: GET
     path:
       - "https://api.ipstack.com/8.8.8.8?access_key={{token}}"
@@ -15,6 +16,3 @@ requests:
     matchers:
       - type: word
         part: body
-        negative: true
-        words:
-          - 'invalid_access_key'

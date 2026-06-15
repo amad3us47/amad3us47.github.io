@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fatpipe-backdoor
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://www.fatpipeinc.com/support/advisories.php
   tags: fatpipe,default-login,backdoor,auth-bypass
 
-requests:
+http:
   - raw:
       - |
         POST /fpui/loginServlet HTTP/1.1

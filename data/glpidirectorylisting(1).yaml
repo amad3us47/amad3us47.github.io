@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: GLPI_Exposed_Data
 info:
   author: RedTeamBrasil
@@ -6,7 +7,7 @@ info:
   reference: "N/A"
   severity: high
   tags: "glpi,misconfiguration,data,exposed"
-requests:
+http:
   - method: GET
     payloads:
       expose_data:

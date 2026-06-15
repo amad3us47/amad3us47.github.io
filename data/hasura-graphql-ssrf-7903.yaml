@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hasura-graphql-ssrf
 info:
   name: Hasura GraphQL Engine - SSRF Side Request Forgery
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://cxsecurity.com/issue/WLB-2021040115
   tags: hasura
-requests:
+http:
   - raw:
       - |
         POST /v1/query HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2020-67113
 info:
   name: H5S CONSOLE - Unauthorized Access
@@ -14,7 +15,7 @@ info:
     verified: true
     shodan-query: http.title:"H5S CONSOLE"
   tags: cnvd,cnvd2020,h5s,unauth,h5sconsole
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/v1/GetSrc"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: drupal-user-enum-redirect
 info:
   name: Drupal User Enumeration [Redirect]
@@ -7,7 +8,7 @@ info:
     verified: true
     shodan-query: http.component:"Drupal"
   tags: drupal,misconfig
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/user/0"

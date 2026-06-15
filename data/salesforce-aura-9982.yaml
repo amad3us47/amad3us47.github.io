@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: salesforce-aura
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://github.com/Ph33rr/cirrusgo (test endpoint)
   tags: aura,unauth,salesforce,exposure
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/aura"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: osint-consulta-cep-receitaws
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: cep,consulta,osint
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://viacep.com.br/ws/{{CEP}}/json/"
@@ -25,6 +26,3 @@ requests:
             part: body
             json:
               - '.'  # JQ like syntax for extraction
-
-
-

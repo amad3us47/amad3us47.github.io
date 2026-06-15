@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: instagram-slider-widget-9835e0e7ed2730191e3d614db989f978
 
 info:

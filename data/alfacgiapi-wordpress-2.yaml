@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: alfacgiapi-wordpress2
 info:
   name: alfacgiapi
@@ -8,7 +9,7 @@ info:
   tags: wordpress,listing
 
 
-requests:
+http:
   - raw:
       - |
         GET /wp-content/uploads/alm_templates/ALFA_DATA/alfacgiapi/ HTTP/1.1

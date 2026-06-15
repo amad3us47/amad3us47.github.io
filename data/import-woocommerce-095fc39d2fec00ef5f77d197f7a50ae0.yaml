@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: import-woocommerce-095fc39d2fec00ef5f77d197f7a50ae0
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-web-dispatcher-admin-portal
 info:
   name: SAP Web Dispatcher admin portal detection
@@ -5,10 +6,10 @@ info:
   description: Detection of SAP Web Dispatcher Admin Portal
   severity: info
   tags: sap,webserver,proxy
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

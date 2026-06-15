@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: browser-and-operating-system-finder-aefcd5015101865e70880aed689210c7
 
 info:

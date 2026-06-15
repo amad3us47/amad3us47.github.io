@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: detect-all-takeovers
 
 info:
@@ -12,7 +13,7 @@ info:
   # Do not report subdomain takeover issues only based on detection.
   # Total number of services #72
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

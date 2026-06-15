@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-upload-data
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://www.exploit-db.com/ghdb/7040
   tags: wordpress,listing
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/uploads/data.txt"

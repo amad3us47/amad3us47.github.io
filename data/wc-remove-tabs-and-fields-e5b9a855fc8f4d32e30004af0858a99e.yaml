@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wc-remove-tabs-and-fields-e5b9a855fc8f4d32e30004af0858a99e
 
 info:

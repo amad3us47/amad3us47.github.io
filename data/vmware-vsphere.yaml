@@ -1,15 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: vmware-vsphere
 name: vmware-vsphere
-priority: 3
-nuclei_tags:
-  - - vsphere
-    - vmware
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 0
-    headers: {}
-    keyword:
-      - <meta name="description" content="VMware vSphere
-    favicon_hash: []

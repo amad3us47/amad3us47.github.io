@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: logaster-logo-generator-a27bb65e0451e73799d0649e7bb2ffbb
 
 info:

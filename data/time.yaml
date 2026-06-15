@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sqli-error-based
 
 info:
@@ -24,7 +25,7 @@ http:
         type: postfix
         fuzz:
           - "{{injection}}"
-          
+
     stop-at-first-match: true
     matchers-condition: and
     matchers:

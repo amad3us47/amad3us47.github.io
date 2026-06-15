@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-netweaver-detect
 info:
   name: SAP NetWeaver ICM Detection
@@ -5,10 +6,10 @@ info:
   description: Detection of SAP NetWeaver ABAP Webserver (ICM/ICF)
   severity: info
   tags: sap,webserver
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

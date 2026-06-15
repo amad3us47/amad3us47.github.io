@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wanhu-smartupload-fileupload
 
 info:
@@ -46,7 +47,7 @@ http:
       - |
         GET /defaultroot/upload/information/{{uploadfile}} HTTP/1.1
         Host: {{Hostname}}
-    
+
     extractors:
       - type: regex
         part: body

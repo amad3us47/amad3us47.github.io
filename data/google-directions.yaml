@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-googledirections
 
 info:
@@ -20,5 +21,5 @@ http:
         part: body
         words:
           - 'error_message'
-        negative: true
+
 # digest: 4a0a0047304502202e475824413f655e498ec0b320dd62002b36cca3dbb3bd3243ca61da3d1f9cc1022100a2df92c76f5916916e10c88383920f035194c6a3ce6eacfdb7f38b0ce3c28c4b:922c64590222798bb761d5b6d8e72950

@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jira-unauthenticated-projects
 info:
   name: Jira Unauthenticated Projects
   author: TechbrunchFR
-  severity: Info
-requests:
+  severity: info
+http:
   - method: GET
     path:
       - "{{BaseURL}}/rest/api/2/project?maxResults=100"

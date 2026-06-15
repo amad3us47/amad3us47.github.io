@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: adminer-panel-fuzz
 info:
   name: Adminer Login Panel Fuzz
@@ -11,12 +12,11 @@ info:
   # Most versions have some kind of SSRF usability
   # Is generally handy if you find SQL creds
 
-requests:
+http:
 
   - payloads:
       path: helpers/wordlists/adminer-paths.txt
 
-    attack: sniper
     threads: 50
 
     raw:

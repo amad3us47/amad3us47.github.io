@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xerox-d95-copier-webserver
 
 info:
-  name: Xerox D95 Copier-Printer Webserver 
+  name: Xerox D95 Copier-Printer Webserver
   author: alexrydzak
   severity: info
   tags: xerox,web,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/stat.htm"

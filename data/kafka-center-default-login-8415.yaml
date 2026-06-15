@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kafka-center-default-login
 
 info:
@@ -16,7 +17,7 @@ info:
     cve-id:
     cwe-id: CWE-522
 
-requests:
+http:
   - raw:
       - |
         POST /login/system HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aspose-pdf-file-download
 info:
   name: WordPress Aspose PDF Exporter File Download
@@ -8,10 +9,10 @@ info:
     - https://packetstormsecurity.com/files/131161
     - https://wordpress.org/plugins/aspose-pdf-exporter
   tags: wordpress,wp-plugin,lfi,aspose
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

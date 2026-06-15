@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: panabit-panel
 info:
   name: Panabit Panel Detect
@@ -7,7 +8,7 @@ info:
   metadata:
     fofa-query: app="Panabit-智能网关"
   tags: panabit,panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/login/login.htm"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: download-monitor-c9a427dbc6303a9bb901cd5ea14c45eb
 
 info:

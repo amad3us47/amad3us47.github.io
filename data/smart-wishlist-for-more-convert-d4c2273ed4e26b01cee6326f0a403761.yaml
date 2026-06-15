@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: smart-wishlist-for-more-convert-d4c2273ed4e26b01cee6326f0a403761
 
 info:

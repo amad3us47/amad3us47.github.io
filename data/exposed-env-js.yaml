@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: exposed-env-js
 info:
   id: exposed-env-js
   name: Exposed env.js File - Detect
   author: OpenAI
   description: Exposed env.js file, which can potentially lead to security vulnerabilities.
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -18,7 +20,7 @@ info:
 
   requests:
     method: GET
-    path: 
+    path:
       - "/env.js"
       - "/assets/env.js"
     description: Attempt to access backup directory

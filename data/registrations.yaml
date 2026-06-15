@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: registrations
 
 info:
@@ -5,7 +6,7 @@ info:
   author: tedm.infosec
   severity: info
   description: Basic check for registration pages
-requests:
+http:
   - raw:
       - |
         GET /register HTTP 2.0

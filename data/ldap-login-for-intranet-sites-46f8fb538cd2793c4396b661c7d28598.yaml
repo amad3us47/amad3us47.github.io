@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ldap-login-for-intranet-sites-46f8fb538cd2793c4396b661c7d28598
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-virtualization-manager-detect
 
 info:
@@ -13,7 +14,7 @@ info:
     - https://www.ovirt.org/dropped/admin-guide/virt/console-client-resources.html
   tags: tech,ovirt
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/ovirt-engine/'

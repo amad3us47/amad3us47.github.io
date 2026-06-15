@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: default-microsoft-azure-page
 info:
   name: Microsoft Azure Default Page
@@ -6,7 +7,7 @@ info:
   reference:
     - https://www.shodan.io/search?query=http.title%3A%22Microsoft+Azure+App+Service+-+Welcome%22
   tags: tech,azure,microsoft
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

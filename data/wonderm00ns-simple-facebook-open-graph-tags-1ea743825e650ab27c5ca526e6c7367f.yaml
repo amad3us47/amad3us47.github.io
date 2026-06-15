@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wonderm00ns-simple-facebook-open-graph-tags-1ea743825e650ab27c5ca526e6c7367f
 
 info:

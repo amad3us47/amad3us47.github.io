@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: smb-v1-detection
 info:
   name: SMB-V1 Detection
@@ -5,7 +6,7 @@ info:
   severity: low
   tags: network,windows,smb,service
   reference: https://stealthbits.com/blog/what-is-smbv1-and-why-you-should-disable-it/
-network:
+tcp:
   - inputs:
       - data: 00000031ff534d4272000000001845680000000000000000000000000000be2200000100000e00024e54204c4d20302e3132000200
         type: hex

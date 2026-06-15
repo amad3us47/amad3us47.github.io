@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: allure-real-estate-theme-for-real-estate-theme-d41d8cd98f00b204e9800998ecf8427e
 
 info:
@@ -12,7 +13,7 @@ info:
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/themes/allure-real-estate-theme-for-real-estate/"
     google-query: inurl:"/wp-content/themes/allure-real-estate-theme-for-real-estate/"

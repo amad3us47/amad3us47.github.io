@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: webcamxp-5
 info:
   name: webcamXP 5
@@ -7,7 +8,7 @@ info:
   tags: iot
   metadata:
     shodan-query: 'http.title:"webcamXP 5"'
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/home.html'

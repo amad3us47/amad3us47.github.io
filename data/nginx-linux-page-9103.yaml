@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nginx-linux-page
 info:
   name: Nginx HTTP Server Amazon Linux
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://www.shodan.io/search?query=http.title%3A%22Test+Page+for+the+Nginx+HTTP+Server+on+Amazon+Linux%22
   tags: tech,nginx,amazon
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

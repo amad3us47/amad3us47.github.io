@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vidyo-default-login
 info:
   name: Vidyo Default Login
@@ -11,7 +12,7 @@ info:
     cvss-score: 5.8
     cwe-id: CWE-522
   tags: vidyo,default-login
-requests:
+http:
   - raw:
       - |
         GET /super/login.html?lang=en HTTP/1.1

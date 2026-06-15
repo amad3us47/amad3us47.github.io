@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: age-gate-open-redirect
 
 info:
@@ -13,7 +14,7 @@ info:
     verified: true
   tags: wp-plugin,redirect,wordpress,wp,agegate,unauth
 
-requests:
+http:
   - method: POST
     path:
       - '{{BaseURL}}/wp-admin/admin-post.php'

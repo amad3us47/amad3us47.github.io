@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: 3dady-real-time-web-stats-42d45c7cd5a93ca2860239ffff32ac83
 
 info:

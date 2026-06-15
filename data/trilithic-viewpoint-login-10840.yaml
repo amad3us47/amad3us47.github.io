@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: trilithic-viewpoint-default
 
 info:
@@ -8,7 +9,7 @@ info:
     Searches for default admin credentials for the (discontinued) Trilithic Viewpoint application.
   tags: default-login,trilithic,viewpoint
 
-requests:
+http:
   - raw:
       - |
         POST /ViewPoint/admin/Site/ViewPointLogin HTTP/1.1

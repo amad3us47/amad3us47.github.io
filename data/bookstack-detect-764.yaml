@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bookstack-detect
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: tech,bookstack
   references: https://github.com/BookStackApp/BookStack
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/login"

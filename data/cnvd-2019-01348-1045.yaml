@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2019-01348
 info:
   name: Xiuno BBS CNVD-2019-01348
@@ -11,7 +12,7 @@ info:
     cvss-metrics: CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
     cvss-score: 6.5
     cwe-id: CWE-276
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/install/"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-launchdarkly
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,launchdarkly
 
 self-contained: true
-requests:
+http:
   - raw:
       - |
         GET https://app.launchdarkly.com/api/v2/members HTTP/1.1

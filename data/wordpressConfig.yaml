@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Wordpress-save
 info:
   name: Wordpress config file
@@ -5,7 +6,7 @@ info:
   severity: medium
   description: Get the wordpress config file
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/blog/wp-config.php.save"

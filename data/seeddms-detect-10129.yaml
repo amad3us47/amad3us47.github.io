@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: seeddms-detect
 info:
   name: Seeddms-
   author: pussycat0x
   severity: info
   tags: tech
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/out/out.Login.php?referuri=%2Fout%2Fout.ViewFolder.php"

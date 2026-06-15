@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: docker-api-detection
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://docs.docker.com/engine/api/
   tags: docker,remote,noninvasive
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/info"
@@ -27,7 +28,7 @@ requests:
       - type: status
         status:
           - 200
-          
+
     extractors:
       - type: json
         part: body

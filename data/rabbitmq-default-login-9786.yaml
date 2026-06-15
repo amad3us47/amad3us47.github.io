@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rabbitmq-default-login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: rabbitmq,default-login
 
-requests:
+http:
   - raw:
       - |
         GET /api/whoami HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-hcx-log4j
 
 info:
@@ -14,7 +15,7 @@ info:
   tags: cve,cve2021,rce,jndi,log4j,vmware
 
 
-requests:
+http:
   - raw:
       - |
         POST /hybridity/api/sessions HTTP/1.1

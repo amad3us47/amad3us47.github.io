@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dir-listing
 info:
   name: Directory listing enabled
@@ -6,7 +7,7 @@ info:
   reference:
     - https://portswigger.net/kb/issues/00600100_directory-listing
   tags: misc,generic
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

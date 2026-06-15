@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: darkstat-detect
 info:
   name: Detect Darkstat Reports
@@ -6,7 +7,7 @@ info:
   reference: https://unix4lyfe.org/darkstat/
   severity: high
   tags: darkstat,logs,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

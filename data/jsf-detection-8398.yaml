@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jsf-detection
 info:
   name: JavaServer Faces Detection
@@ -5,7 +6,7 @@ info:
   severity: info
   description: Searches for JavaServer Faces content on a URL.
   tags: jsf,tech,primefaces,richfaces
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

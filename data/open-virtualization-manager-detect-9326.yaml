@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-virtualization-manager-detect
 info:
   name: Open Virtualization Manager Detection
@@ -15,7 +16,7 @@ info:
     shodan-query: title:"Ovirt-Engine"
     google-query: intitle:"Ovirt-Engine"
   tags: tech,ovirt
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/ovirt-engine/'

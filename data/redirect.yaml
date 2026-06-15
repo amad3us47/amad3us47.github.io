@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: redirect
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: medium
   description: Basic redirection check
 
-requests:
+http:
   - raw:
       - |
         GET /?next=https://z.com&url=https://z.com&target=https://z.com&rurl=https://z.com&dest=https://z.com HTTP 2.0

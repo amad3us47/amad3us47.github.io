@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: header-blind-ssrf
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   description: Checks for Blind SSR via popular browser headers.
 
-requests:
+http:
   - payloads:
       header: helpers/payloads/request-headers.txt
 

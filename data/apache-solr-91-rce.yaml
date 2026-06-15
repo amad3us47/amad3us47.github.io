@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-solr-91-rce
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://noahblog.360.cn/apache-solr-rce/
   tags: solr,apache,rce,oast
 
-requests:
+http:
   - raw:
       - |
         POST /solr/gettingstarted_shard1_replica_n1/config HTTP/1.1

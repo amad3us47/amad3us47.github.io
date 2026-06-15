@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: huawei-router-auth-bypass
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.exploit-db.com/exploits/48310
   tags: huawei,auth-bypass,router
 
-requests:
+http:
   - raw:
       - |
         GET /api/system/deviceinfo HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-sharepoint-list
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://hackerone.com/reports/300539
   tags: config,exposure,sharepoint
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_vti_bin/lists.asmx?WSDL"

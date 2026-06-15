@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: swagger-api
 info:
   name: Public Swagger API
   author: pdteam,c-sh0
   severity: info
   tags: exposure,api,swagger
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/swagger-ui/swagger-ui.js"

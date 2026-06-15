@@ -1,4 +1,5 @@
-id: keycloak-openid-config 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: keycloak-openid-config-1
 
 info:
   name: Keycloak openid-config
@@ -7,10 +8,10 @@ info:
   reference: https://issues.jboss.org/browse/KEYCLOAK-571
   tags: keycloak,config
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

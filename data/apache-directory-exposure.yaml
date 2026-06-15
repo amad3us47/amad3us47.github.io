@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: apache-directory-exposure
 info:
   id: apache-directory-exposure
   name: Apache Directory Exposure - Detect
   author: OpenAI
   description: Template to detect Apache directory exposure
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -12,7 +14,7 @@ info:
 
   reference:
     - https://httpd.apache.org/docs/2.4/urlmapping.html#misc
-    
+
   matcher-condition: or
 
   requests:

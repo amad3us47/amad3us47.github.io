@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: breadcrumb-navxt-0b32909bbf63f69632d2c44ed79f5b18
 
 info:

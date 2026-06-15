@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: artifactory-anonymous-deploy
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.errno.fr/artifactory/Attacking_Artifactory.html
   tags: artifactory
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/artifactory/ui/repodata?deploy=true"

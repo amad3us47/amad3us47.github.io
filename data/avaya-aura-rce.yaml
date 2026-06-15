@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: avaya-aura-rce
 
 info:
@@ -12,7 +13,7 @@ info:
     shodan-query: html:"Avaya Aura"
   tags: rce,avaya,aura,iot
 
-requests:
+http:
   - raw:
       - |
         PUT /PhoneBackup/{{randstr}}.php HTTP/1.1

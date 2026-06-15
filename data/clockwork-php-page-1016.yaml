@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: clockwork-php-page
 info:
   name: Clockwork PHP page exposure
   author: organiccrap
   severity: high
   # https://twitter.com/damian_89_/status/1250721398747791360
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/__clockwork/app'

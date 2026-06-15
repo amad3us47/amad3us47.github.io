@@ -1,4 +1,5 @@
-id: nagios-status-page 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: nagios-status-page-1
 
 info:
   name: Nagios Current Status Page
@@ -7,10 +8,10 @@ info:
   tags: exposure,nagios
   reference: https://www.exploit-db.com/ghdb/6918
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

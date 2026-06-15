@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cargo-takeover
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://github.com/EdOverflow/can-i-take-over-xyz
   tags: takeover
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

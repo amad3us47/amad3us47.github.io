@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hasura-graphql-psql-exec
 info:
   author: Udyz
@@ -6,7 +7,7 @@ info:
   description: A vulnerability in Hasura GraphQL Engine allows remote unauthenticated users to execute arbitrary SQL statements via the '/v2/query' endpoint.
   reference: https://www.exploit-db.com/exploits/49802
   tags: hasura,rce,graphql
-requests:
+http:
   - raw:
       - |
         POST /v2/query HTTP/1.1

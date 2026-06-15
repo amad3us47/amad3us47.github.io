@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: osint-extractor-telefone
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Extração de Telefone via expressão regular
   tags: telefone,consulta,osint
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

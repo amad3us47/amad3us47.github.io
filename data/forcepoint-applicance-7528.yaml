@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: forcepoint-applicance
 
 info:
@@ -8,10 +9,10 @@ info:
     shodan-query: 'http.title:"Forcepoint Appliance"'
   tags: panel,forcepoint
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

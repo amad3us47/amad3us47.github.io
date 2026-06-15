@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rabbit-mq-default-login
 
 info:
@@ -11,7 +12,7 @@ info:
     cwe-id: CWE-798
   tags: rabbitmq,default-login
 
-requests:
+http:
   - raw:
       - |
         GET /api/whoami HTTP/1.1
@@ -30,7 +31,7 @@ requests:
       - type: word
         words:
           - "guest"
-          - "administrator"  
+          - "administrator"
         part: body
         condition: and
 

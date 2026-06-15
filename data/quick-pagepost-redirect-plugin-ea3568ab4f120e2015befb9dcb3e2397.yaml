@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: quick-pagepost-redirect-plugin-ea3568ab4f120e2015befb9dcb3e2397
 
 info:

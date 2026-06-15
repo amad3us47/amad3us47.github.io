@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: caldera-forms-f9b8be778fcf4c8b87453b6c70ed4593
 
 info:

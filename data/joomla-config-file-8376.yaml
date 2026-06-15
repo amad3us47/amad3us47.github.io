@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: joomla-config-dist-file
 
 info:
@@ -7,7 +8,7 @@ info:
   description: configuration.php-dist is a file created by Joomla to save Joomla settings.
   tags: config,exposure,joomla
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/configuration.php-dist"

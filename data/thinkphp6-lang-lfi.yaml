@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkphp6-lang-lfi
 
 info:
@@ -18,7 +19,7 @@ info:
     fofa-query: header="think_lang"
   tags: thinkphp,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?lang=../../thinkphp/base"

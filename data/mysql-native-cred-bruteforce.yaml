@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mysql-native-password-bruteforce
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: network,mysql,bruteforce,db
   description: MySQL instance with enabled native password support prone vulnerable for password brute-force attack.
 
-network:
+tcp:
   - host:
       - "{{Hostname}}"
       - "{{Hostname}}:3306"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: emc2-custom-help-videos-47f96847cb00f7bdef4d4c9260da8879
 
 info:

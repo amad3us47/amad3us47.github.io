@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mailchimp-access-key-value
 info:
   name: Mailchimp API Value
   author: puzzlepeaches
   severity: info
   tags: exposure,token,mailchimp
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

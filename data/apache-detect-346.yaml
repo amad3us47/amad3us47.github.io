@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-detect
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Some Apache servers have the version on the response header. The OpenSSL version can be also obtained
   tags: tech,apache
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

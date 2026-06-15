@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: readarr-dashboard-unauth
 
 info:
@@ -31,9 +32,5 @@ http:
         part: body
         words:
           - "Login - Readarr"
-        negative: true
 
-      - type: status
-        status:
-          - 200
 # digest: 4b0a00483046022100d96c31174cc972af0371460af16a5a2008d32f8de5106520de68bf7a9f9325d50221009d8419dbe4aba3f7375f4a5e4d0327f81d19aeed50df415d2e1a52b7c649789d:922c64590222798bb761d5b6d8e72950

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-altair-listing
 info:
   name: Altair WordPress theme v4.8 - Directory Listing
@@ -5,7 +6,7 @@ info:
   severity: info
   description: Searches for directories listing in the altair theme.
   tags: wordpress,listing,wp-theme
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/themes/altair/modules/"

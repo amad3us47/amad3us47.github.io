@@ -1,16 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: sunlogin
 name: sunlogin
-priority: 3
-nuclei_tags:
-  - - sunflower
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 200
-    headers:
-      Content-Type: application/json
-      Content-Length: '46'
-    keyword:
-      - '{"success":false,"msg":"Verification failure"}'
-    favicon_hash: []

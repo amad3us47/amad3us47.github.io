@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-db-backup-listing
 info:
   name: WordPress DB Backup
   author: Suman_Kar
   severity: medium
   tags: wordpress,backup
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/uploads/database-backups/"

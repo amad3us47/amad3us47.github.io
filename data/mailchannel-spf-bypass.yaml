@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mailchannel-spf-bypass
 
 info:
   name: Spoofable SPF Records with MailChannel Lacking Domain Lockdown
   author: syscl0ck, cham423
   severity: info
-  description: SPF records that include MailChannel without auth, senderid, or cfid records may be spoofed. 
+  description: SPF records that include MailChannel without auth, senderid, or cfid records may be spoofed.
   reference:
     - https://github.com/byt3bl33d3r/SpamChannel
   classification:
@@ -29,5 +30,3 @@ dns:
           - " auth="
           - " senderid="
           - " cfid="
-        negative: true
-        condition: or

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aspose-words-file-download
 info:
   name: Aspose Words Exporter < 2.0 - Unauthenticated Arbitrary File Download
@@ -8,10 +9,10 @@ info:
     - https://wpscan.com/vulnerability/7869
     - https://wordpress.org/plugins/aspose-doc-exporter
   tags: wordpress,wp-plugin,lfi
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

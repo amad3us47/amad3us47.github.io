@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: detect-rsyncd
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://linux.die.net/man/1/rsync
   tags: network,rsyncd
 
-network:
+tcp:
   - inputs:
       - data: "?\r\n"
 

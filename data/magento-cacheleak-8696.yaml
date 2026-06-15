@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: magento-cacheleak
 info:
   name: Magento Cacheleak
@@ -9,7 +10,7 @@ info:
     - https://www.acunetix.com/vulnerabilities/web/magento-cacheleak/
     - https://royduineveld.nl/magento-cacheleak-exploit/
   tags: magento
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/var/resource_config.json'

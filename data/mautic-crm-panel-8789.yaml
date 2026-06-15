@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mautic-crm-panel
 info:
   name: Mautic CRM Panel Login
@@ -6,7 +7,7 @@ info:
   description: Mautic is a free and open-source marketing automation tool for Content Management, Social Media, Email Marketing, and can be used for the integration of social networks, campaign management, forms, questionnaires, reports, etc.
   reference: https://github.com/mautic/mautic
   tags: tech,mautic,crm
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/s/login"

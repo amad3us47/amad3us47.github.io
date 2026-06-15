@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fv-wordpress-flowplayer-c74f981dcb1770629ebd35af9200d9b5
 
 info:

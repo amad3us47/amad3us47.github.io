@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jetbrains-datasource
 info:
   name: Jetbrains IDE DataSources exposure
@@ -5,10 +6,10 @@ info:
   severity: info
   description: Contains uuid of datasource to retrieve via .idea/dataSources/{uuid}.xml to expose database structure.
   tags: config,exposure
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

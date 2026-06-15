@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: auto-usb-installation-enabled
 info:
   name: Auto USB Installation Enabled
@@ -15,4 +16,3 @@ file:
         words:
           - "set auto-install-config disable"
           - "set auto-install-image disable"
-        negative: true

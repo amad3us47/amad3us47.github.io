@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: worksite-takeover-workflow
 
 info:
   name: Worksite Takeover Workflow
   author: pdteam
+  severity: info
   description: A simple workflow that runs DNS based detection to filter hosts runnng worksite and do further HTTP based check to confirm takeover.
   reference: https://blog.melbadry9.xyz/dangling-dns/xyz-services/ddns-worksites
 

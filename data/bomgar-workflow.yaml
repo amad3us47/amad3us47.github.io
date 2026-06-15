@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bomgar-workflow
 
 info:
   name: Bomgar Security Checks
   author: pdteam
+  severity: info
   description: A simple workflow that runs all Bomgar related nuclei templates on a given target.
 workflows:
   - template: http/exposed-panels/bomgar-login-panel.yaml

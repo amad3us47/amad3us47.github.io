@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-circleci
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,circle,circleci
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://circleci.com/api/v1.1/me?circle-token={{token}}"

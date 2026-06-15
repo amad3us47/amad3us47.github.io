@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hidden-input-manipulation
 info:
   name: Hidden Input Field Manipulation Test
@@ -9,7 +10,7 @@ info:
 tags:
   - web
 
-requests:
+http:
   - method: POST
     path:
       - "/submit-form"

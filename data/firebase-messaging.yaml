@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: firebase-messaging
 info:
   id: firebase-messaging
   name: Firebase Messaging
   author: OpenAI
   description: Template to detect Firebase Messaging service.
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:

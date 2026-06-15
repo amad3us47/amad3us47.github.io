@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: account-enumeration-error-messages
 info:
   name: Account Enumeration through Error Messages
+  author: unknown
   severity: medium
   description: Detects potential account enumeration vulnerabilities through error messages on the login page
 author: YourName
 tags:
   - web
   - authentication
-requests:
+http:
 - method: POST
   path: "/login"
   matchers:

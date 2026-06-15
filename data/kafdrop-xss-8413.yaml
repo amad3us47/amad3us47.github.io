@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kafdrop-xss
 info:
   name: KafDrop XSS
@@ -6,10 +7,10 @@ info:
   tags: kafdrop,xss
   description: A vulnerability in KafDrop allows remote unauthenticated attackers to inject arbitrary HTML and/or Javascript into the response returned by the server.
   reference: https://github.com/HomeAdvisor/Kafdrop/issues/12
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

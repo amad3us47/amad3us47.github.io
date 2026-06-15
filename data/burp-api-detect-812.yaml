@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: burp-rest-api-detect
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://portswigger.net/burp/documentation/enterprise/api-reference
   tags: burp,tech
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/v0.1/"

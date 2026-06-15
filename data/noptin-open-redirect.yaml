@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: noptin-open-redirect
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://plugins.trac.wordpress.org/changeset/2639592
   tags: wordpress,redirect,wp-plugin,noptin,wp
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?noptin_ns=email_click&to=https://example.com"

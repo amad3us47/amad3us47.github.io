@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sym404
 
 info:
   name: sym404
   author: pussycat0x
-  severity: High
+  severity: high
   description: Searches for sensitive directories present in the sym404.
   reference:
     - https://twitter.com/momika233/status/1540325055280070656
@@ -12,7 +13,7 @@ info:
     google-dork: inurl:"/wp-includes/sym404/"
   tags: wordpress,listing
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-includes/sym404/root/etc/passwd"

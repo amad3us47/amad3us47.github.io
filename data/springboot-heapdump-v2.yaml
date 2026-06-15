@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-heapdump-v2
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://github.com/pyn3rd/Spring-Boot-Vulnerability
   tags: springboot,exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/heapdump"
@@ -39,4 +40,3 @@ requests:
       - type: status
         status:
           - 200
-

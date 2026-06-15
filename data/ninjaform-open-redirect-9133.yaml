@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ninjaform-open-redirect
 info:
   name: Ninja Forms < 3.4.34 - Administrator Open Redirect
@@ -7,7 +8,7 @@ info:
   reference:
     - https://wpscan.com/vulnerability/6147acf5-e43f-47e6-ab56-c9c8be584818
   tags: wordpress,redirect,wp-plugin,ninjaform,authenticated,wp
-requests:
+http:
   - raw:
       - |
         POST /wp-login.php HTTP/1.1

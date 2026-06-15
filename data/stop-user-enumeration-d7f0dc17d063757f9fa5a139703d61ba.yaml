@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: stop-user-enumeration-d7f0dc17d063757f9fa5a139703d61ba
 
 info:

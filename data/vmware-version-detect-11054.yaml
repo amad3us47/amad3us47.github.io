@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-version-detect
 info:
   name: vmware-version-detect
@@ -8,7 +9,7 @@ info:
     - https://www.pwndefend.com/2021/09/23/exposed-vmware-vcenter-servers-around-the-world-cve-2021-22005/
     - https://svn.nmap.org/nmap/scripts/vmware-version.nse
   tags: tech,vcenter,vmware
-requests:
+http:
   - raw:
       - |
         POST /sdk/ HTTP/1.1

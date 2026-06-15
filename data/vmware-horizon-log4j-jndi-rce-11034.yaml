@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-horizon-log4j-jndi-rce
 info:
   name: VMware Horizon Log4j JNDI RCE
@@ -14,7 +15,7 @@ info:
     verified: true
     shodan-query: http.html:"VMware Horizon"
   tags: cve,cve2021,rce,jndi,log4j,horizon,vmware,oast
-requests:
+http:
   - raw:
       - |
         GET /portal/info.jsp HTTP/1.1

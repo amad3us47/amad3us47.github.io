@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CVE-2023-42442-esonhugh
 info:
   name: JumpServer v3.0.0 - v3.6.3 terminal session api broken access control
@@ -5,10 +6,10 @@ info:
   severity: high
   tags: jumpserver,unauth,access control
   description: |
-    The api /api/v1/terminal/sessions/ permission control is broken and can be accessed anonymously. 
+    The api /api/v1/terminal/sessions/ permission control is broken and can be accessed anonymously.
     https://github.com/jumpserver/jumpserver/blob/v3.6.1/apps/terminal/api/session/session.py#L91
     class SessionViewSet(OrgBulkModelViewSet):
-        permission_classes = [RBACPermission | IsSessionAssignee]   
+        permission_classes = [RBACPermission | IsSessionAssignee]
     https://github.com/jumpserver/jumpserver/blob/v3.6.1/apps/terminal/permissions.py#L10
     class IsSessionAssignee(permissions.BasePermission):
         def has_object_permission(self, request, view, obj):

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Ruijie-EG-passLeak
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://blog.csdn.net/qq_41617034/article/details/119532322
   tags: EG,rce
 
-requests:
+http:
   - raw:
       - |
         POST /login.php HTTP/1.1

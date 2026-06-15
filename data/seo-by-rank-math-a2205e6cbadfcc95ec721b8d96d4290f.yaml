@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: seo-by-rank-math-a2205e6cbadfcc95ec721b8d96d4290f
 
 info:

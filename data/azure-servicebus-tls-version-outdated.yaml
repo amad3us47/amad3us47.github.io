@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-servicebus-tls-version-outdated
 info:
   name: Azure Service Bus Namespace TLS Version Not Latest
@@ -52,10 +53,5 @@ code:
       - type: word
         words:
           - '"1.2"'
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - 'name + " in " + resourceGroup + " is not using TLS 1.2"'
 # digest: 4b0a00483046022100c23f11c1e0e15c78cada5a63a3c41eb1a746778ac7451a6ceb9e5e69778af0e8022100a2d0c629372cd2189f5e61b9f22f22891e60ab75e4b5dff5c09b263dcd36bd95:922c64590222798bb761d5b6d8e72950

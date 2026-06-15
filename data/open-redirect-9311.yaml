@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-redirect
 info:
   name: Open Redirect Detection
   author: melbadry9 & Elmahdi & @pxmme1337 & @Regala_ & @andirrahmani1
   severity: low
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/evil.com/"

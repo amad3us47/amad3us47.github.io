@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-infinitewp-auth-bypass
 info:
   name: WordPress InfiniteWP Client Authentication Bypass
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://www.wordfence.com/blog/2020/01/critical-authentication-bypass-vulnerability-in-infinitewp-client-plugin/
   tags: wordpress,auth-bypass,wp-plugin
-requests:
+http:
   - raw:
       - |
         GET /?author=1 HTTP/1.1

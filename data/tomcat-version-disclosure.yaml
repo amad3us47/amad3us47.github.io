@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: tomcat-version-disclosure
 info:
   id: tomcat-version-disclosure
   name: Apache Tomcat Version Disclosure
   author: OpenAI
   description: Template to detect Apache Tomcat server and its version
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nofollow-all-external-links-efb18fbc3afe3ee2df1264218c9d5841
 
 info:

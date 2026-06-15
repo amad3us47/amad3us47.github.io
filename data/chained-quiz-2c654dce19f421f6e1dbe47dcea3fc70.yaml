@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: chained-quiz-2c654dce19f421f6e1dbe47dcea3fc70
 
 info:

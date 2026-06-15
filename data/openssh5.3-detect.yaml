@@ -1,4 +1,5 @@
-id: openssh5.3-detect
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: openssh5-3-detect
 
 info:
   name: OpenSSH 5.3 Detection
@@ -11,7 +12,7 @@ info:
      - https://security-tracker.debian.org/tracker/CVE-2016-6210
      - http://openwall.com/lists/oss-security/2016/08/01/2
 
-network:
+tcp:
   - host:
       - "{{Hostname}}"
       - "{{Hostname}}:22"

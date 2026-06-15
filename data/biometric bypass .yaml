@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: biometric-auth-bypass
 info:
   name: Biometric Authentication Bypass
+  author: unknown
   severity: high
   description: Detects potential vulnerabilities allowing the bypass of biometric authentication on the login page
 author: YourName
 tags:
   - web
   - authentication
-requests:
+http:
 - method: POST
   path: "/login"
   matchers:

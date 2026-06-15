@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: HTTP-POST
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: unknown
   tags: rootme
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: contact-form-7-to-database-extension-88c4b5ced8d79a1317dafb0be452a2cf
 
 info:

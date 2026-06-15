@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: reflex-gallery-993f4b43683f6dfec609dd71ba44bbc0
 
 info:

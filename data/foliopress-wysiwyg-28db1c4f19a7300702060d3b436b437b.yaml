@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: foliopress-wysiwyg-28db1c4f19a7300702060d3b436b437b
 
 info:

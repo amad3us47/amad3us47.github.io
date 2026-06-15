@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-workflow
 info:
   name: Wordpress workflow
   author: Kiblyn11 & zomsop82
+  severity: info
 variables:
 
   wordpress_tech: technologies/tech-detect.yaml
@@ -12,8 +14,6 @@ variables:
   wordpress_wordfence_xss: vulnerabilities/wordpress-wordfence-xss.yaml
   wordpress_cve_1: cves/CVE-2019-9978.yaml
 
-logic: |
-  wordpress_tech()
 
   if wordpress_tech["wordpress"] {
 

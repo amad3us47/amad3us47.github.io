@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: abyss-web-server
 
 info:
@@ -8,7 +9,7 @@ info:
   metadata:
     fofa-query: 'app="Abyss-Web-Server"'
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

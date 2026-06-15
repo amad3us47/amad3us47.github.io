@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: accordion-6f8f1d3e4e1383d7e226c6b2b11ea4a4
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: weaverx-theme-support-5cf5298d8a46ce1e55016e833f544cbb
 
 info:

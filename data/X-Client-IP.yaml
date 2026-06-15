@@ -1,15 +1,16 @@
-id: x-client-ip 
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: x-client-ip
 
 info:
-  name: x-client-ip 
+  name: x-client-ip
   author: Kabilan S
   severity: low
 
-requests:
+http:
   - method: GET
     # Example of sending some headers to the servers
     headers:
-      
+
       X-Client-IP: "evil.com"
     path:
       - "{{BaseURL}}/"

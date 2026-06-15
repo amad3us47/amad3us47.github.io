@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dell-idrac9-detect
 info:
   name: Detect Dell iDRAC9
@@ -5,7 +6,7 @@ info:
   severity: info
   description: The Integrated Dell Remote Access Controller (iDRAC) is designed for secure local and remote server management and helps IT administrators deploy, update and monitor Dell EMC PowerEdge servers.
   tags: tech,dell
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/sysmgmt/2015/bmc/info" # Firmware Version and other info (iDRAC9)

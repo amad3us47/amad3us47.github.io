@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: perl-status
 info:
   name: Apache mod_perl Status Page Exposure
   author: pdteam
   severity: medium
   tags: config,exposure
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/perl-status'

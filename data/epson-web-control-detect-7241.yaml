@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: epson-web-control-detect
 info:
   name: Epson Printer
@@ -9,7 +10,7 @@ info:
   classification:
     cwe-id: CWE-200
   tags: iot,printer,panel,unauth,epson
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cgi-bin/home"

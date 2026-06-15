@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wamp-xdebug-detect
 info:
   name: WAMP xdebug
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://github.com/random-robbie/My-Shodan-Scripts/blob/1b01bceecc9be0b74b202f445874920eee48bba5/wamp-xdebug/wamp-xdebug.py
   tags: debug,config
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?phpinfo=-1"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: niagara-fox-info-enum
 
 info:
@@ -13,7 +14,7 @@ info:
     - https://nmap.org/nsedoc/scripts/fox-info.html
   tags: network,fox,niagara
 
-network:
+tcp:
   - inputs:
       - data: "fox a 1 -1 fox hello\n{\nfox.version=s:1.0\nid=i:1\n};;\n"
     host:

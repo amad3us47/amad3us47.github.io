@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ruijie-networks-rce
 info:
   name: Ruijie Networks-EWEB Network Management System RCE
@@ -7,7 +8,7 @@ info:
     - https://github.com/yumusb/EgGateWayGetShell_py/blob/main/eg.py
     - https://www.ruijienetworks.com
   tags: ruijie,rce,network
-requests:
+http:
   - raw:
       - |
         POST /guest_auth/guestIsUp.php HTTP/1.1

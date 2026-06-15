@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azkaban-web-client-default-creds
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: default-login,azkaban
 
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

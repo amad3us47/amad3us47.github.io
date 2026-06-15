@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aws-ecs-container-agent-tasks
 
 info:
@@ -8,7 +9,7 @@ info:
   description: Aws container metadata content
   reference: https://docs.aws.amazon.com/en_us/elasticbeanstalk/latest/dg/create_deploy_docker_ecstutorial.html#create_deploy_docker_ecstutorial_connect_inspect
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/v1/metadata"

@@ -1,4 +1,5 @@
-id: server-private-keys 8
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: server-private-keys-8
 
 info:
   name: Detect Private SSH, TLS, and JWT Keys
@@ -6,10 +7,10 @@ info:
   severity: high
   tags: config,exposure
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

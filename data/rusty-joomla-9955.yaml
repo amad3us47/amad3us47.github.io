@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rusty-joomla
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://github.com/kiks7/rusty_joomla_rce
   tags: joomla,rce,unauth,php,cms,objectinjection
 
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1

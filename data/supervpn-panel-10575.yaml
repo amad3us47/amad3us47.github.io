@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: supervpn-detect
 info:
   name: SuperVPN panel detect
   author: organiccrap
   severity: info
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/admin/login.html"

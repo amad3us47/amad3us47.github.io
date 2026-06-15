@@ -1,15 +1,16 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: blind-based-sqli
 
 info:
   name: Blind based sqli (sleep)
   author: ac1d (Richard Jones ~ DefenceLogic.io)
   severity: critical
-  description: url test for blind sleep payloads. 
+  description: url test for blind sleep payloads.
   reference:
     - https://github.com/AssassinUKG
   tags: sqli,blind
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}{{exts}}{{sleep_payload}}"
@@ -79,4 +80,3 @@ requests:
           - "403 Forbidden"
         condition: or
         part: body
-        negative: true

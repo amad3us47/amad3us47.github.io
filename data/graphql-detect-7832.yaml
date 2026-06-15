@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: graphql-detect
 
 info:
@@ -5,7 +6,7 @@ info:
   author: NkxxkN,ELSFA7110
   severity: info
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/graphql"

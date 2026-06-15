@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: laravel-filemanager
 info:
   name: Laravel FileManager Panel Detect
@@ -6,7 +7,7 @@ info:
   reference:
     - https://github.com/UniSharp/laravel-filemanager
   tags: laravel,filemanager,fileupload
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/laravel-filemanager?type=Files"

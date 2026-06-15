@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gocd-cruise-configuration
 info:
   name: GoCd Cruise Configuration disclosure
@@ -10,7 +11,7 @@ info:
   tags: go,gocd,config,exposure,misconfig
   metadata:
     shodan-query: http.title:"Create a pipeline - Go",html:"GoCD Version"
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/go/add-on/business-continuity/api/cruise_config"

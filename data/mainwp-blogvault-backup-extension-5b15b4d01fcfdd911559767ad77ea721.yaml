@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mainwp-blogvault-backup-extension-5b15b4d01fcfdd911559767ad77ea721
 
 info:

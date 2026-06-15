@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zhiyuan-oa-unauthorized
 info:
   name: Zhiyuan Oa Unauthorized
@@ -5,7 +6,7 @@ info:
   severity: low
   reference: https://buaq.net/go-53721.html
   tags: seeyon,unauth,zhiyuan
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/seeyon/personalBind.do.jpg/..;/ajax.do?method=ajaxAction&managerName=mMOneProfileManager&managerMethod=getOAProfile"

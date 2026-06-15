@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-pendo
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: token-spray,pendo
 
-requests:
+http:
   - method: GET
     path:
       - "https://app.pendo.io/api/v1/feature"
@@ -20,4 +21,3 @@ requests:
       - type: status
         status:
           - 403
-        negative: true

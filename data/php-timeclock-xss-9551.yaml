@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: php-timeclock-xss
 info:
   name: PHP Timeclock 1.04 XSS
@@ -6,10 +7,10 @@ info:
   description: PHP Timeclock version 1.04 (and prior) Cross-Site Scripting vulnerabilities
   reference: https://www.exploit-db.com/exploits/49853
   tags: xss,php,timeclock
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

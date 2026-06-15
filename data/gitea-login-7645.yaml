@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitea-login
 info:
   name: Gitea Login
@@ -6,7 +7,7 @@ info:
   tags: gitea,panel
   metadata:
     shodan-query: 'html:"Powered by Gitea Version"'
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/user/login'

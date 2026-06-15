@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kingdee-erp-deserialization-rce
 
 info:
   name: Kingdee Erp -  deserialization Remote Code Execution
   author: unknown
   severity: critical
-  description: Kingdee ERP has a deserialization remote code execution vulnerability. 
+  description: Kingdee ERP has a deserialization remote code execution vulnerability.
   reference: https://stack.chaitin.com/techblog/detail?id=112
   tags: kingdee-erp
   metadata:

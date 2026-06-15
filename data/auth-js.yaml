@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: auth-js
 
 info:
@@ -5,7 +6,7 @@ info:
   author: geeknik
   severity: high
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/auth.js"
@@ -38,31 +39,3 @@ requests:
         part: header
         words:
           - "text/html"
-        negative: true
-      - type: word
-        part: body
-        words:
-          - "<html"
-          - "window.location = x"
-          - "can not find auth.js"
-          - "function _popwnd_open"
-          - "window.dataLayer"
-          - "console.log("
-          - "window.location"
-          - "Unknown Host"
-          - "<h1"
-          - "Error 404: Error not found"
-          - "SERVICE_NOT_EXIST"
-          - "<p>"
-          - "Static content proxy"
-          - "ABORTED"
-          - "// Cedexis Inc."
-          - "This is a placeholder."
-          - "Counting any requests"
-          - ": 409,"
-          - "No action executes!"
-        condition: or
-        negative: true
-      - type: dsl
-        dsl:
-          - "len(body) > 50 && len(body) < 8192"

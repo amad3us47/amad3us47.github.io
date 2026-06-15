@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: socials
 angellist:
   - "(?:https?:)?\\/\\/angel\\.co\\/company\\/(?P<company>[A-z0-9._-]+)(?:\\/(?P<company_subpage>[A-z0-9-]+))?"
   - "(?:https?:)?\\/\\/angel\\.co\\/company\\/(?P<company>[A-z0-9._-]+)\\/jobs\\/(?P<job_permalink>(?P<job_id>[0-9]+)-(?P<job_slug>[A-z0-9-]+))"

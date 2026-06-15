@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: weblogic-bea_wls_internal-detect
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://51pwn.com
   tags: weblogic,web,bea_wls_internal-detect
 
-requests:
+http:
   - raw:
       - |
         GET /bea_wls_internal/classes/mejb@/org/omg/stub/javax/management/j2ee/_ManagementHome_Stub.class HTTP/1.1
@@ -22,7 +23,7 @@ requests:
     threads: 250
     pipeline-concurrent-connections: 50
     pipeline-requests-per-connection: 50
-    
+
     matchers-condition: and
     matchers:
       - type: status

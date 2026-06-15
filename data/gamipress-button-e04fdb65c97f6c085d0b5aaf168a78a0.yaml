@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gamipress-button-e04fdb65c97f6c085d0b5aaf168a78a0
 
 info:

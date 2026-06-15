@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: plone-cms-detect
 info:
   name: Plone CMS detect
@@ -7,7 +8,7 @@ info:
   tags: tech,plone,cms
   reference:
     - https://github.com/plone/Products.CMFPlone
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

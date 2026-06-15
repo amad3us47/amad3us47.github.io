@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: visionhub-default-login
 info:
   name: VisionHub Default Login
@@ -6,7 +7,7 @@ info:
   description: Default Login of admin:admin on VisionHub application.
   tags: visionhub,default-login
   reference: https://www.qognify.com/products/visionhub/
-requests:
+http:
   - raw:
       - |
         POST /VisionHubWebApi/api/Login HTTP/1.1

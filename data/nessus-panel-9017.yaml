@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nessus-panel-detect
 info:
   name: Nessus Panel detector
   author: joanbono
   severity: info
   tags: panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/server/status"

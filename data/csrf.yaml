@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: csrf
 info:
   name: Cross-Site Request Forgery (CSRF)
+  author: unknown
   severity: high
   description: Detects potential CSRF vulnerabilities in the target
 author: YourName
 tags:
   - web
   - csrf
-requests:
+http:
 - method: POST
   path:
     - "/transfer"

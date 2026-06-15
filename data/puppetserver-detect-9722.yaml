@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: puppetserver-detect
 info:
   name: Puppetserver Detection
@@ -7,7 +8,7 @@ info:
   severity: info
   description: Puppetserver Detection
   tags: tech,puppet,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/puppet-ca/v1/certificate_request/{{randstr}}"

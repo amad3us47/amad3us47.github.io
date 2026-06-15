@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yarn-resourcemanager-rce
 info:
   name: Apache Yarn ResourceManager RCE
@@ -7,7 +8,7 @@ info:
   reference:
     - https://neerajsabharwal.medium.com/hadoop-yarn-hack-9a72cc1328b6
   tags: apache,rce
-requests:
+http:
   - method: POST
     path:
       - '{{BaseURL}}/ws/v1/cluster/apps/new-application'

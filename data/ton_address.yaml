@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: extract-ton-wallet
 
 info:
   name: TON wallets addresses extractor
   author: cipher387
   severity: info
-  description: Extract TON wallets addresses from web page body 
+  description: Extract TON wallets addresses from web page body
   tags: osint,juicy-info,cryptocyrrency
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -22,5 +23,3 @@ requests:
         part: body
         regex:
           - '0:[a-z0-9]{64}'
-
-

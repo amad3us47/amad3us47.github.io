@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phone-orders-for-woocommerce-a18b8eeee685e84b7ab5bc1637d15598
 
 info:

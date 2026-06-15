@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauthorized-hp-printer
 info:
   name: Unauthorized HP Printer
   author: pussycat0x
   severity: high
   tags: hp,iot,unauth
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/SSI/Auth/ip_snmp.htm"

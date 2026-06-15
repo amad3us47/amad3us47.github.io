@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: epson-projector-detect
 info:
   name: Epson Projector
@@ -7,7 +8,7 @@ info:
     fofa-query: "cgi-bin/webconf.exe"
   tags: iot,projector,panel,unauth,epson
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

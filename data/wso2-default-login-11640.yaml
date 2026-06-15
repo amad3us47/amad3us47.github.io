@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wso2-default-login
 info:
   name: WSO2 Management Console Default Login
@@ -13,7 +14,7 @@ info:
     cvss-score: 8.3
     cve-id:
     cwe-id: CWE-522
-requests:
+http:
   - raw:
       - |
         POST /carbon/admin/login_action.jsp HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: generic-windows-lfi
 info:
   name: Generic Windows based LFI Test
@@ -5,7 +6,7 @@ info:
   severity: high
   description: Searches for /windows/win.ini on passed URLs
   tags: azure,windows,lfi,generic
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5cwindows/win.ini"

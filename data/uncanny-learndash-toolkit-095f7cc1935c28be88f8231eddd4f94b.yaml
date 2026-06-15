@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: uncanny-learndash-toolkit-095f7cc1935c28be88f8231eddd4f94b
 
 info:

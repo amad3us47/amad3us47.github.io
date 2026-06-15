@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dvwa-default-login
 info:
   name: DVWA Default Login
@@ -9,7 +10,7 @@ info:
   classification:
     cwe-id: CWE-798
   tags: dvwa,default-login
-requests:
+http:
   - raw:
       - |
         GET /login.php HTTP/1.1

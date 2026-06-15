@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: elex-woocommerce-google-product-feed-plugin-basic-3bb3cf9b795a0b7441375ffe407e5b9f
 
 info:

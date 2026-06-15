@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-bitrise
 
 info:
@@ -11,7 +12,7 @@ info:
   tags: token-spray,bitrise
 
 self-contained: true
-requests:
+http:
   - raw:
       - |
         GET https://api.bitrise.io/v0.1/me HTTP/1.1

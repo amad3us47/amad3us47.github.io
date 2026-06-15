@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: apache-httpd-conf-disclosure
 info:
   id: apache-httpd-conf-disclosure
   name: Apache httpd.conf Exposure - Detect
   author: OpenAI
   description: Template to detect Apache httpd.conf configuration file exposure
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

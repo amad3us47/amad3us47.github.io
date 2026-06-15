@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: iis-shortname
 info:
   name: iis-shortname
@@ -10,7 +11,7 @@ info:
         - https://github.com/lijiejie/IIS_shortname_Scanner
         - https://www.exploit-db.com/exploits/19525
 
-requests:
+http:
   - raw:
       - |
         GET /N0t4xist*~1*/a.aspx HTTP/1.1

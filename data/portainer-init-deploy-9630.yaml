@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: portainer-init-deploy
 info:
   name: Portainer - Init Deploy Discovery
@@ -7,7 +8,7 @@ info:
   reference:
     - https://documentation.portainer.io/v2.0/deploy/initial/
   tags: portainer,exposure,docker,devops,panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/users/admin/check"

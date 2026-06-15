@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mabel-shoppable-images-lite-5d43b2a8e54490487f64a0dfbda1ccfe
 
 info:

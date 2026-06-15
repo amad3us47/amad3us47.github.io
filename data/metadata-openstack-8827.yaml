@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: metadata-service-openstack
 
 # This attack abuses a misconfigured proxy that allows access to the metadata
@@ -20,7 +21,7 @@ info:
     - https://www.mcafee.com/blogs/enterprise/cloud-security/how-an-attacker-could-use-instance-metadata-to-breach-your-app-in-aws/
   tags: exposure,config,openstack,proxy,misconfig,metadata
 
-requests:
+http:
   - raw:
       - |+
         GET http://{{hostval}}/openstack/latest HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-iterable
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: token-spray,iterable
 
-requests:
+http:
   - method: GET
     path:
       - "https://api.iterable.com/api/export/data.json?dataTypeName=emailSend&range=Today&onlyFields=List.empty"
@@ -17,7 +18,3 @@ requests:
     matchers:
       - type: word
         part: body
-        negative: true
-        words:
-          - 'BadApiKey'
-          - 'RateLimitExceeded'   # Matchers needs to be replaced with valid +ve match instead of -ve

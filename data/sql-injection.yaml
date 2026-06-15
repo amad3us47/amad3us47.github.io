@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: SQL
 
 info:
@@ -5,7 +6,7 @@ info:
   author: pikpikcu
   severity: critical
 
-requests:
+http:
   - method: GET
     path:
 
@@ -21,15 +22,15 @@ requests:
         regex:
            - "SQL syntax"
            - "MySQL"
-           - "Unexpected end of command in statement" 
-           - "Unexpected token.*?in statement" 
+           - "Unexpected end of command in statement"
+           - "Unexpected token.*?in statement"
            - ".hsqldb"
            - ".jdbc"
            - "CLI Driver"
            - "DB2 SQL error"
            - "bdb2_"
            - "SQLSTATE"
-           - "SQLCODE" 
+           - "SQLCODE"
            - "Warning"
            - "SybSQLException"
            - "sqlite"
@@ -37,7 +38,7 @@ requests:
            - "Sqlite"
            - "SQLSTATE"
            - "Error 500"
-           - "statementSQL" 
+           - "statementSQL"
         part: body
       - type: status
         status:

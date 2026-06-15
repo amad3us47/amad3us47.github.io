@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-custom-admin-role-unrestricted
 info:
   name: Azure Subscription Administrator Custom Role Unrestricted Access

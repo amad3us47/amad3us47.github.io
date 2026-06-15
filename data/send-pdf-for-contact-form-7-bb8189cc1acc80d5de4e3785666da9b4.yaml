@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: send-pdf-for-contact-form-7-bb8189cc1acc80d5de4e3785666da9b4
 
 info:

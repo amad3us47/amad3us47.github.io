@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: widget-control-powered-by-everyblock-7c994fdf481b5aebda4441200577f6a7
 
 info:

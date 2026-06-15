@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: minio-default-login
 info:
   name: Minio Default Login
   author: pikpikcu
   severity: medium
   tags: default-login,minio
-requests:
+http:
   - raw:
       - |
         POST /minio/webrpc HTTP/1.1

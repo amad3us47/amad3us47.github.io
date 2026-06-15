@@ -1,19 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: put-method-enabled
 
 info:
   name: PUT Method Enabled
   author: 25
   severity: high
-requests:
+http:
   - raw:
       - |
-        PUT /lovebb.txt 
+        PUT /lovebb.txt
         Host: {{Hostname}}
 
         Hackedby25
 
       - |
-        GET /lovebb.txt 
+        GET /lovebb.txt
         Host: {{Hostname}}
 
     req-condition: true

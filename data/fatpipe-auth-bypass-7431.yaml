@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fatpipe-auth-bypass
 info:
   name: FatPipe Networks WARP 10.2.2 Authorization Bypass
@@ -8,7 +9,7 @@ info:
     - https://www.zeroscience.mk/en/vulnerabilities/ZSL-2021-5682.php
     - https://www.fatpipeinc.com/support/advisories.php
   tags: fatpipe,auth-bypass,router
-requests:
+http:
   - raw:
       - |
         GET /fpui/jsp/index.jsp HTTP/1.1

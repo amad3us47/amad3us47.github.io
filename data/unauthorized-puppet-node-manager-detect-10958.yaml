@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauthorized-puppet-node-manager
 info:
   name: Pupet Node Manager
@@ -6,7 +7,7 @@ info:
   metadata:
     fofa-dork: 'app="puppet-Node-Manager"'
   tags: node,misconfig
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

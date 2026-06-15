@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-db-repair
 info:
   name: Wordpress DB Repair Exposed
@@ -5,7 +6,7 @@ info:
   severity: low
   description: Discover enabled Wordpress repair page.
   tags: wordpress,config,fpd
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-admin/maint/repair.php"
@@ -23,4 +24,3 @@ requests:
           - "WP_ALLOW_REPAIR"
           - "true"
         condition: and
-        negative: true

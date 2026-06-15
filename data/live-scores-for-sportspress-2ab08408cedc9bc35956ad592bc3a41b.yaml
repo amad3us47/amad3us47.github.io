@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: live-scores-for-sportspress-2ab08408cedc9bc35956ad592bc3a41b
 
 info:

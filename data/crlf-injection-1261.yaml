@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: crlf-injection
 
 info:
@@ -5,7 +6,7 @@ info:
   author: melbadry9 & nadino & xElkomy
   severity: low
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/%0D%0ASet-Cookie:crlfinjection=crlfinjection"

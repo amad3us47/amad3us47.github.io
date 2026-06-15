@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sonicwall-sslvpn-shellshock
 info:
   name: Sonicwall SSLVPN - Remote Code Execution (ShellShock)
@@ -13,7 +14,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: shellshock,sonicwall,rce,vpn
-requests:
+http:
   - raw:
       - |
         GET /cgi-bin/jarrewrite.sh HTTP/1.1

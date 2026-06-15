@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oauth-token-leakage
 info:
   name: OAuth Token Leakage
+  author: unknown
   severity: high
   description: Detects potential OAuth token leakage vulnerabilities in the target
 author: qaisar
 tags:
   - web
   - oauth
-requests:
+http:
 - method: GET
   path:
     - "/profile"

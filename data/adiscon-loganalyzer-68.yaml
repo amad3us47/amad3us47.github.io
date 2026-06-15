@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: adiscon-loganalyzer
 info:
   name: Detect exposed Adiscon LogAnalyzer
@@ -6,7 +7,7 @@ info:
   description: Adiscon LogAnalyzer is a web interface to syslog and other network event data. It provides easy browsing, analysis of realtime network events and reporting services.
   reference: https://loganalyzer.adiscon.com/
   tags: adiscon,loganalyzer,syslog,exposures
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

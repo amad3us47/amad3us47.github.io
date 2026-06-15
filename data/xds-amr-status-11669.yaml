@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xds-amr-status
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-dork: 'http.title:"XDS-AMR - status"'
   tags: panel,tech,xamr,xds
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/login.php"

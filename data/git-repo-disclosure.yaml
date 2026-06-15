@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: git-repo-disclosure
 info:
   id: git-repo-disclosure
   name: Git Repository Disclosure - Detect
   author: OpenAI
   description: Template to detect Git installations with repository disclosure enabled
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

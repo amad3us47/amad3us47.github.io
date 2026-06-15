@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: header-blind-xss
 info:
   name: Delivering blind xss payloads via headers
   author: panch0r3d
   severity: medium
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

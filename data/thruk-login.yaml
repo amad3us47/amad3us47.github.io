@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thruk-login
 
 info:
@@ -8,7 +9,7 @@ info:
     fofa-query: title=="Thruk Monitoring Webinterface"
   tags: thruk,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/thruk/cgi-bin/login.cgi?thruk/"

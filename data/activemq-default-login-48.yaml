@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: activemq-default-login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: medium
   tags: apache,activemq,default-login
 
-requests:
+http:
   - raw:
       - |
         GET /admin/ HTTP/1.1

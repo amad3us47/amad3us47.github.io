@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ebay-feeds-for-wordpress-494cd6b5c352e8ad8af98d622e5530dd
 
 info:

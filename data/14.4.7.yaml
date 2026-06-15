@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ASVS-4-0-3-V14-4-7
 
 info:
@@ -43,14 +44,3 @@ http:
     matchers:
       - type: regex
         name: "'X-Frame-Options' header with 'DENY' or 'SAMEORIGIN' and 'Content-Security-Policy' (CSP) header with 'frame-ancestors' directive do not exist."
-        negative: true
-        regex:
-          - (?i)X-Frame-Options:\s*.*\b(DENY|SAMEORIGIN)\b
-          - (?i)Content-Security-Policy:[^;]*frame-ancestors
-        part: header
-      - type: regex
-        name: "Content Security Policy (CSP) inside HTML meta tag with 'frame-ancestors' directive does not exist."
-        negative: true
-        regex:
-          - (?i)<meta\s+http-equiv=["']Content-Security-Policy["'][^>]*content=["'][^"']*frame-ancestors[^"']*["'][^>]*>
-        part: body

@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: phpmyadmin-default-page
 info:
   id: phpmyadmin-default-page
   name: phpMyAdmin Default Page
   author: OpenAI
   description: Template to detect the default page of phpMyAdmin.
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:
@@ -32,5 +34,5 @@ info:
       description: phpMyAdmin error page found in the response body
 
   response:
-   - status: 
+   - status:
       - 200

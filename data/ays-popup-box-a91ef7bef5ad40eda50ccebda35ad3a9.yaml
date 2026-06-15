@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ays-popup-box-a91ef7bef5ad40eda50ccebda35ad3a9
 
 info:

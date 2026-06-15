@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wbce-cms-file-upload
 info:
   name: WBCE CMS File Upload Vulnerability
@@ -8,7 +9,7 @@ info:
   references:
     - https://example.com/advisory
 
-requests:
+http:
   - method: GET
     path:
       - "/WBCE_CMS-1.6.1/wbce/admin/login/index.php"

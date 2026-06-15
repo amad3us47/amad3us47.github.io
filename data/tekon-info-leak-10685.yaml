@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tekon-info-leak
 info:
   name: Tekon - Unauthenticated Log Leak
@@ -9,7 +10,7 @@ info:
   metadata:
     shodan-query: title:"контроллер"
   tags: tekon,exposure,unauth
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/cgi-bin/log.cgi'

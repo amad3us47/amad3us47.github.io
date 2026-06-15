@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: advanced-post-manager-plugin-d41d8cd98f00b204e9800998ecf8427e
 
 info:
@@ -6,14 +7,14 @@ info:
   author: topscoder
   severity: critical
   description: >
-    The Advanced Post Manager for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 4.5.1 
+    The Advanced Post Manager for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 4.5.1
      via deserialization of untrusted input from the parameter saved_filter. This allows attackers to inject a PHP Object.
   reference:
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/54901d01-241a-4027-ba72-2b983608f9c6?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/advanced-post-manager/"
     google-query: inurl:"/wp-content/plugins/advanced-post-manager/"

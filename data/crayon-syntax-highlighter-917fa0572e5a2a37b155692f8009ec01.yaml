@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: crayon-syntax-highlighter-917fa0572e5a2a37b155692f8009ec01
 
 info:

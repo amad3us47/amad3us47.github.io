@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: header-sqli
 info:
   name: Request header based sqli
   author: panch0r3d
   severity: high
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

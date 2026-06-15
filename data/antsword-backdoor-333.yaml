@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: antsword-backdoor
 
 info:
@@ -13,7 +14,7 @@ info:
     cvss-score: 10.0
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/.antproxy.php"

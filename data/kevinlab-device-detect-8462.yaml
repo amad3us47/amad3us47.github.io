@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kevinlab-device-detect
 info:
   name: KevinLAB Devices Detection
@@ -5,7 +6,7 @@ info:
   severity: info
   description: KevinLab is a venture company specialized in IoT, Big Data, A.I based energy management platform. KevinLAB's BEMS (Building Energy Management System) enables efficient energy management in buildings by collecting and analyzing various information of energy usage and facilities as well as efficiency and indoor environment control.
   tags: iot,kevinlab
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/pages/"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: huawei-router-auth-bypass
 info:
   name: Huawei Router - Authentication Bypass
@@ -11,7 +12,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-288
   tags: huawei,auth-bypass,router
-requests:
+http:
   - raw:
       - |
         GET /api/system/deviceinfo HTTP/1.1

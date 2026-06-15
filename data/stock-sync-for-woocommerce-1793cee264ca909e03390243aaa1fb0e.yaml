@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: stock-sync-for-woocommerce-1793cee264ca909e03390243aaa1fb0e
 
 info:

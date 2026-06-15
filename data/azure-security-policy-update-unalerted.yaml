@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-security-policy-update-unalerted
 info:
   name: Azure Update Security Policy Alert Not Configured
@@ -50,10 +51,5 @@ code:
       - type: word
         words:
           - "Microsoft.Security/policies/write"
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - 'id + " does not have the correct alert configuration for Update Security Policy events"'
 # digest: 4a0a0047304502207c789aba4d4ba1e85c5c83d88d5abe78a52eb3517ecbb337007aeddaacad75fb022100bdbcb9e2f3d35ce6d870d1a602c5c690366c1f6905e38a7bb2e248873483ea53:922c64590222798bb761d5b6d8e72950

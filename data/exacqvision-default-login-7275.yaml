@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exacqvision-default-login
 info:
   name: ExacqVision Default Login
@@ -8,7 +9,7 @@ info:
   reference: https://cdn.exacq.com/auto/manspec/files_2/exacqvision_user_manuals/web_service/exacqVision_Web_Service_Configuration_User_Manual_(version%208.8).pdf
   classification:
     cwe-id: cwe-798
-requests:
+http:
   - raw:
       - |
         POST /service.web HTTP/1.1

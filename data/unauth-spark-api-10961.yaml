@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauth-spark-api
 info:
   name: Unauthenticated Spark REST API
@@ -11,7 +12,7 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10.0
     cwe-id: CWE-77
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/v1/submissions"

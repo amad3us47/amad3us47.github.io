@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pricing-table-by-supsystic-1d6302f948aa64ba36cc63d1fc611922
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: accent-microcomputers-lfi
 
 info:
@@ -15,7 +16,7 @@ info:
     cve-id:
     cwe-id: CWE-22
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php?id=50&file=../../../../../../../../../etc/passwd"

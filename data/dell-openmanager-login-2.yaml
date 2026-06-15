@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dell-openmanager-login2
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: panel,dell
 
 
-requests:
+http:
   - raw:
       - |
         GET /config/authentication_page.htm HTTP/1.1

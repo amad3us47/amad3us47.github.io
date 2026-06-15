@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: form-tag
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Searches Response body for form-tags
   tags: form,input
 
-requests:
+http:
   - method: GET
     redirects: true
     max-redirects: 1

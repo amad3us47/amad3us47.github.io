@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: favicon-detection
 
 info:
@@ -11,7 +12,7 @@ info:
     - https://github.com/devanshbatham/FavFreak
     - https://github.com/sansatart/scrapts/blob/master/shodan-favicon-hashes.csv
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/favicon.ico"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: reflective-xss-check
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   description: Checks for potential reflective XSS vulnerabilities.
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/endpoint?param=<script>alert('xss')</script>"
@@ -15,7 +16,7 @@ requests:
       - "{{BaseURL}}/endpoint?param=<script>alert('xss')</script>#value"
       - "{{BaseURL}}/endpoint?param=<script>alert('xss')</script>?"
       - "{{BaseURL}}/endpoint?param=<script>alert('xss')</script>?value"
-      
+
 
     matchers:
       - type: word
@@ -28,5 +29,3 @@ requests:
           - "alert(\"xss\");"
           - "alert(1);</script>"
           - "alert(1)</script>"
-
-

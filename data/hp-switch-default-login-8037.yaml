@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hp-switch-default-login
 info:
   name: HP 1820-8G Switch J9979A Default Credential
@@ -7,10 +8,10 @@ info:
   metadata:
     fofa-dork: 'HP 1820-8G Switch J9979A'
   tags: default-login,hp
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: htaccess-config
 info:
   name: HTaccess config file
   author: Yash Anand @yashanand155
   severity: info
   tags: misc,config
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.htaccess"

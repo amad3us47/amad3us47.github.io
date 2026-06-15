@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hjsoft-hcm-arbitrary-file-upload
 
 info:
   name: HJSoft HCM eHR - Arbitrary File Upload
   author: Co5mos
   severity: critical
-  description: An arbitrary file upload vulnerability in the eHR OfficeServer.jsp interface of Hongjing, which allows remote attackers without authentication to exploit this vulnerability and upload any files. 
+  description: An arbitrary file upload vulnerability in the eHR OfficeServer.jsp interface of Hongjing, which allows remote attackers without authentication to exploit this vulnerability and upload any files.
   reference:
     - https://blog.csdn.net/qq_41904294/article/details/131902836
   metadata:

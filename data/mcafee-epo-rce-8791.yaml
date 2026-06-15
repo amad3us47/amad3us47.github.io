@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mcafee-epo-rce
 info:
   name: McAfee ePolicy Orchestrator RCE
@@ -14,10 +15,10 @@ info:
     References:
     - https://swarm.ptsecurity.com/vulnerabilities-in-mcafee-epolicy-orchestrator/
   tags: mcafee,rce
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

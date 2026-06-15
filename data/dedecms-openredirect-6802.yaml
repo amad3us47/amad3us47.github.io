@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dedecms-openredirect
 info:
   name: DedeCMS Open Redirect
@@ -9,7 +10,7 @@ info:
     verified: true
     shodan-query: http.html:"power by dedecms" || title:"dedecms"
   tags: dedecms,redirect
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/plus/download.php?open=1&link=aHR0cHM6Ly9ldmlsLmNvbQo="

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: h3c-imc-rce
 info:
   name: H3c IMC Rce
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://mp.weixin.qq.com/s/BP9_H3lpluqIwL5OMIJlIw
   tags: rce,h3c-imc
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/imc/javax.faces.resource/dynamiccontent.properties.xhtml"

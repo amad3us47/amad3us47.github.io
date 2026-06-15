@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: account-takeover-via-registration
 id account-takeover-via-registration
 info
   name Account Takeover via Registration Test
   author qaisar
   severity critical
-  description 
+  description
     Detects potential issues related to account takeover vulnerabilities via the registration process.
 
 tags

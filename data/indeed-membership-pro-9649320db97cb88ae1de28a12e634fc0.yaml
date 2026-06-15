@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: indeed-membership-pro-9649320db97cb88ae1de28a12e634fc0
 
 info:

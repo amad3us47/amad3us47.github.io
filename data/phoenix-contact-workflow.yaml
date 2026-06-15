@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phoenix-contact-workflow
 
 info:
   name: Phoenix Contact Security Checks
   author: inokii
+  severity: info
   description: A simple workflow that runs all Phoenix Contact related nuclei templates on a given target.
 
 workflows:

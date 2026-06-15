@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: adminer-panel
 info:
   name: Adminer Login panel
@@ -11,7 +12,7 @@ info:
   # Most versions have some kind of SSRF usability
   # Is generally handy if you find SQL creds
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/_adminer.php'

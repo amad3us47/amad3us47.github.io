@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-keyvault-cert-keytype-unapproved
 info:
   name: Unapproved Certificate Key Type in Azure Key Vaults

@@ -1,14 +1,15 @@
-id: glpi-login 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: glpi-login-1
 info:
   name: GLPI - Аутентификация
   author: dhiyaneshDk
   severity: info
   reference: https://www.exploit-db.com/ghdb/7002
   tags: panel
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

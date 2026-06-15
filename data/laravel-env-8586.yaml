@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: laravel-env
 info:
   name: Laravel .env file accessible
@@ -6,7 +7,7 @@ info:
   description: Laravel uses the .env file to store sensitive information like database credentials and tokens. It should not be publicly accessible.
   reference: https://laravel.com/docs/master/configuration#environment-configuration
   tags: config,exposure,laravel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.env"

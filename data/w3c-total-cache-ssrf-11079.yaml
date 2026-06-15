@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: w3c-total-cache-ssrf
 info:
   name: Wordpress W3C Total Cache SSRF <= 0.9.4
@@ -8,10 +9,10 @@ info:
   reference: |
     - https://wpvulndb.com/vulnerabilities/8644
     - https://klikki.fi/adv/w3_total_cache.html
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

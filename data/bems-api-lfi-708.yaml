@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bems-api-lfi
 info:
   name: Longjing Technology BEMS API 1.21 - Remote Arbitrary File Download
@@ -6,10 +7,10 @@ info:
   description: The application suffers from an unauthenticated arbitrary file download vulnerability. Input passed through the fileName parameter through downloads endpoint is not properly verified before being used to download files. This can be exploited to disclose the contents of arbitrary and sensitive files through directory traversal attacks.
   reference: https://www.zeroscience.mk/en/vulnerabilities/ZSL-2021-5657.php
   tags: lfi
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Slash-Url-Redirection
 
 info:
@@ -14,7 +15,7 @@ info:
     - https://cwe.mitre.org/data/definitions/601.html
   tags: url-redirection
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}////http://bing.com/%2F'
@@ -30,5 +31,5 @@ requests:
           - 'Location: http://bing.com'
           - 'Location: bing.com'
       - type: status
-        status: 
+        status:
           - 302

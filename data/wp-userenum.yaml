@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-json-users-endpoint-baseurl
 info:
   name: WordPress JSON Users Endpoint (Base URL)
@@ -11,17 +12,17 @@ http:
         Host: {{Hostname}}
         Accept-Encoding: gzip, deflate
 
-          
+
       - |
         GET /wp-json/?rest_route=/wp/v2/users/ HTTP/1.1
         Host: {{Hostname}}
         Accept-Encoding: gzip, deflate
-        
+
       - |
         GET /wp-json/wp/v2/uSERS/ HTTP/1.1
         Host: {{Hostname}}
         Accept-Encoding: gzip, deflate
-    
+
     stop-at-first-match: true
     matchers:
       - type: status
@@ -31,6 +32,3 @@ http:
         words:
           - 'id'
           - 'name'
-
-
-

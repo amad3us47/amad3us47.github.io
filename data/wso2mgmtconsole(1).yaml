@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: WSO2MgmtConsole-panel
 info:
   name: WSO2MgmtConsole Panel
   author: wasp76b
   severity: low
   tags: panel,WSO2MgmtConsole
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/carbon/admin/login.jsp/"

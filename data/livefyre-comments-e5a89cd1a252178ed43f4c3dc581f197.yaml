@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: livefyre-comments-e5a89cd1a252178ed43f4c3dc581f197
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: joomla-file-listing
 info:
   name: Joomla! Database File List
@@ -12,7 +13,7 @@ info:
     cwe-id: CWE-548
   remediation: Disable directory indexing on the /libraries/joomla/database/ directory or remove the content from the web root. If the databases can be download, rotate any credentials contained in the databases.
   tags: exposure,joomla,listing,database
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/libraries/joomla/database/"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: duracelltomi-google-tag-manager-611cc06027021f6cf2b16e49ed3a6a6e
 
 info:

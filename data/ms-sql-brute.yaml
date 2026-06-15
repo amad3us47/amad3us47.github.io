@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ms-sql-brute
 
 info:
@@ -8,7 +9,7 @@ info:
     ms sql bruteforce templates
   metadata:
     shodan-query: "port:1433"
-  
+
 javascript:
   - pre-condition: |
       var m = require("nuclei/mssql");
@@ -25,7 +26,7 @@ javascript:
       Port: "1433"
       User: "{{usernames}}"
       Pass: "{{passwords}}"
-    
+
     payloads:
       usernames:
         - sa

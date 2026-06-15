@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: openinviter-for-wordpress-697a88a3d1b5eed5b8eac59123c46e7a
 
 info:

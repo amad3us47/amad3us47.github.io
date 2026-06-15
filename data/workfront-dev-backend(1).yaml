@@ -1,9 +1,10 @@
-id: Backend Dev WorkFront Exposed
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Backend-Dev-WorkFront-Exposed
 info:
   name: Find WorkFront Dev Backend and works for Symfony panel.
   author: Clark
   severity: medium
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/backend_dev.php/'

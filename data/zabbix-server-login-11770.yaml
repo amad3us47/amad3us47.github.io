@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zabbix-server-login
 info:
   name: Zabbix Login
@@ -6,7 +7,7 @@ info:
   metadata:
     shodan-query: http.title:"zabbix-server"
   tags: panel,zabbix
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

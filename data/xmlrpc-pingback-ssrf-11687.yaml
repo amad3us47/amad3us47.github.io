@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xmlrpc-pingback-ssrf
 info:
   name: XMLRPC Pingback SSRF
@@ -6,7 +7,7 @@ info:
   reference:
     - https://hackerone.com/reports/406387
   tags: ssrf,generic,xmlrpc
-requests:
+http:
   - raw:
       - |
         POST /xmlrpc/pingback HTTP/1.1

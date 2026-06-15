@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-49104
 info:
   name: Pan Micro E-office File Uploads
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://chowdera.com/2021/12/202112200602130067.html
   tags: pan,micro,cnvd,cnvd2021
-requests:
+http:
   - raw:
       - |
         POST /general/index/UploadFile.php?m=uploadPicture&uploadType=eoffice_logo&userId= HTTP/1.1

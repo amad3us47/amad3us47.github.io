@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: keycloak-json
 info:
   name: Keycloak Json File
   author: oppsec
   severity: info
   tags: exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/keycloak.json"

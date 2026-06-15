@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: trustmate-io-integration-for-woocommerce-454fde89c54f6af85a5730e27139c161
 
 info:

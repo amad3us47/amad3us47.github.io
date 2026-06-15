@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: panabit-default-login
 info:
   name: Panabit Gateway Default Login
@@ -13,7 +14,7 @@ info:
     cvss-score: 5.8
     cve-id:
     cwe-id: CWE-522
-requests:
+http:
   - raw:
       - |
         POST /login/userverify.cgi HTTP/1.1

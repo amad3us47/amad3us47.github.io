@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: production-logs
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: exposure,logs,rails
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/log/production.log"
@@ -29,11 +30,3 @@ requests:
         part: header
         words:
           - "text/html"
-        negative: true
-
-    extractors:
-      - type: regex
-        name: last_modified
-        part: header
-        regex:
-          - 'Last-Modified:.*'

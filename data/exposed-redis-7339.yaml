@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-redis
 info:
   name: Redis Unauth Server
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://redis.io/topics/security
   tags: network,redis,unauth
-network:
+tcp:
   - inputs:
       - data: "info\r\nquit\r\n"
     host:
@@ -18,6 +19,3 @@ network:
         words:
           - "redis_version"
       - type: word
-        negative: true
-        words:
-          - "redis_mode:sentinel"

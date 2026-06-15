@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: esxi-unauthorized-access
 info:
   id: esxi-unauthorized-access
   name: Unauthorized Access in VMware ESXi
   author: OpenAI
   description: Template to detect unauthorized access to VMware ESXi hosts
-  severity: High
+  severity: high
   classification:
     country: any
     tags:

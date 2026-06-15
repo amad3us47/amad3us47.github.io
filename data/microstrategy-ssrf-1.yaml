@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microstrategy-ssrf1
 info:
   name: MicroStrategy tinyurl - BSSRF
@@ -8,7 +9,7 @@ info:
   tags: microstrategy,ssrf
 
 
-requests:
+http:
   - raw:
       - |
         GET /servlet/taskProc?taskId=shortURL&taskEnv=xml&taskContentType=xml&srcURL=https://google.com HTTP/1.1

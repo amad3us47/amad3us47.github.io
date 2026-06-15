@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: skywalking-workflow
 
 info:
   name: Apache SkyWalking Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all Apache SkyWalking related nuclei templates on a given target.
 workflows:
   - template: http/technologies/fingerprinthub-web-fingerprints.yaml

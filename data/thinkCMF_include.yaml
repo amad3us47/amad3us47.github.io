@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkCMF_include
 info:
   name: thinkCMF文件包含漏洞
   author: str1am
   severity: high
   tags: pma
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php?a=display&templateFile=README.md"

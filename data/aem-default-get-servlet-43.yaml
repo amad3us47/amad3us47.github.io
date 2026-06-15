@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-default-get-servlet43
 info:
   author: DhiyaneshDk
@@ -7,7 +8,7 @@ info:
   tags: aem
 
 
-requests:
+http:
   - raw:
       - |
         GET ///etc.json?FNZ.ico HTTP/1.1

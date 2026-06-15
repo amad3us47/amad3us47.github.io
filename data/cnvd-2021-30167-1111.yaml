@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-30167
 info:
   name: UFIDA NC BeanShell Remote Code Execution
@@ -7,7 +8,7 @@ info:
     - https://mp.weixin.qq.com/s/FvqC1I_G14AEQNztU0zn8A
     - https://www.cnvd.org.cn/webinfo/show/6491
   tags: beanshell,rce,cnvd
-requests:
+http:
   - raw:
       - | #linux
         POST /servlet/~ic/bsh.servlet.BshServlet HTTP/1.1

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: robots-txt
 info:
   name: robots.txt file
   author: CasperGN
   severity: info
   tags: misc,generic
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/robots.txt"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ApacheSolr-SSRF-3
 
 info:
@@ -8,11 +9,11 @@ info:
   reference:
       - https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/#solr
       - https://github.com/veracode-research/solr-injection
-          
-requests:
+
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

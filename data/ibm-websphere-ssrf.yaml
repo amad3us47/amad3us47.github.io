@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ibm-websphere-ssrf
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://blog.assetnote.io/2021/12/26/chained-ssrf-websphere/
   tags: ibm,ssrf,websphere
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/docpicker/internal_proxy/http/example.com'

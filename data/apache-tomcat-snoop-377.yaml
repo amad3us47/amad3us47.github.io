@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-tomcat-snoop
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.rapid7.com/db/vulnerabilities/apache-tomcat-example-leaks
   tags: apache,misconfig,tomcat,disclosure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/examples/jsp/snp/snoop.jsp"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: inazo-advanced-ads-management-ccf7d9d30b72d77021b620cb8b633d56
 
 info:

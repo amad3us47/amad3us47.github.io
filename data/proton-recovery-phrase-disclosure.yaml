@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: proton-recovery-phrase-disclosure
 info:
   id: proton-recovery-phrase-disclosure
   name: Proton Recovery Phrase TXT Disclosure - Detect
   author: OpenAI
   description: Template to detect Proton Email recovery phrase exposure in `proton_recovery_phrase.txt`
-  severity: High
+  severity: high
   classification:
     country: any
     tags:

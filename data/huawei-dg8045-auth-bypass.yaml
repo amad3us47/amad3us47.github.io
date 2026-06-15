@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: huawei-dg8045-auth-bypass
 
 info:
@@ -8,7 +9,7 @@ info:
   severity: high
   tags: huawei,dg8045,auth,bypass
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/system/deviceinfo"

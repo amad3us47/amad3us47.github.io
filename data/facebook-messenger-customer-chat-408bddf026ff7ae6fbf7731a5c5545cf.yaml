@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: facebook-messenger-customer-chat-408bddf026ff7ae6fbf7731a5c5545cf
 
 info:

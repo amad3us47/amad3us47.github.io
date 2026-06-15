@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: protected-posts-logout-button-cfa021969edb2cc77a22385f05d3d58a
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: metadata-service-aws
 
 # This attack abuses a misconfigured proxy that allows access to the metadata
@@ -24,7 +25,7 @@ info:
     cvss-score: 9.3
     cwe-id: CWE-441
 
-requests:
+http:
   - raw:
       - |+
         GET http://{{hostval}}/latest/meta-data/ HTTP/1.1

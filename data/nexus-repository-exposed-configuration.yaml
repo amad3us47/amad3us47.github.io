@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: nexus-repository-exposed-configuration
 info:
   id: nexus-repository-exposed-configuration
   name: Exposed Nexus Repository Configuration Files - Detect
   author: OpenAI
   description: Template to detect exposed Nexus Repository configuration files
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -20,7 +22,7 @@ info:
         - "/nexus.properties"
         - "/conf/nexus.properties"
         - "/etc/nexus/nexus.properties"
-        
+
   matchers:
     - pattern: "Nexus Repository Manager"
       type: body

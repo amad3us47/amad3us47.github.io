@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: elfinder-rce
 
 info:
@@ -13,7 +14,7 @@ info:
     cwe-id: CWE-77
   tags: tech,elfinder,oss
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/js/elfinder.min.js"

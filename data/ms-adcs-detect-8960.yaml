@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ms-adcs-detect
 info:
   name: MS Active Directory Certificate Services Detector
   author: divya_mudgal
   severity: info
   tags: microsoft,ad,panel
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

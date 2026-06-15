@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: header-command-injection
 info:
   name: Header Command Injection
@@ -5,7 +6,7 @@ info:
   severity: high
   description: Fuzzing headers for command injection
   tags: fuzz,rce
-requests:
+http:
   - payloads:
       header: helpers/payloads/request-headers.txt
       payload: helpers/payloads/command-injection.txt

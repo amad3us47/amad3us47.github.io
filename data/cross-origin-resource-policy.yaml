@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: http-headers-cross-origin-resource-policy
 
 info:
@@ -28,4 +29,3 @@ http:
           - "!regex('(?i)cross-origin-resource-policy', all_headers)"
           - "status_code != 301 && status_code != 302"
         condition: and
-

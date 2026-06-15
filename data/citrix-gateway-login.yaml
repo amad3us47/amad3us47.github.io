@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: citrix-gateway-login
 
 info:
   name: Citrix Gateway Login
   author: NullFuzz
   severity: info
-  description: Detect login Citrix Gateway 
+  description: Detect login Citrix Gateway
   tags: login,panel,gateway,citrix
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/logon/LogonPoint/index.html"

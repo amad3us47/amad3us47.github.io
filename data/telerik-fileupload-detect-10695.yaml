@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: telerik-fileupload-detect
 info:
   name: Detect Telerik Web UI fileupload handler
   author: organiccrap
   severity: low
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/Telerik.Web.UI.WebResource.axd?type=rau"

@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: svn-wc-db-exposure
 info:
   id: svn-wc-db-exposure
   name: Subversion (SVN) Working Copy Metadata Exposure - Detect
   author: OpenAI
   description: Template to detect Subversion (SVN) working copy metadata exposure
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -18,7 +20,7 @@ info:
 
   requests:
       method: GET
-      path: 
+      path:
         - "/.svn/wc.db"
       description: Attempt to access Subversion (SVN) working copy metadata file
 

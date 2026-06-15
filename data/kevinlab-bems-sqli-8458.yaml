@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kevinlab-bems-sqli
 info:
   name: KevinLAB BEMS 1.0 Unauthenticated SQL Injection/Authentication Bypass
@@ -9,10 +10,10 @@ info:
     - https://www.exploit-db.com/exploits/50146
     - https://packetstormsecurity.com/files/163572/
   tags: kevinlab,sqli
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

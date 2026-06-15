@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ms-exchange-server-reflected-xss
 info:
   name: MS Exchange Server XSS
@@ -7,10 +8,10 @@ info:
     - https://www.shodan.io/search?query=http.title%3A%22Outlook%22
     - https://blog.orange.tw/2021/08/proxyoracle-a-new-attack-surface-on-ms-exchange-part-2.html
   tags: miscrsoft,exchange,owa,xss
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

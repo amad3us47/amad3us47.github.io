@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: insecure-randomness
 
 info:
@@ -11,13 +12,13 @@ info:
 file:
   - extensions:
     - java
-  
+
     matchers:
       - type: regex
         name: Random()
         regex:
           - 'new\s+Random\(.*\)'
-      
+
       - type: regex
         name: Math.random()
         regex:

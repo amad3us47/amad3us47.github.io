@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mr12-osInjectionPost
 info:
-  name: os InjectionGet Detection for Post 
+  name: os InjectionGet Detection for Post
   description: Template to check foros InjectionGet vulnerabilities ; chage the post requests
   severity: high
   author: mr12
   tags:
     - osInjection
-requests:
+http:
   - raw:
       - |-
         POST {{endPoint}} HTTP/2
@@ -49,4 +50,3 @@ requests:
         condition: or
         words:
           - "test"
-      

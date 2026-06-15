@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: shortpixel-image-optimiser-a0b813e1b363e8c5376df86a3b8d5d89
 
 info:

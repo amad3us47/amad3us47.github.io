@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: selenium-exposure
 info:
   name: Selenium Node exposure
@@ -12,7 +13,7 @@ info:
     verified: true
     shodan-query: "/wd/hub"
   tags: selenium,misconfiguration,rce,chromium
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wd/hub"

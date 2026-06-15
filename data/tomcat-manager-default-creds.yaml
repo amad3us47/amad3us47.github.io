@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: tomcat-manager-default-creds
 info:
   id: tomcat-manager-default-creds
   name: Tomcat Manager Application Default Credentials - Detect
   author: OpenAI
   description: Template to detect Tomcat Manager Application instances with default credentials
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

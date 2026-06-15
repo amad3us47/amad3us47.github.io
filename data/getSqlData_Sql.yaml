@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: getSqlData_Sql
 info:
   name: 泛微OA E-Cology getSqlData SQL注入漏洞

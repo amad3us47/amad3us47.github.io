@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: google-storage-bucket
 
 info:
-  name: Detect Mobile apps using Google storage Bucket 
+  name: Detect Mobile apps using Google storage Bucket
   author: Thabisocn
   severity: info
 
@@ -13,4 +14,3 @@ file:
       - type: regex
         regex:
           - "[a-z0-9.-]+\\.appspot\\.com"
-          

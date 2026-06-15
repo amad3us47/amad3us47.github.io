@@ -1,15 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-netweaver-workflow
 
 info:
   name: SAP NetWaver Workflow
   author: dwisiswant0
+  severity: info
 
 variables:
   sap_netweaver_as_java: technologies/sap-netweaver-as-java-detect.yaml
   sap_netweaver_as_java_cve_1: cves/CVE-2020-6287.yaml
-
-logic:
-  |
-  if sap_netweaver_as_java() {
-    sap_netweaver_as_java_cve_1()
-  }

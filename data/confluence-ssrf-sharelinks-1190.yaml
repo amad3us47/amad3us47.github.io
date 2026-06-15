@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: confluence-ssrf-sharelinks
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://github.com/assetnote/blind-ssrf-chains#confluence
   tags: confluence,atlassian,ssrf,jira,oob
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/rest/sharelinks/1.0/link?url=https://{{interactsh-url}}/'

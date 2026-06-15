@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rtsp-camera-feed-detection
 info:
   name: RTSP Camera Feed Detection
@@ -6,7 +7,7 @@ info:
   description: |
     Detects RTSP camera feeds.
 
-requests:
+http:
   - method: GET
     path:
       - "/video.cgi"

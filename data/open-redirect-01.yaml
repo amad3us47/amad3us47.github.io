@@ -1,10 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-redirect-01
-type: fuzz
 risk: low
-level: 2
 info:
   name: Open Redirect FUZZ on Param
-  risk: Medium
+  author: unknown
+  severity: info
 
 variables:
   - prefix: |
@@ -61,9 +61,6 @@ payloads:
   - '/〱{{.prefix}}{{.dest}}/%2f%2e%2e'
   - '@{{.prefix}}{{.dest}}'
 
-requests:
+http:
   - generators:
       - Query("{{.payload}}", "{{.name}}")
-    detections:
-      - >-
-        (StatusCode() >= 300 && StatusCode() < 400) && RegexSearch("resHeaders", "Location:\\s(http|https?:)([\\/]+){{.dest}}") && !StringSearch("resHeaders", "Location: https://{{.Host}}")

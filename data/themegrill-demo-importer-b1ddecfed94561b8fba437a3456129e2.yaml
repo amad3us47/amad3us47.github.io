@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: themegrill-demo-importer-b1ddecfed94561b8fba437a3456129e2
 
 info:

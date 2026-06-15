@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gdpr-cookie-compliance-af69ee8486c06ae18479ce20dc19c847
 
 info:

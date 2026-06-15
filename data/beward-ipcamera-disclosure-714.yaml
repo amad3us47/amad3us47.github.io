@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: beward-ipcamera-disclosure
 info:
   name: BEWARD N100 H.264 VGA IP Camera M2.1.6 Arbitrary File Disclosure
@@ -8,10 +9,10 @@ info:
     - https://www.exploit-db.com/exploits/46320
     - https://www.zeroscience.mk/en/vulnerabilities/ZSL-2019-5511.php
   tags: iot,camera,disclosure
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

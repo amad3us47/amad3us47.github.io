@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: iplanet-web-server
 info:
   name: Detect iPlanet Webserver Detection
@@ -6,7 +7,7 @@ info:
   metadata:
     fofa-query: app="iPlanet-Web-Server,-Enterprise-Edition-4.1"
   tags: tech,webserver
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rabbitmq-default-admin
 info:
   name: RabbitMQ Default Credentials
   author: fyoorer & dwisiswant0
   severity: high
   tags: rabbitmq,default-login
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/whoami"

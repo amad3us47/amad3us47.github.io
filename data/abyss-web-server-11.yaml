@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: abyss-web-server
 
 info:
@@ -8,10 +9,10 @@ info:
 #  additional-fields:
 #    fofa-dork: 'app="Abyss-Web-Server"'
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:
@@ -21,7 +22,7 @@ requests:
         User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
         Accept-Encoding: gzip, deflate
         Accept: */*
-        
+
     matchers-condition: and
     matchers:
       - type: word

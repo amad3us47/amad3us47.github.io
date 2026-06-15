@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-keyvault-cert-transparency-missing
 info:
   name: Missing Certificate Transparency in Azure Key Vaults

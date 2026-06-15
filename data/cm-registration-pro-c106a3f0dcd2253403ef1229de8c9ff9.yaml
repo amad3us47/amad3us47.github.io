@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cm-registration-pro-c106a3f0dcd2253403ef1229de8c9ff9
 
 info:

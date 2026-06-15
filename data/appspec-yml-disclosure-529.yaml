@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: appspec-yml-disclosure
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/appsec-yml-disclosure.json
   tags: exposure,config
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/appspec.yml"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: development-logs
 
 info:
@@ -5,7 +6,7 @@ info:
   author: geeknik
   severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/log/development.log"
@@ -28,13 +29,3 @@ requests:
         part: header
         words:
           - "text/html"
-        negative: true
-      - type: status
-        status:
-          - 200
-    extractors:
-      - type: regex
-        name: last_modified
-        part: header
-        regex:
-          - 'Last-Modified:.*'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: versa-flexvnf-server-detect
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://versa-networks.com/products/components/
   tags: panel,versa,flexvnf,sd-wan
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/&?=?"
@@ -28,7 +29,7 @@ requests:
         words:
           - "Server: Versa"
           - "FlexVNF"
-        condition: and 
+        condition: and
 
     extractors:
       - type: kval

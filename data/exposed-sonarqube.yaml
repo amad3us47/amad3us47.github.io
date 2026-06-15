@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: exposed-sonarqube
 info:
   id: exposed-sonarqube
   name: Exposed SonarQube - Detect
   author: OpenAI
   description: Template to detect exposed SonarQube installations
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -14,7 +16,7 @@ info:
 
 matcher-condition: or
 
-requests:
+http:
     method: GET
     path:
       - "/sonarqube"

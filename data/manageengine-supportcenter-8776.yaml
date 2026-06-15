@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: manageengine-supportcenter
 info:
   name: ZOHO ManageEngine SupportCenter
@@ -6,7 +7,7 @@ info:
   metadata:
     shodan-query: http.title:"ManageEngine SupportCenter Plus"
   tags: panel,zoho,manageengine
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

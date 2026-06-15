@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fanwei-login-bypass
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: fanwei,bypass
 
-requests:
+http:
   - raw:
       - |
         POST /;/emp/admin/baseuser/list HTTP/1.1

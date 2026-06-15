@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: formilla-live-chat-ce5a04e92c3bd1ea43e0e9b4093c5ca8
 
 info:

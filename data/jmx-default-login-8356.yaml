@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jmx-default-login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: jboss,jmx,default-login
 
-requests:
+http:
   - raw:
       - |
         GET /jmx-console/ HTTP/1.1

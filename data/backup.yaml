@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: backup-files
 info:
   name: Backup Files Finder (information disclosure)
   author: Vabro
-  severity: High
+  severity: high
   description: |
     This template checks for common backup file extensions that may have been left exposed on a target.
 
-requests:
+http:
   - name: backup-files
     path:
       - "/backup"

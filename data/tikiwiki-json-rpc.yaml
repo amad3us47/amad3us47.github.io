@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kiwitcms-json-rpc
 
 info:
@@ -12,7 +13,7 @@ info:
     shodan-query: title:"Kiwi TCMS - Login",http.favicon.hash:-1909533337
   tags: kiwitcms,exposure,misconfig
 
-requests:
+http:
   - raw:
       - |
         POST /json-rpc/ HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: access-log-file
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: low
   tags: logs
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/access.log"

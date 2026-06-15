@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: geoserver-default-login
 info:
   name: Geoserver Default Admin Login
@@ -14,7 +15,7 @@ info:
     cve-id:
     cwe-id: CWE-522
   tags: geoserver,default-login
-requests:
+http:
   - raw:
       - |
         POST /geoserver/j_spring_security_check HTTP/1.1

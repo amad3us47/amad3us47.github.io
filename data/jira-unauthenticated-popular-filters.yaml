@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jira-unauthenticated-popular-filters
 
 info:
   name: Jira Unauthenticated Popular Filters
   author: TechbrunchFR
-  severity: Info
+  severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/secure/ManageFilters.jspa?filter=popular&filterView=popular"

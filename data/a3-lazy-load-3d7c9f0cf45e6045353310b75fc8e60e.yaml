@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: a3-lazy-load-3d7c9f0cf45e6045353310b75fc8e60e
 
 info:

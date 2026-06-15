@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: product-filter-for-woocommerce-product-89bb98b8d8dfeaea8286b28c83a46a54
 
 info:

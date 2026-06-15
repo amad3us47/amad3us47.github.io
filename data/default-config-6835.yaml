@@ -1,13 +1,14 @@
-id: Config file exposure
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Config-file-exposure
 
 info:
   name: Config file exposure
   description: This template can be used to detect config files containing sensitive information.
   author: rahulkadavil
-  severity: Low
+  severity: low
   tags: exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/sftp-config.json"
@@ -30,9 +31,8 @@ requests:
           - "DB_USER"
           - "DB_PASSWORD"
           - "ADMIN_PASSWORD"
-        condition: or  
-        part: body    
+        condition: or
+        part: body
       - type: status
         status:
           - 200
-  

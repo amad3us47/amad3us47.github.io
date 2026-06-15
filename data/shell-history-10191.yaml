@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: shell-history
 info:
   name: Shell History
@@ -5,7 +6,7 @@ info:
   severity: low
   description: Discover history for bash, ksh, sh, and zsh
   tags: config
-requests:
+http:
   - method: GET
     redirects: true
     max-redirects: 1
@@ -36,4 +37,3 @@ requests:
         words:
           - "<html"
         part: body
-        negative: true

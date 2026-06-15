@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dell-remote-power-management-detect
 
 info:
@@ -7,7 +8,7 @@ info:
   description: The Dell Metered Rack Power Distribution Unit distributes power to a server rack and are installed at the rear of a rack enclosure.
   tags: tech,dell
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index2.html"

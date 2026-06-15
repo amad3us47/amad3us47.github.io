@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: natshell-rce
 info:
   name: NatShell Debug File RCE
@@ -6,7 +7,7 @@ info:
   reference:
     - https://mp.weixin.qq.com/s/g4YNI6UBqIQcKL0TRkKWlw
   tags: natshell,rce
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/debug.php"

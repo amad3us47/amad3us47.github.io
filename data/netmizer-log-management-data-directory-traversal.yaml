@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netmizer-log-management-data-directory-traversal
 
 info:
@@ -9,11 +10,3 @@ info:
     title="NetMizer 日志管理系统"
   reference:
     - http://wiki.peiqi.tech/wiki/iot/NetMizer/NetMizer%20%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20data%20%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /data
-    expression: response.status == 200 && response.body.bcontains(b'Index of /data') && response.body.bcontains(b'Parent Directory')
-expression: r0()

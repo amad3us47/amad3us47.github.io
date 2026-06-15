@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ntlm-directories
 info:
   name: Discovering directories w/ NTLM
@@ -6,7 +7,7 @@ info:
   reference:
     - https://medium.com/swlh/internal-information-disclosure-using-hidden-ntlm-authentication-18de17675666
   tags: misc,fuzz,windows
-requests:
+http:
   - raw:
       - |
         GET {{path}} HTTP/1.1

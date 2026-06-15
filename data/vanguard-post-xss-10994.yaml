@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vanguard-post-xss
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://packetstormsecurity.com/files/157099/Vanguard-2.1-Cross-Site-Scripting.html
   tags: vanguard,xss
 
-requests:
+http:
   - raw:
       - |
         POST /search HTTP/1.1

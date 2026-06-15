@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: elfinder-version
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://github.com/Studio-42/elFinder/
   tags: tech,elfinder,oss
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/js/elfinder.min.js"

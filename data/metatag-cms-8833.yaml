@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: metatag-cms
 info:
   name: Metatag CMS Detection
@@ -7,7 +8,7 @@ info:
   reference:
     - https://www.w3schools.com/tags/att_meta_name.asp
   tags: tech,cms
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

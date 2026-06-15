@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tracer-sc-login
 info:
   name: Tracer SC login panel
@@ -5,10 +6,10 @@ info:
   severity: info
   reference: https://www.trane.com/commercial/north-america/us/en/products-systems/building-management---automation/building-automation-systems/tracer-sc-plus.html
   tags: tracer,trane,iot,panel
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

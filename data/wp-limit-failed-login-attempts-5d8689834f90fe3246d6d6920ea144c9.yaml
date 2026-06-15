@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-limit-failed-login-attempts-5d8689834f90fe3246d6d6920ea144c9
 
 info:

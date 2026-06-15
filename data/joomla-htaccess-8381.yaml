@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: joomla-htaccess-file
 info:
   name: Joomla htaccess file disclosure
@@ -5,7 +6,7 @@ info:
   severity: info
   description: Joomla has an htaccess file to store configurations about HTTP config, directory listing, etc.
   tags: misc,joomla
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/htaccess.txt"

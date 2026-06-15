@@ -1,11 +1,12 @@
-id: graphite-browser-detect 
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: graphite-browser-detect
 
 info:
   name: graphite-browser-detect
   author: notnotnotveg
-  severity: informative
+  severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xss-combined-fuzz-context-aware
 
 info:
@@ -43,14 +44,3 @@ http:
           - "(?i)<[^>]* x=\"y\" onscrollsend=\"alert\\('xs'\\)\"[^>]*>"
       - type: regex
         part: body
-        negative: true
-        regex:
-          - "(?i)<script[^>]*>.*\\\\\"; alert\\('xss'\\); //.*</script>"
-          - "(?i)<script[^>]*>[^<]*\\\\\"; alert\\('xss'\\); //[^<]*</script>"
-          - "(?i)<script[^>]*>[^<]*\\\\'-alert\\(document.domain\\)-'[^<]*</script>"
-          - "(?i)<script[^>]*>[^<]*\"[^\"<]*><xss x=\"y\" onmouseover=\"alert\\('xss'\\)\"></xss>[^\"<]*\"[^<]*</script>"
-      - type: word
-        part: header
-        words:
-          - "text/html"
-

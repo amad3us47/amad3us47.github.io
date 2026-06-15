@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: widget-settings-importexport-32f2ca109720ed021d4d0dfc35019974
 
 info:

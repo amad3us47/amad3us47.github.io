@@ -1,4 +1,5 @@
-id: "bitrix_bak_check"
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: bitrix_bak_check
 
 info:
   name: Bitrix check .env file existence

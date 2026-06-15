@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woocommerce-gateway-amazon-payments-advanced-0bbc3d3119a546c55a24650f1a656f4a
 
 info:

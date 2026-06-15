@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: solarwinds-default-admin
 
 info:
@@ -13,7 +14,7 @@ info:
   # References:
   # - https://github.com/solarwinds/OrionSDK/wiki/REST
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/SolarWinds/InformationService/v3/Json/Query?query=SELECT+Uri+FROM+Orion.Pollers+ORDER+BY+PollerID+WITH+ROWS+1+TO+3+WITH+TOTALROWS" # First path is default base path

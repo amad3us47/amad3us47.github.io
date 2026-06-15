@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: flir-path-traversal
 info:
   name: Flir Path Traversal
@@ -5,10 +6,10 @@ info:
   severity: high
   reference: https://juejin.cn/post/6961370156484263972
   tags: flir,lfi
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

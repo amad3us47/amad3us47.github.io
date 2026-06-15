@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: csrf-guard-detect
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://github.com/OWASP/www-project-csrfguard
   tags: tech,csrfguard,owasp
 
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: osint-consulta-operadora-celular-telein
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: celular,consulta,osint
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://free.telein.com.br/sistema/consulta_json.php?chave=senhasite&numero={{CELULAR}}"
@@ -25,6 +26,3 @@ requests:
             part: body
             json:
               - '.'  # JQ like syntax for extraction
-
-
-

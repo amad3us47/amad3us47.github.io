@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CORS-arbitrary-domain-ACAC
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: medium
   tags: cors
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -29,4 +30,3 @@ requests:
         part: header
         regex:
                 - Access\-Control\-Allow\-Origin\:[\s]+([^\s]+)
-

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: eatery-restaurant-open-redirect
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://cxsecurity.com/issue/WLB-2020030183
   tags: wordpress,wp-theme,redirect
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/themes/eatery/nav.php?-Menu-=https://example.com/"

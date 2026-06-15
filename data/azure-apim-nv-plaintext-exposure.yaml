@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-apim-nv-plaintext-exposure
 info:
   name: Azure API Management Non-Encrypted Named Values Exposure

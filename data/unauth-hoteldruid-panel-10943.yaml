@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauth-hoteldruid-panel
 info:
   name: Unauthenticated Hoteldruid Panel
@@ -6,7 +7,7 @@ info:
   description: A vulnerability in Hoteldruid Panel allows remote unauthenticated users access to the management portal without authentication.
   reference: https://www.hoteldruid.com/
   tags: hoteldruid,panel,unauth
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/hoteldruid/inizio.php"

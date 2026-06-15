@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: companion-auto-update-02d6d09566c18c54d4c5e559e1f141df
 
 info:

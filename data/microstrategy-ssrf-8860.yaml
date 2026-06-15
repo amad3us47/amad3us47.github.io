@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microstrategy-ssrf
 info:
   name: MicroStrategy tinyurl - BSSRF
@@ -6,7 +7,7 @@ info:
   description: Blind server-side request forgery vulnerability on MicroStrategy URL shortener.
   reference: https://medium.com/@win3zz/how-i-made-31500-by-submitting-a-bug-to-facebook-d31bb046e204
   tags: microstrategy,ssrf
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/servlet/taskProc?taskId=shortURL&taskEnv=xml&taskContentType=xml&srcURL=https://google.com'

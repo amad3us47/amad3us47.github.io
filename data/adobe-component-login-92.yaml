@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: adobe-component-login
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.exploit-db.com/ghdb/6846
   tags: panel,adobe
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/CFIDE/componentutils/login.cfm'

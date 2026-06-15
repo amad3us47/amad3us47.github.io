@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: vercel-detect
 info:
   id: vercel-detect
   name: Vercel Response - Detect
   author: OpenAI
-  description: Help detect instances where a Vercel deployment returns a 404 Page Not Found error response. 
-  severity: Low
+  description: Help detect instances where a Vercel deployment returns a 404 Page Not Found error response.
+  severity: low
   classification:
     country: any
     tags:
@@ -16,7 +18,7 @@ info:
   matcher-condition: and
   requests:
       method: GET
-      path: 
+      path:
         - "/"
         - "_domains"
         - "_logs"

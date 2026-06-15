@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: favicon-detection
 
 info:
@@ -11,10 +12,10 @@ info:
     - https://github.com/devanshbatham/FavFreak
     - https://github.com/sansatart/scrapts/blob/master/shodan-favicon-hashes.csv
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:
@@ -24,7 +25,7 @@ requests:
         User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
         Accept-Encoding: gzip, deflate
         Accept: */*
-        
+
     matchers:
       - type: dsl
         name: proxmox

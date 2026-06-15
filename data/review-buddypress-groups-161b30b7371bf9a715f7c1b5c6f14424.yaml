@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: review-buddypress-groups-161b30b7371bf9a715f7c1b5c6f14424
 
 info:

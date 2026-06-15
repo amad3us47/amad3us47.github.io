@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: exposed-grafana
 info:
   id: exposed-grafana
   name: Exposed Grafana - Detect
   author: OpenAI
   description: Template to detect exposed Grafana installations
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -14,7 +16,7 @@ info:
 
 matcher-condition: or
 
-requests:
+http:
     method: GET
     path:
       - "/grafana"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-hide-security-enhancer-c06d2ba4b1ea598192f9d0e4403a1daa
 
 info:

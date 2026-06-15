@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bitrix-log-file-found
 info:
   name: Bitrix Log File Found
@@ -30,4 +31,3 @@ http:
         part: header
         words:
           - "Last-Modified:"
-

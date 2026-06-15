@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bitrix_sessid_and_phpssid
 
 info:
@@ -7,7 +8,7 @@ info:
   description: |
     This template extracts information from the given URL related to bitrix_sessid and PHPSESSID cookies.
 
-requests:
+http:
 - method: GET
   path:
     - "{{BaseURL}}/bitrix/tools/composite_data.php"

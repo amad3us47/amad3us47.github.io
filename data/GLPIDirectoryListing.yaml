@@ -1,7 +1,8 @@
---- 
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+---
 id: GLPI_Exposed_Data
 
-info: 
+info:
   author: RedTeamBrasil
   description: "By default many system admins allow directory listening"
   name: "Exposed data in GLPI"
@@ -9,8 +10,8 @@ info:
   severity: high
   tags: "glpi,misconfiguration,data,exposed"
 
-requests: 
-  - 
+http:
+  -
     method: GET
     payloads:
       expose_data:
@@ -36,7 +37,7 @@ requests:
         - /glpi/files/ZIP/
 
     raw:
-    
+
       - |
         GET {{expose_data}} HTTP/1.1
         Host: {{Hostname}}
@@ -45,12 +46,11 @@ requests:
         Accept-Language: en-US,en;q=0.9
         Connection: close
 
-    attack: batteringram 
+    attack: batteringram
     threads: 10
-    matchers: 
-      - 
+    matchers:
+      -
         part: body
         type: word
-        words: 
+        words:
           - "Index of"
-    

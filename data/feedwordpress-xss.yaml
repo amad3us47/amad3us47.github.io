@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: feedwordpress-xss
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://wpscan.com/vulnerability/7ed050a4-27eb-4ecb-9182-1d8fa1e71571
   tags: wordpress,wp-plugin,xss,feedwordpress,authenticated
 
-requests:
+http:
   - raw:
       - |
         POST /wp-login.php HTTP/1.1

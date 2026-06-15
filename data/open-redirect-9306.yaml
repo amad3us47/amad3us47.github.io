@@ -1,13 +1,14 @@
-id: Open Redirect
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Open-Redirect
 
 info:
   name: Open Redirect Issues
   description: This template can be used to detect Open Redirect vulnerability in the host.
   author: rahulkadavil
-  severity: Low
+  severity: low
   tags: Open Redirect
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?url=http://evil.com"
@@ -31,15 +32,15 @@ requests:
       - "{{BaseURL}}/?reroute=http://evil.com"
       - "{{BaseURL}}/?domain=http://evil.com"
       - "{{BaseURL}}/?Location=http://evil.com"
-      
+
 
     matchers-condition: and
-    matchers:   
+    matchers:
       - type: status
         status:
           - 302
 
-      - type: regex 
+      - type: regex
         regex:
           - '(?m)^(?:Location\s*?:\s*?)(?:http?://|//)?(?:[a-zA-Z0-9\-_\.@]*)evil\.com.*$'
         part: header

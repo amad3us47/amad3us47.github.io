@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: elasticsearch-insecure-default-config
 info:
   id: elasticsearch-insecure-default-config
   name: Elasticsearch Insecure Default Configuration - Detect
   author: OpenAI
   description: Template to detect Elasticsearch installations with insecure default configurations
-  severity: High
+  severity: high
   classification:
     country: any
     tags:
@@ -19,7 +21,7 @@ info:
 
   requests:
       method: GET
-      path: 
+      path:
         - "/_cat/plugins?v&s=component&h=name,component,version,description,elasticsearch_version"
       description: Attempt to retrieve plugin information
       condition: and

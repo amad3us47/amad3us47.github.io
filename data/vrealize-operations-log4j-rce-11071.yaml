@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vrealize-operations-log4j-rce
 info:
   name: VMware vRealize Operations Tenant App Log4j JNDI Remote Code Execution
@@ -14,7 +15,7 @@ info:
   metadata:
     shodan-query: http.title:"vRealize Operations Tenant App"
   tags: rce,log4j,vmware,vrealize
-requests:
+http:
   - raw:
       - |
         POST /suite-api/api/auth/token/acquire HTTP/1.1

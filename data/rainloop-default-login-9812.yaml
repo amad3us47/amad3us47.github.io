@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rainloop-default-login
 info:
   name: Rainloop WebMail Default Login
@@ -8,7 +9,7 @@ info:
   metadata:
     fofa-query: app="RAINLOOP-WebMail"
   tags: rainloop,webmail,default-login,foss
-requests:
+http:
   - raw:
       - | # Login Portal: /?admin
         GET /?/AdminAppData@no-mobile-0/0/15503332983847185/ HTTP/1.1

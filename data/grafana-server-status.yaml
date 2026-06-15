@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: grafana-server-status
 info:
   id: grafana-server-status
   name: Grafana Server Status - Detect
   author: OpenAI
   description: Template to detect Grafana server status page exposure
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

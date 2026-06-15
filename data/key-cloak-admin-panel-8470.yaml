@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: key-cloak-admin-panel
 info:
   name: Keycloak Admin Panel
   author: incogbyte,righettod
   severity: info
   tags: panel,keycloak
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/auth/admin/master/console/"

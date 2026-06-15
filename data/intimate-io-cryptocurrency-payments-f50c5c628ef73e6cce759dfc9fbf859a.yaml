@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: intimate-io-cryptocurrency-payments-f50c5c628ef73e6cce759dfc9fbf859a
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: appointment-calendar-bbe9c1bfa2a70b5f7a19763cd4735745
 
 info:

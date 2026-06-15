@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unsecured-jira-panel
 
 info:
@@ -5,7 +6,7 @@ info:
   author: CyberCavalcante
   severity: medium
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/secure/Dashboard.jspa"

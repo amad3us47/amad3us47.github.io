@@ -1,11 +1,12 @@
-id: cache-poisoning    
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: cache-poisoning
 
 info:
   name: Cache Poisoning
   author:nithissh
   severity: low
 
-requests:
+http:
   - raw:
       - |
         GET /?mel=9 HTTP/1.1

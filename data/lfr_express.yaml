@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Express-LFR-json
 
 info:
@@ -5,7 +6,7 @@ info:
   author: nithissh
   severity: medium
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}"
@@ -19,9 +20,9 @@ requests:
         status:
           - 500
       - type: word
-        words: 
+        words:
           - "X-Powered-By: Express"
-        part: header  
+        part: header
       - type: word
         words:
           - "ENOENT: no such file or directory"
@@ -32,9 +33,9 @@ requests:
     #     status:
     #       - 500
     #   - type: word
-    #     words: 
+    #     words:
     #       - "X-Powered-By: Express"
-    #     part: header  
+    #     part: header
     #   - type: word
     #     words:
     #       - "ENOENT: no such file or directory"

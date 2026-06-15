@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-appservice-remote-debugging-enabled
 info:
   name: Azure App Service Remote Debugging Enabled

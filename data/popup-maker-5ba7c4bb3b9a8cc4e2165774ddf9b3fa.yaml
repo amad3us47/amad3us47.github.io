@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: popup-maker-5ba7c4bb3b9a8cc4e2165774ddf9b3fa
 
 info:

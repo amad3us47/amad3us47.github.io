@@ -1,21 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 # info to search signature
 id: simple-xss
 
-type: fuzz
 info:
   name: XSS Fuzz
-  risk: High
+  author: unknown
+  severity: info
 
 # origin: gonna come from Burp
 payloads:
     - abc<xsshere>abc
-    
-requests:
+
+http:
   - redirect: true
   - generators:
       # Change exist content type or adding new one
       - Query("[[.original]]{{.payload}}")
       - Path("[[.original]]{{.payload}}", "*")
-    detections:
-      - >-
-        StatusCode() != 301 && StatusCode() != 302 && StringSearch("response", "<xsshere>")

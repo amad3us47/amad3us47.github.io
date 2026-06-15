@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: exposed-jenkins
 info:
   id: exposed-jenkins
   name: Exposed Jenkins Panel - Detect
   author: OpenAI
   description: Template to detect exposed Jenkins panels
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -13,7 +15,7 @@ info:
 
 matcher-condition: and
 
-requests:
+http:
     method: GET
     path:
       - "/jenkins"

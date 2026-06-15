@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id:  browser_SQl
 info:
   name: 泛微OA E-Cology browser.jsp SQL注入漏洞
@@ -32,6 +33,3 @@ http:
         part: header
         words:
           - HTTP/1.1 200 OK
-
-
-

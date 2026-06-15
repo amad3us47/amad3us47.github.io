@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-vertical-image-slider-74fa7670c5fb4553b8f5901def65f3b1
 
 info:

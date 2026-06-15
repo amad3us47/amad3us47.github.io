@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: solarwinds-default-admin
 info:
   name: SolarWinds Orion Default Login
@@ -14,7 +15,7 @@ info:
 # Optional:
 # POST /SolarWinds/InformationService/v3/Json/Create/Orion.Pollers HTTP/1.1
 # {"PollerType":"Hello, world! from nuclei :-P", "NetObject":"N:1337", "NetObjectType":"N", "NetObjectID":1337}
-requests:
+http:
   - raw:
       - |
         GET /SolarWinds/InformationService/v3/Json/Query?query=SELECT+Uri+FROM+Orion.Pollers+ORDER+BY+PollerID+WITH+ROWS+1+TO+3+WITH+TOTALROWS HTTP/1.1

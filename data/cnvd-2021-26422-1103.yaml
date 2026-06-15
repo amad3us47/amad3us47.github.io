@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-26422
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://github.com/EdgeSecurityTeam/Vulnerability/blob/main/%E4%BA%BF%E9%82%AE%E9%82%AE%E4%BB%B6%E7%B3%BB%E7%BB%9F%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%20(CNVD-2021-26422).md
   tags: eyoumail,rce,cnvd,cnvd2021
 
-requests:
+http:
   - raw:
       - |
         POST /webadm/?q=moni_detail.do&action=gragh HTTP/1.1

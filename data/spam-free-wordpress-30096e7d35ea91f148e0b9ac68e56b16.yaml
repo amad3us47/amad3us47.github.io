@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: spam-free-wordpress-30096e7d35ea91f148e0b9ac68e56b16
 
 info:

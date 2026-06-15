@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: put-method-enabled
 info:
   name: PUT method enabled
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://portswigger.net/kb/issues/00100900_http-put-method-is-enabled
   tags: injection
-requests:
+http:
   - raw:
       - |
         PUT /testing-put.txt HTTP/1.1

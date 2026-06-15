@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: circarlife-setup
 info:
   name: Exposed CirCarLife Setup Page
@@ -6,10 +7,10 @@ info:
   reference: https://circontrol.com/
   severity: critical
   tags: scada,circontrorl,circarlife,setup,exposure,panel
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

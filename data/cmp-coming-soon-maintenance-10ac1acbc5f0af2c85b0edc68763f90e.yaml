@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cmp-coming-soon-maintenance-10ac1acbc5f0af2c85b0edc68763f90e
 
 info:

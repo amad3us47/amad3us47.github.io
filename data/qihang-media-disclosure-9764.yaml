@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: qihang-media-disclosure
 info:
   name: QiHang Media Web (QH.aspx) Digital Signage 3.0.9 - Cleartext Credentials Disclosure
@@ -7,7 +8,7 @@ info:
   reference:
     - https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5579.php
   tags: qihang,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/xml/User/User.xml"

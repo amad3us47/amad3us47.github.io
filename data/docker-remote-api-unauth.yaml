@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: docker-remote-api-unauth
 
 info:
@@ -11,16 +12,3 @@ info:
     protocol="docker"
   reference:
     - http://wiki.peiqi.tech/redteam/vulnerability/unauthorized/Docker%202375%E7%AB%AF%E5%8F%A3.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /version
-    expression: response.status == 200 && response.body.bcontains(b'"MinAPIVersion":') && response.body.bcontains(b'"Version":') && response.body.bcontains(b'"ApiVersion":')
-  r1:
-    request:
-      method: GET
-      path: /containers/json
-    expression: response.status == 200 && response.body.bcontains(b'<title>GPON Home Gateway</title>')
-expression: r1()

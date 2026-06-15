@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: manageengine-applications-manager
 info:
   name: ZOHO ManageEngine Applications Manager
@@ -6,7 +7,7 @@ info:
   reference:
     - https://fofa.so/result?qbase64=YXBwPSJaT0hPLU1hbmFnZUVuZ2luZS1BcHBsaWNhdGlvbnMtTWFuYWdlciI%3D
   tags: panel,zoho,manageengine
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/index.do'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lidarr-dashboard-unauth
 
 info:
@@ -31,9 +32,5 @@ http:
         part: body
         words:
           - "Login - Lidarr"
-        negative: true
 
-      - type: status
-        status:
-          - 200
 # digest: 4a0a00473045022100fab47881affa84f352733406dc4bc753e2eb692b00caef29414a7330f696a3ba022074b3827e9cdb6153be6ea48e01e41c32aebf219a47df66276657f61194300ce5:922c64590222798bb761d5b6d8e72950

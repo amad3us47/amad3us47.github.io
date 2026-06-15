@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dalaho-ssrf2
 
 info:
@@ -226,7 +227,7 @@ http:
        - 'cgi-bin/redirect.cgi?{{interactsh-url}}'
        - 'out?{{interactsh-url}}'
        - 'login?to=http://{{interactsh-url}}'
-	   
+
     matchers:
       - type: word
         part: interactsh_protocol

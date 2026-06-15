@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: smartsense-default-login
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://docs.cloudera.com/HDPDocuments/SS1/SmartSense-1.2.2/bk_smartsense_admin/content/manual_server_login.html
   tags: hortonworks,smartsense,default-login
 
-requests:
+http:
   - raw:
       - |
         GET /apt/v1/context HTTP/1.1

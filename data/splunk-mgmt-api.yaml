@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: splunk-mgmt-api
 
 info:
@@ -11,7 +12,7 @@ info:
     - https://docs.splunk.com/Documentation/Splunk/9.0.3/RESTREF/RESTsystem
   tags: splunk,api
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

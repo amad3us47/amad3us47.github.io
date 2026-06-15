@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cip4-folder-download-widget-834bce8ccb850ec6faa2c3a419e9a347
 
 info:

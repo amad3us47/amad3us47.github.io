@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: facebook-button-plugin-bd9325b9c760a5d79980dfa92a90cebe
 
 info:

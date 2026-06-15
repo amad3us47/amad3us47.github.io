@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: notify
 discord:
   - id: "nuclei"
     discord_channel: "YOUR-DISCORD-CHANNEL"
@@ -5,4 +7,4 @@ discord:
     discord_format: "{{data}}"
     discord_webhook_url: "https://discord.com/api/webhooks/XXXXXXXXXXXXXXXX"
 # discord web hook url you have generated place it to discord_webhook_url:""
-# notify -provider-config notify.yaml -data custom text 
+# notify -provider-config notify.yaml -data custom text

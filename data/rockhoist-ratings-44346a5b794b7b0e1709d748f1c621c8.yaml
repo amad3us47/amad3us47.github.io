@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rockhoist-ratings-44346a5b794b7b0e1709d748f1c621c8
 
 info:

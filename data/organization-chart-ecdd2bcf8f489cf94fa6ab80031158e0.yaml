@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: organization-chart-ecdd2bcf8f489cf94fa6ab80031158e0
 
 info:

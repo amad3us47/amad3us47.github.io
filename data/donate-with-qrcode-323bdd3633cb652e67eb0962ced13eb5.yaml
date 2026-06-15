@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: donate-with-qrcode-323bdd3633cb652e67eb0962ced13eb5
 
 info:

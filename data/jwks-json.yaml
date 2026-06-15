@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jwks-json
 
 info:
@@ -6,18 +7,18 @@ info:
   severity: low
   tags: exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.well-known/jwks.json"
       - "{{BaseURL}}/jwks.json"
-    
+
     matchers-condition: and
     matchers:
       - type: status
         status:
           - 200
-          
+
       - type: word
         words:
           - '"keys":'

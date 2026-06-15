@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: itop-panel2
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: panel,itop
 
 
-requests:
+http:
   - raw:
       - |
         GET /simple/pages/UI.php HTTP/1.1

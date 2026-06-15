@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-wpcourses-info-disclosure
 info:
   name: WordPress WP Courses Plugin Information Disclosure
@@ -8,10 +9,10 @@ info:
   reference: |
     - https://www.exploit-db.com/exploits/48910
     - https://www.redtimmy.com/critical-information-disclosure-on-wp-courses-plugin-exposes-private-course-videos-and-materials/
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

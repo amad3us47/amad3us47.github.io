@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lanproxy-workflow
 
 info:
   name: Lanproxy Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all Lanproxy related nuclei templates on a given target.
 workflows:
   - template: http/technologies/fingerprinthub-web-fingerprints.yaml

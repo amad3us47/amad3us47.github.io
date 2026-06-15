@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-siebel-xss
 info:
   name: Oracle Siebel Loyalty 8.1 - XSS Vulnerability
@@ -5,10 +6,10 @@ info:
   severity: medium
   reference: https://packetstormsecurity.com/files/86721/Oracle-Siebel-Loyalty-8.1-Cross-Site-Scripting.html
   tags: xss,oracle
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

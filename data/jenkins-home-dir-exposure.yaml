@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: jenkins-home-dir-exposure
 info:
   id: jenkins-home-dir-exposure
   name: Jenkins Home Directory Exposure - Detect
   author: OpenAI
   description: Template to detect Jenkins home directory exposure
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

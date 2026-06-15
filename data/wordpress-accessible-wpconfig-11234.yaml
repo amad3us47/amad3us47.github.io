@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-accessible-wpconfig
 info:
   name: WordPress accessible wp-config
   author: Kiblyn11 & zomsop82 & madrobot
   severity: high
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-config.php'

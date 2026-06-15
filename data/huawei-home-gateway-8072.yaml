@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: huawei-home-gateway
 
 info:
@@ -8,7 +9,7 @@ info:
   metadata:
     shodan-query: 'http.title:"HUAWEI Home Gateway HG658d"'
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

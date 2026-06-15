@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-storage-trusted-access-disabled
 info:
   name: Azure Storage Trusted Microsoft Services Access Disabled

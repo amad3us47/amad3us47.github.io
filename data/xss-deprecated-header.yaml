@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xss-deprecated-header
 
 info:
@@ -27,16 +28,5 @@ http:
         part: header
         regex:
           - "(?i)x-xss-protection: 0"
-        negative: true
 
-      - type: regex
-        part: header
-        regex:
-          - "(?i)x-xss-protection: 1+"
-
-    extractors:
-      - type: kval
-        part: header
-        kval:
-          - x_xss_protection
 # digest: 4a0a00473045022100b743803e263c76218a25c17e35653994e5031450b736caaf8de40fed94ae0e6402202bfcf67e497100ab99f58b335b037142188806590ff3df931021a4796631bbb7:922c64590222798bb761d5b6d8e72950

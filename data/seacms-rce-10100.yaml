@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: seacms-rce
 info:
   name: SeaCMS V6.4.5 RCE
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://mengsec.com/2018/08/06/SeaCMS-v6-45前台代码执行漏洞分析/
   tags: seacms,rce
-requests:
+http:
   - method: POST
     path:
       - '{{BaseURL}}/search.php?searchtype=5'

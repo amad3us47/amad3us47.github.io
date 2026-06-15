@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: amazon-affiliate-link-localizer-3e6b0794d274a22198ec583b9db374b8
 
 info:

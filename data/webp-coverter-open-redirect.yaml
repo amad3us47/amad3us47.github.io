@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: webp-coverter-open-redirect
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://wpscan.com/vulnerability/f3c0a155-9563-4533-97d4-03b9bac83164
   tags: wordpress,redirect,wp-plugin,webpconverter,wp
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=https://example.com"

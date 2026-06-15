@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: OpenTSDB-RCE-2
 
 info:
@@ -8,11 +9,11 @@ info:
   reference:
       - https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/#opentsdb
       - https://packetstormsecurity.com/files/136753/OpenTSDB-Remote-Code-Execution.html
-            
-requests:
+
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: front-end-editor-7bc6f7c22b80a3393dddceb7b6c35b08
 
 info:

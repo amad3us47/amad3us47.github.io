@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: advanced-xml-reader-e1531a4bdd7c6e7df01e2824c6abf5dd
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jboss-web-console
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.exploit-db.com/ghdb/5215
   tags: jboss,unauth
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/web-console/ServerInfo.jsp"

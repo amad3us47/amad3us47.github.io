@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: blazor-server-files
 
 info:
@@ -5,7 +6,7 @@ info:
   author: Daniel_v
   severity: medium
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/_framework/blazor.boot.json'
@@ -14,7 +15,7 @@ requests:
       - '{{BaseURL}}/_framework/_bin/WebAssembly.Bindings.dll'
 
     matchers-condition: and
-    matchers:     
+    matchers:
       - type: word
         words:
           - 'cacheBootResources:'
@@ -22,7 +23,7 @@ requests:
           - 'debugBuild'
           - 'blazorLogical'
           - 'asm'
-      
+
       - type: status
         status:
           - 200

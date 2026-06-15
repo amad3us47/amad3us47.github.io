@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: all_in_one_carousel-ae9fd60ca36c8df2c303aa1504aa68c1
 
 info:

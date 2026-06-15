@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: custom-registration-form-builder-with-submission-manager-ffedc30c7670effca7512067609fd2cc
 
 info:

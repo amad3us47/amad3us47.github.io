@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tinymce-thumbnail-gallery-be95cb11205ecae4c43acf03af89f584
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-square
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: token-spray,square
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://connect.squareup.com/v2/locations"
@@ -22,4 +23,3 @@ requests:
         part: body
         words:
           - 'errors'
-        negative: true

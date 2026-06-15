@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: 001-prime-strategy-translate-accelerator-d48103ed59fd647aae8b2238dfa99a5c
 
 info:

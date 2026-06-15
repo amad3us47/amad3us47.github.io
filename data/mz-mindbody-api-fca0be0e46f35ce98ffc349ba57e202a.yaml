@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mz-mindbody-api-fca0be0e46f35ce98ffc349ba57e202a
 
 info:

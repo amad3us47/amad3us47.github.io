@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nd-stats-for-envato-sales-by-item-8ecbeaca0fe7e87b742f58c9687cf108
 
 info:

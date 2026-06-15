@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauthenticated-varnish-cache-purge
 info:
   name: Varnish Unauthenticated Cache Purge
@@ -8,7 +9,7 @@ info:
     - https://book.varnish-software.com/4.0/chapters/Cache_Invalidation.html
     - https://hackerone.com/reports/154278
   tags: varnish,misconfig,cache
-requests:
+http:
   - method: PURGE
     path:
       - "{{BaseURL}}"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: garees-flickr-feed-b02ffe740f985269ccde7d97bba1139a
 
 info:

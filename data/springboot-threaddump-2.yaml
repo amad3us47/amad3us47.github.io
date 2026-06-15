@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-threaddump2
 
 info:
@@ -9,7 +10,7 @@ info:
   tags: springboot
 
 
-requests:
+http:
   - raw:
       - |
         GET /actuator/threaddump HTTP/1.1

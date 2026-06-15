@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauth-ftp
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://tools.ietf.org/html/rfc2577
   tags: network,ftp
 
-network:
+tcp:
   - inputs:
       - data: "USER anonymous\r\nPASS nuclei\r\n"
 

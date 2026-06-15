@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: beautiful-and-responsive-cookie-consent-f546b6b73b7ee19c4134867c08dcab8b
 
 info:

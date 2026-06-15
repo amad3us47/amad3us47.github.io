@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: supermicro-default-login
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.gearprimer.com/wiki/supermicro-ipmi-default-username-pasword/
   tags: supermicro,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /cgi/login.cgi HTTP/1.1

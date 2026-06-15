@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: database-create-json-exposure
 
 info:
@@ -7,7 +8,7 @@ info:
   description: |
     This template checks for the presence of the `/database.create.json` file, which may contain sensitive information.
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/database.create.json"

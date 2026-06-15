@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nextgen-smooth-gallery-ed0c98ab2ab447ea418bda9028bc922e
 
 info:

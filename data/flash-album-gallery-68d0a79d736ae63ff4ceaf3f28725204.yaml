@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: flash-album-gallery-68d0a79d736ae63ff4ceaf3f28725204
 
 info:

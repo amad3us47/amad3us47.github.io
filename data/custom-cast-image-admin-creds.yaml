@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: custom-cast-image-admin-creds
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://
   tags: default-login
 
-requests:
+http:
   - raw:
       - |-
         POST /imaging/login/api/auth HTTP/1.1

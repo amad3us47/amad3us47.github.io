@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kubernetes-pods-api
 info:
   name: Kubernetes Pods API
@@ -6,7 +7,7 @@ info:
   description: When the service port is available, anyone can execute commands inside the container. See https://github.com/officialhocc/Kubernetes-Kubelet-RCE for inspiration.
   reference: https://blog.binaryedge.io/2018/12/06/kubernetes-being-hijacked-worldwide/
   tags: k8,unauth,kubernetes,devops
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/pods'

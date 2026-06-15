@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: detect-addpac-voip-gateway
 info:
   name: Detect AddPac Technology GSM VoIP Gateway
@@ -6,7 +7,7 @@ info:
   reference:
     - http://www.addpac.com/addpac_eng2/down.php?file=505_f16.pdf
   tags: network,addpac,apos,voip
-network:
+tcp:
   - inputs:
       - data: '00'
         type: hex

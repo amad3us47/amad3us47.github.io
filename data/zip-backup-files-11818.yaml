@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zip-backup-files
 info:
   name: Compressed Web File
   author: Toufik Airane,dwisiswant0
   severity: medium
   tags: exposure,backup
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/{{Hostname}}.7z"

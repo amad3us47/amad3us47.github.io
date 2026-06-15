@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2021-28277
 
 info:
@@ -11,7 +12,7 @@ info:
     fofa-query: app="Landray OA system"
   tags: landray,lfi,cnvd,cnvd2021
 
-requests:
+http:
   - raw:
       - |
         POST /sys/ui/extend/varkind/custom.jsp HTTP/1.1

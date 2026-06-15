@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: s3bubble-amazon-s3-html-5-video-with-adverts-plugin-d41d8cd98f00b204e9800998ecf8427e
 
 info:
@@ -12,7 +13,7 @@ info:
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/s3bubble-amazon-s3-html-5-video-with-adverts/"
     google-query: inurl:"/wp-content/plugins/s3bubble-amazon-s3-html-5-video-with-adverts/"

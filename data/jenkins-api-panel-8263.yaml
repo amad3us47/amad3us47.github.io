@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jenkins-api-panel
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Try to detect the presence of a Jenkins API instance via the API default XML endpoint
   tags: panel,api,jenkins
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/xml"

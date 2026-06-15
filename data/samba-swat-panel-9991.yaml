@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: samba-swat-panel
 info:
   name: Samba SWAT panel
   author: PR3R00T
   severity: info
   tags: panel,samba
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

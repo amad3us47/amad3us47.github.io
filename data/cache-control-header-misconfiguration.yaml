@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cache-control-header-misconfiguration
 
 info:
@@ -11,7 +12,7 @@ http:
   - method: GET
     path:
       - "{{BaseURL}}"
-  
+
     matchers:
       - type: regex
         name: cache-control header

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ftpconfig
 info:
   name: Atom remote-ssh ftpconfig
@@ -5,7 +6,7 @@ info:
   description: Created by remote-ssh for Atom, contains SFTP/SSH server details and credentials
   severity: high
   tags: atom,ftp,config
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.ftpconfig"

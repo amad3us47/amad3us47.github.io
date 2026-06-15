@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: disqus-comment-system-e73e1ecb0ba8ffad27fc277d6c4808f9
 
 info:

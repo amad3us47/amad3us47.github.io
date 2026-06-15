@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: movable-workflow
 
 info:
   name: Movable Type Security Checks
   author: dhiyaneshDk
+  severity: info
   description: A simple workflow that runs all Movable related nuclei templates on a given target.
 workflows:
   - template: http/technologies/default-movable-page.yaml

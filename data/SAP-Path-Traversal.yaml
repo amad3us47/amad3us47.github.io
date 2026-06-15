@@ -1,11 +1,12 @@
-id: SAP Path Traversal
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: SAP-Path-Traversal
 
 info:
   name: SAP Path Traversal
   author: Clark
-  severity: meduim
+  severity: medium
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/scheduler/ui/js/?\&..\\\&..\\\&..\\\version.txt'
@@ -18,7 +19,7 @@ requests:
         words:
           - "Build"
         part: body
-        
+
          - type: word
         words:
           - 'text/plain'

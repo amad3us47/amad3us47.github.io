@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xenmobile-login
 info:
   name: Xenmobile Console Logon
@@ -5,10 +6,10 @@ info:
   severity: info
   reference: https://www.exploit-db.com/ghdb/6675
   tags: panel
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

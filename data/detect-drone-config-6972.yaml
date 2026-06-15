@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: detect-drone-config
 info:
   name: Drone - Configuration Detection
@@ -7,7 +8,7 @@ info:
   reference:
     - https://github.com/drone/drone
   tags: config,exposure,drone
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.drone.yml"

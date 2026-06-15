@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: inspur-clusterengine-default-login
 
 info:
@@ -10,7 +11,7 @@ info:
     fofa-query: title="TSCEV4.0"
   tags: inspur,clusterengine,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /login HTTP/1.1

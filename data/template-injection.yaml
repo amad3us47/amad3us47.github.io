@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 # info to search signature
 id: template-injection-01
-type: fuzz
 info:
   name: Template Injection
-  risk: High
+  author: unknown
+  severity: info
 
 # origin: gonna come from Burp
 payloads:
@@ -12,25 +13,10 @@ payloads:
     - '<%= 3 * 313373133731337 %>'
     - '#{ 3 * 313373133731337 }'
 
-requests:
+http:
   - generators:
       - Query("{{.payload}}")
       - Body("{{.payload}}")
       - Path("{{.payload}}", "*")
       - Cookie("{{.payload}}", "*")
     # if response have result of template code above
-    detections:
-      - >-
-        StringSearch("response", "940119401194011") && (StringCount("response", "940119401194011") > StringCount("oresponse", "940119401194011"))
-  # another request builder with URL encode the payload
-  - encoding: URL()
-    generators:
-      - Query("{{.payload}}")
-      - Body("{{.payload}}")
-      - Path("{{.payload}}", "*")
-      - Cookie("{{.payload}}", "*")
-    # if response have result of template code above
-    detections:
-      - >-
-        StringSearch("response", "940119401194011") && (StringCount("response", "940119401194011") > StringCount("oresponse", "940119401194011"))
-

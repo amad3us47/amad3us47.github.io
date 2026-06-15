@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-hana-xsengine-panel
 info:
   name: SAP HANA XSEngine Admin Panel
   author: PR3R00T
   severity: info
   tags: panel,sap
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/sap/hana/xs/formLogin/login.html"

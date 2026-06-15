@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-merge-metadata-servlet
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: aem
 
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/libs/dam/merge/metadata.html?path=/etc&.ico'

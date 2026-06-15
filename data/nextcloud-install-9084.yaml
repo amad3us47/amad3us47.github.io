@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nextcloud-install
 info:
   name: Nextcloud Exposed Installation
@@ -6,7 +7,7 @@ info:
   reference:
     - https://docs.nextcloud.com/server/latest/admin_manual/installation/installation_wizard.html
   tags: tech,nextcloud,storage
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

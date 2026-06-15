@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CVE-2021-44451
 info:
   name: Apache Superset Default Login
@@ -11,7 +12,7 @@ info:
   tags: apache, default-login
   classification:
     cve-id: CVE-2021-44451
-requests:
+http:
   - raw:
       - |
         GET /login/ HTTP/1.1

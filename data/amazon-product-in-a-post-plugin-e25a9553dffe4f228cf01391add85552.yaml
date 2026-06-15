@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: amazon-product-in-a-post-plugin-e25a9553dffe4f228cf01391add85552
 
 info:

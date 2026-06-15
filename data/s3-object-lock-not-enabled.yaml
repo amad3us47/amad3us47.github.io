@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: s3-object-lock-not-enabled
 info:
   name: CloudTrail S3 Object Lock

@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Grafana_Auth
 
 info:
   name: Grafana basic auth
   author: excis3
-  severity: Critical
+  severity: critical
   description: Grafana default credentials
   tags: Grafana
 
-requests:
+http:
   - raw:
       - |
         GET /api/admin/settings HTTP/1.1
@@ -15,14 +16,14 @@ requests:
         Accept: application/json
         Content-Type: application/json
         Authorization: Basic YWRtaW46YWRtaW4=
-      
+
     matchers-condition: and
     matchers:
       - type: word
         part: body
         words:
           - 'instance_name'
-  
+
       - type: status
         status:
-          - 200 
+          - 200

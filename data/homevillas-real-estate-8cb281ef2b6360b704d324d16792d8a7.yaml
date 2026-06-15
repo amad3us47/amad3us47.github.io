@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: homevillas-real-estate-8cb281ef2b6360b704d324d16792d8a7
 
 info:

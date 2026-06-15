@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: enable-https-protocol
 
 info:
@@ -26,13 +27,6 @@ file:
         words:
           - "<webgui>"
           - "<protocol>https</protocol>"
-        condition: and
-        negative: true
-
-      - type: word
-        words:
-          - "<pfsense>"
-          - "<system>"
         condition: and
 
 # Enhanced by md on 2023/05/04

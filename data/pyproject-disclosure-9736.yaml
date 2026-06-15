@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pyproject-disclosure
 info:
   name: Pyproject Disclosure
@@ -6,7 +7,7 @@ info:
   reference:
     - https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/pyproject-disclosure.json
   tags: exposure,files
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/pyproject.toml"

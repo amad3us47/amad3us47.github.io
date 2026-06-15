@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: influxdb-detect
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"InfluxDB - Admin Interface"
   tags: tech,influxdb
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

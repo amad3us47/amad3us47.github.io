@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: real-cookie-banner-1dba91bdd70cfd02be29db46dcf540b8
 
 info:

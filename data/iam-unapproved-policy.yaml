@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: iam-unapproved-policy
 info:
   name: Unapproved IAM Policy Attachments
@@ -28,11 +29,5 @@ code:
         part: body
         words:
           - '"AttachmentCount": 0'
-        negative: true
 
-    extractors:
-
-      - type: dsl
-        dsl:
-          - '"Unapproved IAM policy is used within your AWS cloud account"'
 # digest: 4b0a00483046022100cdd6b0920f4ce3c606a33251020083ad789e1ae54aa7687c8396b8c37d8f237a022100ecfd880380fd88e62ec2dcd015543d9be876e70e84894d446b028405fd1c167b:922c64590222798bb761d5b6d8e72950

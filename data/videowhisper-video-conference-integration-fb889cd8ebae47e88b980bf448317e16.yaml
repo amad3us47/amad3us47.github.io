@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: videowhisper-video-conference-integration-fb889cd8ebae47e88b980bf448317e16
 
 info:

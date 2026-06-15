@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fastjson-1-2-24-rce
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://github.com/wyzxxz/fastjson_rce_tool
   tags: fastjson,rce,deserialization,oast
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

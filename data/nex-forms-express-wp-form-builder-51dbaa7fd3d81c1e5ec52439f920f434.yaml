@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nex-forms-express-wp-form-builder-51dbaa7fd3d81c1e5ec52439f920f434
 
 info:

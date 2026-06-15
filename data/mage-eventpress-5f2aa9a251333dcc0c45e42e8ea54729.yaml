@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mage-eventpress-5f2aa9a251333dcc0c45e42e8ea54729
 
 info:

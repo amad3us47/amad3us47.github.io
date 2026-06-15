@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lvmeng-uts-disclosure
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Lvmeng UTS was discovered.
   tags: config,exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/webapi/v1/system/accountmanage/account"

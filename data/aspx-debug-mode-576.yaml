@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aspx-debug-mode
 
 info:
@@ -7,10 +8,10 @@ info:
   reference: https://portswigger.net/kb/issues/00100800_asp-net-debugging-enabled
   tags: debug
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

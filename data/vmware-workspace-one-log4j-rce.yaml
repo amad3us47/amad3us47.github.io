@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-workspace-one-log4j-rce
 
 info:
@@ -8,7 +9,7 @@ info:
   severity: critical
   tags: log4j,oast
 
-requests:
+http:
   - raw:
       - |
         POST /SAAS/auth/login/userstore HTTP/1.1

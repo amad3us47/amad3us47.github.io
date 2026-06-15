@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2020-23735
 info:
   name: Xxunchi Local File read
@@ -6,10 +7,10 @@ info:
   description: Xunyou cms has an arbitrary file reading vulnerability. Attackers can use vulnerabilities to obtain sensitive information.
   reference: https://www.cnvd.org.cn/flaw/show/2025171
   tags: xunchi,lfi,cnvd
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

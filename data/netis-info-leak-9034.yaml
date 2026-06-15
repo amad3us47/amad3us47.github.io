@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netis-info-leak
 
 info:
@@ -8,7 +9,7 @@ info:
   description: A vulnerability in Netis allows remote unauthenticated users to disclose the WiFi password of the remote device.
   tags: netis,exposure
 
-requests:
+http:
   - raw:
       - |
         GET //netcore_get.cgi HTTP/1.1

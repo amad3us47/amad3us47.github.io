@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: social-networks-auto-poster-facebook-twitter-g-55c504f3a02296c647426780b1efc725
 
 info:

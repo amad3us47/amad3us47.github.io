@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aspose-ie-file-download
 info:
   name: Wordpress Aspose Importer & Exporter v1.0 Plugin File Download
@@ -8,10 +9,10 @@ info:
     - https://packetstormsecurity.com/files/131162/
     - https://wordpress.org/plugins/aspose-importer-exporter
   tags: wordpress,wp-plugin,lfi,aspose
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

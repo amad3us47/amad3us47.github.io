@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jamf-log4j-jndi-rce
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://github.com/random-robbie/jamf-log4j
   tags: rce,jndi,log4j,jamf
 
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

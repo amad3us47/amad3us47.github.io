@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yarn-manager-exposure
 info:
   name: Apache Yarn ResourceManager Exposure / Unauthenticated Access
   author: pdteam
   severity: low
   tags: panel,apache,yarn,exposure
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/cluster/cluster'

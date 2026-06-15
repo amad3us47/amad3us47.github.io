@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: favinizer-7449
 md5:
     01febf7c2bd75cd15dae3aa093d80552: atlassian crucible or fisheye
     02dd7453848213a7b5277556bcc46307: phpmyadmin (2.11.8.1) - pmd

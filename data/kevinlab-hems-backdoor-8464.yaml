@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kevinlab-hems-backdoor
 info:
   name: KevinLAB HEMS Undocumented Backdoor Account
@@ -6,10 +7,10 @@ info:
   description: The HEMS solution has an undocumented backdoor account and these sets of credentials are never exposed to the end-user and cannot be changed through any normal operation of the solution thru the RMI. Attacker could exploit this vulnerability by logging in using the backdoor account with highest privileges for administration and gain full system control. The backdoor user cannot be seen in the users settings in the admin panel and it also uses an undocumented privilege level (admin_pk=1) which allows full availability of the features that the HEMS is offering remotely.
   reference: https://www.zeroscience.mk/en/vulnerabilities/ZSL-2021-5654.php
   tags: kevinlab,default-login,backdoor
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |
@@ -32,8 +33,3 @@ requests:
       - type: word
         words:
           - '<script> alert'
-        negative: true
-      - type: word
-        words:
-          - 'PHPSESSID'
-        part: header

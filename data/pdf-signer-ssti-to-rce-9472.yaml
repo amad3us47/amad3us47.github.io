@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pdf-signer-ssti-to-rce
 info:
   name: PDF Signer v3.0 - SSTI to RCE via CSRF Cookie
   author: madrobot
   severity: high
   tags: ssti,rce,csrf
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

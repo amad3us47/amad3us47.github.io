@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-gdpr-compliance-2dc21fef23eca745f1c91bfcf6263fa5
 
 info:

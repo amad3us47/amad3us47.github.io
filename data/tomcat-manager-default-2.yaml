@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tomcat-manager-default2
 info:
   name: tomcat-manager-default-password
@@ -6,7 +7,7 @@ info:
   tags: tomcat,apache,default-login
 
 
-requests:
+http:
   - raw:
       - |
         GET /manager/html HTTP/1.1

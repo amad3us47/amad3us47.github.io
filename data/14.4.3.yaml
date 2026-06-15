@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ASVS-4-0-3-V14-4-3
 
 info:
@@ -26,13 +27,3 @@ http:
       - type: word
         name: 'Content Security Policy (CSP) header does not exist.'
         part: header
-        negative: true
-        words:
-          - 'Content-Security-Policy:'
-          - 'Content-Security-Policy-Report-Only:'
-      - type: regex
-        name: 'Content Security Policy (CSP) Meta Tag does not exist.'
-        part: body
-        negative: true
-        regex:
-          - (?i)<meta\s+http-equiv\s*=\s*["'](Content-Security-Policy|Content-Security-Policy-Report-Only)["'].*\/?>

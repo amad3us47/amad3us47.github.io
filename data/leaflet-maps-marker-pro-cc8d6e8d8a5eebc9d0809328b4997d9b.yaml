@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: leaflet-maps-marker-pro-cc8d6e8d8a5eebc9d0809328b4997d9b
 
 info:

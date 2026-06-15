@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: parcel-tracker-ecourier-1fbda1a354e4e1e6f5f905808cc4736f
 
 info:

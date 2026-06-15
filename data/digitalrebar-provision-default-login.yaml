@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: digitalrebar-provision-default-login
 
 info:
@@ -8,7 +9,7 @@ info:
   severity: high
   tags: rackn,digitalrebar,default-login
 
-requests:
+http:
   - raw:
       - |
         GET /api/v3/users HTTP/1.1
@@ -39,4 +40,3 @@ requests:
           - 'Name'
           - 'Secret'
         condition: and
-

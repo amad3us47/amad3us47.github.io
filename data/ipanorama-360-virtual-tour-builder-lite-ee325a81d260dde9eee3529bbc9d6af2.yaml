@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ipanorama-360-virtual-tour-builder-lite-ee325a81d260dde9eee3529bbc9d6af2
 
 info:

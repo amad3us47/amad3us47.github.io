@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: servicedesk-login-panel1
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: servicedesk,confluence,jira,panel
 
 
-requests:
+http:
   - raw:
       - |
         GET /servicedesk/customer/user/login HTTP/1.1

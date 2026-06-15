@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: soundy-background-music-e85e1da2ae5baf0e7ce12cd8c68d008c
 
 info:

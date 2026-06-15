@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jenkins-version
 
 info:
@@ -11,7 +12,7 @@ info:
   description: Obtain Jenkins Version
   tags: tech,jenkins,api
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/whoAmI/"
@@ -33,4 +34,3 @@ requests:
         group: 1
         regex:
           - "X-Jenkins:.*([0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3})"
-

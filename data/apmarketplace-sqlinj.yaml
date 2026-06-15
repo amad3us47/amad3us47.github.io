@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apmarketplace-sqlinj
 
 info:
   name: PrestaShop Ap Marketplace SQL Injection
   author: mastercho
-  severity: Critical
+  severity: critical
   description: |
     The AP Marketplace Prestashop module is vulnerable to Blind/Time SQL Injection. An attacker can exploit this vulnerability to execute arbitrary SQL queries on the underlying database.
   reference:

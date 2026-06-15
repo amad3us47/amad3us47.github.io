@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xss-vuln-params
 
 info:
-  name: detect possible XSS parameters 
+  name: detect possible XSS parameters
   author: ayadim
   severity: info
   tags: file,bbh,bbh-xss,bbh-check1

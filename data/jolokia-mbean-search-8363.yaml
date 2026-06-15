@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jolokia-mbean-search
 info:
   name: Jolokia - Searching MBeans
@@ -8,7 +9,7 @@ info:
     - https://github.com/laluka/jolokia-exploitation-toolkit
   tags: jolokia,springboot,mbean,tomcat
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/jolokia/search/*:test=test"

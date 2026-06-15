@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: icinga-web-login
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"Icinga Web 2 Login"
   tags: panel,icinga
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/authentication/login'

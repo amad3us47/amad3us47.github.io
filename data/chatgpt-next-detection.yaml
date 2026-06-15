@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: chatgpt-next-detection
 info:
   id: chatgpt-next-detection
   name: ChatGPT-next Detection - Detect
   author: drfabiocastro
   description: Template to detect the presence of ChatGPT-next
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

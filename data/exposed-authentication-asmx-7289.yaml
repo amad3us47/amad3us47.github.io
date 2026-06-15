@@ -1,11 +1,12 @@
-id: exposed-authentication.asmx
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: exposed-authentication-asmx
 info:
   name: Exposed Authentication.asmx
   author: DhiyaneshDk
   severity: low
   reference: https://www.exploit-db.com/ghdb/6604
   tags: config,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_vti_bin/Authentication.asmx?op=Mode"

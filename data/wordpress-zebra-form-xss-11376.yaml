@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-zebra-form-xss
 info:
   name: Wordpress Zebra Form XSS
@@ -5,10 +6,10 @@ info:
   severity: medium
   reference: https://blog.wpscan.com/2021/02/15/zebra-form-xss-wordpress-vulnerability-affects-multiple-plugins.html
   tags: wordpress,xss
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

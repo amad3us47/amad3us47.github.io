@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sidekiq-dashboard
 info:
   name: sidekiq-dashboard
   author: dhiyaneshDK
   severity: medium
   tags: unauth
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/sidekiq"

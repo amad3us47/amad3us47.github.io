@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hadoop-unauth
 info:
   name: Apache Hadoop Unauth
   author: pdteam
   severity: low
   tags: apache,hadoop,unauth
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/ws/v1/cluster/info'

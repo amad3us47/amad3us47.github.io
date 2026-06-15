@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xml-external-entities-Validator-SchemaFactory
 
 info:
@@ -11,7 +12,7 @@ info:
 file:
   - extensions:
     - java
-    
+
     matchers-condition: and
     matchers:
       - type: regex
@@ -26,5 +27,3 @@ file:
         regex:
           - '.+\.setProperty\(XMLConstants\.ACCESS_EXTERNAL_DTD,\s*\"\"\);'
           - '.+\.setProperty\(XMLConstants\.ACCESS_EXTERNAL_SCHEMA,\s*\"\"\);'
-        negative: true
-        condition: and

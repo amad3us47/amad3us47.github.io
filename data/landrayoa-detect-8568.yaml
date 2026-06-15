@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: landrayoa-detect
 info:
   name: LandrayOA detect
   author: YanYun
   severity: info
   tags: tech,landrayoa
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/login.jsp'

@@ -1,6 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: broken-links
 info:
   name: Broken Links Finder
+  author: unknown
   description: Use this template to find broken links on a website
   severity: low
 author: Mr.Bobo HP
@@ -9,7 +11,7 @@ tags:
   - broken links
   - http
 
-requests:
+http:
   - method: GET
     path:
       - /

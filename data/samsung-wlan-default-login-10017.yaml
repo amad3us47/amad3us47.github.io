@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: samsung-wlan-default-login
 info:
   name: Samsung Wlan AP (WEA453e) Default Login
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   tags: samsung,default-login
-requests:
+http:
   - raw:
       - |
         POST /main.ehp HTTP/1.1

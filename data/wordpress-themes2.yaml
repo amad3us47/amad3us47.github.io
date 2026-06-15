@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-themes-detect
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: fuzz,wordpress
 
-requests:
+http:
   - raw:
       - |
         GET /wp-content/themes/{{theme}}/readme.txt HTTP/1.1

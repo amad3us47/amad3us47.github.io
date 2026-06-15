@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: essential-addons-for-elementor-lite-4266d43aac31fbaed86f66db6cdaec9d
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ruijie-networks-rce
 info:
   name: Ruijie Networks-EWEB Network Management System RCE
@@ -6,10 +7,10 @@ info:
   reference: https://github.com/yumusb/EgGateWayGetShell_py/blob/main/eg.py
   #  vendor: https://www.ruijienetworks.com
   tags: ruijie,rce
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

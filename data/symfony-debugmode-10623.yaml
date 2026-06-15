@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: symfony-debugmode
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://github.com/synacktiv/eos
   tags: symfony,debug
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

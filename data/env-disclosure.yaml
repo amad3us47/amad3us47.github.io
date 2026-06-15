@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: env-disclose
 
 info:
@@ -7,7 +8,7 @@ info:
   description: This Template checks disclosing secret information via /assets/env.js
   tags: env, env.js, js
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/assets/env.js'

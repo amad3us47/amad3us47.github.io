@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: osint-extractor-email
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Extração de EMAILS via expressão regular
   tags: email,extração,osint
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

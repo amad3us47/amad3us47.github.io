@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mailru-connect-csp-bypass
 
 info:
@@ -30,26 +31,5 @@ headless:
   - steps:
       - action: navigate
         args:
-          url: "{{BaseURL}}"
 
-      - action: waitdialog
-        name: mailru_connect_csp_xss
-        args:
-          max-duration: 5s
-
-    payloads:
-      injection:
-        - '<script src="https://connect.mail.ru/share_count?url_list=x&callback=1&func=alert"></script>'
-
-    fuzzing:
-      - part: query
-        type: replace
-        mode: single
-        fuzz:
-          - "{{url_encode(injection)}}"
-
-    matchers:
-      - type: dsl
-        dsl:
-          - "mailru_connect_csp_xss == true"
 # digest: 490a004630440220047b23ebefd331bb053177c3694a01b768521c53a1de2fe3841f70cc5094525902204450faa3de16abe8ea8f720d8b5395dc5f291ea1452e980c686433458e7f7cfd:922c64590222798bb761d5b6d8e72950

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: valid-gmail-checker
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://github.com/dievus/geeMailUserFinder
 
 self-contained: true
-requests:
+http:
   - method: HEAD
     path:
       - "https://mail.google.com/mail/gxlu?email={{email}}"

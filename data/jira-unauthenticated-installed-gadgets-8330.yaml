@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jira-unauthenticated-installed-gadgets
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Some Jira instances allow to read the installed gadgets (sometimes it's also possible to read config xml file for some gadgets)
   tags: atlassian,jira
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/rest/config/1.0/directory"

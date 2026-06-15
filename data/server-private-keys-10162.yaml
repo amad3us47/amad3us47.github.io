@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: server-private-keys
 info:
   name: Detect Private SSH and TLS Keys
   author: geeknik
   severity: high
   tags: config,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/localhost.key"

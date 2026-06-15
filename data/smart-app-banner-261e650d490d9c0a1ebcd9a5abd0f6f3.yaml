@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: smart-app-banner-261e650d490d9c0a1ebcd9a5abd0f6f3
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kubernetes-version
 info:
   name: Kubernetes Version Exposure
@@ -5,7 +6,7 @@ info:
   description: Searches for exposed Kubernetes API servers which return version information unauthenticated
   severity: info
   tags: tech,k8s,kubernetes,devops
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/version"

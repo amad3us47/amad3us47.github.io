@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: solar-log-authbypass
 info:
   name: Solar-Log 500 2.8.2 - Incorrect Access Control
@@ -6,10 +7,10 @@ info:
   description: The web administration server for Solar-Log 500 all versions prior to 2.8.2 Build 52 does not require authentication, which allows arbitrary remote attackers>
   reference: https://www.exploit-db.com/exploits/49986
   tags: solarlog,auth-bypass
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

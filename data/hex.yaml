@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hex-network-request
 
 info:
@@ -5,8 +6,8 @@ info:
   author: pdteam
   severity: info
 
-network:
-  - host: 
+tcp:
+  - host:
       - "{{Hostname}}"
     inputs:
       - data: "50494e47"

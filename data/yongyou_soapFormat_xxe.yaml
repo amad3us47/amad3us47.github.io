@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yongyou_soapFormat_xxe
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: yongyou,xxe
 
-requests:
+http:
   - raw:
       - |
         POST /uapws/soapFormat.ajax HTTP/1.1
@@ -29,7 +30,7 @@ requests:
         </soap:Body>
         </soap:Envelope>%0a
 
-        
+
     matchers-condition: and
     matchers:
       - type: status

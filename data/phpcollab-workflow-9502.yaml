@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phpcollab-workflow
 
 info:
   name: PhpCollab Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all PhpCollab related nuclei templates on a given target.
 
 workflows:

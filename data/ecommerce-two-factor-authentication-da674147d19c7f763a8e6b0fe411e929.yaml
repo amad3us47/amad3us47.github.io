@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ecommerce-two-factor-authentication-da674147d19c7f763a8e6b0fe411e929
 
 info:

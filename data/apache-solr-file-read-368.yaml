@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-solr-file-read
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://twitter.com/sec715/status/1373472323538362371
   tags: apache,solr,lfi
 
-requests:
+http:
   - raw:
       - |
         GET /solr/admin/cores?wt=json HTTP/1.1

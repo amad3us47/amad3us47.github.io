@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ckan-dom-based-xss
 info:
   name: CKAN DOM Based XSS
@@ -6,10 +7,10 @@ info:
   description: CKAN uses the old jQuery Sparkle library which is vulnerable to DOM Based XSS.
   tags: dom,xss
   reference: https://github.com/ckan/ckan/blob/b9e45e2723d4abd70fa72b16ec4a0bebc795c56b/ckan/public/base/javascript/view-filters.js#L27
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

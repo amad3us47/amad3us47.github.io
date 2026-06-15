@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkcmf-arbitrary-code-execution
 info:
   name: ThinkCMF Arbitrary code execution
@@ -5,10 +6,10 @@ info:
   severity: high
   reference: https://www.shuzhiduo.com/A/l1dygr36Je/
   tags: thinkcmf
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

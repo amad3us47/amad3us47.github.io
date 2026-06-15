@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: toshiba-topaccess-webserver
 
 info:
-  name: Toshiba TopAccess Web Server 
+  name: Toshiba TopAccess Web Server
   author: alexrydzak
   severity: info
   tags: toshiba,web,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?MAIN=TOPACCESS"

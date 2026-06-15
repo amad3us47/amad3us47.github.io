@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: etcd-scan
 info:
   name: Etcd Scan
   author: sharath
   severity: info
   description: Scans all open urls of etcd
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/version"
@@ -16,7 +17,7 @@ requests:
       - type: word
         part: body
         words:
-          - "etcdserver"          
+          - "etcdserver"
   - method: GET
     path:
       - "{{BaseURL}}/v2/keys/"
@@ -28,8 +29,8 @@ requests:
       - type: word
         part: body
         words:
-          - "node" 
-          - "key" 
+          - "node"
+          - "key"
   - method: GET
     path:
       - "{{BaseURL}}/v2/keys/?recursive=true"
@@ -41,5 +42,5 @@ requests:
       - type: word
         part: body
         words:
-          - "node" 
-          - "key"  
+          - "node"
+          - "key"

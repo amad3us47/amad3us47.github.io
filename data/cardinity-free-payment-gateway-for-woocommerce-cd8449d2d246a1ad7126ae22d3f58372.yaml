@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cardinity-free-payment-gateway-for-woocommerce-cd8449d2d246a1ad7126ae22d3f58372
 
 info:

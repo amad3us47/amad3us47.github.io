@@ -1,10 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: china-telecom-f460-gateway-rce
 
 info:
   name: 电信天翼网关 F460 web_shell_cmd.gch 远程命令执行漏洞
   author: jijue
   severity: critical
-  verified: true
   description: |
     2014 年 3 月 3 日，Rapid7 团队发布了中兴 F460 / F660 后门信息[1]，
     任何可以访问设备的用户都可以直接访问一个命令执行的 Web 界面，并以 root 权限执行任意命令。
@@ -12,11 +12,3 @@ info:
     其他型号也存在此问题（主要有 F412、F420、F460、F660、ZXA10F460 等）。
     且描述中的两个型号也不一定存在此漏洞，可能与电信装机时的配置有关
     title="F460"
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /web_shell_cmd.gch
-    expression: response.status == 200 && response.body.bcontains(b'please input shell command:')
-expression: r0()

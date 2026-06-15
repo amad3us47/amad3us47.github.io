@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dell-idrac-default-login
 info:
   name: Dell iDRAC6/7/8 Default Login
@@ -9,7 +10,7 @@ info:
   classification:
     cwe-id: CWE-798
   tags: dell,idrac,default-login
-requests:
+http:
   - raw:
       - |
         POST /data/login HTTP/1.1

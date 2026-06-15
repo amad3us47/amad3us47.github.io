@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cisco-network-config
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.exploit-db.com/ghdb/5430
   tags: config,exposure,cisco,network
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/CGI/Java/Serviceability?adapter=device.statistics.configuration"

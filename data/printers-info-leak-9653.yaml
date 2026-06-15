@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: printers-info-leak
 info:
   name: Unauthorized Printer Access
@@ -6,7 +7,7 @@ info:
   reference:
     - https://book.hacktricks.xyz/pentesting/9100-pjl
   tags: network,iot,printer
-network:
+tcp:
   - inputs:
       - data: "@PJL INFO STATUS\n"
     host:

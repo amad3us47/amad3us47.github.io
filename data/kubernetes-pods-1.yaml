@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kubernetes-pods-api1
 
 info:
@@ -9,7 +10,7 @@ info:
   tags: k8,unauth,kubernetes,devops
 
 
-requests:
+http:
   - raw:
       - |
         GET /pods HTTP/1.1

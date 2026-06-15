@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-game-panel
 info:
   name: Open Game Panel
@@ -7,10 +8,10 @@ info:
   metadata:
     shodan-query: 'http.title:"Open Game Panel"'
   tags: panel
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

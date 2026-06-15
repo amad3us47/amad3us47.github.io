@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jenkins-detect
 info:
   name: Jenkins Detection
@@ -10,7 +11,7 @@ info:
   metadata:
     shodan-query: http.favicon.hash:81586312
   tags: tech,jenkins
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

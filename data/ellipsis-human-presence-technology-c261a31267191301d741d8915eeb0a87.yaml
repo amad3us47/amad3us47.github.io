@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ellipsis-human-presence-technology-c261a31267191301d741d8915eeb0a87
 
 info:

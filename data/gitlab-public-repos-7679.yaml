@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitlab-public-repos
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://twitter.com/ldionmarcil/status/1370052344562470922
     - https://github.com/ldionmarcil/gitlab-unauth-parser
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/v4/projects"

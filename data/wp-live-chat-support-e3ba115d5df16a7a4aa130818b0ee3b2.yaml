@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-live-chat-support-e3ba115d5df16a7a4aa130818b0ee3b2
 
 info:

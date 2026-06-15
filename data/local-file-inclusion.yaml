@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: LFI
 
 info:
@@ -5,7 +6,7 @@ info:
   author: pikpikcu
   severity: high
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/etc/passwd'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hasura-graphql-psql-exec
 info:
   name: Hasura GraphQL Engine - Remote Code Execution
@@ -11,7 +12,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: hasura,rce,graphql
-requests:
+http:
   - raw:
       - |
         POST /v2/query HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mainwp-broken-links-checker-extension-66b11b32e4099661c3d6b15b6385c3a4
 
 info:

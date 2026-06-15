@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jira-unauthenticated-user-picker
 
 info:
@@ -5,11 +6,11 @@ info:
   author: medbsq
   severity: medium
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/rest/api/user/picker?query=admin"
     matchers:
       - type: status
-        status: 
+        status:
           - 200

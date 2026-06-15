@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vikbooking-b9b3e32e46d20656cc6ca2aa0ff122ea
 
 info:

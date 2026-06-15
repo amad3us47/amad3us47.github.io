@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-ultimate-csv-importer-26ffbcecfe7b2f16b8024f634d5f355f
 
 info:

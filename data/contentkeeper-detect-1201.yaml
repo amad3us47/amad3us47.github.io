@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: contentkeeper-detect
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://www.contentkeeper.com/
   tags: contentkeeper,panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cgi-bin/ck/domenu.cgi"

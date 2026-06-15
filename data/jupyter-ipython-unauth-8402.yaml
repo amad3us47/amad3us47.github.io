@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jupyter-ipython-unauth
 info:
   name: Jupyter ipython Unauth
@@ -5,7 +6,7 @@ info:
   severity: critical
   description: Unauthenticated access to Jupyter instance
   tags: unauth
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/ipython/tree"

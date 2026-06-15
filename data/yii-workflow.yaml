@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yii-workflow
 
 info:
   name: Yii Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all Yii related nuclei templates on a given target.
 workflows:
   - template: http/technologies/tech-detect.yaml

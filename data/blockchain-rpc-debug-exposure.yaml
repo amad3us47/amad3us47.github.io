@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: blockchain-rpc-debug-exposure
 
 info:
@@ -49,9 +50,5 @@ http:
           - "not available"
           - "not found"
           - "not supported"
-        negative: true
 
-      - type: status
-        status:
-          - 200
 # digest: 4b0a0048304602210088f0a2af8d5201bbf96337f6e2b7f6e3ac5f0643bba66b00467eadd2a31f18720221009e8055c49c838f2d567789dc4d3cc6c0124b720e3c121dcc7731bf3429dd4ea2:922c64590222798bb761d5b6d8e72950

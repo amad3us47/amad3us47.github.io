@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: panabit-ixcache-default-login
 info:
   name: Panabit iXCache Default Login
@@ -6,7 +7,7 @@ info:
   reference:
     - http://forum.panabit.com/thread-10830-1-1.html
   tags: ixcache,default-login,panabit
-requests:
+http:
   - raw:
       - |
         POST /login/userverify.cgi HTTP/1.1

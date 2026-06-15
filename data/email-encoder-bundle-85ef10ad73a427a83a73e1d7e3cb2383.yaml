@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: email-encoder-bundle-85ef10ad73a427a83a73e1d7e3cb2383
 
 info:

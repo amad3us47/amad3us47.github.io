@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ibm-mqseries-default-login
 info:
   name: IBM MQSeries Web Console Default Login
@@ -12,7 +13,7 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   tags: ibm,default-login
-requests:
+http:
   - raw:
       - |
         POST /ibmmq/console/j_security_check HTTP/1.1

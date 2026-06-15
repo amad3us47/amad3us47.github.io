@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xssi
 info:
   name: Cross-Site Script Inclusion (XSSI)
+  author: unknown
   severity: medium
   description: Detects potential XSSI vulnerabilities in the target
 author: qaisar afridi
 tags:
   - web
   - xssi
-requests:
+http:
 - method: GET
   path:
     - "/include"

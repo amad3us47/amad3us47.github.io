@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: acrolinx-workflow
 
 info:
   name: Acrolinx Security Checks
   author: daffainfo
+  severity: info
   description: A simple workflow that runs all Acrolinx related nuclei templates on a given target.
 workflows:
   - template: http/exposed-panels/acrolinx-dashboard.yaml

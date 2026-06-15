@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: teamcity-registration-enabled
 info:
   name: JetBrains TeamCity - Registration Enabled
@@ -15,7 +16,7 @@ info:
     verified: true
     shodan-query: http.component:"TeamCity"
   tags: misconfig,auth-bypass,teamcity,jetbrains
-requests:
+http:
   - raw:
       - |
         GET /registerUser.html?init=1 HTTP/1.1

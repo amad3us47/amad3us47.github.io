@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-wcm-suggestions-servlet
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://speakerdeck.com/0ang3el/hunting-for-security-bugs-in-aem-webapps?slide=96
   tags: aem
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/bin/wcm/contentfinder/connector/suggestions.json;%0aOJh.css?query_term=path%3a/&pre={{randstr}}'

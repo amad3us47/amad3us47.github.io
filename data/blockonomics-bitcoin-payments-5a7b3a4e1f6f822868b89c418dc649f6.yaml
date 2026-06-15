@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: blockonomics-bitcoin-payments-5a7b3a4e1f6f822868b89c418dc649f6
 
 info:

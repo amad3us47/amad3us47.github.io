@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nacl-outbound-restrict
 info:
   name: Unrestricted NACL Outbound Traffic
@@ -55,10 +56,5 @@ code:
       - type: word
         words:
           - "PortRange"
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - '"Access to the VPC subnets associated with your NACL " + naclid + " is not restricted."'
 # digest: 4b0a00483046022100ce482b003459f45bc6149998a48727c1dd29cf9783b3f357d98d64f04feb0440022100fe8cced5276dcc12d9a34f7b07db1adcd9a17398b40c7eba359ea07905738165:922c64590222798bb761d5b6d8e72950

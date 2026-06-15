@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: litespeed-directory-listing
 info:
   id: litespeed-directory-listing
   name: LiteSpeed Directory Index Template
   author: OpenAI
   description: Template to detect LiteSpeed Web Server and directory index pages.
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:
@@ -38,5 +40,5 @@ info:
     description: Example whitelist for domain example.com
 
   response:
-   - status: 
+   - status:
       - 200

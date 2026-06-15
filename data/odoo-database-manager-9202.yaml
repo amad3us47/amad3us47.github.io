@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: odoo-database-manager
 info:
   name: Odoo-Database-Manager
   author: __Fazal,R3dg33k
   severity: high
   tags: panel,odoo
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/web/database/manager'

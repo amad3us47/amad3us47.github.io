@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: detect-jabber-xmpp
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://datatracker.ietf.org/doc/html/rfc6120
   tags: network,jabber,xmpp,messaging
 
-network:
+tcp:
   - inputs:
       - data: "a\n"
 

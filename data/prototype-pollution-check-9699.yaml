@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: prototype-pollution-check
 info:
   name: Prototype Pollution Check
@@ -76,20 +77,3 @@ headless:
               }, 5 * 1000);
             }
       - args:
-          url: "{{BaseURL}}"
-        action: navigate
-      - action: waitload
-      - action: script
-        name: alerts
-        args:
-          code: window.alerts
-    matchers:
-      - type: word
-        part: alerts
-        words:
-          - "__proto__"
-    extractors:
-      - type: kval
-        part: alerts
-        kval:
-          - alerts

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: javascript-env
 info:
   name: JavaScript Environment Config
@@ -5,7 +6,7 @@ info:
   severity: low
   description: Detects common JavaScript environment configuration files.
   tags: javascript,config,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/env.js"
@@ -42,5 +43,3 @@ requests:
           - "Bootstrap"
           - "jQuery"
           - "CSS TRANSITION SUPPORT"
-        negative: true
-        condition: or

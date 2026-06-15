@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: maintainer-account-not-implemented
 info:
   name: Maintainer Account Not Implemented
@@ -14,4 +15,3 @@ file:
       - type: word
         words:
           - "set admin-maintainer"
-        negative: true

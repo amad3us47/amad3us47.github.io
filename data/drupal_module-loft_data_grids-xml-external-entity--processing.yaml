@@ -1,5 +1,6 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 
-id: drupal_module-loft_data_grids-xml-external-entity--processing
+id: drupal_module-loft_data_grids-xml-external-entity-processing
 info:
   name: drupal_module-loft_data_grids-xml-external-entity--processing
   author: Bishopfox

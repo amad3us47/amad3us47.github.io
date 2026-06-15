@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sermon-browser-2d6bed22d9ce9b40dd6e872bb2ee6d90
 
 info:

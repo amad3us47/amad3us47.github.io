@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: securityspy-detect
 info:
   name: SecuritySpy Camera Detect
@@ -6,10 +7,10 @@ info:
   metadata:
     shodan-dork: 'title:SecuritySpy'
   tags: unauth,iot,securityspy,panel,camera
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

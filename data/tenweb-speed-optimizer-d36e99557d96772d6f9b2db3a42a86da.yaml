@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tenweb-speed-optimizer-d36e99557d96772d6f9b2db3a42a86da
 
 info:

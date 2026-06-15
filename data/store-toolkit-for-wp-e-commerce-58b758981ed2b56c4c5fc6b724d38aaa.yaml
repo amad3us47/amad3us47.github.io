@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: store-toolkit-for-wp-e-commerce-58b758981ed2b56c4c5fc6b724d38aaa
 
 info:

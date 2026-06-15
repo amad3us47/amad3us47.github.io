@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bitrix-open-redirect
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://packetstormsecurity.com/files/151955/1C-Bitrix-Site-Management-Russia-2.0-Open-Redirection.html
   tags: redirect,bitrix
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/bitrix/rk.php?goto=https://example.com'

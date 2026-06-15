@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: puppetdb-detect
 info:
   name: PuppetDB Detection
@@ -6,7 +7,7 @@ info:
   reference:
     - https://puppet.com/docs/puppetdb/7/api/meta/v1/version.html#pdbmetav1version
   tags: puppet,tech,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/pdb/meta/v1/version"

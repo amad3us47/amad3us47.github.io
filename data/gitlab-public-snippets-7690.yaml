@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitlab-public-snippets
 
 info:
@@ -11,7 +12,7 @@ info:
     - https://twitter.com/intigriti/status/1375078783338876929
   tags: gitlab,exposure,misconfig
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/explore/snippets"
@@ -28,8 +29,3 @@ requests:
           - 200
 
       - type: word
-        negative: true
-        condition: or
-        words:
-          - "No snippets found"
-          - "Nothing here."

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: merge-minify-refresh-0c0b173e2bd6f7b85f9b9b87ba38121b
 
 info:

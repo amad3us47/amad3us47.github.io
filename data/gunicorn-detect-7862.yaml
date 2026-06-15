@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gunicorn-detect
 info:
   name: Detect Gunicorn Server
@@ -5,7 +6,7 @@ info:
   description: Gunicorn Python WSGI HTTP Server for UNIX - https://github.com/benoitc/gunicorn
   severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

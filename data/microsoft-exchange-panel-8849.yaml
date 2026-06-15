@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microsoft-exchange-panel
 info:
   name: Microsoft Exchange Control Panel
@@ -6,10 +7,10 @@ info:
   description: Publicly accessible Microsoft Exchange Server Control Panel
   tags: microsoft,panel
   reference: https://docs.microsoft.com/en-us/answers/questions/58814/block-microsoft-exchange-server-2016-exchange-admi.html
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

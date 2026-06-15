@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: brandfolder-open-redirect
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.exploit-db.com/exploits/39591
   tags: wordpress,wp-plugin,lfi,rfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/brandfolder/callback.php?wp_abspath=https://example.com/"

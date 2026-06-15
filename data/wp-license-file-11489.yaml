@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-license-file
 info:
   name: WordPress license file disclosure
   author: yashgoti
   severity: info
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/license.txt"

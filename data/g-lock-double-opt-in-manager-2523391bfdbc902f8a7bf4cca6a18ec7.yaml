@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: g-lock-double-opt-in-manager-2523391bfdbc902f8a7bf4cca6a18ec7
 
 info:

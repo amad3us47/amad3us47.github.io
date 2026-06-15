@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-merge-metadata-servlet
 
 info:
@@ -10,7 +11,7 @@ info:
     - https://labs.withsecure.com/publications/securing-aem-with-dispatcher
   tags: xss,aem
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/libs/dam/merge/metadata.css/test.html?path=/etc<img+src=x+onerror=alert(1);>&.ico"
@@ -21,7 +22,7 @@ requests:
         part: header
         words:
           - "text/html"
-          
+
       - type: word
         words:
           - "<img src=x onerror=alert(1);>"

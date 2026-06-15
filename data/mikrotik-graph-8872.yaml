@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mikrotik-graph
 info:
   name: Mikrotik Router Graphing
@@ -5,10 +6,10 @@ info:
   severity: low
   reference: https://www.exploit-db.com/ghdb/4395
   tags: unauth
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

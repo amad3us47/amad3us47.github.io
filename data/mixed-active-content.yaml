@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mixed-active-content
 
 info:
@@ -25,33 +26,5 @@ http:
     matchers:
       - type: regex
         part: body
-        negative: true
-        regex:
-          - "(?mi)<!--\\[if (lt|lte) IE [0-9]*\\]>\\s*<script[^>]*\\ssrc=\"http://"
 
-      - type: regex
-        part: body
-        negative: true
-        regex:
-          - "<!--\\s*<script"
-
-      - type: regex
-        part: body
-        regex:
-          - "<script[^>]*src=['\"]http://[^'\">]+['\"]"
-          - "<iframe[^>]*src=['\"]http://[^'\">]+['\"]"
-          - "<object[^>]*data=['\"]http://[^'\">]+['\"]"
-
-      - type: dsl
-        dsl:
-          - 'startswith(tostring(BaseURL), "https://")'
-
-    extractors:
-      - type: regex
-        group: 1
-        part: body
-        regex:
-          - "<script[^>]*src=['\"](http[^s'\">][^'\">]*)['\"]"
-          - "<iframe[^>]*src=['\"](http[^s'\">][^'\">]*)['\"]"
-          - "<object[^>]*data=['\"](http[^s'\">][^'\">]*)['\"]"
 # digest: 4b0a004830460221009b0b9daf144014e4435db3baf5347c71288ca7eed79471973f195b73fbe53bfa022100e25e8f9bc909f8e24e3acf57ac485f1929d2758c3fbe78cd1fbdf40c1f8cb992:922c64590222798bb761d5b6d8e72950

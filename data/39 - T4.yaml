@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Wordpress-Sensitive-Info-Disclosure
 info:
   name: Wordpress Sensitive Info Disclosure
@@ -8,7 +9,7 @@ info:
   reference: |
     - null
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-admin/admin.php?page=MEC-ix&tab=MEC-export&mec-ix-action=export-events&format=xml' #endpoint

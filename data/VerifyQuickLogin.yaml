@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: VerifyQuickLogin
 info:
   name: 泛微OA E-Cology VerifyQuickLogin.jsp 任意管理员登录漏洞

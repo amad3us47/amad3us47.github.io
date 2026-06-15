@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yongyou-jdbcRead
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: yongyou
 
-requests:
+http:
   - raw:
       - |
         POST /uapws/service/nc.itf.bd.crm.ICurrtypeExportToCrmService HTTP/1.1

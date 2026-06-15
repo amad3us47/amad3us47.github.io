@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: information-disclosure-in-js-files
 
 info:
@@ -7,7 +8,7 @@ info:
   description: |
     This template checks for the presence of sensitive information in JS files.
 
-requests:
+http:
   - method: GET
     path:
       # Replace with a list of JS file links

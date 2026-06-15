@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: swagger-api44
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: exposure,api,swagger
 
 
-requests:
+http:
   - raw:
       - |
         GET /api/__swagger__/ HTTP/1.1

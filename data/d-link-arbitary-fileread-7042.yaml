@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dlink-file-read
 
 info:
@@ -13,7 +14,7 @@ info:
     cwe-id: CWE-522
   tags: dlink,lfi
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/cgi-bin/webproc"

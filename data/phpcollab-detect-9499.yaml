@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phpcollab-detect
 info:
   name: PhpCollab detect
   author: pikpikcu
   severity: info
   tags: tech,phpcollab
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/general/login.php"

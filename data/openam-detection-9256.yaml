@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: openam-detection
 info:
   name: Detect OpenAM and OpenSSO
   author: philippedelteil
   severity: info
   tags: tech,openam
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/openam/XUI"

@@ -1,20 +1,21 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Linux-bashrc-file
 
 info:
   name: Linux .bashrc File - Detect
   author: h4rsh4d
-  severity: Medium
-  description: bashrc file 
-  remediation: remove access to .bashrc file 
+  severity: medium
+  description: bashrc file
+  remediation: remove access to .bashrc file
   reference:
-    - 
+    -
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cwe-id: 
+    cvss-metrics:
+    cvss-score:
+    cwe-id:
   tags: config,exposure,linux
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.bashrc"

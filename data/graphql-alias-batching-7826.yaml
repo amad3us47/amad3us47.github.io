@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: graphql-alias-batching
 info:
   name: GraphQL Alias-based Batching
@@ -14,7 +15,7 @@ info:
   remediation: |
     Limit queries aliasing in your GraphQL Engine to ensure mitigation of aliasing-based attacks.
   tags: graphql
-requests:
+http:
   - raw:
       - |
         POST /graphql HTTP/1.1

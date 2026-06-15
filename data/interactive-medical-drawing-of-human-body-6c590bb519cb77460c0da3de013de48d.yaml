@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: interactive-medical-drawing-of-human-body-6c590bb519cb77460c0da3de013de48d
 
 info:

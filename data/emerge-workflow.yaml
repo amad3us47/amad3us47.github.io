@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: emerge-workflow
 
 info:
   name: eMerge Checks
   author: DhiyaneshDk
+  severity: info
   description: A simple workflow that runs all eMerge related nuclei templates on a given target.
 workflows:
   - tags: emerge

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: alpine-photo-tile-for-instagram-2daf553de1f607e3896e72f5cc1e291d
 
 info:

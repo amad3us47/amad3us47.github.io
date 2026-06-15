@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oscommerce-rce
 info:
   name: osCommerce 2.3.4.1 - Remote Code Execution
@@ -7,7 +8,7 @@ info:
   reference:
     - https://www.exploit-db.com/exploits/50128
   tags: rce,oscommerce
-requests:
+http:
   - raw:
       - |
         POST /install/install.php?step=4 HTTP/1.1

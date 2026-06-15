@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: postman-api-key-disclosure
 info:
   id: postman-api-key-disclosure
   name: Postman API Key Disclosure - Detect
   author: OpenAI
   description: Template to detect Postman API key disclosure
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:

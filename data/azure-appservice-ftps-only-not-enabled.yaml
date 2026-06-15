@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-appservice-ftps-only-not-enabled
 info:
   name: Azure App Service FTPS-Only Access Not Enabled

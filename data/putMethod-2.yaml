@@ -1,12 +1,13 @@
-id: PUT Method 2
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: PUT-Method-2
 info:
   name: PUT Method Enable
   author: 0xAwali
   severity: info
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

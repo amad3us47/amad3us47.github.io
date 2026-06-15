@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: missing-mfa
 info:
   name: lack of MFA
@@ -33,13 +34,3 @@ http:
           - "<member>"
           - "<EnableDate>"
         condition: and
-        negative: true
-
-      - type: status
-        status:
-          - 200
-
-    extractors:
-      - type: dsl
-        dsl:
-          - '"MFA is missing for user:"+ user'

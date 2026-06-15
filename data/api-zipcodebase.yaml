@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-zipcodebase
 
 info:
@@ -11,7 +12,7 @@ info:
   tags: token-spray,zipcodebase
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://app.zipcodebase.com/api/v1/search?apikey={{token}}&codes=10005%2C51503"

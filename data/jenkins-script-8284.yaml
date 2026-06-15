@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jenkins-script
 info:
   name: Jenkins - Remote Code Execution
@@ -12,7 +13,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: jenkins,rce,devops
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/script/"

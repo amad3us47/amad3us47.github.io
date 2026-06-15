@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: seowon-router-rce
 info:
   name: Seowon 130-SLC router -  Remote Code Execution
@@ -6,7 +7,7 @@ info:
   description: Execute commands without authentication as admin user, To use it in all versions, we only enter the router ip & Port(if available) in the request The result of the request is visible on the browser page
   reference: https://www.exploit-db.com/exploits/50295
   tags: rce,seowon,router,unauth,iot
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1

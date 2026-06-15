@@ -1,9 +1,10 @@
-id: Dashboard Exposed bypassing authentication
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Dashboard-Exposed-bypassing-authentication
 info:
   name: Find Exposed dashboard
   author: Clark
   severity: medium
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/dashboard"

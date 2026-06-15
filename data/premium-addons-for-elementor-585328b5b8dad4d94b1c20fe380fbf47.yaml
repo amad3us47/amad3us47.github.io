@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: premium-addons-for-elementor-585328b5b8dad4d94b1c20fe380fbf47
 
 info:

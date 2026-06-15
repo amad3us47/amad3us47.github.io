@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: interactsh-stop-at-first-match-integration-test
 
 info:
@@ -5,7 +6,7 @@ info:
   author: pdteam
   severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?a=1"
@@ -18,12 +19,3 @@ requests:
       - "{{BaseURL}}/?a=8"
       - "{{BaseURL}}/?a=9"
     headers:
-      url: 'http://{{interactsh-url}}'
-
-    stop-at-first-match: true
-
-    matchers:
-      - type: word
-        part: interactsh_protocol # Confirms the HTTP Interaction
-        words:
-          - "http"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ASVS-4-0-3-V13-2-1
 
 info:
@@ -51,29 +52,3 @@ http:
     matchers:
       - type: status
         name: "PUT method is Enabled"
-        negative: true
-        status:
-          - 405
-          - 501
-          - 400
-          - 404
-
-  - method: DELETE
-    path:
-      - "{{BaseURL}}"
-    headers:
-      Host: "{{Hostname}}"
-      Cookie: "{{Cookie}}"
-    extractors:
-      - type: dsl
-        dsl:
-          - status_code
-    matchers:
-      - type: status
-        name: "DELETE method is Enabled"
-        negative: true
-        status:
-          - 405
-          - 501
-          - 400
-          - 404

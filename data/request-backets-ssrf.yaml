@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CVE-2023-27163
 
 info:
@@ -5,7 +6,7 @@ info:
   name: CVE-2023-27163 request-baskets ssrf
   severity: high
   description: |
-    This is a SSRF vulnerability in the request baskets (web application). 
+    This is a SSRF vulnerability in the request baskets (web application).
     https://github.com/darklynx/request-baskets
   reference:
     - "https://notes.sjtu.edu.cn/s/MUUhEymt7"

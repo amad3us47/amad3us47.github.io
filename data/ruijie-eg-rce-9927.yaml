@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ruijie-eg-rce
 info:
   name: Ruijie EG - Remote Code Execution
@@ -12,7 +13,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: ruijie,rce
-requests:
+http:
   - raw:
       - |
         POST /login.php HTTP/1.1

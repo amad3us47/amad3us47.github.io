@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-wordfence-waf-bypass-xss
 info:
   author: hackergautam
@@ -5,10 +6,10 @@ info:
   reference: https://twitter.com/naglinagli/status/1382082473744564226
   severity: medium
   tags: wordpress,wordfence,xss
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

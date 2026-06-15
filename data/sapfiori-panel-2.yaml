@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sapfiori-panel2
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: panel,sap,fiori
 
 
-requests:
+http:
   - raw:
       - |
         GET /irj/portal/fiori HTTP/1.1

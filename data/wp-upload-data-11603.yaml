@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-upload-data
 info:
   name: wordpress-upload-data
@@ -6,10 +7,10 @@ info:
   description: Searches for Passwords  in the wordpress uploads directory.
   reference: https://www.exploit-db.com/ghdb/7040
   tags: wordpress,listing
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: elasticsearch-cluster-settings-exposure
 info:
   id: elasticsearch-cluster-settings-exposure
   name: Elasticsearch Cluster Settings Exposure - Detect
   author: OpenAI
   description: Template to detect Elasticsearch instances with cluster settings exposure
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

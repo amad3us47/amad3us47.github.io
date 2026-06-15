@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cli-with-constants
 
 info:
@@ -8,7 +9,7 @@ info:
 constants:
   test: test-in-template
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}?p={{test}}"

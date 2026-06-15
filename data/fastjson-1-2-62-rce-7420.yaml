@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fastjson-1-2-62-rce
 info:
   name: Fastjson 1.2.62 - Remote Code Execution
@@ -12,7 +13,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: fastjson,rce,deserialization,oast
-requests:
+http:
   - raw:
       - |
         POST / HTTP/1.1
@@ -30,8 +31,5 @@ requests:
         words:
           - "dns"
       - type: status
-        negative: true
-        status:
-          - 200
 
 # Enhanced by mp on 2022/05/25

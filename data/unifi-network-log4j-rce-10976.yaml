@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unifi-network-log4j-rce
 info:
   name: UniFi Network Application - Remote Code Execution (Log4j)
@@ -18,7 +19,7 @@ info:
     verified: true
     shodan-query: http.title:"UniFi Network"
   tags: cve,cve2021,rce,log4j,ubnt,unifi,oast,jndi
-requests:
+http:
   - raw:
       - |
         POST /api/login HTTP/1.1

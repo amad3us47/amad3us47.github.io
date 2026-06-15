@@ -1,4 +1,5 @@
-id: springboot-beans 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: springboot-beans-1
 
 info:
   name: Detect Springboot Beans Actuator
@@ -7,10 +8,10 @@ info:
   description: Displays a complete list of all the Spring beans in the application
   tags: springboot,disclosure
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: crlf
 template:
    name: crlf-discovery
    severity: info
@@ -5,13 +7,13 @@ template:
    description: CRLF Discovery
 
 request:
-   payloads: 
+   payloads:
       - "%0D%0ASet-Cookie:mycookie=myvalue"
 
    paths: false
 response:
    statusCode: 200
-   header: 
+   header:
       -  "Set-Cookie:mycookie=myvalue"
-   exclude: 
+   exclude:
       - "%0D%0A"

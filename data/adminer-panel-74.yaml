@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: adminer-panel
 
 info:
@@ -16,7 +17,7 @@ info:
     shodan-query: title:"Login - Adminer"
   tags: panel,adminer
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/adminer.php'

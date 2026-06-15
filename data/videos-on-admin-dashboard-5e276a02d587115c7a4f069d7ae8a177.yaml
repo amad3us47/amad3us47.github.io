@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: videos-on-admin-dashboard-5e276a02d587115c7a4f069d7ae8a177
 
 info:

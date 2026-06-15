@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauthenticated-frp
 
 info:
@@ -8,7 +9,7 @@ info:
   reference:
     - https://github.com/fatedier/frp/ # vendor homepage
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/static/"

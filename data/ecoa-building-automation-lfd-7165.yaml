@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ecoa-building-automation-lfd
 info:
   name: ECOA Building Automation System - LFD
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://www.zeroscience.mk/en/vulnerabilities/ZSL-2021-5679.php
   tags: ecoa,lfi
-requests:
+http:
   - raw:
       - |
         POST /viewlog.jsp HTTP/1.1

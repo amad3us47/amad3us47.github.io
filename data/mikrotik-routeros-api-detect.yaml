@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mikrotik-routeros-api-detect
 
 info:
@@ -11,7 +12,7 @@ info:
     shodan-query: product:"MikroTik RouterOS API Service"
   tags: network,detect,mikrotik
 
-network:
+tcp:
   - inputs:
       - data: "3a0000002f00000002000040020f0001003d050000000000000000000000002f000000000000000000401f0000000000000000000000000000000000"
         type: hex

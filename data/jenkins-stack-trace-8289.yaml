@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jenkins-stack-trace
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://hackerone.com/reports/221833
   tags: jenkins
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/adjuncts/3a890183/"

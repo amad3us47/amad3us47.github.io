@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sonicwall-secure-mobile-access-version-detect
 
 info:
@@ -9,7 +10,7 @@ info:
     verified: true
     shodan-query: sonicwall product:"SonicWALL SSL-VPN http proxy" port:443
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -65,5 +66,3 @@ requests:
         regex:
           - '<meta name="connect-agent-version" content="(.*?)">'
           - 'SWL_LOGIN.sonicwallSMAConnectAgentVersion = "(.*?)";'
-
-

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: grandstream-device-configuration
 
 info:
@@ -8,7 +9,7 @@ info:
   metadata:
     shodan-query: 'http.title:"Grandstream Device Configuration"'
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

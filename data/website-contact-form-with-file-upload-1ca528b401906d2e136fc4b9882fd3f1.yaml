@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: website-contact-form-with-file-upload-1ca528b401906d2e136fc4b9882fd3f1
 
 info:

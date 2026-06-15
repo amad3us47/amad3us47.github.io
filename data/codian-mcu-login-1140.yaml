@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: codian-mcu-login
 
 info:
@@ -10,7 +11,7 @@ info:
     shodan-query: http.title:"Codian MCU - Home page"
   tags: iot
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/login.html'

@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: liferay-workflow
 
 info:
   name: Liferay Security Checks
   author: dwisiswant0
+  severity: info
   description: A simple workflow that runs all liferay related nuclei templates on a given target.
 workflows:
   - template: http/exposed-panels/liferay-portal.yaml

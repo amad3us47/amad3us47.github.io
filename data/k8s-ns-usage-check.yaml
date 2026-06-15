@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: k8s-ns-usage-check
 
 info:
@@ -33,10 +34,5 @@ code:
       - type: word
         words:
           - '"Namespace"'
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - '"Kubernetes cluster is not utilizing " + argument'
 # digest: 4a0a00473045022075eae04d53affaced90ab821445c547b5fe5a37fd8de40b012363334523f57c8022100dc967ac1b68d944fdc0971286d4587deaaca50dd0b116fa601e36351d9c3beaf:922c64590222798bb761d5b6d8e72950

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: laravel-debug-405
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   description: |
     This template is designed to detect potential security risks associated with the Laravel framework when debug mode is enabled. Enabling debug mode in a production environment may expose sensitive information and pose a high-security risk.
-  tags: 
+  tags:
     - Laravel
     - Debug Mode
     - Security
@@ -16,7 +17,7 @@ http:
       - |+
         PUT /index.php HTTP/2
         Host: {{Hostname}}
-    
+
     matchers-condition: and
     matchers:
       - type: word
@@ -24,7 +25,7 @@ http:
         words:
           - laravel
           - framework
-          
+
       - type: status
         status:
           - 405

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-key-vault-delete-unalerted
 info:
   name: Azure Key Vault Delete Alert Not Configured
@@ -50,10 +51,5 @@ code:
       - type: word
         words:
           - "Microsoft.KeyVault/vaults/delete"
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - 'id + " does not have the correct alert configuration for Delete Key Vault events"'
 # digest: 490a00463044022069abd9c1f38c3414a06f1da8aaca68079e4e853366046220557c17ed8f9d638702202fca92caea6a7f6cc147cba3a0a53f11ebd8430bd8c2c45234e1b6c01202db93:922c64590222798bb761d5b6d8e72950

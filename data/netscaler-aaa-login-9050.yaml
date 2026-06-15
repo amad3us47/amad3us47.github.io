@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netscaler-aaa-login
 info:
   name: NetScaler AAA Login Panel
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://www.exploit-db.com/ghdb/6898
   tags: panel,netscaler,login
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/logon/LogonPoint/tmindex.html'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: versa-default-login
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Searches for default admin credentials for the Versa Networks SD-WAN application.
   tags: default-login,versa,sdwan
 
-requests:
+http:
   - raw:
       - |
         GET /versa/login.html HTTP/1.1
@@ -43,4 +44,3 @@ requests:
         dsl:
           - "contains(tolower(all_headers_2), '/login?error=true')"
           - "contains(tolower(all_headers_2), '/login?tokenmissingerror=true')"
-        negative: true

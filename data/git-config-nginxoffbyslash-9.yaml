@@ -1,4 +1,5 @@
-id: git-config-nginxoffbyslash 9
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: git-config-nginxoffbyslash-9
 info:
   name: Nginx off-by-slash exposes Git config
   author: organiccrap
@@ -9,10 +10,10 @@ info:
     - https://twitter.com/Random_Robbie/status/1262676628167110656
     - https://github.com/PortSwigger/nginx-alias-traversal/blob/master/off-by-slash.py
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

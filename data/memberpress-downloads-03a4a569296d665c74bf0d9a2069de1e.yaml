@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: memberpress-downloads-03a4a569296d665c74bf0d9a2069de1e
 
 info:

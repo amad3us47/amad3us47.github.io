@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: qvisdvr-deserialization-rce
 info:
   name: QVISDVR JSF Deserialization - Remote Code Execution
@@ -13,7 +14,7 @@ info:
     cve-id:
     cwe-id: CWE-77
   tags: qvisdvr,rce,deserialization,jsf,iot
-requests:
+http:
   - raw:
       - |
         GET /qvisdvr/ HTTP/1.1

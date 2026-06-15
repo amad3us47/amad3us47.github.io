@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-vm-jit-access-not-enabled
 info:
   name: Azure VM Just-In-Time Access Not Enabled

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: showdoc-default-login
 info:
   name: Showdoc Default Login
@@ -11,7 +12,7 @@ info:
     cvss-score: 5.8
     cwe-id: CWE-522
   tags: showdoc,default-login
-requests:
+http:
   - raw:
       - |
         POST /server/index.php?s=/api/user/login HTTP/1.1

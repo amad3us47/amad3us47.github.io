@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phpwiki-lfi
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://www.exploit-db.com/exploits/38027
   tags: phpwiki,lfi,xss
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/phpwiki/index.php/passwd"

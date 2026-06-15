@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Django-Debug-Disclosure
 info:
   name: Django Debug Configuration Disclosure
@@ -8,7 +9,7 @@ info:
   reference: |
     - null
 
-requests:
+http:
   - method: POST
     path:
       - '{{BaseURL}}/admin/login/?next=/admin/' #endpoint

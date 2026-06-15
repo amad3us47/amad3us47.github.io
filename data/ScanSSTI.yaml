@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ScanReflectedSSTI
 
 info:
   name: Scanner Cross-Site Scripting Reflected
   author: Hernan Rodriguez
-  severity: Critical
+  severity: critical
   description: SSTI or CSTI via GET parameter
   reference: https://www.linkedin.com/in/hernanrodriguez-/
-    - 
+    -
   tags: SSTI
 
 variables:

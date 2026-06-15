@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: azure-default-page
 info:
   id: azure-default-page
   name: Microsoft Azure Default Page
   author: OpenAI
   description: Template to detect the default page of Microsoft Azure.
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:
@@ -30,5 +32,5 @@ info:
       description: Microsoft Azure default page found in the response body
 
   response:
-   - status: 
+   - status:
       - 200

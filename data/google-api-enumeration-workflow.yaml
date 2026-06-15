@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: google-api-token-usage-enumeration
 
 info:
   name: Google API Token Usage Enumeration
   author: tanq16
+  severity: info
   description: This template is a workflow that allows enumeration of usage capabilities for an exposed Google API Key. A key found or discovered in front-end or source code can be validated for authorization of use and can also be used to make multiple requests and produce high bills for the owner if usage is unrestricted
 workflows:
   - template: http/token-spray/google-autocomplete.yaml

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: esmtprc-config
 info:
   name: eSMTP config disclosure
@@ -5,7 +6,7 @@ info:
   reference: https://linux.die.net/man/5/esmtprc
   severity: high
   tags: esmtp,config
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.esmtprc"

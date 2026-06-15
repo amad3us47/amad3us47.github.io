@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: viewpoint-system-status
 
 info:
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"ViewPoint System Status"
   tags: status,exposures,viewpoint
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

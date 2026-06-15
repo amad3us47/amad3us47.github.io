@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: GT-AC2900-login
 info:
   name: GT-AC2900 登录绕过
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://github.com/atredispartners/advisories/blob/master/ATREDIS-2020-0010.md
   tags: AC2900,ASSUS
-requests:
+http:
   - raw:
       - |
         GET /appGet.cgi?hook=get_cfg_clientlist() HTTP/1.1

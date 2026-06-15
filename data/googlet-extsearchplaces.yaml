@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-googletextsearchplaces
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: token-spray,google,search,places,text
 
 self-contained: true
-requests:
+http:
   - method: GET
     path:
       - "https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&key={{token}}"
@@ -15,6 +16,3 @@ requests:
     matchers:
       - type: word
         part: body
-        negative: true
-        words:
-          - 'error_message'

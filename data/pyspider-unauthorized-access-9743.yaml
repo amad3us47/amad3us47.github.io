@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pyspider-unauthorized-access
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://github.com/ianxtianxt/Pyspider-webui-poc
   tags: pyspider,unauth
 
-requests:
+http:
   - raw:
       - |
         POST /debug/pyspidervulntest/run HTTP/1.1

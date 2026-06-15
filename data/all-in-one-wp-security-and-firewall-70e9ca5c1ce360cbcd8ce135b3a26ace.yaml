@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: all-in-one-wp-security-and-firewall-70e9ca5c1ce360cbcd8ce135b3a26ace
 
 info:

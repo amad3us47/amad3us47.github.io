@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 ---
 id: httpbin-open-redirect
 
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: panel
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/redirect-to?url=https%3A%2F%2Fexample.com"

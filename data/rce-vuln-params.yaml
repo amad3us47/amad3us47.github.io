@@ -1,7 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rce-vuln-params
 
 info:
-  name: detect possible rce parameters 
+  name: detect possible rce parameters
   author: ayadim
   severity: info
   tags: file,bbh,bbh-rce,bbh-check1

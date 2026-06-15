@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: address-autocomplete-using-google-place-api-5dc0b72cb07e4116d6703d68bd5a486d
 
 info:

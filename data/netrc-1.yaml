@@ -1,4 +1,5 @@
-id: netrc 1
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: netrc-1
 
 info:
   name: netrc config file
@@ -8,10 +9,10 @@ info:
   severity: high
   tags: netrc,config,exposure
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

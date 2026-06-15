@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: official-mailerlite-sign-up-forms-6707baefec25107b95f6524fdb5e747c
 
 info:

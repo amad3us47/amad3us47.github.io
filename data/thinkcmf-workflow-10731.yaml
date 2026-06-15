@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkcmf-workflow
 info:
   name: ThinkCMF Security Checks
   author: pdteam
+  severity: info
   description: A simple workflow that runs all ThinkCMF related nuclei templates on a given target.
 
 workflows:

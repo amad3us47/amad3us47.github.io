@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: splunk-enterprise-panel
 info:
   name: Splunk Enterprise Panel
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://www.shodan.io/search?query=title%3A%22Login+Splunk%22
   tags: panel,splunk
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/en-US/account/login'

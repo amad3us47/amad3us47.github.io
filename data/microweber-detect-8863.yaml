@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microweber-detect
 info:
   name: Microweber Detect
@@ -8,7 +9,7 @@ info:
   metadata:
     shodan-query: http.favicon.hash:780351152
   tags: tech,microweber,oss
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

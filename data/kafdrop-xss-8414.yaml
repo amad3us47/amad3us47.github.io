@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kafdrop-xss
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://github.com/HomeAdvisor/Kafdrop/issues/12
   tags: kafdrop,xss
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/topic/e'%22%3E%3Cimg%20src=x%20onerror=alert(2)%3E"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: package-json
 
 info:
@@ -7,7 +8,7 @@ info:
   description: All npm packages contain a file, usually in the project root, called package.json - this file holds various metadata relevant to the project.
   tags: config,exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/package.json"

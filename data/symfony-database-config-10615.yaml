@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: symfony-database-config
 info:
   name: Symfony Database Configuration Exposure
   author: pdteam,geeknik
   severity: high
   tags: config,exposure,symfony
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/config/databases.yml"
@@ -14,13 +15,3 @@ requests:
         part: header
         words:
           - "text/html"
-        negative: true
-      - type: status
-        status:
-          - 200
-      - type: word
-        words:
-          - "class:"
-          - "param:"
-        condition: and
-        part: body

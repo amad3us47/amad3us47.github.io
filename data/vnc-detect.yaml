@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vnc-service-detection
 
 info:
@@ -9,7 +10,7 @@ info:
     cwe-id: CWE-200
   tags: network,vnc,service
 
-network:
+tcp:
   - inputs:
       - data: "\r\n"
     host:

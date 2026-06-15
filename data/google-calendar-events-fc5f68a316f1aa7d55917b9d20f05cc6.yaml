@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: google-calendar-events-fc5f68a316f1aa7d55917b9d20f05cc6
 
 info:

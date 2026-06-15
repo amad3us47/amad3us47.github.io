@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: lfi-j2ee
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Looks for J2EE specific LFI vulnerabilities, tries to leak the web.xml file.
   tags: j2ee,lfi,generic
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

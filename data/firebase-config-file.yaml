@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: firebase-config-file
 info:
   id: firebase-config-file
   name: Firebase Configuration File
   author: OpenAI
   description: Template to detect Firebase configuration files with potential sensitive information exposed.
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -15,7 +17,7 @@ info:
 
   requests:
         method: GET
-        path: 
+        path:
           - "/firebase.json"
           - "/firebase_crediantial.json"
         description: Attempt to access the Firebase configuration file
@@ -36,7 +38,7 @@ info:
     - pattern: "project_id"
       type: body
       description: Firebase project ID found in the response body
-      
+
   response:
-    - status: 
+    - status:
       - 200

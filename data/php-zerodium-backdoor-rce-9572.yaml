@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: php-zerodium-backdoor-rce
 info:
   name: PHP 8.1.0-dev - Backdoor Remote Code Execution
@@ -13,7 +14,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: php,backdoor,rce,zerodium
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

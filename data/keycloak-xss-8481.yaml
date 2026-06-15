@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: keycloak-xss
 info:
   name: Keycloak <= 8.0 - Cross Site Scripting
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://cure53.de/pentest-report_keycloak.pdf
   tags: keycloak,xss
-requests:
+http:
   - raw:
       - |
         POST /auth/realms/master/clients-registrations/openid-connect HTTP/1.1

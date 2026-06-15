@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dotclear-detect
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: tech,dotclear
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/dc2/admin/auth.php"

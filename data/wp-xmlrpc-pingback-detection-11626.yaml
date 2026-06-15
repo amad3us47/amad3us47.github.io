@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-xmlrpc-pingback-detection
 info:
   name: Wordpress XMLRPC Pingback detection
@@ -7,7 +8,7 @@ info:
     - https://github.com/dorkerdevil/rpckiller
     - https://the-bilal-rizwan.medium.com/wordpress-xmlrpc-php-common-vulnerabilites-how-to-exploit-them-d8d3c8600b32
   tags: wordpress,ssrf,oast,xmlrpc
-requests:
+http:
   - raw:
       - |
         POST /xmlrpc.php HTTP/1.1

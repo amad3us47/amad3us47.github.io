@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ready-ecommerce-7bb39099ddcf5d3ae8271eb305c54043
 
 info:

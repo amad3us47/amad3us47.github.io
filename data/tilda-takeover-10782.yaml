@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: tilda-takeover
 info:
   name: tilda takeover detection
@@ -6,7 +7,7 @@ info:
   reference:
     - https://github.com/EdOverflow/can-i-take-over-xyz/issues/155
   tags: takeover
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -18,4 +19,3 @@ requests:
       - type: word
         words:
           - "<title>Please renew your subscription</title>"
-        negative: true

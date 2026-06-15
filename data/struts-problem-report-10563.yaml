@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: struts-problem-report
 info:
   name: Apache Struts in Dev Mode
@@ -6,7 +7,7 @@ info:
   reference:
     - https://www.exploit-db.com/ghdb/4278
   tags: exposure,apache,struts,debug
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

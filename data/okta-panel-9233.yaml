@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: okta-panel
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.shodan.io/search?query=http.title%3A%22okta%22
   tags: panel,okta,login
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

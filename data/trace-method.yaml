@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: HTTP-TRACE
 
 info:
@@ -8,7 +9,7 @@ info:
     - https://www.blackhillsinfosec.com/three-minutes-with-the-http-trace-method/
   tags: misc,generic
 
-requests:
+http:
   - method: TRACE
     path:
       - "{{BaseURL}}"

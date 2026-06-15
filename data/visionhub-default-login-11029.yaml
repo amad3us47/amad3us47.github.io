@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: visionhub-default-login
 info:
   name: VisionHub Default Login
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   tags: visionhub,default-login
-requests:
+http:
   - raw:
       - |
         POST /VisionHubWebApi/api/Login HTTP/1.1

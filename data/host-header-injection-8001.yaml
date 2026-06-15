@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 # info to search signature
 id: host-header-injection
-type: fuzz
 info:
   name: Host Header Injection
-  risk: Medium
+  author: unknown
+  severity: info
 
 
 variables:
@@ -14,10 +15,7 @@ variables:
 payloads:
   - "{{.dest}}"
 
-requests:
+http:
   - method: GET
   - generators:
       - Header("{{.payload}}", "{{.head}}")
-    detections:
-      - >-
-        RegexSearch("resHeaders", "(?m)^(L|l)ocation: ((http|https)://)?{{.dest}}")

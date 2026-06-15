@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: saprouter-workflow
 
 info:
   name: SAProuter Security checks
   author: randomstr1ng
+  severity: info
   description: A simple workflow that runs all checks related to SAProuter.
   tags: workflow
 

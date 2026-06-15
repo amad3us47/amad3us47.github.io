@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: url-detection
 
 info:
@@ -11,7 +12,7 @@ file:
       - all
 
     extractors:
-      # This rule does not include all possible schemes for URL. It will be updated with its usage.   
+      # This rule does not include all possible schemes for URL. It will be updated with its usage.
       # - type: regex
       #   name: simple-url
       #   regex:

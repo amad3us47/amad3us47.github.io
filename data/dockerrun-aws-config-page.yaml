@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: dockerrun-aws-config-page
 info:
   id: dockerrun-aws-config-page
   name: Dockerrun AWS Configuration Page - Detect
   author: OpenAI
   description: Template to detect the AWS Dockerrun configuration page
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

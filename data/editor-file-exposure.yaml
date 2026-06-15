@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: editor-file-exposure
 info:
   id: editor-file-exposure
   name: Editor File Exposure - Detect
   author: OpenAI
   description: Template to detect exposure of editor configuration files
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -15,7 +17,7 @@ info:
 
   requests:
       method: GET
-      path: 
+      path:
         - "/.editorconfig"
       description: Attempt to access editor configuration file
 

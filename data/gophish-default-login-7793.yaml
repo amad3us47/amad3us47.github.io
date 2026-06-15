@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gophish-default-login
 info:
   name: Gophish < v0.10.1 Default Credentials
@@ -11,7 +12,7 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   tags: gophish,default-login
-requests:
+http:
   - raw:
       - |
         GET /login HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: flatpress-xss
 
 info:
@@ -17,7 +18,7 @@ info:
     shodan-query: http.html:"Flatpress"
   tags: flatpress,xss,authenticated,oss
 
-requests:
+http:
   - raw:
       - |
         POST /login.php HTTP/1.1

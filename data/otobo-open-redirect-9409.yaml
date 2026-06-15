@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: otobo-open-redirect
 info:
   name: Open Redirect in Otobo
@@ -8,7 +9,7 @@ info:
     - https://github.com/rotheross/otobo
     - https://huntr.dev/bounties/de64ac71-9d06-47cb-b643-891db02f2a1f/
   tags: redirect,otobo
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/otobo/index.pl?Action=ExternalURLJump;URL=http://www.example.com'

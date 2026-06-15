@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: comtrend-ct5367-remote-root
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: high
   tags: comtrend,router,vivacom,iot,disclosure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/password.cgi"

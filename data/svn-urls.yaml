@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: svn-urls
 
-requests:
+http:
   - method: GET
     path:
       - /.svn/entries
-    
+
     matchers:
       - type: regex
         regex: \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{6}Z

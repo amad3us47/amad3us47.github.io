@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: default-redhat-test-page
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: tech,redhat
   reference: https://www.shodan.io/search?query=http.title%3A%22Test+Page+for+the+Apache+HTTP+Server+on+Red+Hat+Enterprise+Linux%22
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

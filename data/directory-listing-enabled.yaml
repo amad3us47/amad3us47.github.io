@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: directory-listing-enabled
 info:
   name: Directory Listing Enabled
+  author: unknown
   severity: low
   description: Detects potential directory listing vulnerabilities on the target web server
 author: qaisar
 tags:
   - web
   - directory-listing
-requests:
+http:
 - method: GET
   path:
     - "/uploads"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: qtranslate-x-b4f5b83bce125b00c9a9b5e27f6371bb
 
 info:

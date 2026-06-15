@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mdb-database-file
 info:
   name: MDB database file leakage
@@ -6,7 +7,7 @@ info:
   reference:
     - https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.5-Testing_for_MS_Access.html
   tags: fuzz,mdb,asp
-requests:
+http:
   - raw:
       - |
         GET {{mdbPaths}} HTTP/1.1

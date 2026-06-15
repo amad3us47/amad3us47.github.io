@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jeedom-detect
 info:
   name: Jeedom Detect
   author: pikpikcu
   severity: info
   tags: tech,jeedom
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php?v=d"

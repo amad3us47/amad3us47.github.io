@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Konga-default-login
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://github.com/pantsel/konga/blob/57f40d45108341eb57b7360cd01e8288e619747f/api/services/Token.js
   tags: Konga,login
 
-requests:
+http:
   - raw:
       - |
         GET /kong HTTP/1.1

@@ -1,17 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: possible-directory-listing
 
 info:
   name: possible directory listing
   author: h4rsh4d
   severity: info
-  description: Possible directory listing check on wayback machin for old pages. 
+  description: Possible directory listing check on wayback machin for old pages.
   reference:
     -
   classification:
     cvss-metrics:
   tags: dirlisting
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index"
@@ -31,4 +32,3 @@ requests:
       - type: status
         status:
           - 200
-

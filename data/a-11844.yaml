@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: a-11844
 a
 amazon-mws-auth-token.yaml.~1~
 boa-web-fileread.yaml.~1~

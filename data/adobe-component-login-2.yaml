@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: adobe-component-login2
 
 info:
@@ -8,7 +9,7 @@ info:
   tags: panel
 
 
-requests:
+http:
   - raw:
       - |
         GET /CFIDE/componentutils/login.cfm HTTP/1.1

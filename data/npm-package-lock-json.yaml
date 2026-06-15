@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: package-lock-json
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://docs.npmjs.com/cli/v9/configuring-npm/package-json
   tags: exposure,files
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/package-lock.json"

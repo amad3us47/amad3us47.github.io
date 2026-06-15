@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: exchange-autodiscover-info-disclosure
 info:
   id: exchange-autodiscover-info-disclosure
   name: Microsoft Exchange Server Autodiscover Information Disclosure
   author: Your Name
   description: Template to detect information disclosure in Microsoft Exchange Server Autodiscover service
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -26,5 +28,5 @@ info:
       description: Autodiscover service response contains protocol information
 
   response:
-    - status: 
+    - status:
       - 200

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: plesk-obsidian
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.exploit-db.com/ghdb/6951
   tags: panel,plesk
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/login_up.php'

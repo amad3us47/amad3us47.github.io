@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-solr-ssrf
 
 info:
@@ -8,7 +9,7 @@ info:
     - http://www.2cto.com/article/201405/304552.html
   tags: 74cms,sqli
 
-requests:
+http:
   - method: GET
     path:
       - "/solr/db/replication?command=fetchindex&masterUrl=http://127.0.0.1&wt=json&httpBasicAuthUser=&httpBasicAuthPassword="

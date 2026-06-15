@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: luftguitar-arbitrary-file-upload
 info:
   name: Luftguitar CMS Arbitrary File Upload
@@ -6,7 +7,7 @@ info:
   tags: luftguitar
   description: A vulnerability in Luftguitar CMS allows remote unauthenticated users to upload files to the remote service via the 'ftb.imagegallery.aspx' endpoint.
   reference: https://www.exploit-db.com/exploits/14991
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/ftb.imagegallery.aspx"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thumbs-db-disclosure
 info:
   name: Thumbs DB Disclosure
@@ -5,10 +6,10 @@ info:
   severity: info
   reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/thumbs-db-disclosure.json
   tags: exposure,files
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

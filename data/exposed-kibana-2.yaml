@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-kibana2
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: kibana,unauth
 
 
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1

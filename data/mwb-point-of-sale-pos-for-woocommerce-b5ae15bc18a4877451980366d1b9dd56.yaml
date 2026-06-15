@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mwb-point-of-sale-pos-for-woocommerce-b5ae15bc18a4877451980366d1b9dd56
 
 info:

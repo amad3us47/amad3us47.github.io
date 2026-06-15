@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: groundhogg-3517ead9082b5f20b79fe79ad3d9c2e6
 
 info:

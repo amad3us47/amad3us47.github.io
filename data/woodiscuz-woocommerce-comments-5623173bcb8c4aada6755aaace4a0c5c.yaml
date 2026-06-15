@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: woodiscuz-woocommerce-comments-5623173bcb8c4aada6755aaace4a0c5c
 
 info:

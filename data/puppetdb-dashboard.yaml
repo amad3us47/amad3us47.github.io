@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: puppetdb-dashboard
 
 info:
@@ -9,7 +10,7 @@ info:
     shodan-query: 'title:"PuppetDB: Dashboard"'
   tags: misconfig,exposure,puppetdb
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/pdb/dashboard/index.html"

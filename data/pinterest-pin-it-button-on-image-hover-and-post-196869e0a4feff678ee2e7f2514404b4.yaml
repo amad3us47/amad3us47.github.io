@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pinterest-pin-it-button-on-image-hover-and-post-196869e0a4feff678ee2e7f2514404b4
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: netsus-default-login
 info:
   name: NetSUS Server Default Login
@@ -11,7 +12,7 @@ info:
   metadata:
     shodan-query: http.title:"NetSUS Server Login"
   tags: netsus,default-login
-requests:
+http:
   - raw:
       - |
         POST /webadmin/index.php HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: laravel-ignition-xss
 info:
   name: Laravel Ignition XSS
@@ -7,7 +8,7 @@ info:
     - https://www.acunetix.com/vulnerabilities/web/laravel-ignition-reflected-cross-site-scripting/
     - https://github.com/facade/ignition/issues/273
   tags: laravel,xss,ignition
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_ignition/scripts/--><svg%20onload=alert(document.domain)>"

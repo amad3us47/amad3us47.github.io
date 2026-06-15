@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-xmlrpc-listmethods
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: wordpress
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/xmlrpc.php"

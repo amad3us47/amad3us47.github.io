@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: moodle-xss
 info:
   name: Moodle redirect_uri Reflected XSS
@@ -6,10 +7,10 @@ info:
   severity: medium
   tags: moodle,xss
   reference: https://twitter.com/JacksonHHax/status/1391367064154042377
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

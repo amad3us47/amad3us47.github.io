@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: nginx-version
 info:
   name: nginx version detect
   author: philippedelteil
   description: Some nginx servers have the version on the response header. Useful when you need to find specific CVEs on your targets.
   severity: info
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: cpanel-detection
 info:
   id: cpanel-detection
   name: cPanel Detection
   author: OpenAI
   description: cPanel Control Panel
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:

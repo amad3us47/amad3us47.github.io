@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: connect-proxy-enabled
 
 info:
@@ -7,7 +8,7 @@ info:
 
 # https://www.securityfocus.com/bid/4131/discuss
 
-requests:
+http:
   - raw:
       - |
         CONNECT www.example.com HTTP/1.1
@@ -22,4 +23,3 @@ requests:
       - type: word
         words:
           - Example Domain
-          

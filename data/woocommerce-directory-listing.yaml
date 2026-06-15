@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: woocommerce-directory-listing
 info:
   id: woocommerce-directory-listing
   name: Woocommerce Plugin Directory Listing
   author: Your Name
   description: Template to detect if the directory listing is enabled for the WordPress Woocommerce plugin.
-  severity: Info
+  severity: info
   classification:
     country: any
     tags:
@@ -29,6 +31,6 @@ info:
       description: Directory listing enabled for the Woocommerce plugin
 
   response:
-    - status: 
+    - status:
       - 200
       - 403

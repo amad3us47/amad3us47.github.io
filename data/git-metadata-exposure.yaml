@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: git-metadata-exposure
 info:
   id: git-metadata-exposure
   name: Git Metadata Directory Exposure
   author: drfabiocastro
   description: Template to detect Git metadata directories exposed on web servers.
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:
@@ -30,5 +32,5 @@ info:
     description: Git repository configuration found in the response body
 
   response:
-    - status: 
+    - status:
       - 200

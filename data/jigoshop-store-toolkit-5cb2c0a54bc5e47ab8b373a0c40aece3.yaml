@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: jigoshop-store-toolkit-5cb2c0a54bc5e47ab8b373a0c40aece3
 
 info:

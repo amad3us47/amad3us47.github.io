@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: command-injection
 info:
   name: Command Injection
+  author: unknown
   severity: high
   description: Detects potential command injection vulnerabilities in the target
 author: qaisar
 tags:
   - web
   - command-injection
-requests:
+http:
 - method: POST
   path:
     - "/execute"

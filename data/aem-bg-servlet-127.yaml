@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aem-bg-servlet
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.slideshare.net/0ang3el/hunting-for-security-bugs-in-aem-webapps-129262212
   tags: aem
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/system/bgservlets/test.css'

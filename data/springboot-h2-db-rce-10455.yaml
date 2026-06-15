@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-h2-db-rce
 info:
   name: Spring Boot H2 Database RCE
@@ -11,7 +12,7 @@ info:
     - https://github.com/spaceraccoon/spring-boot-actuator-h2-rce
   metadata:
     shodan-query: http.favicon.hash:116323821
-requests:
+http:
   - raw:
       - |
         POST /actuator/env HTTP/1.1

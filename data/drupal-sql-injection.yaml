@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: drupal-sql-injection
 info:
   name: Drupalgeddon SQL Injection
+  author: unknown
   severity: high
   description: Detects potential Drupalgeddon SQL injection vulnerabilities in the target
 author: qaisar afridi
 tags:
   - web
   - drupal
-requests:
+http:
 - method: POST
   path:
     - "/node"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: siteomat-loader
 info:
   name: Orpak SiteOmat login portals
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: https://www.exploit-db.com/ghdb/6624
   tags: panel
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/login.htm'

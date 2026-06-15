@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: custom-splunk-info-disclose-detect
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: medium
   tags: config,exposure
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/en-US/splunkd/__raw/services/server/info/server-info?output_mode=json'
@@ -15,6 +16,5 @@ requests:
         words:
           - 'links'
           - 'origin'
-          - 'updated'  
+          - 'updated'
         condition: and
-

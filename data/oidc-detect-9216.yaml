@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oidc-detect
 info:
   name: Detect OpenID Connect provider
   author: jarijaas
   severity: info
   description: Detects OpenID Connect providers. See https://en.wikipedia.org/wiki/OpenID_Connect
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.well-known/openid-configuration"

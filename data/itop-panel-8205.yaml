@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: itop-panel
 
 info:
@@ -7,7 +8,7 @@ info:
   description: Try to detect the presence of a Combodo iTop instance via the login page
   tags: panel,itop
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/pages/UI.php"

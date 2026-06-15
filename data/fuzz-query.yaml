@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fuzz-query
 
 info:
@@ -5,7 +6,7 @@ info:
   author: pdteam
   severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -13,7 +14,7 @@ requests:
       - part: query
         type: postfix
         mode: multiple
-        keys: ["id","name"] 
+        keys: ["id","name"]
         fuzz: ["fuzz-word"]
     matchers-condition: and
     matchers:

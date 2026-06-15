@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: xfh-ssrf
 
 info:
@@ -9,18 +10,18 @@ info:
     - https://medium.com/@_yldrm/host-header-injection-to-complete-organization-takeover-67a8a2ddb188
     - https://hackerone.com/reports/727330
 
-requests:
+http:
   - raw:
       - |
         GET / HTTP/1.1
         Host: {{Hostname}}
         X-Forwarded-Host: {{interactsh-url}}
-        
+
       - |
         GET / HTTP/1.1
         Host: {{Hostname}}
         X-Forwarded-Host: {{Hostname}}@{{interactsh-url}}
-        
+
     matchers:
       - type: word
         part: interactsh_protocol  # Confirms the DNS Interaction

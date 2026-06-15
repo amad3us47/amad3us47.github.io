@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: django-debug-enabled
 info:
   id: django-debug-enabled
   name: Django Debug Enabled
   author: OpenAI
   description: Template to detect if Django Debug mode is enabled
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

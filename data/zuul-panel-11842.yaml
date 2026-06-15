@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: zuul-panel
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.shodan.io/search?query=http.title%3A%22zuul%22+http.favicon.hash%3A-1127895693
   tags: panel,Zuul,cicd
 
-requests:
+http:
   - method: GET
     redirects: true
     max-redirects: 5

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aws-redirect
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://link.medium.com/fgXKJHR9P7
   tags: aws
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

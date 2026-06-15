@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sysaid-workflow
 
 info:
   name: SysAid Security Checks
   author: pdteam
+  severity: info
   description: A simple workflow that runs all SysAid related nuclei templates on a given target.
 workflows:
   - template: http/exposed-panels/sysaid-panel.yaml

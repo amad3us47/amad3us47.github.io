@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: html5-jquery-audio-player-07ccbae2dfea0672d547a855c771a2bd
 
 info:

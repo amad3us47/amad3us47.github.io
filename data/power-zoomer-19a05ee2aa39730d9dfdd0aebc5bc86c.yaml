@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: power-zoomer-19a05ee2aa39730d9dfdd0aebc5bc86c
 
 info:

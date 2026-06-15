@@ -1,5 +1,6 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 
-id: drupal_module-feedback_collect-cross-site-scripting-
+id: drupal_module-feedback_collect-cross-site-scripting
 info:
   name: drupal_module-feedback_collect-cross-site-scripting-
   author: Bishopfox

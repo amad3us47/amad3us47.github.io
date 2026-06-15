@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: phpmyadmin-setup
 info:
   name: phpMyAdmin setup page
@@ -5,10 +6,10 @@ info:
   severity: medium
   tags: phpmyadmin
   reference: https://hackerone.com/reports/297339
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

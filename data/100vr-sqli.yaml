@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: 100vr-sqli
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: 100vr,sqli
 
-requests:
+http:
   - raw:
       - |
         POST /100vr/login/checktypelogin/ HTTP/1.1

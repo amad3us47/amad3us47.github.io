@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: drop-shadow-boxes-dff6244f53c14ed550fb7e75f8acb86e
 
 info:

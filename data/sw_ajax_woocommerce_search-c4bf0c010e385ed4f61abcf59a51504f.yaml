@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sw_ajax_woocommerce_search-c4bf0c010e385ed4f61abcf59a51504f
 
 info:

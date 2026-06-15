@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hot-linked-image-cacher-1688c46a384c2ec71926e19b96cb3c62
 
 info:

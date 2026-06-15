@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sceditor-detect
 info:
   name: SCEditor Detect
   author: pikpikcu
   severity: info
   tags: tech,sceditor
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

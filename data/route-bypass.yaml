@@ -1,15 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: common-route-01
-type: list
 info:
   name: Weird Case in route handler
+  author: unknown
+  severity: info
 
 origin:
   method: GET
-  redirect: false
-  headers:
-    - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
-  url: >-
-    {{.BaseURL}}/hopefully404
 
 variables:
   - prefix: |
@@ -41,13 +38,5 @@ variables:
       ajax/
       cms/
 
-requests:
+http:
   - method: GET
-    redirect: false
-    url: >-
-      {{.BaseURL}}/{{.prefix}}{{.dir}}
-    headers:
-      - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
-    detections:
-      - >-
-        StatusCode() == 200 && !StringSearch("response", "Not found") && Math.abs(ContentLength() - OriginContentLength()) > 1000

@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: exposed-git-repository
 info:
   name: Exposed Git Repository
+  author: unknown
   severity: medium
   description: Detects potential exposed Git repositories in the target
 author: qaisar afridi
 tags:
   - web
   - git
-requests:
+http:
 - method: GET
   path:
     - "/.git"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: cgi-test-page
 info:
   name: CGI Test page
@@ -5,7 +6,7 @@ info:
   severity: info
   tags: cgi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/cgi-bin/test/test.cgi"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: karel-ip-phone-lfi
 info:
   name: Karel IP Phone IP1211 Web Management Panel - Directory Traversal
@@ -7,10 +8,10 @@ info:
     - https://cxsecurity.com/issue/WLB-2020100038
     - https://www.karel.com.tr/urun-cozum/ip1211-ip-telefon
   tags: karel,lfi
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

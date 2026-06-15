@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: brute-force-protection-bypass
 info:
   name: Brute Force Protection Bypass Test
@@ -9,7 +10,7 @@ info:
 tags:
   - web
 
-requests:
+http:
   - method: POST
     path:
       - "/login"

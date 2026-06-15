@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: php-backup-files
 info:
   name: PHP source disclosure through backup files
   author: StreetOfHackerR007 (Rohit Soni)
   severity: medium
   tags: exposure,backup,php,disclosure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php.bak"

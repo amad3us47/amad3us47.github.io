@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-googleroutetotraveled
 
 info:
@@ -20,5 +21,5 @@ http:
         part: body
         words:
           - 'error'
-        negative: true
+
 # digest: 4a0a00473045022100cd8ace2e9692b411f42f6b55b052f2f980774ae42a6651686c445c21903e6a2d02206cbe38a080661a60a9e442f61a53f01520222a587b64d9ae285b23265808a10e:922c64590222798bb761d5b6d8e72950

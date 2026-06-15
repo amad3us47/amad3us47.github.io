@@ -1,4 +1,5 @@
-id: Django Debug Mode
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Django-Debug-Mode
 
 info:
   name: Django Debug Mode Information leakage
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: exposure
 
-requests:
+http:
   - raw:
       - |
         POST /admin/login/?next=/admin/ HTTP/1.1
@@ -15,7 +16,7 @@ requests:
         Accept: */*
         Content-Type: application/json;charset=UTF-8
         User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
-        
+
         {"test::"data"}
 
 
@@ -30,8 +31,8 @@ requests:
           - "DB_USER"
           - "DB_PASSWORD"
           - "ADMIN_PASSWORD"
-        condition: or  
-        part: body    
+        condition: or
+        part: body
         - type: status
       - type: status
         status:
@@ -39,5 +40,4 @@ requests:
           - 500
           - 403
           - 404
-        condition: or 
-       
+        condition: or

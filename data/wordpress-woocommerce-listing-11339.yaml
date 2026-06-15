@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-woocommerce-listing
 info:
   name: WordPress Woocommerce Plugin Directory Listing
@@ -6,7 +7,7 @@ info:
   description: Searches for sensitive directories present in the woocommerce wordpress plugin.
   reference: https://www.exploit-db.com/ghdb/6192
   tags: wordpress,listing,plugin,woocommerce
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/woocommerce/"

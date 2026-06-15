@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: flash-player-widget-c784d661dd1bbf959b79cb5c907c7e0b
 
 info:

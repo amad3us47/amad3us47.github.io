@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: api-bingmaps
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: info
   tags: token-spray,bing,maps,bingmaps
 
-requests:
+http:
   - method: GET
     path:
       - "https://dev.virtualearth.net/REST/v1/Locations?CountryRegion=US&adminDistrict=WA&locality=Somewhere&postalCode=98001&addressLine=100%20Main%20St.&key={{token}}"

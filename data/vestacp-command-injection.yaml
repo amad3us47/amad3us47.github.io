@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: vestacp-command-injection
 
 info:
@@ -18,6 +19,6 @@ http:
     matchers-condition: and
     matchers:
       - type: word
-        part: interactsh_protocol  
+        part: interactsh_protocol
         words:
           - "dns"

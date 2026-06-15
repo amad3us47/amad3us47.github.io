@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: vmware-aria-operations
 info:
   id: vmware-aria-operations
   name: VMware Aria Operations Detected
   author: OpenAI
   description: Template to detect the VMware Aria Operations service
-  severity: Medium
+  severity: medium
   classification:
     country: any
     tags:

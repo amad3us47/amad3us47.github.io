@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: iptime-default-login
 info:
   name: ipTIME Default Login
   author: gy741
   severity: high
   tags: iptime,default-login
-requests:
+http:
   - raw:
       - |
         POST /sess-bin/login_handler.cgi HTTP/1.1

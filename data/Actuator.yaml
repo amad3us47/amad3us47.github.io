@@ -1,10 +1,11 @@
-id: Finds actuator 
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: Finds-actuator
 info:
   name: Actuator info leakage
   author: Clark
-  severity: meduim
+  severity: medium
   #Look in for exposed info.
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/actuator"
@@ -21,7 +22,7 @@ requests:
       - "{{BaseURL}}/actuator/loggers"
       - "{{BaseURL}}/actuator/mappings"
       - "{{BaseURL}}/actuator/threaddump"
-    
+
     matchers-condition: and
     matchers:
       - type: word

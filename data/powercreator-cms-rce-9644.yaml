@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: powercreator-cms-rce
 info:
   name: PowerCreator CMS - Remote Code Execution
@@ -12,7 +13,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-77
   tags: rce,powercreator,intrusive
-requests:
+http:
   - raw:
       - |
         POST /upload/UploadResourcePic.ashx?ResourceID=8382 HTTP/1.1

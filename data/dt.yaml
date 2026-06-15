@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: directory-traversal
 info:
   name: Directory Traversal
+  author: unknown
   severity: medium
   description: Detects potential directory traversal vulnerabilities in the target
 author: qaisar afridi
 tags:
   - web
   - directory-traversal
-requests:
+http:
 - method: GET
   path:
     - "/download"

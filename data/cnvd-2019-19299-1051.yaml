@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: CNVD-2019-19299
 
 info:
@@ -9,7 +10,7 @@ info:
     - https://github.com/sectestt/CNVD-2019-19299
   tags: zhiyuan,cnvd,cnvd2019,rce
 
-requests:
+http:
   - raw:
       - |
         POST /seeyon/htmlofficeservlet HTTP/1.1

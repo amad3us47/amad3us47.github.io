@@ -1,6 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aws-s3-misconfig
 info:
   name: AWS S3 Bucket Misconfiguration
+  author: unknown
   severity: high
   description: Detects potential AWS S3 bucket misconfigurations in the target
 author: qaisar afridi
@@ -8,7 +10,7 @@ tags:
   - cloud
   - aws
   - s3
-requests:
+http:
 - method: GET
   path:
     - "/s3"

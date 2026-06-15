@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: linkerd-ssrf-detect
 # Detect the Linkerd service by overriding the delegation table and
 # inspect the response for:
@@ -17,7 +18,7 @@ info:
   name: Linkerd SSRF detection
   author: dudez
   severity: info
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/"

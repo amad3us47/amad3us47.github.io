@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: add-hierarchy-parent-to-post-8c69e602ef62402b2019221e3fa0a566
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: aryo-activity-log-561c48e4bd5edcf5f4e3bfb16c03d109
 
 info:

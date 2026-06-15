@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-trace
 info:
   name: Detect Springboot Trace Actuator
@@ -5,10 +6,10 @@ info:
   severity: low
   description: View recent HTTP requests and responses
   tags: springboot,disclosure
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

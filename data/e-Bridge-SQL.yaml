@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: e-Bridge-SQL
 info:
   name: 泛微云桥e-Bridge
@@ -29,4 +30,4 @@ http:
           - 8ce8afb7e88194e7b3bb
       - type: dsl
         dsl:
-          - 'duration>=5'          
+          - 'duration>=5'

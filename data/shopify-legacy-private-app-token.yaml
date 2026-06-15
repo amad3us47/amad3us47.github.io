@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: shopify-legacy-private-app-token
 info:
   id: shopify-legacy-private-app-token
   name: Shopify Access Token (Legacy Private App)
   author: twitter/drfabiocastro
   description: Template to detect Shopify access tokens for legacy private apps.
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:
@@ -16,7 +18,7 @@ info:
 
   requests:
       method: GET
-      path: 
+      path:
         - "/"
       description: Attempt to access the repository's main page
 
@@ -26,6 +28,6 @@ info:
       description: Shopify access token for legacy private app found in source code
 
   response:
-    - status: 
+    - status:
       - 200
       description: Successful response from server

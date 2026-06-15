@@ -1,12 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Labda_auth_Bypass_method
 
 info:
   name: Labda auth bypass
   author: Labda
+  severity: info
   description: Bypasses authorization with header modification
   tags: bypass, web, authorization, Forbidden
 
-requests:
+http:
   - raw:
       - |+
         {{method}} / HTTP/1.1

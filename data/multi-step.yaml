@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: multi-step
 
 info:
@@ -5,7 +6,7 @@ info:
   author: pd-team
   severity: info
 
-network:
+tcp:
   - inputs:
       - data: "FIRST"
         read: 4
@@ -20,13 +21,13 @@ network:
       - type: word
         part: first
         words:
-          - "PING" 
+          - "PING"
       - type: word
         part: second
         words:
-          - "PONG" 
+          - "PONG"
       - type: word
         part: data
         words:
-          - "NUCLEI" 
+          - "NUCLEI"
     matchers-condition: and

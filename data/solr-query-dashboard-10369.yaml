@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: solr-admin-query
 info:
   name: Solr - Admin Page Access
@@ -7,7 +8,7 @@ info:
   reference:
     - https://www.exploit-db.com/ghdb/5856
   tags: solr,unauth
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/admin/'

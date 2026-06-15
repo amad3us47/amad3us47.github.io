@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-gateway
 info:
   name: Detect Spring Gateway Actuator
@@ -7,7 +8,7 @@ info:
   reference:
     - https://wya.pl/2021/12/20/bring-your-own-ssrf-the-gateway-actuator/
   tags: springboot,exposure
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/gateway/routes"

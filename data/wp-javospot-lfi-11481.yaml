@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wp-javospot-lfi
 info:
   name: Javo Spot Premium Theme - Unauthenticated Directory Traversal
@@ -9,10 +10,10 @@ info:
     - https://wpscan.com/vulnerability/2d465fc4-d4fa-43bb-9c0d-71dcc3ee4eab
     - https://themeforest.net/item/javo-spot-multi-purpose-directory-wordpress-theme/13198068
   tags: wordpress,wp-theme,lfi,wp
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

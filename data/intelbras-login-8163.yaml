@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: intelbras-login
 info:
   name: Intelbras Login
@@ -8,7 +9,7 @@ info:
     shodan-query: http.title:"Intelbras"
     google-dork: intitle:"Intelbras" "All Rights Reserved" -.com
   tags: panel
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/login.html'

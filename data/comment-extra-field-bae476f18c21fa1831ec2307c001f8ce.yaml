@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: comment-extra-field-bae476f18c21fa1831ec2307c001f8ce
 
 info:

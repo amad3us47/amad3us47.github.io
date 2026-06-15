@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: laravel-env-disclosure
 info:
   id: laravel-env-disclosure
   name: Laravel Sensitive Data Disclosure
   author: twitter/drfabiocastro
   description: Detects the exposure of sensitive information in Laravel applications.
-  severity: High
+  severity: high
   classification:
     country: any
     tags:
@@ -12,7 +14,7 @@ info:
       - disclosure
 
   matcher-condition: or
-  
+
   requests:
     method: GET
     path:
@@ -28,5 +30,5 @@ info:
       type: body
       description: Matching DB_ variables found in response body
   response:
-    - status: 
+    - status:
       - 200

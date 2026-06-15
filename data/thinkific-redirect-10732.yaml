@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: thinkific-redirect
 info:
   name: Open Redirect vulnerability on thinkific websites
   author: Gal Nagli
   severity: medium
   tags: redirect
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/sso/v2/sso/jwt?error_url=http://evil.com"

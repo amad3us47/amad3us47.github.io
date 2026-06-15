@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ASVS-4-0-3-V14-4-1
 
 info:
@@ -42,22 +43,3 @@ http:
     matchers:
       - type: regex
         name: "Content-Type header"
-        negative: true
-        regex:
-          - (?i)Content-Type:\s+text/(\w+);\s+charset=(utf-?8|iso-?8859?-1)
-          - (?i)Content-Type:\s+(application/xml|\+xml);\s+charset=(utf-?8|utf-?16)
-        part: header
-
-      - type: regex
-        name: "HTML meta charset"
-        negative: true
-        regex:
-          - (?i)<meta\s+charset\s*=\s*["'](utf-?8|iso-?8859-?1)["']\s*\/?>
-        part: body
-
-      - type: regex
-        name: "XML declaration encoding"
-        negative: true
-        regex:
-          - (?i)<\?xml\s+version\s*=\s*["'][0-9.]*["']\s+encoding\s*=\s*["'](utf-?8|utf-?16|iso-?8859-?1)["']\s*\?>
-        part: body

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: easy-media-gallery-pro-listing
 info:
   name: WordPress Plugin Media Gallery Pro Listing
@@ -7,10 +8,10 @@ info:
   reference: https://www.exploit-db.com/ghdb/6455
   tags: wordpress,listing,wp-plugin
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

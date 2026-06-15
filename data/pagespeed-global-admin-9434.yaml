@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: pagespeed-global-admin
 info:
   name: Pagespeed Global Admin
   author: geeknik
   severity: low
   tags: pagespeed,admin
-requests:
+http:
   - method: GET
     headers:
       X-Client-IP: "127.0.0.1"

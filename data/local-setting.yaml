@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: local-settings-python
 info:
   name: Detect Python Config Sensitive Information Exposure
@@ -9,7 +10,7 @@ info:
     - sensitive-information
     - python-config
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/local_settings.py'
@@ -26,7 +27,3 @@ requests:
           - 'KEY'
           - 'django'
           - 'TOKEN'
-
-
-
-

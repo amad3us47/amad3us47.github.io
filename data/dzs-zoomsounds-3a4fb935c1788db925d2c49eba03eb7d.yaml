@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dzs-zoomsounds-3a4fb935c1788db925d2c49eba03eb7d
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: gitlab-user-enumeration
 
 info:
@@ -8,10 +9,10 @@ info:
 
   # Username source - https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/malenames-usa-top1000.txt
 
-requests:
+http:
   - payloads:
       user: helpers/wordlists/user-list.txt
-    attack: sniper
+
     threads: 50
 
     raw:

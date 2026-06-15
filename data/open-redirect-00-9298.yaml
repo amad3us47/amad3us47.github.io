@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: open-redirect-00
 info:
   name: Open Redirect Lite
-  risk: Low
+  author: unknown
+  severity: info
 
 params:
   - root: "{{.BaseURL}}"
@@ -18,24 +20,5 @@ variables:
       /%5c/%2f%2e%2e
       /〱%2f%2e%2e
 
-requests:
+http:
   - method: GET
-    redirect: false
-    url: >-
-      {{.root}}{{.prefix}}{{.dest}}
-    headers:
-      - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
-    detections:
-      - >-
-        (StatusCode() >= 300 && StatusCode() < 400) && (StringSearch("resHeaders", "Location: http://{{.dest}}") || StringSearch("resHeaders", "Location: https://{{.dest}}") || StringSearch("resHeaders", "Location: {{.dest}}") || StringSearch("resHeaders", "Location: https:///{{.dest}}")) && !StringSearch("resHeaders", "Location: https://{{.Host}}")
-
-  # with scheme
-  - method: GET
-    redirect: false
-    url: >-
-      {{.root}}{{.prefix}}https://{{.dest}}
-    headers:
-      - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
-    detections:
-      - >-
-        (StatusCode() >= 300 && StatusCode() < 400) && (StringSearch("resHeaders", "Location: http://{{.dest}}") || StringSearch("resHeaders", "Location: https://{{.dest}}") || StringSearch("resHeaders", "Location: {{.dest}}") || StringSearch("resHeaders", "Location: https:///{{.dest}}")) && !StringSearch("resHeaders", "Location: https://{{.Host}}")

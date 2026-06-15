@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: iptime-router
 info:
   name: ipTIME Router Login
@@ -5,7 +6,7 @@ info:
   severity: info
   reference: http://pierrekim.github.io/blog/2015-07-01-poc-with-RCE-against-127-iptime-router-models.html
   tags: panel,login,iptime,router
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/sess-bin/login_session.cgi'

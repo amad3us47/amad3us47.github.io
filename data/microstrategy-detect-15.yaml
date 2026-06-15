@@ -1,4 +1,5 @@
-id: microstrategy-detect 15
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: microstrategy-detect-15
 
 info:
   name: MicroStrategy Instances Detection Template
@@ -7,10 +8,10 @@ info:
   description: Detect if MicroStrategy instances exist in your URLS
   tags: microstrategy,panel
 
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
 
     raw:

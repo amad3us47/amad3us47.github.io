@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: default-iis7-page
 
 info:
@@ -7,7 +8,7 @@ info:
   tags: tech,iis
   reference: https://github.com/yavolo/nuclei-templates/
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/does-not-exist-iis-404'

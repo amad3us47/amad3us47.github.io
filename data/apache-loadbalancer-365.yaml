@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: apache-loadbalancer
 
 info:
   name: Apache Load Balancer Manager
   author: notnotnotveg
-  severity: informative
+  severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/balancer-manager"

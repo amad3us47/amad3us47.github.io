@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: springboot-exposures
 
 info:
   name: Detect the exposure of Springboot Actuators
   author: h0tak88r
   severity: medium
-  description: Sensetive data disclosure via springboot 
+  description: Sensetive data disclosure via springboot
   tags: rce,exposures
   reference:
     - https://www.veracode.com/blog/research/exploiting-spring-boot-actuators
@@ -12,7 +13,7 @@ info:
     - https://hackerone.com/reports/1662474
     - https://hackerone.com/reports/862589
     - https://docs.spring.io/spring-boot/docs/current/actuator-api/htmlsingle/#caches
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/actuator"

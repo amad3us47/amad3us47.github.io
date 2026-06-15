@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: strong-testimonials-085046f7fb801ef38d5b3c238d4b5860
 
 info:

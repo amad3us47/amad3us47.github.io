@@ -1,4 +1,5 @@
-id: php-8.1.0-dev-rce-sqli
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: php-8-1-0-dev-rce-sqli
 info:
   name: PHP 8.1.0-dev RCE & SQLi via User-Agentt header
   author: 0xpugazh

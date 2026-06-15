@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: asf-allow-svg-files-cb109deaaa178a3f20d3b7caac11ecb6
 
 info:

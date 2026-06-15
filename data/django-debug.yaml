@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: django-debug
 
 info:
@@ -7,7 +8,7 @@ info:
   severity: high
   tags: django
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/admin/login/?next=/admin/"

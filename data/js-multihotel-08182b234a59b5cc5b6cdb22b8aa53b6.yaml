@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: js-multihotel-08182b234a59b5cc5b6cdb22b8aa53b6
 
 info:

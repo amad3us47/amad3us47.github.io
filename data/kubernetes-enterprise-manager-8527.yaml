@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kubernetes-enterprise-manager
 info:
   name: Detect Kubernetes Enterprise Manager
@@ -7,10 +8,10 @@ info:
 #  additional-fields:
 
 #    fofa-dork: 'app="Kubernetes-Enterprise-Manager"'
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |

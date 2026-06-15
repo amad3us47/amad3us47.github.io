@@ -1,14 +1,3 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: manageengine-admanager-plus
 name: manageengine-admanager-plus
-priority: 3
-nuclei_tags:
-  - - admanager
-fingerprint:
-  - path: /
-    request_method: get
-    request_headers: {}
-    request_data: ''
-    status_code: 0
-    headers: {}
-    keyword:
-      - <title>ManageEngine - ADManager Plus</title>
-    favicon_hash: []

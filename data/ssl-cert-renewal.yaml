@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: ssl-cert-renewal
 info:
   name: SSL/TLS Certificates in AWS IAM about to expire in 30 days

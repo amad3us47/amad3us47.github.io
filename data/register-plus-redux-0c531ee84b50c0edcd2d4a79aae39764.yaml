@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: register-plus-redux-0c531ee84b50c0edcd2d4a79aae39764
 
 info:

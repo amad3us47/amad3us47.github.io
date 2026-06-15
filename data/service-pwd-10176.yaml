@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: service-pwd
 info:
   name: Service password file
@@ -6,7 +7,7 @@ info:
   description: Searches for sensitive service.pwd file.
   reference: https://www.exploit-db.com/ghdb/7256
   tags: exposure,listing,service
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_vti_pvt/service.pwd"

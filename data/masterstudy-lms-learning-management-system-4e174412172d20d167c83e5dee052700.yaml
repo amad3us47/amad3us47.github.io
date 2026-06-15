@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: masterstudy-lms-learning-management-system-4e174412172d20d167c83e5dee052700
 
 info:

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: photocrati-theme-113cdcc8fb58fe9815b936db2ac1eb4a
 
 info:

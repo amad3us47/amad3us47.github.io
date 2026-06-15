@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: login-with-ajax-b808d5ed9f854902d5f9f36f77de50b6
 
 info:

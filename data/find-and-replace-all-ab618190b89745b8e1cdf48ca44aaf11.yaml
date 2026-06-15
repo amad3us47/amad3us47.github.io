@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: find-and-replace-all-ab618190b89745b8e1cdf48ca44aaf11
 
 info:

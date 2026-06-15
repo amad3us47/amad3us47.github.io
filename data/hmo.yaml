@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: HTTP-Override-Attack
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   description: HMO
 
-requests:
+http:
 
   - raw:
       - |
@@ -33,10 +34,9 @@ requests:
         status:
           - 404
       - type: word
-        words: 
+        words:
           - "POST"
           - "GET"
           - "DELETE"
           - "not found"
           - "Resource has been successfully removed with the DELETE method"
-

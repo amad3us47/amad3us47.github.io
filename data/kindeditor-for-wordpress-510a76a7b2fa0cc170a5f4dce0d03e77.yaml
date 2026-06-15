@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: kindeditor-for-wordpress-510a76a7b2fa0cc170a5f4dce0d03e77
 
 info:

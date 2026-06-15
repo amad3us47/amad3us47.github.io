@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: f5-bigip-unauthorized-access
 info:
   name: F5 BIG-IP Unauthorized Access
+  author: unknown
   severity: high
   description: Detects potential unauthorized access to F5 BIG-IP in the target
 author: qaisar afridi
 tags:
   - network
   - f5-bigip
-requests:
+http:
 - method: GET
   path:
     - "/bigip"

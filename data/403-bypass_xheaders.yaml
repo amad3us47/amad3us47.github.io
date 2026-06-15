@@ -1,12 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Labda_403Bypass_xheaders
 
 info:
   name: Labda 403 bypass
   author: Labda
+  severity: info
   description: Bypasses 403 Forbidden
   tags: bypass, web, 403, Forbidden
 
-requests:
+http:
   - raw:
       - |+
         GET / HTTP/1.1
@@ -47,5 +49,3 @@ requests:
         - type: status
           status:
             - 200
-
-

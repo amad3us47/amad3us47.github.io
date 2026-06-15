@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: servicedesk-login-panel
 info:
   name: Servicedesk Login Panel Detector
@@ -7,7 +8,7 @@ info:
   metadata:
     shodan-query: http.component:"Atlassian Confluence"
   tags: servicedesk,confluence,jira,panel,login
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/servicedesk/customer/user/login"

@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: nginx-server-detection
 info:
   id: nginx-server-detection
   name: Nginx Server Detection
   author: OpenAI
   description: Template to detect Nginx server and its version
-  severity: Low
+  severity: low
   classification:
     country: any
     tags:

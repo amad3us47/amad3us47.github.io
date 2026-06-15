@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: prometheus-exporter
 info:
   name: Prometheus exporter detect
@@ -7,7 +8,7 @@ info:
   reference:
     - https://github.com/prometheus/prometheus/wiki/Default-port-allocations
   tags: prometheus
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

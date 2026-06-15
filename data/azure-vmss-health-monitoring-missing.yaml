@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: azure-vmss-health-monitoring-missing
 info:
   name: Azure VMSS Health Monitoring Not Enabled
@@ -53,10 +54,5 @@ code:
         words:
           - 'ApplicationHealthLinux'
           - 'healthRepairExtension'
-        negative: true
 
-    extractors:
-      - type: dsl
-        dsl:
-          - 'name + " in " + resourceGroup + " does not have health monitoring enabled"'
 # digest: 4a0a0047304502210099fdefb7bb4678883edf03d7f72c77263ed6d9fa53a688e4293f730b3ea4052802203160466184b179839207d6f030efc907a867bc433026e04e590641ad40eb72d4:922c64590222798bb761d5b6d8e72950

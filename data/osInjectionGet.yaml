@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: mr12-osInjectionGet
 info:
   name: os InjectionGet Detection for GET parameters
@@ -6,7 +7,7 @@ info:
   author: mr12
   tags:
     - osInjection
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}{{osPayloads}}"
@@ -45,4 +46,3 @@ requests:
         condition: or
         words:
           - "test"
-      

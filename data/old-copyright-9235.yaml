@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: old-copyright
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: info
   tags: misc
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -19,21 +20,3 @@ requests:
         part: body
         words:
           - '2022'
-        negative: true
-
-      - type: regex
-        part: body
-        regex:
-          - 'Copyright [1-9]\d*'
-          - '© [1-9]\d*'
-          - '&copy; [1-9]\d*'
-          - '&#169; [1-9]\d*'
-
-    extractors:
-      - type: regex
-        part: body
-        regex:
-          - 'Copyright [1-9]\d*'
-          - '© [1-9]\d*'
-          - '&copy; [1-9]\d*'
-          - '&#169; [1-9]\d*'

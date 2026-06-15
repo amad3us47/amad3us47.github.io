@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: osint-consulta-veiculo-tabelafipebrasil
 
 info:
@@ -9,7 +10,7 @@ info:
 
 self-contained: true
 
-requests:
+http:
   - method: POST
     headers:
       User-Agent: Android
@@ -23,7 +24,7 @@ requests:
       sec-fetch-site: same-origin
     path:
       - "https://www.tabelafipebrasil.com/placa/{{PLACA}}"
-    
+
 
     extractors:
          - type: xpath
@@ -32,8 +33,3 @@ requests:
            group: 1
            xpath:
             - "/html/body/div/div[2]/div[2]/div[1]/table"
-
-    
-        
-        
-

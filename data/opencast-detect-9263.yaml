@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: opencast-panel
 info:
   name: Opencast Panel Login
@@ -6,7 +7,7 @@ info:
   description: The free and open source solution for automated video capture and distribution at scale.
   reference: https://github.com/opencast/opencast
   tags: panel,opencast
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/admin-ng/login.html"

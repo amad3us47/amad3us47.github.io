@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: dlink-850L-info-leak
 
 info:
@@ -7,7 +8,7 @@ info:
   reference: https://xz.aliyun.com/t/2941
   tags: dlink
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/hedwig.cgi"

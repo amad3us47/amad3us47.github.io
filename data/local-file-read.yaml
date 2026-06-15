@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Etc-file
 info:
   name: Etc File Read
   author: Saimon
   severity: high
   description: Finds etc password files
-requests:
+http:
   - method: GET
     path:
       - |

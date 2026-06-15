@@ -1,15 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: rabbitmq-workflow
 
 info:
   name: RabbitMQ Workflow
   author: fyoorer
+  severity: info
 
 variables:
   rabbitmq_dashboard: panels/rabbitmq-dashboard.yaml
   rabbitmq_default_admin: security-misconfiguration/rabbitmq-default-admin.yaml
-
-logic:
-  |
-  if rabbitmq_dashboard() {
-    rabbitmq_default_admin()
-  }

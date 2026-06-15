@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: wordpress-accessible-wpconfig
 info:
   name: WordPress accessible wp-config
@@ -5,7 +6,7 @@ info:
   severity: high
   description: The remote WordPress installation has the `wp-config` file remotely accessible and its content available for reading.
   tags: wordpress,backup
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-config.php'

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: sunos58-ftp-detect
 info:
   name: SunOS 5.8 FTP Service - Detect

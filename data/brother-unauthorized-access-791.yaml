@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: brother-unauthorized-access-detect
 info:
   name: Brother Printer
@@ -5,7 +6,7 @@ info:
   severity: medium
   reference: https://www.exploit-db.com/ghdb/6889
   tags: iot,printer
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/net/net/net.html"

@@ -1,11 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauthenticated-nacos-access
 info:
   name: Unauthenticated Nacos access v1.x
   author: taielab & @pikpikcu
   severity: critical
-  issues: https://github.com/alibaba/nacos/issues/4593
   tags: nacos,unauth
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/nacos/v1/auth/users?pageNo=1&pageSize=9"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: opennms-log4j-jndi-rce
 
 info:
@@ -19,7 +20,7 @@ info:
     shodan-query: title:"OpenNMS Web Console"
   tags: jndi,log4j,rce,opennms,cve,cve2021
 
-requests:
+http:
   - raw:
       - |
         POST /opennms/j_spring_security_check HTTP/1.1

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: widget-google-reviews-6737ec662f7c07603c60d5ec4de414a0
 
 info:

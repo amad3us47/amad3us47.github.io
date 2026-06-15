@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: qwiz-online-quizzes-and-flashcards-9e67def2d7461738e52bd6d13ec8e04f
 
 info:

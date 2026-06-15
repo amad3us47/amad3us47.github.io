@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: fastjson-1-2-47-rce
 info:
   name: Fastjson 1.2.47 Deserialization RCE
@@ -9,10 +10,10 @@ info:
     - https://cert.360.cn/warning/detail?id=7240aeab581c6dc2c9c5350756079955
     - https://github.com/wyzxxz/fastjson_rce_tool
   tags: fastjson,rce,deserialization,oast
-requests:
+http:
   - payloads:
       Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
+
     threads: 100
     raw:
       - |-

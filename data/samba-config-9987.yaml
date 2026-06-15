@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: samba-config
 info:
   name: Samba config file disclosure
   author: sheikhrishad
   severity: info
   tags: config,exposure,smb
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/smb.conf"

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: owasp-juice-shop-detect
 info:
   name: OWASP Juice Shop
@@ -5,7 +6,7 @@ info:
   severity: info
   tags: tech,owasp
   reference: https://fofa.so/result?qbase64=dGl0bGU9Ik9XQVNQIEp1aWNlIFNob3Ai
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"

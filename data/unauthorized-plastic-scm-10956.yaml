@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: unauthorized-plastic-scm
 info:
   name: Plastic Admin Console - Authentication Bypass
@@ -11,7 +12,7 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-288
   tags: plastic
-requests:
+http:
   - raw:
       - |
         GET /account/register HTTP/1.1

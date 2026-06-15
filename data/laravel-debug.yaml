@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
+id: laravel-debug
 info:
   id: laravel-debug
   name: Laravel Debug Method Enabled
   author: Fábio Castro
   description: List of common regular expression patterns to detect Laravel debug method enabled in HTTP response bodies.
-  severity: Medium
+  severity: medium
   classification:
     tags:
       - debug
@@ -29,7 +31,7 @@ info:
     - pattern: "Whoops! There was an error"
       type: body
       description: "Matches Laravel Whoops error message in request bodies."
-      
+
   response:
-    - status: 
+    - status:
       - 200

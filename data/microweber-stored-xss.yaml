@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: microweber-stored-xss
 
 info:
@@ -18,7 +19,7 @@ info:
     verified: true
   tags: cve,cve2022,xss,microweber,authenticated
 
-requests:
+http:
   - raw:
       - |
         POST /api/user_login HTTP/1.1

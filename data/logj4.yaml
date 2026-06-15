@@ -1,12 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: Labda_rce_apache
 
 info:
   name: Labda rce
   author: Labda
+  severity: info
   description: Log4Shell
   tags: web, rce,
 
-requests:
+http:
   - raw:
       - |+
         GET / HTTP/1.1

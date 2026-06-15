@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/projectdiscovery/nuclei/dev/pkg/templates/nuclei-jsonschema.json
 id: arl-default-login
 
 info:
@@ -6,7 +7,7 @@ info:
   severity: high
   tags: arl,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /api/user/login HTTP/1.1
