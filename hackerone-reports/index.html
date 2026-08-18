@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HackerOne Reports</title>
+
+    <style>
+        :root {
+            --background: #ffffff;
+            --surface: #ffffff;
+            --border: #d8dee4;
+            --border-light: #e6e9ed;
+            --text: #24292f;
+            --muted: #656d76;
+            --link: #0969da;
+            --green: #1a7f37;
+            --hover: #f6f8fa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: var(--background);
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: min(1400px, calc(100% - 48px));
+            margin: 0 auto;
+            padding: 42px 0 60px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 18px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        .description {
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .toolbar-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #search {
+            width: 330px;
+            height: 34px;
+            padding: 6px 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: #fff;
+            color: var(--text);
+            font: inherit;
+            outline: none;
+        }
+
+        #search:focus {
+            border-color: #0969da;
+            box-shadow: 0 0 0 2px rgba(9, 105, 218, 0.12);
+        }
+
+        button {
+            height: 34px;
+            padding: 0 11px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: #f6f8fa;
+            color: var(--text);
+            font: inherit;
+            cursor: pointer;
+        }
+
+        button:hover:not(:disabled) {
+            background: #eef1f4;
+        }
+
+        button:disabled {
+            color: #8c959f;
+            cursor: default;
+        }
+
+        #status {
+            color: var(--muted);
+            white-space: nowrap;
+            font-size: 13px;
+        }
+
+        .table-wrapper {
+            border: 1px solid var(--border);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th {
+            background: #f6f8fa;
+            color: #57606a;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        th,
+        td {
+            padding: 9px 12px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        tbody tr:hover {
+            background: var(--hover);
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 90px;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 150px;
+        }
+
+        th:nth-child(3),
+        td:nth-child(3) {
+            width: auto;
+        }
+
+        th:nth-child(4),
+        td:nth-child(4) {
+            width: 130px;
+        }
+
+        th:nth-child(5),
+        td:nth-child(5) {
+            width: 100px;
+        }
+
+        th:nth-child(6),
+        td:nth-child(6) {
+            width: 145px;
+        }
+
+        .id {
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .platform {
+            font-weight: 500;
+        }
+
+        .bug-type {
+            overflow-wrap: anywhere;
+        }
+
+        .report-link {
+            color: var(--link);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .report-link:hover {
+            text-decoration: underline;
+        }
+
+        .bounty {
+            color: var(--green);
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        .date {
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 18px;
+        }
+
+        .page-jump {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0 4px;
+            color: var(--muted);
+        }
+
+        #pageInput {
+            width: 64px;
+            height: 34px;
+            padding: 5px 8px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            text-align: center;
+            font: inherit;
+            outline: none;
+        }
+
+        #pageInput:focus {
+            border-color: var(--link);
+        }
+
+        .page-info {
+            margin-top: 8px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .error {
+            color: #cf222e;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: min(100% - 24px, 1400px);
+                padding-top: 24px;
+            }
+
+            .toolbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            #search {
+                width: 100%;
+            }
+
+            .toolbar-left {
+                width: 100%;
+            }
+
+            #sortDate {
+                flex-shrink: 0;
+            }
+
+            #status {
+                white-space: normal;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>HackerOne Reports</h1>
+        <div class="description">
+            Public vulnerability report index
+        </div>
+    </header>
+
+    <div class="toolbar">
+
+        <div class="toolbar-left">
+
+            <input
+                type="search"
+                id="search"
+                placeholder="Search reports"
+                autocomplete="off"
+            >
+
+            <button id="sortDate">
+                Newest
+            </button>
+
+        </div>
+
+        <div id="status">
+            Loading...
+        </div>
+
+    </div>
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Platform</th>
+                    <th>Type of Bug</th>
+                    <th>Report</th>
+                    <th>Bounty</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody id="reportsBody"></tbody>
+
+        </table>
+
+    </div>
+
+    <div class="pagination">
+
+        <button
+            id="previous"
+            type="button"
+        >
+            Previous
+        </button>
+
+        <div class="page-jump">
+
+            <span>Page</span>
+
+            <input
+                type="number"
+                id="pageInput"
+                min="1"
+                value="1"
+            >
+
+            <span id="totalPagesText">
+                of 1
+            </span>
+
+            <button
+                id="goButton"
+                type="button"
+            >
+                Go
+            </button>
+
+        </div>
+
+        <button
+            id="next"
+            type="button"
+        >
+            Next
+        </button>
+
+    </div>
+
+    <div
+        class="page-info"
+        id="pageInfo"
+    ></div>
+
+</div>
+
+
+<script>
+
+const CSV_FILE = "./reports.csv";
+const ROWS_PER_PAGE = 25;
+
+let allRows = [];
+let filteredRows = [];
+let currentPage = 1;
+let newestFirst = true;
+
+
+/*
+ * Load CSV
+ */
+
+async function loadCSV() {
+
+    try {
+
+        const response = await fetch(CSV_FILE);
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        const csv = await response.text();
+
+        allRows = parseCSV(csv);
+
+        sortRowsByDate();
+
+        filteredRows = [...allRows];
+
+        document.getElementById("status").textContent =
+            `${allRows.length.toLocaleString()} reports`;
+
+        render();
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById("status").innerHTML =
+            `<span class="error">
+                Unable to load reports.csv
+            </span>`;
+    }
+}
+
+
+/*
+ * Sort by CSV date column.
+ *
+ * Column 7 = YYYY-MM-DD
+ */
+
+function sortRowsByDate() {
+
+    allRows.sort((a, b) => {
+
+        const dateA = new Date(a[7]);
+        const dateB = new Date(b[7]);
+
+        return newestFirst
+            ? dateB - dateA
+            : dateA - dateB;
+    });
+}
+
+
+/*
+ * Render
+ */
+
+function render() {
+
+    renderTable();
+    updatePagination();
+}
+
+
+/*
+ * Render table
+ */
+
+function renderTable() {
+
+    const tbody =
+        document.getElementById("reportsBody");
+
+    tbody.innerHTML = "";
+
+    const start =
+        (currentPage - 1) * ROWS_PER_PAGE;
+
+    const end =
+        start + ROWS_PER_PAGE;
+
+    const pageRows =
+        filteredRows.slice(start, end);
+
+
+    pageRows.forEach(row => {
+
+        const tr =
+            document.createElement("tr");
+
+
+        /*
+         * ID
+         */
+
+        const idCell =
+            document.createElement("td");
+
+        idCell.className = "id";
+        idCell.textContent = row[0] || "";
+
+        tr.appendChild(idCell);
+
+
+        /*
+         * Platform
+         */
+
+        const platformCell =
+            document.createElement("td");
+
+        platformCell.className = "platform";
+        platformCell.textContent = row[1] || "";
+
+        tr.appendChild(platformCell);
+
+
+        /*
+         * Type of bug
+         */
+
+        const bugCell =
+            document.createElement("td");
+
+        bugCell.className = "bug-type";
+        bugCell.textContent = row[2] || "";
+
+        tr.appendChild(bugCell);
+
+
+        /*
+         * Report link
+         */
+
+        const linkCell =
+            document.createElement("td");
+
+        let url = row[3] || "";
+
+        if (
+            url &&
+            !url.startsWith("http://") &&
+            !url.startsWith("https://")
+        ) {
+            url = "https://" + url;
+        }
+
+        if (url) {
+
+            const link =
+                document.createElement("a");
+
+            link.href = url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.className = "report-link";
+            link.textContent = "Open report";
+
+            linkCell.appendChild(link);
+        }
+
+        tr.appendChild(linkCell);
+
+
+        /*
+         * Bounty
+         */
+
+        const bountyCell =
+            document.createElement("td");
+
+        bountyCell.className = "bounty";
+
+        const bounty =
+            parseFloat(row[5]);
+
+        if (!isNaN(bounty) && bounty > 0) {
+
+            bountyCell.textContent =
+                `$${bounty.toLocaleString()}`;
+
+        } else {
+
+            bountyCell.textContent = "$0";
+        }
+
+        tr.appendChild(bountyCell);
+
+
+        /*
+         * Date
+         */
+
+        const dateCell =
+            document.createElement("td");
+
+        dateCell.className = "date";
+        dateCell.textContent = formatDate(row[7]);
+
+        tr.appendChild(dateCell);
+
+
+        tbody.appendChild(tr);
+    });
+}
+
+
+/*
+ * Date formatting
+ *
+ * 2018-07-17
+ * →
+ * 17 July 2018
+ */
+
+function formatDate(dateString) {
+
+    if (!dateString) {
+        return "";
+    }
+
+    const date =
+        new Date(
+            dateString.trim() + "T00:00:00"
+        );
+
+    if (isNaN(date.getTime())) {
+        return dateString;
+    }
+
+    return date.toLocaleDateString(
+        "en-GB",
+        {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }
+    );
+}
+
+
+/*
+ * Pagination
+ */
+
+function updatePagination() {
+
+    const totalPages =
+        Math.max(
+            1,
+            Math.ceil(
+                filteredRows.length /
+                ROWS_PER_PAGE
+            )
+        );
+
+
+    if (currentPage > totalPages) {
+        currentPage = totalPages;
+    }
+
+
+    document.getElementById("pageInput").value =
+        currentPage;
+
+    document.getElementById("pageInput").max =
+        totalPages;
+
+    document.getElementById("totalPagesText").textContent =
+        `of ${totalPages}`;
+
+    document.getElementById("previous").disabled =
+        currentPage === 1;
+
+    document.getElementById("next").disabled =
+        currentPage === totalPages;
+
+
+    const total =
+        filteredRows.length;
+
+    const start =
+        total === 0
+            ? 0
+            : (currentPage - 1)
+                * ROWS_PER_PAGE + 1;
+
+    const end =
+        Math.min(
+            currentPage * ROWS_PER_PAGE,
+            total
+        );
+
+    document.getElementById("pageInfo").textContent =
+        `Showing ${start}–${end} of ${total.toLocaleString()} reports`;
+}
+
+
+/*
+ * Go to page
+ */
+
+function goToPage() {
+
+    const totalPages =
+        Math.max(
+            1,
+            Math.ceil(
+                filteredRows.length /
+                ROWS_PER_PAGE
+            )
+        );
+
+    let page =
+        parseInt(
+            document.getElementById("pageInput").value,
+            10
+        );
+
+    if (isNaN(page)) {
+        return;
+    }
+
+    page =
+        Math.max(
+            1,
+            Math.min(page, totalPages)
+        );
+
+    currentPage = page;
+
+    render();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+/*
+ * Previous page
+ */
+
+document
+    .getElementById("previous")
+    .addEventListener("click", () => {
+
+        if (currentPage > 1) {
+
+            currentPage--;
+
+            render();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    });
+
+
+/*
+ * Next page
+ */
+
+document
+    .getElementById("next")
+    .addEventListener("click", () => {
+
+        const totalPages =
+            Math.ceil(
+                filteredRows.length /
+                ROWS_PER_PAGE
+            );
+
+        if (currentPage < totalPages) {
+
+            currentPage++;
+
+            render();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    });
+
+
+/*
+ * Page input
+ */
+
+document
+    .getElementById("goButton")
+    .addEventListener("click", goToPage);
+
+
+document
+    .getElementById("pageInput")
+    .addEventListener("keydown", event => {
+
+        if (event.key === "Enter") {
+            goToPage();
+        }
+    });
+
+
+/*
+ * Date sorting
+ */
+
+document
+    .getElementById("sortDate")
+    .addEventListener("click", () => {
+
+        newestFirst = !newestFirst;
+
+        sortRowsByDate();
+
+        applySearch();
+
+        currentPage = 1;
+
+        document.getElementById("sortDate").textContent =
+            newestFirst ? "Newest" : "Oldest";
+
+        render();
+    });
+
+
+/*
+ * Search
+ */
+
+document
+    .getElementById("search")
+    .addEventListener("input", () => {
+
+        currentPage = 1;
+
+        applySearch();
+
+        render();
+    });
+
+
+function applySearch() {
+
+    const query =
+        document
+            .getElementById("search")
+            .value
+            .toLowerCase()
+            .trim();
+
+
+    if (!query) {
+
+        filteredRows = [...allRows];
+
+        return;
+    }
+
+
+    filteredRows =
+        allRows.filter(row =>
+            row.some(value =>
+                value
+                    .toLowerCase()
+                    .includes(query)
+            )
+        );
+}
+
+
+/*
+ * CSV parser
+ */
+
+function parseCSV(text) {
+
+    const rows = [];
+
+    let row = [];
+    let field = "";
+    let insideQuotes = false;
+
+
+    for (
+        let i = 0;
+        i < text.length;
+        i++
+    ) {
+
+        const char = text[i];
+        const next = text[i + 1];
+
+
+        if (
+            char === '"' &&
+            insideQuotes &&
+            next === '"'
+        ) {
+
+            field += '"';
+            i++;
+
+        } else if (char === '"') {
+
+            insideQuotes = !insideQuotes;
+
+        } else if (
+            char === "," &&
+            !insideQuotes
+        ) {
+
+            row.push(field);
+            field = "";
+
+        } else if (
+            (
+                char === "\n" ||
+                char === "\r"
+            ) &&
+            !insideQuotes
+        ) {
+
+            if (
+                char === "\r" &&
+                next === "\n"
+            ) {
+                i++;
+            }
+
+            row.push(field);
+            field = "";
+
+            if (
+                row.some(
+                    value =>
+                        value.trim() !== ""
+                )
+            ) {
+                rows.push(row);
+            }
+
+            row = [];
+
+        } else {
+
+            field += char;
+        }
+    }
+
+
+    if (
+        field.length > 0 ||
+        row.length > 0
+    ) {
+
+        row.push(field);
+
+        if (
+            row.some(
+                value =>
+                    value.trim() !== ""
+            )
+        ) {
+            rows.push(row);
+        }
+    }
+
+
+    return rows;
+}
+
+
+loadCSV();
+
+</script>
+
+</body>
+</html>
